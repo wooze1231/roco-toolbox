@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 12+ (targetSdk 34) 云端备份 / 设备转移规则。
+  本应用数据（轮次记录、异色图鉴、订阅、自定义商品池）纯本地，
+  一律不参与云备份与设备转移，避免 adb backup / 云备份导出。
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude
+            domain="root"
+            path="." />
+        <exclude
+            domain="database"
+            path="." />
+        <exclude
+            domain="sharedpref"
+            path="." />
+        <exclude
+            domain="external"
+            path="." />
+        <exclude
+            domain="file"
+            path="." />
+    </cloud-backup>
+    <device-transfer>
+        <exclude
+            domain="root"
+            path="." />
+        <exclude
+            domain="database"
+            path="." />
+        <exclude
+            domain="sharedpref"
+            path="." />
+        <exclude
+            domain="external"
+            path="." />
+        <exclude
+            domain="file"
+            path="." />
+    </device-transfer>
+</data-extraction-rules>

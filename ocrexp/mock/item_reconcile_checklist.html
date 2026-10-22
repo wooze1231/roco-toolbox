@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>商品名对齐核对清单</title><style>
+:root{--page:#F6F3ED;--card:#FDFCF9;--ok:#2E7D32;--bad:#C0392B;--mid:#B8860B;--line:#E4DED3;--txt:#2B2723;--sub:#8A8378}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--txt);font:13.5px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif;padding:26px 22px 70px}
+h1{font-size:21px;margin:0 0 4px}
+.lede{color:#6E6860;font-size:12.5px;margin:0 0 20px}
+h2{font-size:15.5px;margin:34px 0 6px;padding-left:9px;border-left:4px solid #D4A017}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 22px}
+.st{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 16px;min-width:118px}
+.st b{display:block;font-size:21px;line-height:1.2}
+.st span{font-size:11.5px;color:var(--sub)}
+.st.g b{color:var(--ok)} .st.r b{color:var(--bad)} .st.y b{color:var(--mid)}
+table{border-collapse:collapse;width:100%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(60,50,30,.07);font-size:12.5px}
+th,td{padding:8px 11px;text-align:left;border-bottom:1px solid #EFEAE2;vertical-align:top}
+th{background:#F5F1E9;font-size:11.5px;color:#6B655C;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.pick{text-align:center;font-size:15px;color:#B9B2A7}
+.pick.on{color:var(--ok)}
+code{background:#F1EDE5;padding:1px 5px;border-radius:5px;font-size:11.5px}
+.sim{color:var(--sub)}
+.tag{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:8px;background:#F1EDE5;color:#6B655C;margin-left:5px}
+.tag.warn{background:#FDF3DC;color:#9A6B00}
+.tag.dang{background:#FBE9E7;color:#C0392B}
+.note{background:#FFFDF6;border:1px solid #EAD9A6;border-radius:12px;padding:12px 15px;font-size:12.5px;margin:14px 0}
+.note b{color:#9A6B00}
+details{margin:10px 0}
+summary{cursor:pointer;font-weight:700;font-size:13.5px;padding:7px 0}
+.wrap{display:inline-block;min-width:200px;background:#fff;border:1.5px solid var(--line);border-radius:9px;padding:5px 9px}
+</style></head><body>
+<h1>商品名对齐核对清单</h1>
+<p class="lede">App 商品池 vs BWIKI（wiki.biligame.com/rocom）全量道具 1672 条 · 自动比对结果 · 请按行勾选</p>
+<div class="stats">
+<div class="st g"><b>47</b><span>名字对得上</span></div>
+<div class="st r"><b>32</b><span>对不上，待核对</span></div>
+<div class="st y"><b>82</b><span>BWIKI 有、池里缺</span></div>
+<div class="st"><b>0</b><span>孤儿图标</span></div>
+</div>
+<div class="note">
+<b>怎么用</b>：每条「对不上」的下面都给了 BWIKI 里的近似名字。<br>
+· 如果近似项<b>就是同一个东西</b>，说明 App 用了别名/脏名 → 我加别名映射 <br>
+· 如果<b>确实没有对应的</b>，说明这条本身可疑 → 从池里删掉 <br>
+· 如果是<b>真新东西</b> → 保留原样，同时补进标准表
+</div>
+<h2>一、App 池有、BWIKI 没有（32 条）— 逐条核对</h2>
+<table><thead><tr><th>App 里的名字</th><th>当前分类</th><th>图标</th><th>BWIKI 近似</th><th>保留?</th></tr></thead><tbody>
+<tr><td><b>中级咕噜球</b></td><td>精灵球类</td><td><span class="tag warn">无图标</span></td><td class="sim">高级咕噜球 / 普通咕噜球 / 柔软咕噜球 / 光球 / 雪球</td><td class="pick">☐</td></tr>
+<tr><td><b>大经验果</b></td><td>经验果类</td><td><span class="tag warn">无图标</span></td><td class="sim">大耳帽兜果实 / 大头骨龙果实 / 可可果 / 无花果 / 魔力果</td><td class="pick">☐</td></tr>
+<tr><td><b>天水碧</b></td><td>矿石宝石类</td><td><span class="tag warn">无图标</span></td><td class="sim">天火 / 水炮 / 水弹 / 蓄水 / 水环</td><td class="pick">☐</td></tr>
+<tr><td><b>寒冰石</b></td><td>矿石宝石类</td><td><span class="tag warn">无图标</span></td><td class="sim">石耳 / 裂石 / 落石 / 抛石 / 陨石</td><td class="pick">☐</td></tr>
+<tr><td><b>属性粉尘</b></td><td>粉尘类</td><td><span class="tag warn">无图标</span></td><td class="sim">草系粉尘 / 火系粉尘 / 水系粉尘 / 光系粉尘 / 恶系粉尘</td><td class="pick">☐</td></tr>
+<tr><td><b>彩虹果</b></td><td>经验果类</td><td><span class="tag warn">无图标</span></td><td class="sim">彩虹小马灯 / 可可果 / 无花果 / 魔力果 / 彩玉花</td><td class="pick">☐</td></tr>
+<tr><td><b>普通材料</b></td><td>道具材料类</td><td><span class="tag warn">无图标</span></td><td class="sim">普通粉尘 / 普通灵碎 / 普通咕噜球 / 普通血脉秘药 / 家用料理炉</td><td class="pick">☐</td></tr>
+<tr><td><b>普通精灵蛋</b></td><td>蛋与精灵类</td><td><span class="tag warn">无图标</span></td><td class="sim">普通灵碎 / 画精灵的蛋 / 炫彩精灵蛋 / 绿草精灵的蛋 / 精灵小窝</td><td class="pick">☐</td></tr>
+<tr><td><b>条件球</b></td><td>精灵球类</td><td><span class="tag warn">无图标</span></td><td class="sim">光球 / 雪球 / 国王球 / 美妙球 / 好战球</td><td class="pick">☐</td></tr>
+<tr><td><b>极品经验果</b></td><td>经验果类</td><td><span class="tag warn">无图标</span></td><td class="sim">可可果 / 无花果 / 魔力果 / 糖果罐 / 可可果盘</td><td class="pick">☐</td></tr>
+<tr><td><b>水脉秘药</b></td><td>血脉秘药类</td><td><span class="tag warn">无图标</span></td><td class="sim">水系血脉秘药 / 普通血脉秘药 / 草系血脉秘药 / 火系血脉秘药 / 光系血脉秘药</td><td class="pick">☐</td></tr>
+<tr><td><b>水脉经验果</b></td><td>经验果类</td><td><span class="tag warn">无图标</span></td><td class="sim">水蓝蓝果实 / 水滴蛇果实 / 水系血脉秘药 / 翡翠水母果实 / 水炮</td><td class="pick">☐</td></tr>
+<tr><td><b>火山石</b></td><td>矿石宝石类</td><td><span class="tag warn">无图标</span></td><td class="sim">山火 / 配方-山火 / 石耳 / 怒火 / 火爪</td><td class="pick">☐</td></tr>
+<tr><td><b>火系经验果</b></td><td>经验果类</td><td><span class="tag warn">无图标</span></td><td class="sim">火系粉尘 / 火系灵碎 / 火花果实 / 火红尾果实 / 火系血脉秘药</td><td class="pick">☐</td></tr>
+<tr><td><b>炫彩精灵带</b></td><td>蛋与精灵类</td><td><span class="tag warn">无图标</span></td><td class="sim">炫彩精灵蛋 / 精灵小窝 / 画精灵的蛋 / 画精灵果实 / 爱心炫彩蛋</td><td class="pick">☐</td></tr>
+<tr><td><b>炫彩蛋</b></td><td>蛋与精灵类</td><td>✓</td><td class="sim">炫彩精灵蛋 / 爱心炫彩蛋 / 方块炫彩蛋 / 火红炫彩蛋 / 四角星炫彩蛋</td><td class="pick">☐</td></tr>
+<tr><td><b>琉璃</b></td><td>矿石宝石类</td><td><span class="tag warn">无图标</span></td><td class="sim">黑晶琉璃</td><td class="pick">☐</td></tr>
+<tr><td><b>琉璃矿</b></td><td>矿石宝石类</td><td><span class="tag warn">无图标</span></td><td class="sim">黑晶琉璃 / 赤色矿石 / 矿石研磨钵 / 矿晶虫的蛋 / 矿晶虫果实</td><td class="pick">☐</td></tr>
+<tr><td><b>祝福项坠</b></td><td>道具材料类</td><td><span class="tag warn">无图标</span></td><td class="sim">冰晶坠 / 坠星遗石 / 配方-冰晶坠</td><td class="pick">☐</td></tr>
+<tr><td><b>神奇妙妙蛋</b></td><td>蛋与精灵类</td><td><span class="tag warn">无图标</span></td><td class="sim">神奇种子 / 奇丽草的蛋 / 首领奇丽草的蛋 / 异色奇丽草的蛋 / 蹦蹦种子(海神球形态)的蛋</td><td class="pick">☐</td></tr>
+<tr><td><b>神奇的蛋</b></td><td>蛋与精灵类</td><td>✓</td><td class="sim">奇丽草的蛋 / 首领奇丽草的蛋 / 异色奇丽草的蛋 / 蹦蹦种子(海神球形态)的蛋 / 喵喵的蛋</td><td class="pick">☐</td></tr>
+<tr><td><b>粉晶矿石</b></td><td>矿石宝石类</td><td><span class="tag warn">无图标</span></td><td class="sim">矿晶·石刻地台 / 晶石之壶 / 赤色矿石 / 矿石研磨钵 / 矿晶虫的蛋</td><td class="pick">☐</td></tr>
+<tr><td><b>精品大果</b></td><td>经验果类</td><td><span class="tag warn">无图标</span></td><td class="sim">画精灵果实 / 绿草精灵果实 / 大耳帽兜果实 / 大头骨龙果实 / 可可果</td><td class="pick">☐</td></tr>
+<tr><td><b>紫色矿石</b></td><td>矿石宝石类</td><td><span class="tag warn">无图标</span></td><td class="sim">赤色矿石 / 矿石研磨钵 / 紫色水晶球 / 矿晶·石刻地台 / 石耳</td><td class="pick">☐</td></tr>
+<tr><td><b>经验果</b></td><td>经验果类</td><td><span class="tag warn">无图标</span></td><td class="sim">可可果 / 无花果 / 魔力果 / 糖果罐 / 可可果盘</td><td class="pick">☐</td></tr>
+<tr><td><b>荧光草</b></td><td>道具材料类</td><td><span class="tag warn">无图标</span></td><td class="sim">荧光兰 / 天光 / 闪光 / 光球 / 光刃</td><td class="pick">☐</td></tr>
+<tr><td><b>蓝色矿石</b></td><td>矿石宝石类</td><td><span class="tag warn">无图标</span></td><td class="sim">赤色矿石 / 矿石研磨钵 / 蓝色水晶球 / 矿晶·石刻地台 / 蓝掌</td><td class="pick">☐</td></tr>
+<tr><td><b>补光球</b></td><td>精灵球类</td><td><span class="tag warn">无图标</span></td><td class="sim">光球 / 光合球 / 捕光球 / 配方-光球 / 天光</td><td class="pick">☐</td></tr>
+<tr><td><b>超级经验果</b></td><td>经验果类</td><td><span class="tag warn">无图标</span></td><td class="sim">超级糖果 / 配方-超级糖果 / 超导 / 可可果 / 无花果</td><td class="pick">☐</td></tr>
+<tr><td><b>首领血脉密钥</b></td><td>血脉秘药类</td><td><span class="tag warn">无图标</span></td><td class="sim">首领血脉凝露 / 首领血脉秘药 / 奇异血脉凝露 / 普通血脉秘药 / 草系血脉秘药</td><td class="pick">☐</td></tr>
+<tr><td><b>黑色矿石</b></td><td>矿石宝石类</td><td><span class="tag warn">无图标</span></td><td class="sim">赤色矿石 / 矿石研磨钵 / 矿晶·石刻地台 / 石耳 / 裂石</td><td class="pick">☐</td></tr>
+<tr><td><b>黑金</b></td><td>矿石宝石类</td><td><span class="tag warn">无图标</span></td><td class="sim">黑手 / 炼金釜 / 黑罗盘 / 代金券 / 炼金药剂</td><td class="pick">☐</td></tr>
+</tbody></table>
+<h2>二、BWIKI 有、App 池缺（只列商人会卖的类目）</h2>
+<h3 style="font-size:13.5px;margin:16px 0 4px;color:#6B655C">咕噜球 · 缺 6 条</h3>
+<details><summary>展开查看</summary><table><thead><tr><th>BWIKI 名字</th><th>序号</th><th>稀有度</th><th>补进 App?</th></tr></thead><tbody>
+<tr><td>可可果球</td><td><code>100287</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>好战球</td><td><code>100263</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>捕光球</td><td><code>100285</code></td><td>橙</td><td class="pick">☐</td></tr>
+<tr><td>柔软咕噜球</td><td><code>280001</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>淘沙球</td><td><code>100283</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>织梦棱镜球</td><td><code>100288</code></td><td>橙</td><td class="pick">☐</td></tr>
+</tbody></table></details>
+<h3 style="font-size:13.5px;margin:16px 0 4px;color:#6B655C">材料 · 缺 76 条</h3>
+<details><summary>展开查看</summary><table><thead><tr><th>BWIKI 名字</th><th>序号</th><th>稀有度</th><th>补进 App?</th></tr></thead><tbody>
+<tr><td>伞伞菌</td><td><code>100622</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>光系灵碎</td><td><code>100304</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>冰系灵碎</td><td><code>100310</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>冰系粉尘</td><td><code>100130</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>凤眼莲</td><td><code>100625</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>创造符文</td><td><code>100729</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>可可果</td><td><code>100211</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>向阳花</td><td><code>100604</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>喵喵草</td><td><code>100605</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>地系灵碎</td><td><code>100309</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>大嘴花</td><td><code>100666</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>奇异血脉凝露</td><td><code>100532</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>契约本源</td><td><code>100206</code></td><td>橙</td><td class="pick">☐</td></tr>
+<tr><td>小小炼金釜</td><td><code>100730</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>小小魔力之源</td><td><code>100731</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>幻系灵碎</td><td><code>100319</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>幻系粉尘</td><td><code>100139</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>幽幽草</td><td><code>100627</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>幽幽鬼火</td><td><code>100845</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>幽系灵碎</td><td><code>100306</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>彩玉花</td><td><code>100840</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>恶系灵碎</td><td><code>100305</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>恶魔雪茄</td><td><code>100670</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>愿力灵碎</td><td><code>100531</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>无花果</td><td><code>100212</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>普通灵碎</td><td><code>100307</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>普通粉尘</td><td><code>100127</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>机械灵碎</td><td><code>100318</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>杏黄贝</td><td><code>100849</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>武系灵碎</td><td><code>100315</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>毒系灵碎</td><td><code>100313</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>水系灵碎</td><td><code>100303</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>水系粉尘</td><td><code>100123</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>洋红珊瑚</td><td><code>100848</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>流星兰</td><td><code>100667</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>海桑花</td><td><code>100669</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>海珊瑚</td><td><code>100843</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>海神花</td><td><code>100844</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>液化药剂</td><td><code>100723</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>火焰花</td><td><code>100674</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>火系灵碎</td><td><code>100302</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>灵魂环印</td><td><code>100205</code></td><td>橙</td><td class="pick">☐</td></tr>
+<tr><td>瓶装冰雪</td><td><code>100690</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>瓶装困倦</td><td><code>100693</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>瓶装幸运</td><td><code>100698</code></td><td>橙</td><td class="pick">☐</td></tr>
+<tr><td>瓶装快乐</td><td><code>100695</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>瓶装恐惧</td><td><code>100694</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>瓶装斗志</td><td><code>100696</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>瓶装沙暴</td><td><code>100691</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>瓶装迷雾</td><td><code>100689</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>瓶装雨天</td><td><code>100688</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>电系灵碎</td><td><code>100312</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>留影沙漏</td><td><code>100736</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>睡铃</td><td><code>100607</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>短木莲</td><td><code>100850</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>紫晶菇</td><td><code>100668</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>紫雀花</td><td><code>100846</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>翼系灵碎</td><td><code>100316</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>花星角</td><td><code>100664</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>草系灵碎</td><td><code>100301</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>荧光兰</td><td><code>100665</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>萌系灵碎</td><td><code>100317</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>蓝掌</td><td><code>100606</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>藻羽花</td><td><code>100839</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>虫系灵碎</td><td><code>100314</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>虫系粉尘</td><td><code>100134</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>蜂窝</td><td><code>100626</code></td><td>橙</td><td class="pick">☐</td></tr>
+<tr><td>蜜黄菌</td><td><code>100623</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>象牙花</td><td><code>100841</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>贤者碎晶</td><td><code>100423</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>雪菇</td><td><code>100662</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>风卷草</td><td><code>100842</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>首领血脉凝露</td><td><code>100530</code></td><td>紫</td><td class="pick">☐</td></tr>
+<tr><td>骨片</td><td><code>100663</code></td><td>绿</td><td class="pick">☐</td></tr>
+<tr><td>魔法石</td><td><code>100203</code></td><td>蓝</td><td class="pick">☐</td></tr>
+<tr><td>龙系灵碎</td><td><code>100311</code></td><td>紫</td><td class="pick">☐</td></tr>
+</tbody></table></details>
+<div class="note"><b>注意</b>：这一节数量很大（咕噜球只有 6 条，材料 76 条）。
+但<b>不代表都要补</b> —— 商人只会卖其中一部分。建议你只勾「确实见商人卖过」的。</div>
+<h2>三、名字对得上的（47 条，无需操作）</h2>
+<details><summary>展开查看（已自动对齐成功）</summary><table><thead><tr><th>名字</th><th>BWIKI 序号</th><th>BWIKI 分类</th></tr></thead><tbody>
+<tr><td>万能血脉秘药</td><td><code>102022</code></td><td>重要</td></tr>
+<tr><td>光合球</td><td><code>100271</code></td><td>咕噜球</td></tr>
+<tr><td>光系粉尘</td><td><code>100124</code></td><td>材料</td></tr>
+<tr><td>变幻球</td><td><code>100284</code></td><td>咕噜球</td></tr>
+<tr><td>喷气菇</td><td><code>100624</code></td><td>材料</td></tr>
+<tr><td>国王球</td><td><code>100255</code></td><td>咕噜球</td></tr>
+<tr><td>地系粉尘</td><td><code>100129</code></td><td>材料</td></tr>
+<tr><td>地系血脉秘药</td><td><code>102006</code></td><td>重要</td></tr>
+<tr><td>天使草</td><td><code>100608</code></td><td>材料</td></tr>
+<tr><td>奇异血脉秘药</td><td><code>102024</code></td><td>重要</td></tr>
+<tr><td>幽系粉尘</td><td><code>100126</code></td><td>材料</td></tr>
+<tr><td>幽系血脉秘药</td><td><code>102015</code></td><td>重要</td></tr>
+<tr><td>恶系粉尘</td><td><code>100125</code></td><td>材料</td></tr>
+<tr><td>星霜花</td><td><code>100661</code></td><td>材料</td></tr>
+<tr><td>普通咕噜球</td><td><code>100002</code></td><td>咕噜球</td></tr>
+<tr><td>暗星球</td><td><code>100273</code></td><td>咕噜球</td></tr>
+<tr><td>机械粉尘</td><td><code>100138</code></td><td>材料</td></tr>
+<tr><td>棱镜球</td><td><code>100286</code></td><td>咕噜球</td></tr>
+<tr><td>武系粉尘</td><td><code>100135</code></td><td>材料</td></tr>
+<tr><td>残缺魔镜</td><td><code>100421</code></td><td>重要</td></tr>
+<tr><td>毒系粉尘</td><td><code>100133</code></td><td>材料</td></tr>
+<tr><td>水系血脉秘药</td><td><code>102004</code></td><td>重要</td></tr>
+<tr><td>火系粉尘</td><td><code>100122</code></td><td>材料</td></tr>
+<tr><td>火系血脉秘药</td><td><code>102003</code></td><td>重要</td></tr>
+<tr><td>炫彩精灵蛋</td><td><code>310053</code></td><td>精灵蛋</td></tr>
+<tr><td>电系粉尘</td><td><code>100132</code></td><td>材料</td></tr>
+<tr><td>电系血脉秘药</td><td><code>102009</code></td><td>重要</td></tr>
+<tr><td>石耳</td><td><code>100621</code></td><td>材料</td></tr>
+<tr><td>紫莲刚玉</td><td><code>100677</code></td><td>材料</td></tr>
+<tr><td>绝缘球</td><td><code>100275</code></td><td>咕噜球</td></tr>
+<tr><td>网兜球</td><td><code>100272</code></td><td>咕噜球</td></tr>
+<tr><td>美妙球</td><td><code>100262</code></td><td>咕噜球</td></tr>
+<tr><td>翼系粉尘</td><td><code>100136</code></td><td>材料</td></tr>
+<tr><td>能力钥匙</td><td><code>100424</code></td><td>重要</td></tr>
+<tr><td>草系粉尘</td><td><code>100121</code></td><td>材料</td></tr>
+<tr><td>草系血脉秘药</td><td><code>102002</code></td><td>重要</td></tr>
+<tr><td>萌系粉尘</td><td><code>100137</code></td><td>材料</td></tr>
+<tr><td>蓝晶碧玺</td><td><code>100676</code></td><td>材料</td></tr>
+<tr><td>调温球</td><td><code>100274</code></td><td>咕噜球</td></tr>
+<tr><td>适格钥匙</td><td><code>100422</code></td><td>重要</td></tr>
+<tr><td>首领血脉秘药</td><td><code>102023</code></td><td>重要</td></tr>
+<tr><td>高级咕噜球</td><td><code>100003</code></td><td>咕噜球</td></tr>
+<tr><td>魔力果</td><td><code>100213</code></td><td>材料</td></tr>
+<tr><td>魔法粉尘</td><td><code>100201</code></td><td>材料</td></tr>
+<tr><td>黄石榴石</td><td><code>100675</code></td><td>材料</td></tr>
+<tr><td>黑晶琉璃</td><td><code>100628</code></td><td>材料</td></tr>
+<tr><td>龙系粉尘</td><td><code>100131</code></td><td>材料</td></tr>
+</tbody></table></details>
+</body></html>

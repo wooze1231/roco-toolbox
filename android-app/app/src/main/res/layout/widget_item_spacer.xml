@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  网格里的隐形占位格：宽度权重与正常商品格一致（layout_weight=1），
+  用来补齐最后一行不满的列，让孤项左对齐（和 App 内 renderItems 的行为一致）。
+  无背景、无内容，不可见但占位。
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_margin="3dp" />

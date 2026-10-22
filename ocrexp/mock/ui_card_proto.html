@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洛克助手 · 炫彩色卡（可交互原型 v2）</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#151412;color:#e9e4d8;
+       font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+       padding:22px 18px 60px}
+  h1{font-size:20px;margin:0 0 6px}
+  .lead{color:#9a9284;font-size:13px;line-height:1.75;margin:0 0 18px}
+  .lead b{color:#E4573D}
+  .board{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
+  .col{flex:0 0 auto}
+  .phone{position:relative;width:304px;height:628px;border-radius:26px;overflow:hidden;
+         box-shadow:0 14px 34px rgba(0,0,0,.6);background:#000}
+  .cap{font-size:12px;color:#9a9284;margin:9px 0 0 4px;line-height:1.65;max-width:304px}
+
+  /* ===== 扫描页 ===== */
+  .feed{position:absolute;inset:0;background:radial-gradient(120% 80% at 30% 18%, #F7F1E1 0%, #EFE7D3 55%, #E3D9C2 100%)}
+  .feed .page{position:absolute;left:4%;top:8%;right:-6%;bottom:6%;background:#FBF7EC;border-radius:14px}
+  .feed .nameplate{position:absolute;right:9%;top:11%;width:36%;height:28px;background:#FFFDF6;
+        border:2px solid #4A453C;border-radius:6px;display:flex;align-items:center;justify-content:center;
+        font-size:12px;font-weight:800;color:#2E2A25;transform:rotate(-.6deg)}
+  .feed .ghost{position:absolute;right:15%;top:21%;width:20%;height:18%;border-radius:50%;
+        background:radial-gradient(circle at 40% 35%, #DDD6C4, #C9C0AC)}
+  .feed .panel{position:absolute;right:5%;top:42%;width:58%;height:26%;background:#292D2E;
+        border-radius:16px;display:flex;gap:4%;padding:7% 5%;align-items:center}
+  .feed .slot{flex:1;height:100%;border-radius:10px;background:#232728;overflow:hidden}
+  .feed .slot svg{width:100%;height:100%;display:block}
+
+  .hole{position:absolute;left:5%;right:5%;top:16%;height:40%;border-radius:18px;
+        border:2px solid rgba(228,87,61,.95);
+        box-shadow:0 0 0 9999px rgba(0,0,0,.66), inset 0 0 18px rgba(228,87,61,.16)}
+  .hole .c{position:absolute;width:15px;height:15px;border:3px solid #E4573D;border-radius:3px}
+  .hole .c1{left:-3px;top:-3px;border-right:0;border-bottom:0}
+  .hole .c2{right:-3px;top:-3px;border-left:0;border-bottom:0}
+  .hole .c3{left:-3px;bottom:-3px;border-right:0;border-top:0}
+  .hole .c4{right:-3px;bottom:-3px;border-left:0;border-top:0}
+  .hole .tag{position:absolute;left:50%;top:-11px;transform:translateX(-50%);
+        font-size:10px;font-weight:800;color:#FFFDF6;background:#E4573D;padding:2px 9px;border-radius:9px;white-space:nowrap}
+
+  .sheet{position:absolute;left:0;right:0;bottom:0;background:rgba(24,23,21,.96);
+         border-radius:22px 22px 0 0;padding:11px 13px 13px}
+  .hint{font-size:11.5px;color:#A89E8C;display:flex;justify-content:space-between}
+  .hint b{color:#E4573D;font-weight:800}
+  .bar{height:3px;border-radius:2px;background:linear-gradient(90deg,#E4573D,#E0A93B,#57A15A,#3E7CC1);
+       opacity:.5;margin:7px 0 9px}
+  .reslist{max-height:190px;overflow:auto}
+  .res{display:flex;align-items:center;gap:9px;background:#2B2823;border:1px solid #3A352D;
+       border-radius:12px;padding:6px 8px;margin-bottom:6px}
+  .thumb{width:54px;height:32px;border-radius:8px;overflow:hidden;flex:0 0 auto}
+  .thumb svg{width:100%;height:100%;display:block}
+  .meta{flex:1;min-width:0}
+  .meta .n{font-size:11.5px;font-weight:800;color:#F0EADB;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .meta .s{font-size:10px;color:#A89E8C;margin-top:2px;display:flex;align-items:center;gap:4px}
+  .cdot{width:9px;height:9px;border-radius:3px;display:inline-block}
+  .pchip{display:inline-flex;align-items:center;height:16px;padding:0 5px;border-radius:5px;
+         background:#3A2A22;color:#F0D4AE;font-size:9.5px}
+  .x{width:21px;height:21px;border-radius:7px;background:#3A2A22;color:#E08770;border:0;
+     display:flex;align-items:center;justify-content:center;font-size:11px;cursor:pointer}
+  .btns{display:flex;gap:8px;margin-top:9px}
+  .b{flex:1;height:40px;border-radius:12px;border:0;display:flex;align-items:center;justify-content:center;
+     font-size:13px;font-weight:800;cursor:pointer;font-family:inherit}
+  .b.primary{background:#E4573D;color:#FFFDF6}
+  .b.ghost{background:transparent;border:1.5px solid #4A443B;color:#A89E8C}
+  .sim{position:absolute;right:10px;bottom:196px;z-index:6;background:#E4573D;color:#fff;
+       border:0;border-radius:12px;padding:8px 12px;font-size:11.5px;font-weight:800;cursor:pointer;
+       box-shadow:0 6px 16px rgba(0,0,0,.4);font-family:inherit}
+  .empty{color:#7d776b;font-size:11.5px;text-align:center;padding:16px 6px}
+
+  /* ===== 展示页（米金浅色） ===== */
+  .gm{--bg:#F5F3EE;--card:#FFF;--line:#EAE5DB;--txt:#2C2C2C;--sub:#8A8A8A;--gold:#D4AF37;
+      --goldsoft:#FBF3DC;--sel:#FFF4E0}
+  .screen{position:absolute;inset:0;background:var(--bg)}
+  .gbar{height:52px;display:flex;align-items:center;padding:0 13px;background:var(--card);
+        border-bottom:1px solid var(--line)}
+  .gbar .ttl{font-size:17px;font-weight:800;color:var(--txt);flex:1;margin-left:4px}
+  .gbar .cnt{height:29px;padding:0 9px;border-radius:9px;background:var(--goldsoft);
+             border:1px solid #EAD9A6;color:#8A6410;font-size:11.5px;font-weight:800;
+             display:flex;align-items:center;gap:3px}
+  .gbar .cnt i{font-style:normal;font-weight:600;font-size:10px;opacity:.85}
+  .gbody{padding:10px 11px;height:calc(100% - 52px);overflow:auto}
+  .fcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;margin-bottom:9px}
+  .frow{display:flex;gap:6px}
+  .fsel{flex:1;height:32px;border-radius:9px;background:#F7F5F0;border:1px solid var(--line);
+        display:flex;align-items:center;gap:4px;padding:0 7px;font-size:10.5px;color:var(--txt);
+        cursor:pointer;user-select:none;font-family:inherit;overflow:hidden}
+  .fsel .cv{margin-left:auto;font-size:9.5px;color:#B9B2A4;max-width:44px;overflow:hidden;
+            white-space:nowrap;text-overflow:ellipsis}
+  .fsel.on{border-color:#E8CF8F;background:var(--sel);color:#8A6410;font-weight:800}
+  .fsel.on .cv{color:#8A6410}
+  .chips{display:none;flex-wrap:wrap;gap:5px;margin-top:8px;padding-top:8px;border-top:1px dashed #EDE7DB}
+  .chips.on{display:flex}
+  .chip{height:26px;padding:0 9px;border-radius:7px;background:#F2F0EB;border:1px solid transparent;
+        font-size:10.5px;color:#4A4A4A;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:4px}
+  .chip .dot{width:8px;height:8px;border-radius:50%}
+  .chip.on{background:var(--sel);border-color:#E8CF8F;color:#8A6410;font-weight:800}
+  .chip .n{font-size:9px;color:#A39C90}
+  .chip.on .n{color:#8A6410}
+  .sortrow{display:flex;gap:5px;margin-top:8px;padding-top:8px;border-top:1px dashed #EDE7DB}
+  .sp{flex:1;height:27px;border-radius:8px;border:1px solid var(--line);background:#F7F5F0;
+      font-size:10px;font-weight:700;color:var(--sub);cursor:pointer;font-family:inherit}
+  .sp.on{background:var(--sel);border-color:#E8CF8F;color:#8A6410}
+  .search{width:100%;height:35px;border-radius:12px;background:var(--card);
+          border:1px solid var(--line);padding:0 11px;font-size:12px;color:var(--txt);
+          margin-bottom:9px;font-family:inherit;outline:none}
+  .search::placeholder{color:#B9B2A4}
+  .gcards{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-bottom:14px}
+  .gc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px;cursor:pointer}
+  .gc:active{transform:scale(.985)}
+  .gc .sw{height:52px;border-radius:9px;overflow:hidden}
+  .gc .sw svg{width:100%;height:100%;display:block}
+  .gc .nm{font-size:10.5px;color:var(--txt);font-weight:800;margin-top:5px;
+          white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .gc .sb{font-size:9px;color:var(--sub);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .gc .ft{display:flex;align-items:center;gap:3px;margin-top:4px}
+  .gc .ft .cdot{width:8px;height:8px;border-radius:2px}
+  .gc .ft .pt{display:inline-flex;align-items:center;height:14px;padding:0 4px;border-radius:4px;
+          background:var(--goldsoft);color:#8A6410;font-size:8.5px;margin-left:auto}
+  .gc .ft .pt.ss{background:#EEF0F2;color:#5A6470}
+  .nores{grid-column:span 2;text-align:center;color:#B9B2A4;font-size:11.5px;padding:26px 8px}
+  .scrim{position:absolute;inset:0;background:rgba(30,26,20,.34);z-index:7}
+  .detail{position:absolute;left:18px;right:18px;top:130px;background:var(--card);border-radius:18px;
+          border:1px solid var(--line);box-shadow:0 16px 36px rgba(60,50,35,.28);padding:13px;z-index:8}
+  .detail .big{height:92px;border-radius:13px;overflow:hidden}
+  .detail .big svg{width:100%;height:100%;display:block}
+  .detail .r{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--txt);padding:5px 0}
+  .detail .r span{width:40px;color:var(--sub);font-size:11px}
+  .detail .r .dot{width:15px;height:11px;border-radius:4px}
+  .detail .r code{font-size:10.5px;color:#6F6A5E;font-family:ui-monospace,Menlo,monospace}
+  .detail .acts{display:flex;gap:7px;margin-top:9px}
+  .detail .a{flex:1;height:37px;border-radius:11px;border:0;font-size:12px;font-weight:800;
+             cursor:pointer;font-family:inherit}
+  .detail .a.del{background:#FBE9E7;color:#C0392B}
+  .detail .a.ok{background:var(--gold);color:#fff}
+  .confirm{position:absolute;left:22px;right:22px;top:44%;background:#FFFDF6;border-radius:20px;
+           border:2px solid #4A453C;padding:16px;z-index:9;color:#2E2A25}
+  .confirm h3{margin:0 0 6px;font-size:15px;font-weight:800;text-align:center}
+  .confirm p{margin:0 0 12px;font-size:12px;color:#6F6A5E;text-align:center;line-height:1.6}
+  .confirm .cb{width:100%;height:38px;border-radius:11px;border:0;font-size:12.5px;font-weight:800;
+               cursor:pointer;font-family:inherit;margin-top:7px}
+  .confirm .cb.pri{background:#E4573D;color:#fff}
+  .confirm .cb.soft{background:transparent;color:#6F6A5E}
+</style>
+</head>
+<body>
+
+<h1>洛克助手 · 炫彩色卡（可交互原型 v2）</h1>
+<p class="lead">按新说明改：<b>底色 / 混色 是两套不同的颜色分类</b>（混色多一批"浅X"）；<b>S1–S4（赛季）已归入「特殊」</b>，不再作为底色/混色类别；<b>「炫彩突袭」是游戏设定，不显示</b>。左边能模拟识别，右边筛选/排序/搜索都能点。<br><span style="color:#E4573D">测试版 1.2.99 · 独立于正式版 1.2.0</span></p>
+
+<div class="board">
+
+  <!-- 左：扫描 -->
+  <div class="col">
+    <div class="phone" id="scanPhone">
+      <div class="feed">
+        <div class="page"></div>
+        <div class="nameplate">雪绒鸟</div>
+        <div class="ghost"></div>
+        <div class="panel"><div class="slot" id="slot1"></div><div class="slot"></div><div class="slot"></div></div>
+      </div>
+      <div class="hole"><span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span>
+        <span class="tag">框住 名称牌 + 色卡</span></div>
+      <button class="sim" id="btnSim">模拟识别 +1</button>
+      <div class="sheet">
+        <div class="hint"><span>对准方框 · 自动识别</span><span>已记 <b id="pendCount">0</b> 张</span></div>
+        <div class="bar"></div>
+        <div class="reslist" id="scanList"></div>
+        <div class="btns">
+          <button class="b primary" id="btnDone">完成并导入</button>
+          <button class="b ghost" id="btnCancel">取消并放弃</button>
+        </div>
+      </div>
+    </div>
+    <div class="cap">① 扫描页：模拟识别 +1 / ✕ 删除 / 完成导入（二次确认）/ 取消放弃。</div>
+  </div>
+
+  <!-- 右：展示 -->
+  <div class="col">
+    <div class="phone" id="libPhone">
+      <div class="screen gm">
+        <div class="gbar"><span class="ttl">炫彩色卡</span><span class="cnt"><span id="total">0</span><i>张</i></span></div>
+        <div class="gbody">
+          <div class="fcard">
+            <div class="frow">
+              <div class="fsel" id="fBase">底色<span class="cv" id="fBaseCv">全部</span></div>
+              <div class="fsel" id="fMix">混色<span class="cv" id="fMixCv">全部</span></div>
+              <div class="fsel" id="fPart">粒子<span class="cv" id="fPartCv">全部</span></div>
+              <div class="fsel" id="fSpec">特殊<span class="cv" id="fSpecCv">不含</span></div>
+            </div>
+            <div class="chips" id="chips"></div>
+            <div class="sortrow">
+              <button class="sp on" data-sort="recent">最近</button>
+              <button class="sp" data-sort="base">底色</button>
+              <button class="sp" data-sort="mix">混色</button>
+              <button class="sp" data-sort="part">粒子</button>
+            </div>
+          </div>
+          <input class="search" id="q" placeholder="搜索精灵名称或炫彩名称">
+          <div class="gcards" id="grid"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cap">② 展示页：点「底色 / 混色 / 粒子」展开对应色卡类别（带数量）；「特殊」可循环 不含→含→只看。</div>
+  </div>
+
+</div>
+
+<script>
+/* ---------- 粒子：点位全站统一 ---------- */
+const PART = {
+  star4:{chip:'✦ 星芒', hollow:false, d:'M0,-13.5 C2.1,-3.9 3.9,-2.1 13.5,0 C3.9,2.1 2.1,3.9 0,13.5 C-2.1,3.9 -3.9,2.1 -13.5,0 C-3.9,-2.1 -2.1,-3.9 0,-13.5 Z'},
+  heart:{chip:'♥ 爱心', hollow:false, d:'M0,9 C-9.5,2 -12,-2.5 -7.2,-7 C-3.9,-10 0,-6.6 0,-3.6 C0,-6.6 3.9,-10 7.2,-7 C12,-2.5 9.5,2 0,9 Z'},
+  diam: {chip:'◆ 菱形', hollow:false, d:'M0,-10 L10,0 L0,10 L-10,0 Z'},
+  star5:{chip:'★ 五角星', hollow:true,  d:'M0,-10 L2.7,-3.7 L9.5,-3.1 L4.4,1.4 L5.9,8.1 L0,4.6 L-5.9,8.1 L-4.4,1.4 L-9.5,-3.1 L-2.7,-3.7 Z'},
+  spec: {chip:'✦ 特殊', hollow:false, d:'M0,-13.5 C2.1,-3.9 3.9,-2.1 13.5,0 C3.9,2.1 2.1,3.9 0,13.5 C-2.1,3.9 -3.9,2.1 -13.5,0 C-3.9,-2.1 -2.1,-3.9 0,-13.5 Z'}
+};
+const POS = [[28,16,.75],[58,32,1.15],[84,14,.7]];
+let uid = 0;
+function swatch(base, top, part){
+  const id='s'+(++uid), p=PART[part]||PART.star4;
+  const def = p.hollow
+    ? `<path id="${id}p" d="${p.d}" fill="none" stroke="#F5EFE1" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>`
+    : `<path id="${id}p" d="${p.d}" fill="#F5EFE1"/>`;
+  return `<svg viewBox="0 0 100 60" preserveAspectRatio="none">
+    <defs><clipPath id="${id}c"><rect width="100" height="60" rx="10"/></clipPath>${def}</defs>
+    <g clip-path="url(#${id}c)">
+      <rect width="100" height="60" fill="${base}"/>
+      <path d="M0,28 C14,12 26,40 42,34 C60,27 74,10 100,20 L100,0 L0,0 Z" fill="${top}"/>
+      ${POS.map(([x,y,s])=>`<use href="#${id}p" transform="translate(${x},${y}) scale(${s})"/>`).join('')}
+    </g></svg>`;
+}
+
+/* ---------- 两套颜色分类 ---------- */
+const BASE_CATS = ['蓝色','青色','绿色','黄色','粉色','紫色'];
+const MIX_CATS  = ['蓝色','绿色','青色','紫色','粉色','浅蓝紫','浅绿','浅蓝','浅紫','浅粉','浅黄','浅灰'];
+const BASE_HEX = {蓝色:'#3E7CC1',青色:'#3DD6D6',绿色:'#57A15A',黄色:'#F7C722',粉色:'#E5576F',
+  紫色:'#DBBCEB'};
+const MIX_HEX = {蓝色:'#2F6FB5',绿色:'#83D256',青色:'#3ED7D7',紫色:'#B98CE0',粉色:'#E4566E',
+  浅蓝紫:'#C9BEEF',浅绿:'#C8E6C9',浅蓝:'#BFE6F7',浅紫:'#DBBCEB',浅粉:'#F6C7D5',浅黄:'#FFEDB0',浅灰:'#D8D8D2'};
+function rgb(hex){ const n=parseInt(hex.slice(1),16); return [(n>>16)&255,(n>>8)&255,n&255]; }
+function nearest(hex, table){
+  const [r,g,b]=rgb(hex); let best=null, bd=1e9;
+  for(const k in table){ const [r2,g2,b2]=rgb(table[k]); const d=(r-r2)**2+(g-g2)**2+(b-b2)**2;
+    if(d<bd){bd=d;best=k;} }
+  return best;
+}
+const baseCat = (hex)=>nearest(hex, BASE_HEX);
+const mixCat  = (hex)=>nearest(hex, MIX_HEX);
+/* 特殊卡（黑白、赛季限定等）不参与颜色分类，一律归「特殊」 */
+const baseLabel = (c)=> c.special ? '特殊' : baseCat(c.base);
+const mixLabel  = (c)=> c.special ? '特殊' : mixCat(c.top);
+
+/* ---------- 数据 ---------- */
+let cards = [
+  {id:1, spirit:'雪绒鸟', base:'#E5576F', top:'#3DD6D6', part:'star4', special:false, ts:1},
+  {id:2, spirit:'鸭吉吉', base:'#F7C722', top:'#3DD6D6', part:'heart', special:false, ts:2},
+  {id:3, spirit:'水灵',   base:'#A7E4E4', top:'#E4566E', part:'diam',  special:false, ts:3},
+  {id:4, spirit:'觅觅蝠', base:'#3ED7D7', top:'#DBBCEB', part:'star5', special:true,  ts:4},
+  {id:5, spirit:'黑白',   base:'#BFBFB9', top:'#2A2826', part:'spec',  special:true,  ts:5},
+  {id:6, spirit:'板板壳', base:'#83D256', top:'#E5576F', part:'star4', special:false, ts:6},
+  {id:7, spirit:'焰火',   base:'#2F6FB5', top:'#BFE6F7', part:'star4', special:false, ts:7},
+  {id:8, spirit:'火神',   base:'#3E7CC1', top:'#F7C722', part:'diam',  special:false, ts:8},
+  {id:9, spirit:'波波拉', base:'#57A15A', top:'#C8E6C9', part:'heart', special:false, ts:9},
+  {id:10,spirit:'咔咔壳', base:'#E0A93B', top:'#F6C7D5', part:'star4', special:false, ts:10},
+  {id:11,spirit:'水蓝蓝', base:'#BFE6F7', top:'#2F6FB5', part:'star4', special:false, ts:11},
+  {id:12,spirit:'喵喵',   base:'#DBBCEB', top:'#3ED7D7', part:'star5', special:true,  ts:12}
+];
+let pending = [
+  {spirit:'雪绒鸟', base:'#E5576F', top:'#3DD6D6', part:'star4', special:false},
+  {spirit:'鸭吉吉', base:'#F7C722', top:'#3DD6D6', part:'heart', special:false}
+];
+const SIM_POOL = [
+  {spirit:'焰火', base:'#E5576F', top:'#83D256', part:'diam', special:false},
+  {spirit:'火神', base:'#3DD6D6', top:'#DBBCEB', part:'star5', special:false},
+  {spirit:'水蓝蓝', base:'#F7C722', top:'#E5576F', part:'star4', special:false},
+  {spirit:'波波拉', base:'#A7E4E4', top:'#E4566E', part:'heart', special:false},
+  {spirit:'黑白', base:'#BFBFB9', top:'#2A2826', part:'spec', special:true},
+  {spirit:'咔咔壳', base:'#DBBCEB', top:'#3ED7D7', part:'star5', special:true}
+];
+let simIdx = 0;
+
+/* ---------- 状态 ---------- */
+const F = { base:'全部', mix:'全部', part:'全部', spec:'不含' };
+let sortBy='recent', q='', openDim='';
+
+/* ---------- 扫描列表 ---------- */
+function renderScan(){
+  const box=document.getElementById('scanList');
+  document.getElementById('pendCount').textContent=pending.length;
+  if(!pending.length){ box.innerHTML='<div class="empty">框住色卡，等它出现</div>'; return; }
+  box.innerHTML=pending.map((c,i)=>`
+    <div class="res">
+      <div class="thumb">${swatch(c.base,c.top,c.part)}</div>
+      <div class="meta">
+        <div class="n">${c.spirit}</div>
+        <div class="s"><i class="cdot" style="background:${c.base}"></i><i class="cdot" style="background:${c.top}"></i>
+          <i class="pchip">${PART[c.part].chip}</i></div>
+      </div>
+      <button class="x" data-del="${i}">✕</button>
+    </div>`).join('');
+  box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{pending.splice(+b.dataset.del,1);renderScan();});
+}
+
+/* ---------- 筛选 / 排序 ---------- */
+function filtered(){
+  let out=cards.filter(c=>{
+    if(F.base!=='全部' && baseLabel(c)!==F.base) return false;
+    if(F.mix !=='全部' && mixLabel(c)!==F.mix) return false;
+    if(F.part!=='全部'){
+      if(F.part==='特殊'){ if(!(c.part==='spec'||c.special)) return false; }
+      else if(PART[c.part].chip!==F.part) return false;
+    }
+    if(F.spec==='不含' && c.special) return false;
+    if(F.spec==='只看' && !c.special) return false;
+    if(q){
+      const k=q.trim().toLowerCase();
+      if(!c.spirit.toLowerCase().includes(k)) return false;
+    }
+    return true;
+  });
+  const key={
+    recent:c=>c.ts,
+    base:c=> c.special ? 999 : BASE_CATS.indexOf(baseCat(c.base)),
+    mix:c=> c.special ? 999 : MIX_CATS.indexOf(mixCat(c.top)),
+    part:c=>Object.keys(PART).indexOf(c.part)
+  }[sortBy];
+  out.sort((a,b)=> sortBy==='recent' ? key(b)-key(a) : key(a)-key(b));
+  return out;
+}
+function renderLib(){
+  document.getElementById('total').textContent=cards.length;
+  const list=filtered(), grid=document.getElementById('grid');
+  if(!list.length){ grid.innerHTML='<div class="nores">当前筛选没有色卡</div>'; }
+  else grid.innerHTML=list.map(c=>`
+    <div class="gc" data-id="${c.id}">
+      <div class="sw">${swatch(c.base,c.top,c.part)}</div>
+      <div class="nm">${c.spirit}</div>
+      <div class="sb">${c.special ? '特殊色卡' : baseCat(c.base)+'底 · '+mixCat(c.top)+'混'}</div>
+      <div class="ft"><i class="cdot" style="background:${c.base}"></i><i class="cdot" style="background:${c.top}"></i>
+        <span class="pt ${c.special?'ss':''}">${c.special?'✧ 特殊':PART[c.part].chip}</span></div>
+    </div>`).join('');
+  grid.querySelectorAll('[data-id]').forEach(el=>el.onclick=()=>openDetail(+el.dataset.id));
+  renderChips();
+}
+
+/* ---------- 颜色类别 chips ---------- */
+function renderChips(){
+  const box=document.getElementById('chips');
+  if(!openDim){ box.classList.remove('on'); box.innerHTML=''; return; }
+  box.classList.add('on');
+  let cats, cur, table, field;
+  if(openDim==='base'){ cats=BASE_CATS; cur=F.base; table=BASE_HEX; field='base'; }
+  else if(openDim==='mix'){ cats=MIX_CATS; cur=F.mix; table=MIX_HEX; field='mix'; }
+  else { cats=['✦ 星芒','♥ 爱心','◆ 菱形','★ 五角星','特殊']; cur=F.part; table=null; field='part'; }
+  const countOf=(cat)=>{
+    if(field==='part') return cards.filter(c=> cat==='特殊' ? (c.part==='spec'||c.special) : PART[c.part].chip===cat).length;
+    return cards.filter(c=> !c.special && (field==='base'?baseCat(c.base):mixCat(c.top))===cat).length;
+  };
+  const totalAll = cards.filter(c=> field!=='part' ? true : true).length;
+  box.innerHTML =
+    `<button class="chip ${cur==='全部'?'on':''}" data-v="全部">全部<span class="n">${cards.length}</span></button>` +
+    cats.map(cat=>{
+      const dot = table ? `<span class="dot" style="background:${table[cat]}"></span>` : '';
+      return `<button class="chip ${cur===cat?'on':''}" data-v="${cat}">${dot}${cat}<span class="n">${countOf(cat)}</span></button>`;
+    }).join('');
+  box.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{
+    F[field]=b.dataset.v; syncFilters(); renderLib();
+  });
+}
+
+function syncFilters(){
+  document.getElementById('fBaseCv').textContent=F.base;
+  document.getElementById('fMixCv').textContent=F.mix;
+  document.getElementById('fPartCv').textContent=F.part;
+  document.getElementById('fSpecCv').textContent=F.spec;
+  document.getElementById('fBase').classList.toggle('on', F.base!=='全部' || openDim==='base');
+  document.getElementById('fMix').classList.toggle('on', F.mix!=='全部' || openDim==='mix');
+  document.getElementById('fPart').classList.toggle('on', F.part!=='全部' || openDim==='part');
+  document.getElementById('fSpec').classList.toggle('on', F.spec!=='不含');
+}
+
+/* ---------- 详情 ---------- */
+function openDetail(id){
+  const c=cards.find(x=>x.id===id); if(!c) return;
+  closeOverlays();
+  const phone=document.getElementById('libPhone');
+  const scrim=document.createElement('div'); scrim.className='scrim'; scrim.onclick=closeOverlays; phone.appendChild(scrim);
+  const d=document.createElement('div'); d.className='detail'; d.id='detailBox';
+  d.innerHTML=`
+    <div class="big">${swatch(c.base,c.top,c.part)}</div>
+    <div class="r"><span>精灵</span><b>${c.spirit}</b></div>
+    <div class="r"><span>底色</span><i class="dot" style="background:${c.base}"></i><span style="width:auto">${baseLabel(c)}</span><code>${c.base}</code></div>
+    <div class="r"><span>混色</span><i class="dot" style="background:${c.top}"></i><span style="width:auto">${mixLabel(c)}</span><code>${c.top}</code></div>
+    <div class="r"><span>粒子</span><span style="width:auto">${PART[c.part].chip}</span></div>
+    <div class="acts"><button class="a del" id="dDel">删除这张</button><button class="a ok" id="dOk">关闭</button></div>`;
+  phone.appendChild(d);
+  d.querySelector('#dOk').onclick=closeOverlays;
+  d.querySelector('#dDel').onclick=()=>{ cards=cards.filter(x=>x.id!==id); closeOverlays(); renderLib(); };
+}
+function closeOverlays(){
+  const d=document.getElementById('detailBox'); if(d) d.remove();
+  document.querySelectorAll('.scrim').forEach(e=>e.remove());
+}
+
+/* ---------- 扫描交互 ---------- */
+function confirmBox(phone,title,msg,okText,onOk){
+  const scrim=document.createElement('div'); scrim.className='scrim'; phone.appendChild(scrim);
+  const box=document.createElement('div'); box.className='confirm';
+  box.innerHTML=`<h3>${title}</h3><p>${msg}</p>
+    <button class="cb pri">${okText}</button><button class="cb soft">再想想</button>`;
+  phone.appendChild(box);
+  const close=()=>{box.remove();scrim.remove();};
+  box.children[2].onclick=()=>{close();onOk();};
+  box.children[3].onclick=close;
+}
+document.getElementById('btnSim').onclick=()=>{
+  pending.push({...SIM_POOL[simIdx%SIM_POOL.length]}); simIdx++; renderScan();
+};
+document.getElementById('btnDone').onclick=()=>{
+  const sp=document.getElementById('scanPhone');
+  if(!pending.length){ confirmBox(sp,'还没识别到色卡','把色卡对准方框，或点「模拟识别 +1」。','知道了',()=>{}); return; }
+  confirmBox(sp,`导入这 ${pending.length} 张色卡？`,'每张独立写入「炫彩色卡」，颜色相同也各占一条。','确认导入',()=>{
+    let ts=Math.max(0,...cards.map(c=>c.ts));
+    pending.forEach(p=>{ cards.push({id:++uid+1000,...p,ts:++ts}); });
+    pending=[]; renderScan(); renderLib();
+    confirmBox(sp,'已导入',`现在共 ${cards.length} 张，去右边点点筛选看效果。`,'好',()=>{});
+  });
+};
+document.getElementById('btnCancel').onclick=()=>{
+  const sp=document.getElementById('scanPhone');
+  if(!pending.length){ renderScan(); return; }
+  confirmBox(sp,'放弃本次扫描？',`已识别的 ${pending.length} 张都会清掉，不会写进列表。`,'放弃',()=>{pending=[];renderScan();});
+};
+
+/* ---------- 绑定 ---------- */
+function toggleDim(dim){
+  openDim = (openDim===dim) ? '' : dim;
+  syncFilters(); renderChips();
+}
+document.getElementById('fBase').onclick=()=>toggleDim('base');
+document.getElementById('fMix').onclick =()=>toggleDim('mix');
+document.getElementById('fPart').onclick=()=>toggleDim('part');
+document.getElementById('fSpec').onclick=()=>{
+  F.spec = F.spec==='不含'?'含':F.spec==='含'?'只看':'不含';
+  syncFilters(); renderLib();
+};
+document.querySelectorAll('.sp').forEach(b=>b.onclick=()=>{
+  sortBy=b.dataset.sort;
+  document.querySelectorAll('.sp').forEach(x=>x.classList.toggle('on',x===b));
+  renderLib();
+});
+document.getElementById('q').addEventListener('input',e=>{ q=e.target.value; renderLib(); });
+
+/* ---------- init ---------- */
+document.getElementById('slot1').innerHTML=swatch('#E5576F','#3DD6D6','star4');
+renderScan(); syncFilters(); renderLib();
+</script>
+</body>
+</html>

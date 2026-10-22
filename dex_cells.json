@@ -1,0 +1,6442 @@
+[
+ {
+  "title": "迪莫",
+  "no": "NO001",
+  "shiny": "否",
+  "family": "dimo",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/8fd4c9adadcdd75b.webp",
+  "slug": "dimo"
+ },
+ {
+  "title": "圣光迪莫",
+  "no": "NO001",
+  "shiny": "否",
+  "family": "dimo",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/d906fe62515c395d.webp",
+  "slug": "shengguangdimo"
+ },
+ {
+  "title": "圣草迪莫",
+  "no": "NO001",
+  "shiny": "否",
+  "family": "dimo",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/841ef8ec52420720.webp",
+  "slug": "shengcaodimo"
+ },
+ {
+  "title": "圣火迪莫",
+  "no": "NO001",
+  "shiny": "否",
+  "family": "dimo",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/94b5e58ad690433b.webp",
+  "slug": "shenghuodimo"
+ },
+ {
+  "title": "圣水迪莫",
+  "no": "NO001",
+  "shiny": "否",
+  "family": "dimo",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/5f9ef6335a29d201.webp",
+  "slug": "shengshuidimo"
+ },
+ {
+  "title": "喵喵",
+  "no": "NO002",
+  "shiny": "否",
+  "family": "miaomiao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/bd3253d8f4261030.webp",
+  "slug": "miaomiao"
+ },
+ {
+  "title": "喵呜",
+  "no": "NO003",
+  "shiny": "否",
+  "family": "miaomiao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/8435c97d1cc3404c.webp",
+  "slug": "miaowu"
+ },
+ {
+  "title": "魔力猫",
+  "no": "NO004",
+  "shiny": "否",
+  "family": "miaomiao",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/d14bd69e2e9f9b14.webp",
+  "slug": "molimao"
+ },
+ {
+  "title": "叶冕魔力猫",
+  "no": "NO004",
+  "shiny": "否",
+  "family": "miaomiao",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/4e76cb1856aae655.webp",
+  "slug": "yemianmolimao"
+ },
+ {
+  "title": "武斗酷猫",
+  "no": "NO004",
+  "shiny": "否",
+  "family": "miaomiao",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/1e70144400a34eee.webp",
+  "slug": "wudoukumao"
+ },
+ {
+  "title": "火花",
+  "no": "NO005",
+  "shiny": "否",
+  "family": "huohua",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/f01e441a14c3c5ac.webp",
+  "slug": "huohua"
+ },
+ {
+  "title": "焰火",
+  "no": "NO006",
+  "shiny": "否",
+  "family": "huohua",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/f1837781a0515298.webp",
+  "slug": "yanhuo"
+ },
+ {
+  "title": "火神",
+  "no": "NO007",
+  "shiny": "否",
+  "family": "huohua",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/5e7f3bd4e22eb088.webp",
+  "slug": "huoshen"
+ },
+ {
+  "title": "烈火战神",
+  "no": "NO007",
+  "shiny": "否",
+  "family": "huohua",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/8d3de00df9093bda.webp",
+  "slug": "liehuozhanshen"
+ },
+ {
+  "title": "水蓝蓝",
+  "no": "NO008",
+  "shiny": "否",
+  "family": "shuilanlan",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/3951fea0c5fdf0f7.webp",
+  "slug": "shuilanlan"
+ },
+ {
+  "title": "波波拉",
+  "no": "NO009",
+  "shiny": "否",
+  "family": "shuilanlan",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/d4e1690bc5a53c2a.webp",
+  "slug": "bobola"
+ },
+ {
+  "title": "水灵",
+  "no": "NO010",
+  "shiny": "否",
+  "family": "shuilanlan",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/d6f9bb5e9135c280.webp",
+  "slug": "shuiling"
+ },
+ {
+  "title": "圣水守护",
+  "no": "NO010",
+  "shiny": "否",
+  "family": "shuilanlan",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/f82b9c38c6b5dc2b.webp",
+  "slug": "shengshuishouhu"
+ },
+ {
+  "title": "鸭吉吉（燃了鸭）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/cddc88fe5cbd226a.webp",
+  "slug": "yajiji"
+ },
+ {
+  "title": "鸭吉吉（蓬松的样子）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/aae9875f7eca56c8.webp",
+  "slug": "yajiji-pengsongdeyangzi"
+ },
+ {
+  "title": "鸭吉吉（紧实的样子）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/5546f4949f72a8bf.webp",
+  "slug": "yajiji-jinshideyangzi"
+ },
+ {
+  "title": "鸭吉吉（急急急鸭）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/02685faff1706944.webp",
+  "slug": "yajiji-jijijiya"
+ },
+ {
+  "title": "鸭吉吉（等一等鸭）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/426c52108a22d30e.webp",
+  "slug": "yajiji-dengyidengya"
+ },
+ {
+  "title": "鸭吉吉（起来鸭）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/5732e985fd2d8c1e.webp",
+  "slug": "yajiji-qilaiya"
+ },
+ {
+  "title": "鸭吉吉国王（蓬松的样子）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/884293f10c533700.webp",
+  "slug": "yajijiguowang-pengsongdeyangzi"
+ },
+ {
+  "title": "鸭吉吉国王（紧实的样子）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/884293f10c533700.webp",
+  "slug": "yajijiguowang-jinshideyangzi"
+ },
+ {
+  "title": "鸭吉吉国王（急急急鸭）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/884293f10c533700.webp",
+  "slug": "yajijiguowang-jijijiya"
+ },
+ {
+  "title": "鸭吉吉国王（等一等鸭）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/884293f10c533700.webp",
+  "slug": "yajijiguowang-dengyidengya"
+ },
+ {
+  "title": "鸭吉吉国王（燃了鸭）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/884293f10c533700.webp",
+  "slug": "yajijiguowang-ranleya"
+ },
+ {
+  "title": "鸭吉吉国王（起来鸭）",
+  "no": "NO011",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/884293f10c533700.webp",
+  "slug": "yajijiguowang-qilaiya"
+ },
+ {
+  "title": "板板壳（蜕皮时的样子）",
+  "no": "NO012",
+  "shiny": "否",
+  "family": "shuipaoke",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/03ee5b912073761a.webp",
+  "slug": "banbanke"
+ },
+ {
+  "title": "板板壳",
+  "no": "NO012",
+  "shiny": "否",
+  "family": "shuipaoke",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/4cf799ce4763fbff.webp",
+  "slug": "banbanke-2"
+ },
+ {
+  "title": "咔咔壳（蜕皮时的样子）",
+  "no": "NO013",
+  "shiny": "否",
+  "family": "shuipaoke",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/2bd1fd99d90f9e88.webp",
+  "slug": "kakake"
+ },
+ {
+  "title": "咔咔壳",
+  "no": "NO013",
+  "shiny": "否",
+  "family": "shuipaoke",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/3f3d2b9cc863bf89.webp",
+  "slug": "kakake-2"
+ },
+ {
+  "title": "水泡壳（蜕皮时的样子）",
+  "no": "NO014",
+  "shiny": "否",
+  "family": "shuipaoke",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/7de3213dc63f35b5.webp",
+  "slug": "shuipaoke"
+ },
+ {
+  "title": "水泡壳",
+  "no": "NO014",
+  "shiny": "否",
+  "family": "shuipaoke",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/86ad8d66764ff0d9.webp",
+  "slug": "shuipaoke-2"
+ },
+ {
+  "title": "锥尾羊",
+  "no": "NO015",
+  "shiny": "否",
+  "family": "zhuiweiyang",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/999bbdba1ceab847.webp",
+  "slug": "zhuiweiyang"
+ },
+ {
+  "title": "铃兰羊",
+  "no": "NO016",
+  "shiny": "否",
+  "family": "zhuiweiyang",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/2d1cf1be071d42a6.webp",
+  "slug": "linglanyang"
+ },
+ {
+  "title": "花影羚羊",
+  "no": "NO017",
+  "shiny": "否",
+  "family": "zhuiweiyang",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/19844f46b11eb972.webp",
+  "slug": "huayinglingyang"
+ },
+ {
+  "title": "雪绒鸟",
+  "no": "NO018",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/55286fad151224a5.webp",
+  "slug": "xuerongniao"
+ },
+ {
+  "title": "雪绒鸟（春天的样子）",
+  "no": "NO018",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/a509de9bf9d4986d.webp",
+  "slug": "xuerongniao-chuntiandeyangzi"
+ },
+ {
+  "title": "雪绒鸟（夏天的样子）",
+  "no": "NO018",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/442afe8c7a8ad144.webp",
+  "slug": "xuerongniao-xiatiandeyangzi"
+ },
+ {
+  "title": "雪绒鸟（秋天的样子）",
+  "no": "NO018",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/4d7206a75be5d443.webp",
+  "slug": "xuerongniao-qiutiandeyangzi"
+ },
+ {
+  "title": "冬羽雀（秋天的样子）",
+  "no": "NO019",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/12306474d32907f7.webp",
+  "slug": "dongyuque"
+ },
+ {
+  "title": "冬羽雀（春天的样子）",
+  "no": "NO019",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/c05ccaf159fe340c.webp",
+  "slug": "dongyuque-chuntiandeyangzi"
+ },
+ {
+  "title": "冬羽雀（夏天的样子）",
+  "no": "NO019",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/2fca3472eefa6ded.webp",
+  "slug": "dongyuque-xiatiandeyangzi"
+ },
+ {
+  "title": "冬羽雀",
+  "no": "NO019",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/9b9065b37d8182f9.webp",
+  "slug": "dongyuque-2"
+ },
+ {
+  "title": "岚鸟（秋天的样子）",
+  "no": "NO020",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/119e6b86f05da40f.webp",
+  "slug": "lanniao"
+ },
+ {
+  "title": "霜翼领主",
+  "no": "NO020",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/6563c412ecc20ec3.webp",
+  "slug": "shuangyilingzhu"
+ },
+ {
+  "title": "岚鸟（春天的样子）",
+  "no": "NO020",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/3c69dc0135cc2f39.webp",
+  "slug": "lanniao-chuntiandeyangzi"
+ },
+ {
+  "title": "岚鸟（夏天的样子）",
+  "no": "NO020",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/a62e97f1fb03a8f5.webp",
+  "slug": "lanniao-xiatiandeyangzi"
+ },
+ {
+  "title": "霜翼领主（春天的样子）",
+  "no": "NO020",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/4a99797579a2515f.webp",
+  "slug": "shuangyilingzhu-chuntiandeyangzi"
+ },
+ {
+  "title": "霜翼领主（夏天的样子）",
+  "no": "NO020",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/4a99797579a2515f.webp",
+  "slug": "shuangyilingzhu-xiatiandeyangzi"
+ },
+ {
+  "title": "霜翼领主（秋天的样子）",
+  "no": "NO020",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/4a99797579a2515f.webp",
+  "slug": "shuangyilingzhu-qiutiandeyangzi"
+ },
+ {
+  "title": "岚鸟",
+  "no": "NO020",
+  "shiny": "否",
+  "family": "xuerongniao-qiutiandeyangzi",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/aa2daaa622a0fdee.webp",
+  "slug": "lanniao-2"
+ },
+ {
+  "title": "小灵菇",
+  "no": "NO021",
+  "shiny": "否",
+  "family": "xiaolinggu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/0fbf6333ab1f9da7.webp",
+  "slug": "xiaolinggu"
+ },
+ {
+  "title": "幻灵菇",
+  "no": "NO022",
+  "shiny": "否",
+  "family": "xiaolinggu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/e035c55dcf4758b5.webp",
+  "slug": "huanlinggu"
+ },
+ {
+  "title": "幻影灵菇",
+  "no": "NO023",
+  "shiny": "否",
+  "family": "xiaolinggu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/eb03701c667e0a8e.webp",
+  "slug": "huanyinglinggu"
+ },
+ {
+  "title": "石肤蜥（球球尾巴的样子）",
+  "no": "NO024",
+  "shiny": "否",
+  "family": "shiguanwangxi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/3b54d72b89d89fee.webp",
+  "slug": "shifuxi"
+ },
+ {
+  "title": "石肤蜥",
+  "no": "NO024",
+  "shiny": "否",
+  "family": "shiguanwangxi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/651d3a5bc6e2b882.webp",
+  "slug": "shifuxi-2"
+ },
+ {
+  "title": "石刺蜥（球球尾巴的样子）",
+  "no": "NO025",
+  "shiny": "否",
+  "family": "shiguanwangxi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/8674d68a7d010b9f.webp",
+  "slug": "shicixi"
+ },
+ {
+  "title": "石刺蜥",
+  "no": "NO025",
+  "shiny": "否",
+  "family": "shiguanwangxi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/5147ce5454596d02.webp",
+  "slug": "shicixi-2"
+ },
+ {
+  "title": "石冠王蜥（球球尾巴的样子）",
+  "no": "NO026",
+  "shiny": "否",
+  "family": "shiguanwangxi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/4049271ce1a47085.webp",
+  "slug": "shiguanwangxi"
+ },
+ {
+  "title": "石冠王蜥",
+  "no": "NO026",
+  "shiny": "否",
+  "family": "shiguanwangxi",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/729c4676de657c75.webp",
+  "slug": "shiguanwangxi-2"
+ },
+ {
+  "title": "布是石",
+  "no": "NO027",
+  "shiny": "否",
+  "family": "bushishi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/ea8853e6a6ca4b7e.webp",
+  "slug": "bushishi"
+ },
+ {
+  "title": "布是岩",
+  "no": "NO028",
+  "shiny": "否",
+  "family": "bushishi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/65dcb45926f4efd3.webp",
+  "slug": "bushiyan"
+ },
+ {
+  "title": "布克棱岩",
+  "no": "NO029",
+  "shiny": "否",
+  "family": "bushishi",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/4f84fb95652d70be.webp",
+  "slug": "bukelengyan"
+ },
+ {
+  "title": "迷嶂布莱克",
+  "no": "NO029",
+  "shiny": "否",
+  "family": "bushishi",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/54ce70b67fafd3bf.webp",
+  "slug": "mizhangbulaike"
+ },
+ {
+  "title": "恶魔叮",
+  "no": "NO030",
+  "shiny": "是",
+  "family": "emoding",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/c7b4ab5e184c0f97.webp",
+  "slug": "emoding"
+ },
+ {
+  "title": "叮叮恶魔",
+  "no": "NO031",
+  "shiny": "是",
+  "family": "emoding",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/87ad59ecd6365a46.webp",
+  "slug": "dingdingemo"
+ },
+ {
+  "title": "恶魔男爵",
+  "no": "NO031",
+  "shiny": "是",
+  "family": "emoding",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/60a9cae3df8bf900.webp",
+  "slug": "emonanjue"
+ },
+ {
+  "title": "毛毛",
+  "no": "NO032",
+  "shiny": "否",
+  "family": "huadie-miaomiaodeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/fb3e23fb93b7a6b8.webp",
+  "slug": "maomao"
+ },
+ {
+  "title": "爬爬",
+  "no": "NO033",
+  "shiny": "否",
+  "family": "huadie-miaomiaodeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/a638beb3b8228fc1.webp",
+  "slug": "papa"
+ },
+ {
+  "title": "化蝶（奇丽花的样子）",
+  "no": "NO034",
+  "shiny": "否",
+  "family": "huadie-miaomiaodeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/91667e807b7c6d2d.webp",
+  "slug": "huadie"
+ },
+ {
+  "title": "化蝶（平常的样子）",
+  "no": "NO034",
+  "shiny": "否",
+  "family": "huadie-miaomiaodeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/f97fd6486fad3dc1.webp",
+  "slug": "huadie-pingchangdeyangzi"
+ },
+ {
+  "title": "化蝶（幽冥眼的样子）",
+  "no": "NO034",
+  "shiny": "否",
+  "family": "huadie-miaomiaodeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/4d8ae030ecb41119.webp",
+  "slug": "huadie-youmingyandeyangzi"
+ },
+ {
+  "title": "化蝶（喵喵的样子）",
+  "no": "NO034",
+  "shiny": "否",
+  "family": "huadie-miaomiaodeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/8a2119284b45ea91.webp",
+  "slug": "huadie-miaomiaodeyangzi"
+ },
+ {
+  "title": "幽影树",
+  "no": "NO035",
+  "shiny": "是",
+  "family": "youyingshu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/72721fbb05abefce.webp",
+  "slug": "youyingshu"
+ },
+ {
+  "title": "幻影荆棘",
+  "no": "NO035",
+  "shiny": "是",
+  "family": "youyingshu",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/857c6a5e32710fa2.webp",
+  "slug": "huanyingjingji"
+ },
+ {
+  "title": "小鼠獭",
+  "no": "NO036",
+  "shiny": "否",
+  "family": "xiaoshuta",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/e01ff95716c36b8a.webp",
+  "slug": "xiaoshuta"
+ },
+ {
+  "title": "燕尾獭",
+  "no": "NO037",
+  "shiny": "否",
+  "family": "xiaoshuta",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/4c90d8072d20c921.webp",
+  "slug": "yanweita"
+ },
+ {
+  "title": "卷胡巨獭",
+  "no": "NO038",
+  "shiny": "否",
+  "family": "xiaoshuta",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/5c78aae1870c628a.webp",
+  "slug": "juanhujuta"
+ },
+ {
+  "title": "矿晶虫",
+  "no": "NO039",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/fc06bf21ac50948b.webp",
+  "slug": "kuangjingchong"
+ },
+ {
+  "title": "晶石蜗（烧蓝黄金的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/0def614def0ef38a.webp",
+  "slug": "jingshiwo"
+ },
+ {
+  "title": "晶石蜗（西瓜碧玺的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/2ee43dc68b84d899.webp",
+  "slug": "jingshiwo-xiguabixideyangzi"
+ },
+ {
+  "title": "晶石蜗（莲花刚玉的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/74ceb54745bf30c4.webp",
+  "slug": "jingshiwo-lianhuagangyudeyangzi"
+ },
+ {
+  "title": "晶石蜗（星彩榴石的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/da601519d6a54966.webp",
+  "slug": "jingshiwo-xingcailiushideyangzi"
+ },
+ {
+  "title": "晶石蜗（火山琉璃的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/08a2e9ac843f07a6.webp",
+  "slug": "jingshiwo-huoshanliulideyangzi"
+ },
+ {
+  "title": "晶石蜗（蓝锥矿的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/2de8f4bd5c41f6b3.webp",
+  "slug": "jingshiwo-lanzhuikuangdeyangzi"
+ },
+ {
+  "title": "钻石蜗（西瓜碧玺的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/54a0414811799745.webp",
+  "slug": "zuanshiwo-xiguabixideyangzi"
+ },
+ {
+  "title": "钻石蜗（莲花刚玉的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/54a0414811799745.webp",
+  "slug": "zuanshiwo-lianhuagangyudeyangzi"
+ },
+ {
+  "title": "钻石蜗（星彩榴石的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/54a0414811799745.webp",
+  "slug": "zuanshiwo-xingcailiushideyangzi"
+ },
+ {
+  "title": "钻石蜗（火山琉璃的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/54a0414811799745.webp",
+  "slug": "zuanshiwo-huoshanliulideyangzi"
+ },
+ {
+  "title": "钻石蜗（蓝锥矿的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/54a0414811799745.webp",
+  "slug": "zuanshiwo-lanzhuikuangdeyangzi"
+ },
+ {
+  "title": "钻石蜗（烧蓝黄金的样子）",
+  "no": "NO040",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/54a0414811799745.webp",
+  "slug": "zuanshiwo-shaolanhuangjindeyangzi"
+ },
+ {
+  "title": "奇丽草",
+  "no": "NO041",
+  "shiny": "是",
+  "family": "qilicao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/ec01c1396866635b.webp",
+  "slug": "qilicao"
+ },
+ {
+  "title": "奇丽叶",
+  "no": "NO042",
+  "shiny": "是",
+  "family": "qilicao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/32a7c55cb7fadff7.webp",
+  "slug": "qiliye"
+ },
+ {
+  "title": "奇丽花",
+  "no": "NO043",
+  "shiny": "是",
+  "family": "qilicao",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/86fbd445881f3c47.webp",
+  "slug": "qilihua"
+ },
+ {
+  "title": "奇丽果",
+  "no": "NO043",
+  "shiny": "是",
+  "family": "qilicao",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/ad9ebab9eaa28b11.webp",
+  "slug": "qiliguo"
+ },
+ {
+  "title": "丢丢（火山附近的样子）",
+  "no": "NO044",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/4fd44964190626d2.webp",
+  "slug": "diudiu"
+ },
+ {
+  "title": "丢丢（草地附近的样子）",
+  "no": "NO044",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/3f07da83ef812aab.webp",
+  "slug": "diudiu-caodifujindeyangzi"
+ },
+ {
+  "title": "丢丢（沙地附近的样子）",
+  "no": "NO044",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/f5db76719609b372.webp",
+  "slug": "diudiu-shadifujindeyangzi"
+ },
+ {
+  "title": "丢丢（雪山附近的样子）",
+  "no": "NO044",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/d3d833bcbb71e835.webp",
+  "slug": "diudiu-xueshanfujindeyangzi"
+ },
+ {
+  "title": "卡卡虫（火山附近的样子）",
+  "no": "NO045",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/f09c7b929639dbd9.webp",
+  "slug": "kakachong"
+ },
+ {
+  "title": "卡卡虫（草地附近的样子）",
+  "no": "NO045",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/487643f93fa87619.webp",
+  "slug": "kakachong-caodifujindeyangzi"
+ },
+ {
+  "title": "卡卡虫（沙地附近的样子）",
+  "no": "NO045",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/0dce07ba54b0bb2e.webp",
+  "slug": "kakachong-shadifujindeyangzi"
+ },
+ {
+  "title": "卡卡虫（雪山附近的样子）",
+  "no": "NO045",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/ce881bfccb5f5950.webp",
+  "slug": "kakachong-xueshanfujindeyangzi"
+ },
+ {
+  "title": "卡瓦重（火山附近的样子）",
+  "no": "NO046",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/22c9aed87661d242.webp",
+  "slug": "kawazhong"
+ },
+ {
+  "title": "卡瓦重（草地附近的样子）",
+  "no": "NO046",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/5eac61c3b3cf372b.webp",
+  "slug": "kawazhong-caodifujindeyangzi"
+ },
+ {
+  "title": "卡瓦重（沙地附近的样子）",
+  "no": "NO046",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/34b54b48cb2cee91.webp",
+  "slug": "kawazhong-shadifujindeyangzi"
+ },
+ {
+  "title": "卡瓦重（雪山附近的样子）",
+  "no": "NO046",
+  "shiny": "否",
+  "family": "kawazhong-xueshanfujindeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/ae10ce6b6a2acda3.webp",
+  "slug": "kawazhong-xueshanfujindeyangzi"
+ },
+ {
+  "title": "护主犬",
+  "no": "NO047",
+  "shiny": "否",
+  "family": "huzhuquan",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/af17a46aa9cb27b9.webp",
+  "slug": "huzhuquan"
+ },
+ {
+  "title": "音速犬",
+  "no": "NO048",
+  "shiny": "否",
+  "family": "huzhuquan",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/4c1336646ba2df08.webp",
+  "slug": "yinsuquan"
+ },
+ {
+  "title": "风暴战犬",
+  "no": "NO048",
+  "shiny": "否",
+  "family": "huzhuquan",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/fa65583da8b4ebc0.webp",
+  "slug": "fengbaozhanquan"
+ },
+ {
+  "title": "绿耳松鼠",
+  "no": "NO049",
+  "shiny": "否",
+  "family": "l-ersongshu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/8f3c978db070d7ba.webp",
+  "slug": "l-ersongshu"
+ },
+ {
+  "title": "抱枕松鼠",
+  "no": "NO050",
+  "shiny": "否",
+  "family": "l-ersongshu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/c1abf88467b5028c.webp",
+  "slug": "baozhensongshu"
+ },
+ {
+  "title": "蹦床松鼠",
+  "no": "NO051",
+  "shiny": "否",
+  "family": "l-ersongshu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/45b50cbd619d452b.webp",
+  "slug": "bengchuangsongshu"
+ },
+ {
+  "title": "嘟嘟煲",
+  "no": "NO052",
+  "shiny": "是",
+  "family": "dudubao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/dbf2ab7f33dfe55b.webp",
+  "slug": "dudubao"
+ },
+ {
+  "title": "地鼠",
+  "no": "NO053",
+  "shiny": "否",
+  "family": "dundishu-chushuishideyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/da9d591bc839b208.webp",
+  "slug": "dishu"
+ },
+ {
+  "title": "嘟嘟锅",
+  "no": "NO053",
+  "shiny": "是",
+  "family": "dudubao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/c7aa984a12e8737a.webp",
+  "slug": "duduguo"
+ },
+ {
+  "title": "小灵面",
+  "no": "NO054",
+  "shiny": "否",
+  "family": "youmingyan-zhengyandeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/95dd079bdaa7e9e0.webp",
+  "slug": "xiaolingmian"
+ },
+ {
+  "title": "遁鼠",
+  "no": "NO054",
+  "shiny": "否",
+  "family": "dundishu-chushuishideyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/39c4ffe04b06a6f0.webp",
+  "slug": "dunshu"
+ },
+ {
+  "title": "暗影灵面（闭眼的样子）",
+  "no": "NO055",
+  "shiny": "否",
+  "family": "youmingyan-zhengyandeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/814303a6abe07c6f.webp",
+  "slug": "anyinglingmian"
+ },
+ {
+  "title": "遁地鼠",
+  "no": "NO055",
+  "shiny": "否",
+  "family": "dundishu-chushuishideyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/7fd0b06148be106d.webp",
+  "slug": "dundishu"
+ },
+ {
+  "title": "暗影灵面（睁眼的样子）",
+  "no": "NO055",
+  "shiny": "否",
+  "family": "youmingyan-zhengyandeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/b4e7e1b4c28ea302.webp",
+  "slug": "anyinglingmian-zhengyandeyangzi"
+ },
+ {
+  "title": "幽冥眼（闭眼的样子）",
+  "no": "NO056",
+  "shiny": "否",
+  "family": "youmingyan-zhengyandeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/191a0d061af6b829.webp",
+  "slug": "youmingyan"
+ },
+ {
+  "title": "幽冥眼（睁眼的样子）",
+  "no": "NO056",
+  "shiny": "否",
+  "family": "youmingyan-zhengyandeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/43c7effd86e5c575.webp",
+  "slug": "youmingyan-zhengyandeyangzi"
+ },
+ {
+  "title": "梦游（穿星星睡衣的样子）",
+  "no": "NO057",
+  "shiny": "否",
+  "family": "mengyouyou-chuanjiushuiyideyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/e10b9ebf6c88ddb3.webp",
+  "slug": "mengyou"
+ },
+ {
+  "title": "梦游（穿旧睡衣的样子）",
+  "no": "NO057",
+  "shiny": "否",
+  "family": "mengyouyou-chuanjiushuiyideyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/1b75bc97c7cbffeb.webp",
+  "slug": "mengyou-chuanjiushuiyideyangzi"
+ },
+ {
+  "title": "梦悠悠（穿星星睡衣的样子）",
+  "no": "NO058",
+  "shiny": "否",
+  "family": "mengyouyou-chuanjiushuiyideyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/de026adef63d494b.webp",
+  "slug": "mengyouyou"
+ },
+ {
+  "title": "梦悠悠（穿旧睡衣的样子）",
+  "no": "NO058",
+  "shiny": "否",
+  "family": "mengyouyou-chuanjiushuiyideyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/7637f5816c5be97c.webp",
+  "slug": "mengyouyou-chuanjiushuiyideyangzi"
+ },
+ {
+  "title": "兽花蕾",
+  "no": "NO059",
+  "shiny": "否",
+  "family": "shouhualei",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/f33919929d4ebe29.webp",
+  "slug": "shouhualei"
+ },
+ {
+  "title": "伏地兽",
+  "no": "NO060",
+  "shiny": "否",
+  "family": "fudishou",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/8e31bd0f529712b0.webp",
+  "slug": "fudishou"
+ },
+ {
+  "title": "贪食鼹",
+  "no": "NO061",
+  "shiny": "否",
+  "family": "fudishou",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/bcd0d490a65b4c49.webp",
+  "slug": "tanshiyan"
+ },
+ {
+  "title": "巨噬针鼹",
+  "no": "NO062",
+  "shiny": "否",
+  "family": "fudishou",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/52c5ee0d0c37e92f.webp",
+  "slug": "jushizhenyan"
+ },
+ {
+  "title": "蹦蹦种子（象牙球形态）",
+  "no": "NO063",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/dc6bdb27870ff2af.webp",
+  "slug": "bengbengzhongzi"
+ },
+ {
+  "title": "蹦蹦种子（海神球形态）",
+  "no": "NO063",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/7106cdac98e8b228.webp",
+  "slug": "bengbengzhongzi-haishenqiuxingtai"
+ },
+ {
+  "title": "蹦蹦种子（彩玉球形态）",
+  "no": "NO063",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/9ab388a886b01ae8.webp",
+  "slug": "bengbengzhongzi-caiyuqiuxingtai"
+ },
+ {
+  "title": "蹦蹦种子（短毛球形态）",
+  "no": "NO063",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/f6445872c7a2d683.webp",
+  "slug": "bengbengzhongzi-duanmaoqiuxingtai"
+ },
+ {
+  "title": "蹦蹦草（象牙球形态）",
+  "no": "NO064",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/5f718f2ed6c987ce.webp",
+  "slug": "bengbengcao"
+ },
+ {
+  "title": "蹦蹦草（海神球形态）",
+  "no": "NO064",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/9cb1589e051c1812.webp",
+  "slug": "bengbengcao-haishenqiuxingtai"
+ },
+ {
+  "title": "蹦蹦草（彩玉球形态）",
+  "no": "NO064",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/d092bdae292cf3cd.webp",
+  "slug": "bengbengcao-caiyuqiuxingtai"
+ },
+ {
+  "title": "蹦蹦草（短毛球形态）",
+  "no": "NO064",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/ccd264177f02bc39.webp",
+  "slug": "bengbengcao-duanmaoqiuxingtai"
+ },
+ {
+  "title": "蹦蹦花（象牙球形态）",
+  "no": "NO065",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/4b5bc8b03c13e073.webp",
+  "slug": "bengbenghua"
+ },
+ {
+  "title": "蹦蹦花（海神球形态）",
+  "no": "NO065",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/185e2876ee5b8e10.webp",
+  "slug": "bengbenghua-haishenqiuxingtai"
+ },
+ {
+  "title": "蹦蹦花（彩玉球形态）",
+  "no": "NO065",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/4f9bf1b59d7b66c1.webp",
+  "slug": "bengbenghua-caiyuqiuxingtai"
+ },
+ {
+  "title": "蹦蹦花（短毛球形态）",
+  "no": "NO065",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/0871d39b3d9f162d.webp",
+  "slug": "bengbenghua-duanmaoqiuxingtai"
+ },
+ {
+  "title": "蹦蹦果（海神球形态）",
+  "no": "NO065",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/7be500ce931d2814.webp",
+  "slug": "bengbengguo-haishenqiuxingtai"
+ },
+ {
+  "title": "蹦蹦果（彩玉球形态）",
+  "no": "NO065",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/7be500ce931d2814.webp",
+  "slug": "bengbengguo-caiyuqiuxingtai"
+ },
+ {
+  "title": "蹦蹦果（短毛球形态）",
+  "no": "NO065",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/7be500ce931d2814.webp",
+  "slug": "bengbengguo-duanmaoqiuxingtai"
+ },
+ {
+  "title": "蹦蹦果（象牙球形态）",
+  "no": "NO065",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/7be500ce931d2814.webp",
+  "slug": "bengbengguo-xiangyaqiuxingtai"
+ },
+ {
+  "title": "电咩咩",
+  "no": "NO066",
+  "shiny": "否",
+  "family": "dianmiemie",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/58f80c8097da74df.webp",
+  "slug": "dianmiemie"
+ },
+ {
+  "title": "粉咩咩",
+  "no": "NO067",
+  "shiny": "否",
+  "family": "dianmiemie",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/8faf979927375502.webp",
+  "slug": "fenmiemie"
+ },
+ {
+  "title": "电球咩咩",
+  "no": "NO068",
+  "shiny": "否",
+  "family": "dianmiemie",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/71e4001372e1ab5e.webp",
+  "slug": "dianqiumiemie"
+ },
+ {
+  "title": "蒲公英",
+  "no": "NO069",
+  "shiny": "否",
+  "family": "pugongying",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/09d1c5a3afcb5b4e.webp",
+  "slug": "pugongying"
+ },
+ {
+  "title": "蒲公英娃娃",
+  "no": "NO070",
+  "shiny": "否",
+  "family": "pugongying",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/20251a3d10e642ac.webp",
+  "slug": "pugongyingwawa"
+ },
+ {
+  "title": "伊贝儿",
+  "no": "NO071",
+  "shiny": "是",
+  "family": "yibeier",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/380983ceec8d7ac4.webp",
+  "slug": "yibeier"
+ },
+ {
+  "title": "伊贝粉粉",
+  "no": "NO072",
+  "shiny": "是",
+  "family": "yibeier",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/784cc397caf0e0eb.webp",
+  "slug": "yibeifenfen"
+ },
+ {
+  "title": "白发懒人",
+  "no": "NO073",
+  "shiny": "否",
+  "family": "baifalanren",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/d35b7e468b827c32.webp",
+  "slug": "baifalanren"
+ },
+ {
+  "title": "动力猿",
+  "no": "NO074",
+  "shiny": "否",
+  "family": "baifalanren",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/4e63e64ff261db78.webp",
+  "slug": "dongliyuan"
+ },
+ {
+  "title": "瞌睡王",
+  "no": "NO075",
+  "shiny": "否",
+  "family": "baifalanren",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/7b9077d6d715cb19.webp",
+  "slug": "keshuiwang"
+ },
+ {
+  "title": "海盔虫（磨损的样子）",
+  "no": "NO076",
+  "shiny": "是",
+  "family": "qianjihaizhen-mosundeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/52d99a0c35ae6357.webp",
+  "slug": "haikuichong"
+ },
+ {
+  "title": "海盔虫",
+  "no": "NO076",
+  "shiny": "是",
+  "family": "qianjihaizhen-mosundeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/5844eb2593c13edb.webp",
+  "slug": "haikuichong-2"
+ },
+ {
+  "title": "刺盔虫（磨损的样子）",
+  "no": "NO077",
+  "shiny": "是",
+  "family": "qianjihaizhen-mosundeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/c5ebc505196a436e.webp",
+  "slug": "cikuichong"
+ },
+ {
+  "title": "刺盔虫",
+  "no": "NO077",
+  "shiny": "是",
+  "family": "qianjihaizhen-mosundeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/d440a0b9010d3079.webp",
+  "slug": "cikuichong-2"
+ },
+ {
+  "title": "千棘盔（磨损的样子）",
+  "no": "NO078",
+  "shiny": "是",
+  "family": "qianjihaizhen-mosundeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/42feb5694153f7ed.webp",
+  "slug": "qianjikui"
+ },
+ {
+  "title": "千棘海针",
+  "no": "NO078",
+  "shiny": "是",
+  "family": "qianjihaizhen-mosundeyangzi",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/e7721a13af7f36e7.webp",
+  "slug": "qianjihaizhen"
+ },
+ {
+  "title": "千棘海针（磨损的样子）",
+  "no": "NO078",
+  "shiny": "是",
+  "family": "qianjihaizhen-mosundeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/46e7fcc5a9e32099.webp",
+  "slug": "qianjihaizhen-mosundeyangzi"
+ },
+ {
+  "title": "千棘盔",
+  "no": "NO078",
+  "shiny": "是",
+  "family": "qianjihaizhen-mosundeyangzi",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/ad54531662dff857.webp",
+  "slug": "qianjikui-2"
+ },
+ {
+  "title": "菊花梨",
+  "no": "NO079",
+  "shiny": "是",
+  "family": "juhuali",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9772a50f4138675d.webp",
+  "slug": "juhuali"
+ },
+ {
+  "title": "小星光（月光能量的样子）",
+  "no": "NO080",
+  "shiny": "否",
+  "family": "xingguangshi-xingguangnengliangdeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/adabb3cafb43db71.webp",
+  "slug": "xiaoxingguang"
+ },
+ {
+  "title": "小星光（星光能量的样子）",
+  "no": "NO080",
+  "shiny": "否",
+  "family": "xingguangshi-xingguangnengliangdeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/8e73c8fafd165410.webp",
+  "slug": "xiaoxingguang-xingguangnengliangdeyangzi"
+ },
+ {
+  "title": "星光狮（月光能量的样子）",
+  "no": "NO081",
+  "shiny": "否",
+  "family": "xingguangshi-xingguangnengliangdeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/719b423255b9675d.webp",
+  "slug": "xingguangshi"
+ },
+ {
+  "title": "星光狮（星光能量的样子）",
+  "no": "NO081",
+  "shiny": "否",
+  "family": "xingguangshi-xingguangnengliangdeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/dfcb2a874f7a8f47.webp",
+  "slug": "xingguangshi-xingguangnengliangdeyangzi"
+ },
+ {
+  "title": "一窝蜂",
+  "no": "NO082",
+  "shiny": "否",
+  "family": "yiwofeng",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/c533f986bbdd9d7d.webp",
+  "slug": "yiwofeng"
+ },
+ {
+  "title": "黄蜂后",
+  "no": "NO083",
+  "shiny": "否",
+  "family": "yiwofeng",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/34a8bf7c072308d1.webp",
+  "slug": "huangfenghou"
+ },
+ {
+  "title": "花魁蜂后",
+  "no": "NO084",
+  "shiny": "否",
+  "family": "yiwofeng",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/18a878445ce1c730.webp",
+  "slug": "huakuifenghou"
+ },
+ {
+  "title": "女王蜂",
+  "no": "NO084",
+  "shiny": "否",
+  "family": "yiwofeng",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/fc290e7404f77e8d.webp",
+  "slug": "n-wangfeng"
+ },
+ {
+  "title": "小夜",
+  "no": "NO085",
+  "shiny": "是",
+  "family": "xiaoye",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/2ead985bf614895b.webp",
+  "slug": "xiaoye"
+ },
+ {
+  "title": "紫夜",
+  "no": "NO086",
+  "shiny": "是",
+  "family": "xiaoye",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/b6d3b9f80eb79fb8.webp",
+  "slug": "ziye"
+ },
+ {
+  "title": "朔夜伊芙",
+  "no": "NO087",
+  "shiny": "是",
+  "family": "xiaoye",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/315e1dbc5c015790.webp",
+  "slug": "shuoyeyifu"
+ },
+ {
+  "title": "乖乖鹄",
+  "no": "NO088",
+  "shiny": "否",
+  "family": "guaiguaihu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/6a9738865a168ce2.webp",
+  "slug": "guaiguaihu"
+ },
+ {
+  "title": "蓝珠天鹅",
+  "no": "NO089",
+  "shiny": "否",
+  "family": "guaiguaihu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/875b308a22dd8336.webp",
+  "slug": "lanzhutiane"
+ },
+ {
+  "title": "翠顶夫人",
+  "no": "NO090",
+  "shiny": "否",
+  "family": "guaiguaihu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/e881687e3fb9fb79.webp",
+  "slug": "cuidingfuren"
+ },
+ {
+  "title": "黑羽夫人",
+  "no": "NO091",
+  "shiny": "否",
+  "family": "guaiguaihu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/85ebf86f1bc17802.webp",
+  "slug": "heiyufuren"
+ },
+ {
+  "title": "锤头鹳",
+  "no": "NO092",
+  "shiny": "否",
+  "family": "chuitouguan",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/52c0fd486305ebb6.webp",
+  "slug": "chuitouguan"
+ },
+ {
+  "title": "绿草精灵",
+  "no": "NO093",
+  "shiny": "否",
+  "family": "l-caojingling",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/b966b8351de2ab37.webp",
+  "slug": "l-caojingling"
+ },
+ {
+  "title": "魔草巫灵",
+  "no": "NO094",
+  "shiny": "否",
+  "family": "l-caojingling",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/6e41a32627a55ba9.webp",
+  "slug": "mocaowuling"
+ },
+ {
+  "title": "记忆石",
+  "no": "NO095",
+  "shiny": "否",
+  "family": "jiyishi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/ee7a7d4e56ce2fd9.webp",
+  "slug": "jiyishi"
+ },
+ {
+  "title": "咔咔羽毛",
+  "no": "NO096",
+  "shiny": "否",
+  "family": "kakayumao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/374e9d9649b3be7d.webp",
+  "slug": "kakayumao"
+ },
+ {
+  "title": "咔咔雀",
+  "no": "NO097",
+  "shiny": "否",
+  "family": "kakayumao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/f9788b92a0badeb5.webp",
+  "slug": "kakaque"
+ },
+ {
+  "title": "咔咔鸟",
+  "no": "NO098",
+  "shiny": "否",
+  "family": "kakayumao",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/d1fb277d53e67623.webp",
+  "slug": "kakaniao"
+ },
+ {
+  "title": "小草虫",
+  "no": "NO099",
+  "shiny": "是",
+  "family": "xiaocaochong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/1ae51d7468c6cc60.webp",
+  "slug": "xiaocaochong"
+ },
+ {
+  "title": "草衣虫",
+  "no": "NO100",
+  "shiny": "是",
+  "family": "xiaocaochong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/f458b2e5602bafae.webp",
+  "slug": "caoyichong"
+ },
+ {
+  "title": "花衣蝶",
+  "no": "NO101",
+  "shiny": "是",
+  "family": "xiaocaochong",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/2a98c4295af031f9.webp",
+  "slug": "huayidie"
+ },
+ {
+  "title": "绿翼鸟",
+  "no": "NO102",
+  "shiny": "否",
+  "family": "l-yiniao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/0b0843fc95d9aac6.webp",
+  "slug": "l-yiniao"
+ },
+ {
+  "title": "魔翼鸟",
+  "no": "NO103",
+  "shiny": "否",
+  "family": "l-yiniao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/a43f45d443000d19.webp",
+  "slug": "moyiniao"
+ },
+ {
+  "title": "魔眷鸟",
+  "no": "NO104",
+  "shiny": "否",
+  "family": "l-yiniao",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/37685c92e7124256.webp",
+  "slug": "mojuanniao"
+ },
+ {
+  "title": "阿米亚特",
+  "no": "NO105",
+  "shiny": "否",
+  "family": "amiyate",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/f65cfe268d61648f.webp",
+  "slug": "amiyate"
+ },
+ {
+  "title": "阿米樱",
+  "no": "NO106",
+  "shiny": "否",
+  "family": "amiyate",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/c6a916e820626bab.webp",
+  "slug": "amiying"
+ },
+ {
+  "title": "罗隐",
+  "no": "NO107",
+  "shiny": "否",
+  "family": "amiyate",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/41a541174b7a0d6b.webp",
+  "slug": "luoyin"
+ },
+ {
+  "title": "深渊罗隐",
+  "no": "NO107",
+  "shiny": "否",
+  "family": "amiyate",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/15d09309c68c75ed.webp",
+  "slug": "shenyuanluoyin"
+ },
+ {
+  "title": "风铃鲨",
+  "no": "NO108",
+  "shiny": "否",
+  "family": "fenglingsha",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/baca5962044cc1a5.webp",
+  "slug": "fenglingsha"
+ },
+ {
+  "title": "蓝蝶鲨",
+  "no": "NO109",
+  "shiny": "否",
+  "family": "fenglingsha",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/b19622d8613f0b06.webp",
+  "slug": "landiesha"
+ },
+ {
+  "title": "彩蝶鲨",
+  "no": "NO110",
+  "shiny": "否",
+  "family": "fenglingsha",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/f6537ae87e36b1e9.webp",
+  "slug": "caidiesha"
+ },
+ {
+  "title": "神谕鲨",
+  "no": "NO110",
+  "shiny": "否",
+  "family": "fenglingsha",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/c755d2db9fe4b1cf.webp",
+  "slug": "shenyusha"
+ },
+ {
+  "title": "石石",
+  "no": "NO111",
+  "shiny": "否",
+  "family": "shishi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/ab3559846d0e2d49.webp",
+  "slug": "shishi"
+ },
+ {
+  "title": "巨灵石",
+  "no": "NO112",
+  "shiny": "否",
+  "family": "shishi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/0dcdef3f78394dd0.webp",
+  "slug": "julingshi"
+ },
+ {
+  "title": "仪使者",
+  "no": "NO113",
+  "shiny": "否",
+  "family": "yishizhe",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/c9116e06a16aef1c.webp",
+  "slug": "yishizhe"
+ },
+ {
+  "title": "仪式之星",
+  "no": "NO114",
+  "shiny": "否",
+  "family": "yishizhe",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/12365cfd3b505c25.webp",
+  "slug": "yishizhixing"
+ },
+ {
+  "title": "仪式巨像",
+  "no": "NO115",
+  "shiny": "否",
+  "family": "yishizhe",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/0f178654651b6580.webp",
+  "slug": "yishijuxiang"
+ },
+ {
+  "title": "祭礼巨像",
+  "no": "NO115",
+  "shiny": "否",
+  "family": "yishizhe",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/b5c7462f9641f1ff.webp",
+  "slug": "jilijuxiang"
+ },
+ {
+  "title": "小独角兽",
+  "no": "NO116",
+  "shiny": "是",
+  "family": "xiaodujiaoshou",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/2f4500bd2481febd.webp",
+  "slug": "xiaodujiaoshou"
+ },
+ {
+  "title": "白金独角兽",
+  "no": "NO117",
+  "shiny": "是",
+  "family": "xiaodujiaoshou",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/f36163882a4bceb2.webp",
+  "slug": "baijindujiaoshou"
+ },
+ {
+  "title": "彩虹独角兽",
+  "no": "NO117",
+  "shiny": "是",
+  "family": "xiaodujiaoshou",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/975d1ef391c118cd.webp",
+  "slug": "caihongdujiaoshou"
+ },
+ {
+  "title": "旋叶虫（枯叶的样子）",
+  "no": "NO118",
+  "shiny": "否",
+  "family": "mufengyinzhe-kuyedeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/fa9b4576effa1556.webp",
+  "slug": "xuanyechong"
+ },
+ {
+  "title": "旋叶虫（金黄的样子）",
+  "no": "NO118",
+  "shiny": "否",
+  "family": "mufengyinzhe-kuyedeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/8580fac8fe19710b.webp",
+  "slug": "xuanyechong-jinhuangdeyangzi"
+ },
+ {
+  "title": "蓬叶虫（枯叶的样子）",
+  "no": "NO119",
+  "shiny": "否",
+  "family": "mufengyinzhe-kuyedeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/abc248f828177da7.webp",
+  "slug": "pengyechong"
+ },
+ {
+  "title": "蓬叶虫（金黄的样子）",
+  "no": "NO119",
+  "shiny": "否",
+  "family": "mufengyinzhe-kuyedeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/3851cd78c3d1674e.webp",
+  "slug": "pengyechong-jinhuangdeyangzi"
+ },
+ {
+  "title": "风滚暮虫（枯叶的样子）",
+  "no": "NO120",
+  "shiny": "否",
+  "family": "mufengyinzhe-kuyedeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/f230668bc0018e9f.webp",
+  "slug": "fenggunmuchong"
+ },
+ {
+  "title": "风滚暮虫（金黄的样子）",
+  "no": "NO120",
+  "shiny": "否",
+  "family": "mufengyinzhe-kuyedeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/d34218da5375883e.webp",
+  "slug": "fenggunmuchong-jinhuangdeyangzi"
+ },
+ {
+  "title": "暮风隐者（金黄的样子）",
+  "no": "NO120",
+  "shiny": "否",
+  "family": "mufengyinzhe-kuyedeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/b00a1019976b82c9.webp",
+  "slug": "mufengyinzhe-jinhuangdeyangzi"
+ },
+ {
+  "title": "暮风隐者（枯叶的样子）",
+  "no": "NO120",
+  "shiny": "否",
+  "family": "mufengyinzhe-kuyedeyangzi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/b00a1019976b82c9.webp",
+  "slug": "mufengyinzhe-kuyedeyangzi"
+ },
+ {
+  "title": "小黑猫",
+  "no": "NO121",
+  "shiny": "否",
+  "family": "xiaoheimao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/ae57c9a5ca709d2e.webp",
+  "slug": "xiaoheimao"
+ },
+ {
+  "title": "黑猫巫师",
+  "no": "NO122",
+  "shiny": "否",
+  "family": "xiaoheimao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/713fd43a4e8e8656.webp",
+  "slug": "heimaowushi"
+ },
+ {
+  "title": "黑猫密探",
+  "no": "NO122",
+  "shiny": "否",
+  "family": "xiaoheimao",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/8d1ade36a394af28.webp",
+  "slug": "heimaomitan"
+ },
+ {
+  "title": "忽幽狸",
+  "no": "NO123",
+  "shiny": "否",
+  "family": "huyouli",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/4e28ebd5abbb6378.webp",
+  "slug": "huyouli"
+ },
+ {
+  "title": "影狸",
+  "no": "NO124",
+  "shiny": "否",
+  "family": "huyouli",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/cdc88ba4abde4a22.webp",
+  "slug": "yingli"
+ },
+ {
+  "title": "多多",
+  "no": "NO125",
+  "shiny": "否",
+  "family": "duoduo",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/51d2c4badd383fd5.webp",
+  "slug": "duoduo"
+ },
+ {
+  "title": "多啦多",
+  "no": "NO126",
+  "shiny": "否",
+  "family": "duoduo",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/d86580cc49a51e28.webp",
+  "slug": "duoladuo"
+ },
+ {
+  "title": "古啦多",
+  "no": "NO127",
+  "shiny": "否",
+  "family": "duoduo",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/3c5bda342218964e.webp",
+  "slug": "guladuo"
+ },
+ {
+  "title": "哭哭菇",
+  "no": "NO128",
+  "shiny": "否",
+  "family": "kukugu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/aa9a8faf5a923191.webp",
+  "slug": "kukugu"
+ },
+ {
+  "title": "怖须菇",
+  "no": "NO129",
+  "shiny": "否",
+  "family": "kukugu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/9f63041c6d64bef1.webp",
+  "slug": "buxugu"
+ },
+ {
+  "title": "怖哭菇",
+  "no": "NO130",
+  "shiny": "否",
+  "family": "kukugu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/c841cb45c14fd086.webp",
+  "slug": "bukugu"
+ },
+ {
+  "title": "恶魔狼",
+  "no": "NO131",
+  "shiny": "是",
+  "family": "emolang",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/emolang-official.png",
+  "slug": "emolang"
+ },
+ {
+  "title": "恶魔狼王",
+  "no": "NO131",
+  "shiny": "是",
+  "family": "emolang",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/8e0e305c31c050f6.webp",
+  "slug": "emolangwang"
+ },
+ {
+  "title": "小电企鹅",
+  "no": "NO132",
+  "shiny": "否",
+  "family": "xiaodianqie",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/d844c5d84a134069.webp",
+  "slug": "xiaodianqie"
+ },
+ {
+  "title": "电企鹅",
+  "no": "NO133",
+  "shiny": "否",
+  "family": "xiaodianqie",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/381bc53847fbdfef.webp",
+  "slug": "dianqie"
+ },
+ {
+  "title": "雪豆丁",
+  "no": "NO134",
+  "shiny": "否",
+  "family": "xuedouding",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/b3917a0631eda866.webp",
+  "slug": "xuedouding"
+ },
+ {
+  "title": "雪蛮人",
+  "no": "NO135",
+  "shiny": "否",
+  "family": "xuedouding",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/559f536b0f154f26.webp",
+  "slug": "xuemanren"
+ },
+ {
+  "title": "雪巨人",
+  "no": "NO136",
+  "shiny": "否",
+  "family": "xuedouding",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/81dd6a6d85d081a9.webp",
+  "slug": "xuejuren"
+ },
+ {
+  "title": "呼呼猪",
+  "no": "NO137",
+  "shiny": "是",
+  "family": "huhuzhu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/c41525c4da64c4b3.webp",
+  "slug": "huhuzhu"
+ },
+ {
+  "title": "獠牙猪",
+  "no": "NO138",
+  "shiny": "是",
+  "family": "huhuzhu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/97cdf0c7d27d516a.webp",
+  "slug": "liaoyazhu"
+ },
+ {
+  "title": "雪娃娃",
+  "no": "NO139",
+  "shiny": "否",
+  "family": "xuewawa",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/0fa0d742e82290e6.webp",
+  "slug": "xuewawa"
+ },
+ {
+  "title": "冰封怨灵",
+  "no": "NO140",
+  "shiny": "否",
+  "family": "xuewawa",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/36508d718729eb7e.webp",
+  "slug": "bingfengyuanling"
+ },
+ {
+  "title": "雪灵",
+  "no": "NO141",
+  "shiny": "否",
+  "family": "xuewawa",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/fa7948b7efaf5e55.webp",
+  "slug": "xueling"
+ },
+ {
+  "title": "大耳帽兜",
+  "no": "NO142",
+  "shiny": "是",
+  "family": "daermaodou",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/a06cc9e663b86374.webp",
+  "slug": "daermaodou"
+ },
+ {
+  "title": "帽兜娃娃",
+  "no": "NO143",
+  "shiny": "是",
+  "family": "daermaodou",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/45be489a275523ae.webp",
+  "slug": "maodouwawa"
+ },
+ {
+  "title": "雪影娃娃",
+  "no": "NO144",
+  "shiny": "是",
+  "family": "daermaodou",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/0d03e5e474230fcd.webp",
+  "slug": "xueyingwawa"
+ },
+ {
+  "title": "雪影冰灵",
+  "no": "NO144",
+  "shiny": "是",
+  "family": "daermaodou",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/e5d8a4c4b65550ba.webp",
+  "slug": "xueyingbingling"
+ },
+ {
+  "title": "权杖-Ⅱ",
+  "no": "NO145",
+  "shiny": "否",
+  "family": "quanzhang-226",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/8d61f52902a8b74a.webp",
+  "slug": "quanzhang"
+ },
+ {
+  "title": "权杖-V",
+  "no": "NO146",
+  "shiny": "否",
+  "family": "quanzhang-226",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/1e5671db9241b398.webp",
+  "slug": "quanzhang-v"
+ },
+ {
+  "title": "灵狐",
+  "no": "NO147",
+  "shiny": "是",
+  "family": "linghu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/3f23f9a72125776e.webp",
+  "slug": "linghu"
+ },
+ {
+  "title": "九尾狐",
+  "no": "NO148",
+  "shiny": "是",
+  "family": "linghu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/f9cd7fcaac4a4ffd.webp",
+  "slug": "jiuweihu"
+ },
+ {
+  "title": "尖嘴狐仙",
+  "no": "NO149",
+  "shiny": "是",
+  "family": "linghu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/8803f1470bca81a8.webp",
+  "slug": "jianzuihuxian"
+ },
+ {
+  "title": "里奥",
+  "no": "NO150",
+  "shiny": "否",
+  "family": "liao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/8aff77104898086f.webp",
+  "slug": "liao"
+ },
+ {
+  "title": "灵羽勇士",
+  "no": "NO151",
+  "shiny": "否",
+  "family": "liao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/eebc755b2a4a090c.webp",
+  "slug": "lingyuyongshi"
+ },
+ {
+  "title": "圣羽翼王",
+  "no": "NO152",
+  "shiny": "否",
+  "family": "liao",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/4517a585e822344c.webp",
+  "slug": "shengyuyiwang"
+ },
+ {
+  "title": "松仔",
+  "no": "NO153",
+  "shiny": "否",
+  "family": "songzai",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/aedb12186a7e61fd.webp",
+  "slug": "songzai"
+ },
+ {
+  "title": "松叶羊",
+  "no": "NO154",
+  "shiny": "否",
+  "family": "songzai",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/f1ea9605e4571b9d.webp",
+  "slug": "songyeyang"
+ },
+ {
+  "title": "针叶巡林",
+  "no": "NO155",
+  "shiny": "否",
+  "family": "songzai",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/805feb8d397d06fe.webp",
+  "slug": "zhenyexunlin"
+ },
+ {
+  "title": "小勇狮",
+  "no": "NO156",
+  "shiny": "否",
+  "family": "xiaoyongshi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/d52f0016ebf28bea.webp",
+  "slug": "xiaoyongshi"
+ },
+ {
+  "title": "炽焰狮",
+  "no": "NO157",
+  "shiny": "否",
+  "family": "xiaoyongshi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/bb4c96947f8d3b90.webp",
+  "slug": "chiyanshi"
+ },
+ {
+  "title": "炽心勇狮",
+  "no": "NO158",
+  "shiny": "否",
+  "family": "xiaoyongshi",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/bcfb2fe9a3874f90.webp",
+  "slug": "chixinyongshi"
+ },
+ {
+  "title": "水滴蛇",
+  "no": "NO159",
+  "shiny": "否",
+  "family": "shuidishe",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/f19e785deb68c946.webp",
+  "slug": "shuidishe"
+ },
+ {
+  "title": "水蛇锁",
+  "no": "NO160",
+  "shiny": "否",
+  "family": "shuidishe",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/e2a48b8eadea17dd.webp",
+  "slug": "shuishesuo"
+ },
+ {
+  "title": "游蛇魔使",
+  "no": "NO161",
+  "shiny": "否",
+  "family": "shuidishe",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/5c069435c7857a81.webp",
+  "slug": "youshemoshi"
+ },
+ {
+  "title": "公平鸽",
+  "no": "NO162",
+  "shiny": "是",
+  "family": "gongpingge",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/36e00248aad11b95.webp",
+  "slug": "gongpingge"
+ },
+ {
+  "title": "小怂猫",
+  "no": "NO163",
+  "shiny": "否",
+  "family": "xiaosongmao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/3b5b8ffc6f1daa83.webp",
+  "slug": "xiaosongmao"
+ },
+ {
+  "title": "怒目怂猫",
+  "no": "NO164",
+  "shiny": "否",
+  "family": "xiaosongmao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/6c7ea0db57d0b2a7.webp",
+  "slug": "numusongmao"
+ },
+ {
+  "title": "小狮鹫（高山地的样子）",
+  "no": "NO165",
+  "shiny": "否",
+  "family": "huangjiashijiu-yajiandideyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/64727cae07b5c7cc.webp",
+  "slug": "xiaoshijiu"
+ },
+ {
+  "title": "小狮鹫（崖间地的样子）",
+  "no": "NO165",
+  "shiny": "否",
+  "family": "huangjiashijiu-yajiandideyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/9d7f82ed7781cb90.webp",
+  "slug": "xiaoshijiu-yajiandideyangzi"
+ },
+ {
+  "title": "神圣狮鹫（高山地的样子）",
+  "no": "NO166",
+  "shiny": "否",
+  "family": "huangjiashijiu-yajiandideyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/4b71c40aac011d8e.webp",
+  "slug": "shenshengshijiu"
+ },
+ {
+  "title": "神圣狮鹫（崖间地的样子）",
+  "no": "NO166",
+  "shiny": "否",
+  "family": "huangjiashijiu-yajiandideyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/d7bc01398b6697af.webp",
+  "slug": "shenshengshijiu-yajiandideyangzi"
+ },
+ {
+  "title": "皇家狮鹫（高山地的样子）",
+  "no": "NO167",
+  "shiny": "否",
+  "family": "huangjiashijiu-yajiandideyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/65da808fddff6d35.webp",
+  "slug": "huangjiashijiu"
+ },
+ {
+  "title": "皇家狮鹫（崖间地的样子）",
+  "no": "NO167",
+  "shiny": "否",
+  "family": "huangjiashijiu-yajiandideyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/2276c999cb21e6c7.webp",
+  "slug": "huangjiashijiu-yajiandideyangzi"
+ },
+ {
+  "title": "圆眼蜘蛛",
+  "no": "NO168",
+  "shiny": "否",
+  "family": "yuanyanzhizhu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/5a05626f348d67dd.webp",
+  "slug": "yuanyanzhizhu"
+ },
+ {
+  "title": "尖角蜘蛛",
+  "no": "NO169",
+  "shiny": "否",
+  "family": "yuanyanzhizhu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/ebac8771640516bf.webp",
+  "slug": "jianjiaozhizhu"
+ },
+ {
+  "title": "芋香巨角蛛",
+  "no": "NO170",
+  "shiny": "否",
+  "family": "yuanyanzhizhu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/8ada58e9e5c8a1b7.webp",
+  "slug": "yuxiangjujiaozhu"
+ },
+ {
+  "title": "波波螺（被污染的样子）",
+  "no": "NO171",
+  "shiny": "否",
+  "family": "shiboluo",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/654175bea8cdea53.webp",
+  "slug": "boboluo"
+ },
+ {
+  "title": "波波螺",
+  "no": "NO171",
+  "shiny": "否",
+  "family": "shiboluo",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/8c1f5f81168e800e.webp",
+  "slug": "boboluo-2"
+ },
+ {
+  "title": "消波螺（被污染的样子）",
+  "no": "NO172",
+  "shiny": "否",
+  "family": "shiboluo",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/48def74e7905d32d.webp",
+  "slug": "xiaoboluo"
+ },
+ {
+  "title": "消波螺",
+  "no": "NO172",
+  "shiny": "否",
+  "family": "shiboluo",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/2098a3ca9cad4339.webp",
+  "slug": "xiaoboluo-2"
+ },
+ {
+  "title": "嗜波螺（被污染的样子）",
+  "no": "NO173",
+  "shiny": "否",
+  "family": "shiboluo",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/426f684a40453ea3.webp",
+  "slug": "shiboluo"
+ },
+ {
+  "title": "嗜波螺",
+  "no": "NO173",
+  "shiny": "否",
+  "family": "shiboluo",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/d05e872d56d34e2e.webp",
+  "slug": "shiboluo-2"
+ },
+ {
+  "title": "菇菇丁",
+  "no": "NO174",
+  "shiny": "否",
+  "family": "guguding",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/4e6d5760379263c9.webp",
+  "slug": "guguding"
+ },
+ {
+  "title": "多菇丁",
+  "no": "NO175",
+  "shiny": "否",
+  "family": "guguding",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/063a8f751a7bc2d9.webp",
+  "slug": "duoguding"
+ },
+ {
+  "title": "九幽菇",
+  "no": "NO176",
+  "shiny": "否",
+  "family": "guguding",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/cd4fa5dd34b67367.webp",
+  "slug": "jiuyougu"
+ },
+ {
+  "title": "斑斑",
+  "no": "NO177",
+  "shiny": "是",
+  "family": "banban",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/367d724fb402bc6b.webp",
+  "slug": "banban"
+ },
+ {
+  "title": "斑枭",
+  "no": "NO178",
+  "shiny": "是",
+  "family": "banban",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/690e022cb14665c9.webp",
+  "slug": "banxiao"
+ },
+ {
+  "title": "草头鸭",
+  "no": "NO179",
+  "shiny": "否",
+  "family": "caotouya",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/90998589fed80408.webp",
+  "slug": "caotouya"
+ },
+ {
+  "title": "卷毛鸭",
+  "no": "NO180",
+  "shiny": "否",
+  "family": "caotouya",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/ba0c8ccba4bb1844.webp",
+  "slug": "juanmaoya"
+ },
+ {
+  "title": "海豹战士",
+  "no": "NO181",
+  "shiny": "否",
+  "family": "haibaozhanshi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/bb435aae75bfd52d.webp",
+  "slug": "haibaozhanshi"
+ },
+ {
+  "title": "海豹船长",
+  "no": "NO182",
+  "shiny": "否",
+  "family": "haibaozhanshi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/6e5090d3d81d6d80.webp",
+  "slug": "haibaochuanchang"
+ },
+ {
+  "title": "号儿鱼",
+  "no": "NO183",
+  "shiny": "否",
+  "family": "haoeryu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/1b8134f32e39f1ab.webp",
+  "slug": "haoeryu"
+ },
+ {
+  "title": "圆号鱼",
+  "no": "NO184",
+  "shiny": "否",
+  "family": "haoeryu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/aeb4125e9c3a40b5.webp",
+  "slug": "yuanhaoyu"
+ },
+ {
+  "title": "甜田螺",
+  "no": "NO185",
+  "shiny": "否",
+  "family": "tiantianluo",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/1ee0bef4afaff0f6.webp",
+  "slug": "tiantianluo"
+ },
+ {
+  "title": "壳乙螺",
+  "no": "NO186",
+  "shiny": "否",
+  "family": "tiantianluo",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/2151ebaf009bfefd.webp",
+  "slug": "keyiluo"
+ },
+ {
+  "title": "卡洛儿",
+  "no": "NO187",
+  "shiny": "否",
+  "family": "tiantianluo",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/076c6d3707c24913.webp",
+  "slug": "kaluoer"
+ },
+ {
+  "title": "棋棋（黑子）",
+  "no": "NO188",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/340b92a076df3fb1.webp",
+  "slug": "qiqi"
+ },
+ {
+  "title": "棋棋（白子）",
+  "no": "NO188",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/b04e95e2cac1457e.webp",
+  "slug": "qiqi-baizi"
+ },
+ {
+  "title": "棋骑士（黑子）",
+  "no": "NO189",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/292fdd0c83dff2ce.webp",
+  "slug": "qiqishi"
+ },
+ {
+  "title": "棋骑士（白子）",
+  "no": "NO189",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/4ed3227691a19806.webp",
+  "slug": "qiqishi-baizi"
+ },
+ {
+  "title": "棋契陛下（白棋棋骑士分支）",
+  "no": "NO189",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/9c44fd48d11a5109.webp",
+  "slug": "qiqibixia-baiqiqiqishifenzhi"
+ },
+ {
+  "title": "棋契陛下（黑棋棋骑士分支）",
+  "no": "NO189",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/9c44fd48d11a5109.webp",
+  "slug": "qiqibixia-heiqiqiqishifenzhi"
+ },
+ {
+  "title": "棋齐垒（黑子）",
+  "no": "NO190",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/bee470c3bae57ca9.webp",
+  "slug": "qiqilei"
+ },
+ {
+  "title": "棋齐垒（白子）",
+  "no": "NO190",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/8740b996972beae4.webp",
+  "slug": "qiqilei-baizi"
+ },
+ {
+  "title": "棋契陛下（白棋棋齐垒分支）",
+  "no": "NO190",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/9c44fd48d11a5109.webp",
+  "slug": "qiqibixia-baiqiqiqileifenzhi"
+ },
+ {
+  "title": "棋契陛下（黑棋棋齐垒分支）",
+  "no": "NO190",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/9c44fd48d11a5109.webp",
+  "slug": "qiqibixia-heiqiqiqileifenzhi"
+ },
+ {
+  "title": "棋祈督（黑子）",
+  "no": "NO191",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/6ce1e389ee35398b.webp",
+  "slug": "qiqidu"
+ },
+ {
+  "title": "棋祈督（白子）",
+  "no": "NO191",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/31aeedb8a3e4f080.webp",
+  "slug": "qiqidu-baizi"
+ },
+ {
+  "title": "棋契陛下（白棋棋祈督分支）",
+  "no": "NO191",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/9c44fd48d11a5109.webp",
+  "slug": "qiqibixia-baiqiqiqidufenzhi"
+ },
+ {
+  "title": "棋契陛下（黑棋棋祈督分支）",
+  "no": "NO191",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/9c44fd48d11a5109.webp",
+  "slug": "qiqibixia-heiqiqiqidufenzhi"
+ },
+ {
+  "title": "棋绮后（黑子）",
+  "no": "NO192",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/6e2399f595c6f67a.webp",
+  "slug": "qiqihou"
+ },
+ {
+  "title": "棋契陛下（白棋棋绮后分支）",
+  "no": "NO192",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/9c44fd48d11a5109.webp",
+  "slug": "qiqibixia-baiqiqiqihoufenzhi"
+ },
+ {
+  "title": "棋契陛下（黑棋棋绮后分支）",
+  "no": "NO192",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/9c44fd48d11a5109.webp",
+  "slug": "qiqibixia-heiqiqiqihoufenzhi"
+ },
+ {
+  "title": "棋绮后（白子）",
+  "no": "NO192",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/d5a6459c1860d083.webp",
+  "slug": "qiqihou-baizi"
+ },
+ {
+  "title": "奔波鼠",
+  "no": "NO193",
+  "shiny": "否",
+  "family": "benboshu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/6db582d9ea353608.webp",
+  "slug": "benboshu"
+ },
+ {
+  "title": "流浪鼠",
+  "no": "NO194",
+  "shiny": "否",
+  "family": "benboshu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/6c4507059e49e69f.webp",
+  "slug": "liulangshu"
+ },
+ {
+  "title": "呆小路",
+  "no": "NO195",
+  "shiny": "否",
+  "family": "daixiaolu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/49f2e8f0be404415.webp",
+  "slug": "daixiaolu"
+ },
+ {
+  "title": "舞动路路",
+  "no": "NO196",
+  "shiny": "否",
+  "family": "daixiaolu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/0bd1073f1a1809a6.webp",
+  "slug": "wudonglulu"
+ },
+ {
+  "title": "白发路路",
+  "no": "NO197",
+  "shiny": "否",
+  "family": "daixiaolu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/bb111234a6409b41.webp",
+  "slug": "baifalulu"
+ },
+ {
+  "title": "逗逗",
+  "no": "NO198",
+  "shiny": "否",
+  "family": "doudou",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/da99d7ed4c1bf1d0.webp",
+  "slug": "doudou"
+ },
+ {
+  "title": "气球猫",
+  "no": "NO199",
+  "shiny": "否",
+  "family": "doudou",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/3d701c5757dd0a91.webp",
+  "slug": "qiqiumao"
+ },
+ {
+  "title": "梦想三三",
+  "no": "NO200",
+  "shiny": "否",
+  "family": "doudou",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/62306a0b969029ad.webp",
+  "slug": "mengxiangsansan"
+ },
+ {
+  "title": "奇梦咪",
+  "no": "NO200",
+  "shiny": "否",
+  "family": "doudou",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/e883bf5789419d4f.webp",
+  "slug": "qimengmi"
+ },
+ {
+  "title": "花怨鳗",
+  "no": "NO201",
+  "shiny": "否",
+  "family": "huayuanman",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/fa0d10a8f29ba110.webp",
+  "slug": "huayuanman"
+ },
+ {
+  "title": "鳗尾兽",
+  "no": "NO202",
+  "shiny": "否",
+  "family": "huayuanman",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/42b908f64ba47e30.webp",
+  "slug": "manweishou"
+ },
+ {
+  "title": "伊雷龙",
+  "no": "NO203",
+  "shiny": "否",
+  "family": "yileilong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/113e85a2f4ffc259.webp",
+  "slug": "yileilong"
+ },
+ {
+  "title": "伊兰亚龙",
+  "no": "NO204",
+  "shiny": "否",
+  "family": "yileilong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/5bd76612f8eed007.webp",
+  "slug": "yilanyalong"
+ },
+ {
+  "title": "伊兰龙",
+  "no": "NO204",
+  "shiny": "否",
+  "family": "yileilong",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/70a306903e755daf.webp",
+  "slug": "yilanlong"
+ },
+ {
+  "title": "拉特",
+  "no": "NO205",
+  "shiny": "是",
+  "family": "late",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/5456cd05a5e64304.webp",
+  "slug": "late"
+ },
+ {
+  "title": "酷拉",
+  "no": "NO206",
+  "shiny": "是",
+  "family": "late",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/8dfa941c09ffceeb.webp",
+  "slug": "kula"
+ },
+ {
+  "title": "风暴酷拉",
+  "no": "NO206",
+  "shiny": "是",
+  "family": "late",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/b7c3c0f00401088d.webp",
+  "slug": "fengbaokula"
+ },
+ {
+  "title": "闪电环",
+  "no": "NO207",
+  "shiny": "否",
+  "family": "shandianhuan",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/328efcb153c48169.webp",
+  "slug": "shandianhuan"
+ },
+ {
+  "title": "刺电环",
+  "no": "NO208",
+  "shiny": "否",
+  "family": "shandianhuan",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/78d2ae23ece97a48.webp",
+  "slug": "cidianhuan"
+ },
+ {
+  "title": "荆棘电环",
+  "no": "NO209",
+  "shiny": "否",
+  "family": "shandianhuan",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/beaadbf50aeb500b.webp",
+  "slug": "jingjidianhuan"
+ },
+ {
+  "title": "小箱怪",
+  "no": "NO210",
+  "shiny": "否",
+  "family": "xiaoxiangguai",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/fe42b45663acf39d.webp",
+  "slug": "xiaoxiangguai"
+ },
+ {
+  "title": "迷迷箱怪",
+  "no": "NO211",
+  "shiny": "否",
+  "family": "xiaoxiangguai",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/b4871868c54749bc.webp",
+  "slug": "mimixiangguai"
+ },
+ {
+  "title": "古钟蛇",
+  "no": "NO212",
+  "shiny": "否",
+  "family": "guzhongshe",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/2a2988ca722c1983.webp",
+  "slug": "guzhongshe"
+ },
+ {
+  "title": "寒音蛇",
+  "no": "NO213",
+  "shiny": "否",
+  "family": "guzhongshe",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/48160771a6400b9d.webp",
+  "slug": "hanyinshe"
+ },
+ {
+  "title": "矮脚爬爬",
+  "no": "NO214",
+  "shiny": "否",
+  "family": "aijiaopapa",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/6cc3f6036d1420b8.webp",
+  "slug": "aijiaopapa"
+ },
+ {
+  "title": "恶魔红钻",
+  "no": "NO215",
+  "shiny": "否",
+  "family": "aijiaopapa",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/6cc3f6036d1420b8.webp",
+  "slug": "emohongzuan"
+ },
+ {
+  "title": "火尾瓦特",
+  "no": "NO216",
+  "shiny": "否",
+  "family": "lieyankuangzhanshi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/f9515a8ea909de44.webp",
+  "slug": "huoweiwate"
+ },
+ {
+  "title": "火尾战士",
+  "no": "NO217",
+  "shiny": "否",
+  "family": "lieyankuangzhanshi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/49c1334f75c48753.webp",
+  "slug": "huoweizhanshi"
+ },
+ {
+  "title": "烈火守护",
+  "no": "NO218",
+  "shiny": "否",
+  "family": "lieyankuangzhanshi",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/81029bf64591f9cf.webp",
+  "slug": "liehuoshouhu"
+ },
+ {
+  "title": "烈焰狂战士",
+  "no": "NO218",
+  "shiny": "",
+  "family": "lieyankuangzhanshi",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/7bfbc7f61d9b6533.png",
+  "slug": "lieyankuangzhanshi"
+ },
+ {
+  "title": "里拉鳐",
+  "no": "NO219",
+  "shiny": "否",
+  "family": "lilayao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/d3cbb405870b4bbe.webp",
+  "slug": "lilayao"
+ },
+ {
+  "title": "海枝枝（翠绿纶布）",
+  "no": "NO220",
+  "shiny": "否",
+  "family": "haizhizhi-yanghongshading",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/9c2248cd68c149fc.webp",
+  "slug": "haizhizhi"
+ },
+ {
+  "title": "海枝枝（碧蓝珊瑚）",
+  "no": "NO220",
+  "shiny": "否",
+  "family": "haizhizhi-yanghongshading",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/b9a83e371a9119d3.webp",
+  "slug": "haizhizhi-bilanshanhu"
+ },
+ {
+  "title": "海枝枝（杏黄百合）",
+  "no": "NO220",
+  "shiny": "否",
+  "family": "haizhizhi-yanghongshading",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/53d5ce36874aebb9.webp",
+  "slug": "haizhizhi-xinghuangbaihe"
+ },
+ {
+  "title": "海枝枝（洋红沙丁）",
+  "no": "NO220",
+  "shiny": "否",
+  "family": "haizhizhi-yanghongshading",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/1230041b57e2e757.webp",
+  "slug": "haizhizhi-yanghongshading"
+ },
+ {
+  "title": "多西",
+  "no": "NO221",
+  "shiny": "否",
+  "family": "duoxi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9f3d11c2729a6fc8.webp",
+  "slug": "duoxi"
+ },
+ {
+  "title": "库多西",
+  "no": "NO222",
+  "shiny": "否",
+  "family": "duoxi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/a5fd590467078846.webp",
+  "slug": "kuduoxi"
+ },
+ {
+  "title": "波多西",
+  "no": "NO223",
+  "shiny": "否",
+  "family": "duoxi",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/b977fefa1dc999a6.webp",
+  "slug": "boduoxi"
+ },
+ {
+  "title": "小翼龙",
+  "no": "NO224",
+  "shiny": "否",
+  "family": "xiaoyilong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/0af8f57403cb2f33.webp",
+  "slug": "xiaoyilong"
+ },
+ {
+  "title": "翼龙",
+  "no": "NO225",
+  "shiny": "否",
+  "family": "xiaoyilong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/cf3246d6684f33d9.webp",
+  "slug": "yilong"
+ },
+ {
+  "title": "电动长颈鹿",
+  "no": "NO226",
+  "shiny": "否",
+  "family": "diandongchangjinglu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/b7d4d85ff8b3f2b9.webp",
+  "slug": "diandongchangjinglu"
+ },
+ {
+  "title": "Quanzhang",
+  "no": "NO226",
+  "shiny": "",
+  "family": "quanzhang-226",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/a403d5eed1007d07.webp",
+  "slug": "quanzhang-226"
+ },
+ {
+  "title": "奔乐鹿",
+  "no": "NO227",
+  "shiny": "否",
+  "family": "diandongchangjinglu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/229d554d86469ec7.webp",
+  "slug": "benlelu"
+ },
+ {
+  "title": "Gedouxiaowu",
+  "no": "NO227",
+  "shiny": "",
+  "family": "gedouxiaowu",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/dd340272e43e434c.webp",
+  "slug": "gedouxiaowu"
+ },
+ {
+  "title": "爵士鹿",
+  "no": "NO228",
+  "shiny": "否",
+  "family": "diandongchangjinglu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/385edcdcd5debcf8.webp",
+  "slug": "jueshilu"
+ },
+ {
+  "title": "格斗小六",
+  "no": "NO228",
+  "shiny": "",
+  "family": "gedouxiaoliu",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/23a8738f045bf80e.webp",
+  "slug": "gedouxiaoliu"
+ },
+ {
+  "title": "波普鹿",
+  "no": "NO228",
+  "shiny": "否",
+  "family": "diandongchangjinglu",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/1364b16357ede526.webp",
+  "slug": "bopulu"
+ },
+ {
+  "title": "Gedouxiaoba",
+  "no": "NO229",
+  "shiny": "",
+  "family": "gedouxiaoba",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/056a85498b794561.webp",
+  "slug": "gedouxiaoba"
+ },
+ {
+  "title": "缇塔",
+  "no": "NO229",
+  "shiny": "否",
+  "family": "tita",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/719c3ffff5c6b688.webp",
+  "slug": "tita"
+ },
+ {
+  "title": "声波缇塔",
+  "no": "NO230",
+  "shiny": "否",
+  "family": "tita",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/5fca3c1f8b3570eb.webp",
+  "slug": "shengbotita"
+ },
+ {
+  "title": "小鹬",
+  "no": "NO231",
+  "shiny": "是",
+  "family": "xiaoyu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/bf6ab3d34cb5bc0a.webp",
+  "slug": "xiaoyu"
+ },
+ {
+  "title": "鄙目鹬",
+  "no": "NO232",
+  "shiny": "是",
+  "family": "xiaoyu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/35c0545e6d9d91be.webp",
+  "slug": "bimuyu"
+ },
+ {
+  "title": "高脚鹬",
+  "no": "NO233",
+  "shiny": "是",
+  "family": "xiaoyu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/382e110b741a5f3b.webp",
+  "slug": "gaojiaoyu"
+ },
+ {
+  "title": "高帽鹬者",
+  "no": "NO233",
+  "shiny": "是",
+  "family": "xiaoyu",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/9265982ed9a979ef.webp",
+  "slug": "gaomaoyuzhe"
+ },
+ {
+  "title": "脆筒甜甜",
+  "no": "NO234",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/34e7e8aed7e12f08.webp",
+  "slug": "cuitongtiantian"
+ },
+ {
+  "title": "香草甜甜（蓝莓饰品）",
+  "no": "NO235",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/e00b950339f8d299.webp",
+  "slug": "xiangcaotiantian"
+ },
+ {
+  "title": "香草甜甜（杨桃饰品）",
+  "no": "NO235",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/5994e6247df30a2f.webp",
+  "slug": "xiangcaotiantian-yangtaoshipin"
+ },
+ {
+  "title": "香草甜甜",
+  "no": "NO235",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/b473a6aec8e30611.webp",
+  "slug": "xiangcaotiantian-2"
+ },
+ {
+  "title": "香草甜甜（樱桃饰品）",
+  "no": "NO235",
+  "shiny": "",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/b4a951b323d4d216.png",
+  "slug": "xiangcaotiantian-yingtaoshipin"
+ },
+ {
+  "title": "圣代甜甜（杨桃抹茶口味）",
+  "no": "NO236",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/2d20aedee181fce2.webp",
+  "slug": "shengdaitiantian"
+ },
+ {
+  "title": "圣代甜甜（樱桃草莓口味）",
+  "no": "NO236",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/1687e7bec4b15482.webp",
+  "slug": "shengdaitiantian-yingtaocaomeikouwei"
+ },
+ {
+  "title": "圣代甜甜（樱桃抹茶口味）",
+  "no": "NO236",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/2a35de76de6be81f.webp",
+  "slug": "shengdaitiantian-yingtaomochakouwei"
+ },
+ {
+  "title": "圣代甜甜（蓝莓巧克力口味）",
+  "no": "NO236",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/07f056308dbe5a45.webp",
+  "slug": "shengdaitiantian-lanmeiqiaokelikouwei"
+ },
+ {
+  "title": "圣代甜甜（蓝莓草莓口味）",
+  "no": "NO236",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/11a7a1bbdadbd1e5.webp",
+  "slug": "shengdaitiantian-lanmeicaomeikouwei"
+ },
+ {
+  "title": "圣代甜甜（蓝莓抹茶口味）",
+  "no": "NO236",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/9709ae27c14780dd.webp",
+  "slug": "shengdaitiantian-lanmeimochakouwei"
+ },
+ {
+  "title": "圣代甜甜（杨桃巧克力口味）",
+  "no": "NO236",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/06e4198e90ffa70b.webp",
+  "slug": "shengdaitiantian-yangtaoqiaokelikouwei"
+ },
+ {
+  "title": "圣代甜甜（杨桃草莓口味）",
+  "no": "NO236",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/8a4fe81491feb85f.webp",
+  "slug": "shengdaitiantian-yangtaocaomeikouwei"
+ },
+ {
+  "title": "圣代甜甜",
+  "no": "NO236",
+  "shiny": "否",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/b8a812b1b87cd75f.webp",
+  "slug": "shengdaitiantian-2"
+ },
+ {
+  "title": "圣代甜甜（樱桃巧克力口味）",
+  "no": "NO236",
+  "shiny": "",
+  "family": "shengdaitiantian-yingtaoqiaokelikouwei",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/1d81c095ab3da817.png",
+  "slug": "shengdaitiantian-yingtaoqiaokelikouwei"
+ },
+ {
+  "title": "刺轮砣（下弦的样子）",
+  "no": "NO237",
+  "shiny": "否",
+  "family": "manyuetuo-xiaxiandeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/0426afaf766a4db3.webp",
+  "slug": "ciluntuo"
+ },
+ {
+  "title": "刺轮砣（上弦的样子）",
+  "no": "NO237",
+  "shiny": "否",
+  "family": "manyuetuo-xiaxiandeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/565b66cd1ca24914.webp",
+  "slug": "ciluntuo-shangxiandeyangzi"
+ },
+ {
+  "title": "月亮砣（下弦的样子）",
+  "no": "NO238",
+  "shiny": "否",
+  "family": "manyuetuo-xiaxiandeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/85590b40e43d360d.webp",
+  "slug": "yueliangtuo"
+ },
+ {
+  "title": "月亮砣（上弦的样子）",
+  "no": "NO238",
+  "shiny": "否",
+  "family": "manyuetuo-xiaxiandeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/cc6dfa37f7e2b1af.webp",
+  "slug": "yueliangtuo-shangxiandeyangzi"
+ },
+ {
+  "title": "满月砣（上弦的样子）",
+  "no": "NO238",
+  "shiny": "",
+  "family": "manyuetuo-xiaxiandeyangzi",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/1e0dfd43c265e39c.png",
+  "slug": "manyuetuo-shangxiandeyangzi"
+ },
+ {
+  "title": "满月砣（下弦的样子）",
+  "no": "NO238",
+  "shiny": "",
+  "family": "manyuetuo-xiaxiandeyangzi",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/1e0dfd43c265e39c.png",
+  "slug": "manyuetuo-xiaxiandeyangzi"
+ },
+ {
+  "title": "豆丁鱼",
+  "no": "NO239",
+  "shiny": "是",
+  "family": "doudingyu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/7220cfd5a68a0ef5.webp",
+  "slug": "doudingyu"
+ },
+ {
+  "title": "快鳍鱼",
+  "no": "NO240",
+  "shiny": "是",
+  "family": "doudingyu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/01ff73e0c930b38b.webp",
+  "slug": "kuaiqiyu"
+ },
+ {
+  "title": "龙鱼",
+  "no": "NO241",
+  "shiny": "是",
+  "family": "doudingyu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/3e71ef5ca09a082d.webp",
+  "slug": "longyu"
+ },
+ {
+  "title": "胆小鳗鱼",
+  "no": "NO242",
+  "shiny": "否",
+  "family": "danxiaomanyu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9616e3cb5bdb8f30.webp",
+  "slug": "danxiaomanyu"
+ },
+ {
+  "title": "闪电鳗鱼",
+  "no": "NO243",
+  "shiny": "否",
+  "family": "danxiaomanyu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/59f63ef2696a7997.webp",
+  "slug": "shandianmanyu"
+ },
+ {
+  "title": "翡翠水母",
+  "no": "NO244",
+  "shiny": "否",
+  "family": "feicuishuimu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/bae2c6aea99904de.webp",
+  "slug": "feicuishuimu"
+ },
+ {
+  "title": "琉璃水母",
+  "no": "NO245",
+  "shiny": "否",
+  "family": "feicuishuimu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/8c24b70e8c4da7ac.webp",
+  "slug": "liulishuimu"
+ },
+ {
+  "title": "裘洛",
+  "no": "NO246",
+  "shiny": "否",
+  "family": "qiuluo",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/17cf38774a23f290.webp",
+  "slug": "qiuluo"
+ },
+ {
+  "title": "裘力",
+  "no": "NO247",
+  "shiny": "否",
+  "family": "qiuluo",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/a117facffe33bfa4.webp",
+  "slug": "qiuli"
+ },
+ {
+  "title": "裘卡",
+  "no": "NO248",
+  "shiny": "否",
+  "family": "qiuluo",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/d985114649539793.webp",
+  "slug": "qiuka"
+ },
+ {
+  "title": "可爱猿",
+  "no": "NO249",
+  "shiny": "否",
+  "family": "keaiyuan",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9a9064da5aa51b0b.webp",
+  "slug": "keaiyuan"
+ },
+ {
+  "title": "炽热猿",
+  "no": "NO250",
+  "shiny": "否",
+  "family": "keaiyuan",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/332c5c5279373d5a.webp",
+  "slug": "chireyuan"
+ },
+ {
+  "title": "火焰猿",
+  "no": "NO251",
+  "shiny": "否",
+  "family": "keaiyuan",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/6bb1eeffb117ed8d.webp",
+  "slug": "huoyanyuan"
+ },
+ {
+  "title": "布鲁斯",
+  "no": "NO252",
+  "shiny": "否",
+  "family": "bulusi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9a80d699c1596c09.webp",
+  "slug": "bulusi"
+ },
+ {
+  "title": "雪顶布鲁斯",
+  "no": "NO253",
+  "shiny": "否",
+  "family": "bulusi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/c7df2ce2110b6012.webp",
+  "slug": "xuedingbulusi"
+ },
+ {
+  "title": "冰钻布鲁斯",
+  "no": "NO254",
+  "shiny": "否",
+  "family": "bulusi",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/4d354b6d4372953e.webp",
+  "slug": "bingzuanbulusi"
+ },
+ {
+  "title": "治愈兔",
+  "no": "NO255",
+  "shiny": "是",
+  "family": "zhiyutu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/6c012b7c3bd4405f.webp",
+  "slug": "zhiyutu"
+ },
+ {
+  "title": "红丝绒",
+  "no": "NO256",
+  "shiny": "是",
+  "family": "zhiyutu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/ecd74ad8d95020ca.webp",
+  "slug": "hongsirong"
+ },
+ {
+  "title": "红绒十字",
+  "no": "NO257",
+  "shiny": "是",
+  "family": "zhiyutu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/5d9d636a106b1171.webp",
+  "slug": "hongrongshizi"
+ },
+ {
+  "title": "乌达（极夜的样子）",
+  "no": "NO258",
+  "shiny": "否",
+  "family": "wulata-jizhoudeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/331a13dc5eb3009a.webp",
+  "slug": "wuda"
+ },
+ {
+  "title": "乌达（极昼的样子）",
+  "no": "NO258",
+  "shiny": "否",
+  "family": "wulata-jizhoudeyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/6a8ff5fd5c6a36ec.webp",
+  "slug": "wuda-jizhoudeyangzi"
+ },
+ {
+  "title": "迷你乌（极夜的样子）",
+  "no": "NO259",
+  "shiny": "否",
+  "family": "wulata-jizhoudeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/f4688358cd6d1bfa.webp",
+  "slug": "miniwu"
+ },
+ {
+  "title": "迷你乌（极昼的样子）",
+  "no": "NO259",
+  "shiny": "否",
+  "family": "wulata-jizhoudeyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/97e6876f69d99e0e.webp",
+  "slug": "miniwu-jizhoudeyangzi"
+ },
+ {
+  "title": "乌拉塔（极夜的样子）",
+  "no": "NO260",
+  "shiny": "否",
+  "family": "wulata-jizhoudeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/684798202bdd7435.webp",
+  "slug": "wulata"
+ },
+ {
+  "title": "乌拉塔（极昼的样子）",
+  "no": "NO260",
+  "shiny": "否",
+  "family": "wulata-jizhoudeyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/3c533e29dc234106.webp",
+  "slug": "wulata-jizhoudeyangzi"
+ },
+ {
+  "title": "螺旋帕帕",
+  "no": "NO261",
+  "shiny": "否",
+  "family": "luoxuanpapa",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/6ce98d5ff7d7f1b6.webp",
+  "slug": "luoxuanpapa"
+ },
+ {
+  "title": "帕帕斯卡",
+  "no": "NO262",
+  "shiny": "否",
+  "family": "luoxuanpapa",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/6ba1a23f443cd9f3.webp",
+  "slug": "papasika"
+ },
+ {
+  "title": "机械方方",
+  "no": "NO263",
+  "shiny": "是",
+  "family": "jixiefangfang",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/29a73e7c354f5b20.webp",
+  "slug": "jixiefangfang"
+ },
+ {
+  "title": "多彩方方",
+  "no": "NO264",
+  "shiny": "是",
+  "family": "jixiefangfang",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/d02fbcad59ff0c08.webp",
+  "slug": "duocaifangfang"
+ },
+ {
+  "title": "立方人",
+  "no": "NO265",
+  "shiny": "是",
+  "family": "jixiefangfang",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/1aebb9cfce36aad8.webp",
+  "slug": "lifangren"
+ },
+ {
+  "title": "可立鸡",
+  "no": "NO266",
+  "shiny": "是",
+  "family": "keliji",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/66bff42cf8dc9329.webp",
+  "slug": "keliji"
+ },
+ {
+  "title": "晕晕鸡",
+  "no": "NO267",
+  "shiny": "是",
+  "family": "keliji",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/e9f4bb1b20466d3b.webp",
+  "slug": "yunyunji"
+ },
+ {
+  "title": "绅士鸡",
+  "no": "NO268",
+  "shiny": "是",
+  "family": "keliji",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/437460512b8fb2ec.webp",
+  "slug": "shenshiji"
+ },
+ {
+  "title": "武者鸡",
+  "no": "NO269",
+  "shiny": "是",
+  "family": "keliji",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/439ec9199e0a4be5.webp",
+  "slug": "wuzheji"
+ },
+ {
+  "title": "优优",
+  "no": "NO270",
+  "shiny": "否",
+  "family": "youyou",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/17beb16c43a06fd4.webp",
+  "slug": "youyou"
+ },
+ {
+  "title": "绒光优优",
+  "no": "NO271",
+  "shiny": "否",
+  "family": "youyou",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/387db297c3b87e1a.webp",
+  "slug": "rongguangyouyou"
+ },
+ {
+  "title": "噼啪鸟",
+  "no": "NO272",
+  "shiny": "否",
+  "family": "pipaniao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/8e5bef646d3d253c.webp",
+  "slug": "pipaniao"
+ },
+ {
+  "title": "深蓝鲸",
+  "no": "NO273",
+  "shiny": "否",
+  "family": "shenlanjing",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/8748e496e9797c53.webp",
+  "slug": "shenlanjing"
+ },
+ {
+  "title": "格兰种子",
+  "no": "NO274",
+  "shiny": "是",
+  "family": "gelanzhongzi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/6519dc1f2787142f.webp",
+  "slug": "gelanzhongzi"
+ },
+ {
+  "title": "格兰花",
+  "no": "NO275",
+  "shiny": "是",
+  "family": "gelanzhongzi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/bbf112f3a1970042.webp",
+  "slug": "gelanhua"
+ },
+ {
+  "title": "格兰球",
+  "no": "NO276",
+  "shiny": "是",
+  "family": "gelanzhongzi",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/4fceb80154ccaa63.webp",
+  "slug": "gelanqiu"
+ },
+ {
+  "title": "地鼠（枯水期的样子）",
+  "no": "NO277",
+  "shiny": "是",
+  "family": "dundishu-chushuishideyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/8d7e6cbb993b5e7e.webp",
+  "slug": "dishu-kushuiqideyangzi"
+ },
+ {
+  "title": "地鼠（储水时的样子）",
+  "no": "NO277",
+  "shiny": "是",
+  "family": "dundishu-chushuishideyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "地区形态",
+  "img": "/img/d74a616a38489e0c.webp",
+  "slug": "dishu-chushuishideyangzi"
+ },
+ {
+  "title": "遁鼠（枯水期的样子）",
+  "no": "NO278",
+  "shiny": "是",
+  "family": "dundishu-chushuishideyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/b136281d9a5cd0a4.webp",
+  "slug": "dunshu-kushuiqideyangzi"
+ },
+ {
+  "title": "遁鼠（储水时的样子）",
+  "no": "NO278",
+  "shiny": "是",
+  "family": "dundishu-chushuishideyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/ca530f0fa93353d7.webp",
+  "slug": "dunshu-chushuishideyangzi"
+ },
+ {
+  "title": "遁地鼠（枯水期的样子）",
+  "no": "NO279",
+  "shiny": "是",
+  "family": "dundishu-chushuishideyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/01fadcb317dafdc0.webp",
+  "slug": "dundishu-kushuiqideyangzi"
+ },
+ {
+  "title": "遁地鼠（储水时的样子）",
+  "no": "NO279",
+  "shiny": "是",
+  "family": "dundishu-chushuishideyangzi",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/56b370d362ac6f88.webp",
+  "slug": "dundishu-chushuishideyangzi"
+ },
+ {
+  "title": "墨鱿士",
+  "no": "NO280",
+  "shiny": "否",
+  "family": "moyoushi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/b0bfbc3059c0c0c4.webp",
+  "slug": "moyoushi"
+ },
+ {
+  "title": "混乱鱿彩",
+  "no": "NO281",
+  "shiny": "否",
+  "family": "moyoushi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/3d95d4edd891e576.webp",
+  "slug": "hunluanyoucai"
+ },
+ {
+  "title": "秩序鱿墨",
+  "no": "NO282",
+  "shiny": "否",
+  "family": "moyoushi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/3ba372e67091e80f.webp",
+  "slug": "zhixuyoumo"
+ },
+ {
+  "title": "小甲虫",
+  "no": "NO283",
+  "shiny": "否",
+  "family": "xiaojiachong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/da725df3c581d29b.webp",
+  "slug": "xiaojiachong"
+ },
+ {
+  "title": "铠甲虫",
+  "no": "NO284",
+  "shiny": "否",
+  "family": "xiaojiachong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/584eead1f1f34ea0.webp",
+  "slug": "kaijiachong"
+ },
+ {
+  "title": "圣剑侍从",
+  "no": "NO285",
+  "shiny": "否",
+  "family": "shengjianshicong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/c922d8aa2420b639.webp",
+  "slug": "shengjianshicong"
+ },
+ {
+  "title": "圣剑-X",
+  "no": "NO286",
+  "shiny": "否",
+  "family": "shengjianshicong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/caaaa462c6f452e2.webp",
+  "slug": "shengjian-x"
+ },
+ {
+  "title": "圣剑骑士",
+  "no": "NO286",
+  "shiny": "否",
+  "family": "shengjianshicong",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/f90472b83f607a86.webp",
+  "slug": "shengjianqishi"
+ },
+ {
+  "title": "吸泥鸥",
+  "no": "NO287",
+  "shiny": "否",
+  "family": "xiniou",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/76f72248ba0a116e.webp",
+  "slug": "xiniou"
+ },
+ {
+  "title": "泥吼牙",
+  "no": "NO288",
+  "shiny": "否",
+  "family": "xiniou",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/ae4cbf27cb4880e1.webp",
+  "slug": "nihouya"
+ },
+ {
+  "title": "淤泥乌泽",
+  "no": "NO288",
+  "shiny": "否",
+  "family": "xiniou",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/05ddf3acc0f6bf81.webp",
+  "slug": "yuniwuze"
+ },
+ {
+  "title": "大头骨龙",
+  "no": "NO289",
+  "shiny": "否",
+  "family": "datougulong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/cf8784a89a1ff38a.webp",
+  "slug": "datougulong"
+ },
+ {
+  "title": "寂灭骨龙",
+  "no": "NO290",
+  "shiny": "否",
+  "family": "datougulong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/d3a57638ee91f7ab.webp",
+  "slug": "jimiegulong"
+ },
+ {
+  "title": "厉毒小萝",
+  "no": "NO291",
+  "shiny": "否",
+  "family": "liduxiaoluo",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/077eb917e9cad327.webp",
+  "slug": "liduxiaoluo"
+ },
+ {
+  "title": "厉毒修萝",
+  "no": "NO292",
+  "shiny": "否",
+  "family": "liduxiaoluo",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/9f14cb819feafa08.webp",
+  "slug": "liduxiuluo"
+ },
+ {
+  "title": "小帕尔",
+  "no": "NO293",
+  "shiny": "否",
+  "family": "xiaopaer",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/ba844eee5b615140.webp",
+  "slug": "xiaopaer"
+ },
+ {
+  "title": "帕尔萨斯",
+  "no": "NO294",
+  "shiny": "否",
+  "family": "xiaopaer",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/3afc46e3b7d1b7c8.webp",
+  "slug": "paersasi"
+ },
+ {
+  "title": "龙息帕尔",
+  "no": "NO295",
+  "shiny": "否",
+  "family": "xiaopaer",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/7a4b14dbe1182bcc.webp",
+  "slug": "longxipaer"
+ },
+ {
+  "title": "毛头小蛛",
+  "no": "NO296",
+  "shiny": "否",
+  "family": "maotouxiaozhu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/85528fb80fc5ed1b.webp",
+  "slug": "maotouxiaozhu"
+ },
+ {
+  "title": "捕尘长绒",
+  "no": "NO297",
+  "shiny": "否",
+  "family": "maotouxiaozhu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/9d6dfb3a23f677da.webp",
+  "slug": "buchenchangrong"
+ },
+ {
+  "title": "食尘短绒",
+  "no": "NO298",
+  "shiny": "否",
+  "family": "maotouxiaozhu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/1e7f41537e40721e.webp",
+  "slug": "shichenduanrong"
+ },
+ {
+  "title": "画精灵",
+  "no": "NO299",
+  "shiny": "否",
+  "family": "huajingling",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/0ecd9e33a1793591.webp",
+  "slug": "huajingling"
+ },
+ {
+  "title": "画像守护",
+  "no": "NO300",
+  "shiny": "否",
+  "family": "huajingling",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/f20be9a74f57ff88.webp",
+  "slug": "huaxiangshouhu"
+ },
+ {
+  "title": "画间法师手",
+  "no": "NO301",
+  "shiny": "否",
+  "family": "huajingling",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/19edc0f46d0dfd6e.webp",
+  "slug": "huajianfashishou"
+ },
+ {
+  "title": "画间沉铁兽",
+  "no": "NO302",
+  "shiny": "否",
+  "family": "huajingling",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/8805dfb9cef8153e.webp",
+  "slug": "huajianchentieshou"
+ },
+ {
+  "title": "书魔虫",
+  "no": "NO303",
+  "shiny": "否",
+  "family": "shumochong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/bfaad4873d2179e2.webp",
+  "slug": "shumochong"
+ },
+ {
+  "title": "书卷守护",
+  "no": "NO304",
+  "shiny": "否",
+  "family": "shumochong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/41d8d68a9285d31f.webp",
+  "slug": "shujuanshouhu"
+ },
+ {
+  "title": "古卷执政官",
+  "no": "NO305",
+  "shiny": "否",
+  "family": "shumochong",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/29b407a01424e7b0.webp",
+  "slug": "gujuanzhizhengguan"
+ },
+ {
+  "title": "古卷匣魔像",
+  "no": "NO306",
+  "shiny": "否",
+  "family": "shumochong",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/f3844d4a62b8abfd.webp",
+  "slug": "gujuanxiamoxiang"
+ },
+ {
+  "title": "绒绒",
+  "no": "NO307",
+  "shiny": "是",
+  "family": "rongrong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/ec410e956c16304c.webp",
+  "slug": "rongrong"
+ },
+ {
+  "title": "小绒茧",
+  "no": "NO308",
+  "shiny": "是",
+  "family": "rongrong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/671fb3af954a4fad.webp",
+  "slug": "xiaorongjian"
+ },
+ {
+  "title": "绒仙子",
+  "no": "NO309",
+  "shiny": "是",
+  "family": "rongrong",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/553b34b7fc6d9d3c.webp",
+  "slug": "rongxianzi"
+ },
+ {
+  "title": "犀角鸟",
+  "no": "NO310",
+  "shiny": "是",
+  "family": "xijiaoniao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/450739c0545726aa.webp",
+  "slug": "xijiaoniao"
+ },
+ {
+  "title": "光纤兽",
+  "no": "NO311",
+  "shiny": "是",
+  "family": "xijiaoniao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/9d429f0c1f1bcbbe.webp",
+  "slug": "guangxianshou"
+ },
+ {
+  "title": "疾光千兽",
+  "no": "NO312",
+  "shiny": "是",
+  "family": "xijiaoniao",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/82c307870fa77a97.webp",
+  "slug": "jiguangqianshou"
+ },
+ {
+  "title": "果冻",
+  "no": "NO313",
+  "shiny": "否",
+  "family": "guodong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/77524cfc5fc95074.webp",
+  "slug": "guodong"
+ },
+ {
+  "title": "抹茶布丁",
+  "no": "NO314",
+  "shiny": "否",
+  "family": "guodong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/462d078fff9eb9bf.webp",
+  "slug": "mochabuding"
+ },
+ {
+  "title": "椰浆布丁",
+  "no": "NO315",
+  "shiny": "否",
+  "family": "guodong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/5e4efaebd51ce3f7.webp",
+  "slug": "yejiangbuding"
+ },
+ {
+  "title": "熔岩布丁",
+  "no": "NO316",
+  "shiny": "否",
+  "family": "guodong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/9dd430e54470776f.webp",
+  "slug": "rongyanbuding"
+ },
+ {
+  "title": "星尘虫",
+  "no": "NO317",
+  "shiny": "否",
+  "family": "xingchenchong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/bb995a5924953651.webp",
+  "slug": "xingchenchong"
+ },
+ {
+  "title": "落星虫",
+  "no": "NO318",
+  "shiny": "否",
+  "family": "xingchenchong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/c0469e482fc0aeea.webp",
+  "slug": "luoxingchong"
+ },
+ {
+  "title": "陨星虫",
+  "no": "NO319",
+  "shiny": "否",
+  "family": "xingchenchong",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/d69633b38d71f119.webp",
+  "slug": "yunxingchong"
+ },
+ {
+  "title": "双灯鱼",
+  "no": "NO320",
+  "shiny": "是",
+  "family": "shuangdengyu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/be13d7e1228d67be.webp",
+  "slug": "shuangdengyu"
+ },
+ {
+  "title": "利灯鱼",
+  "no": "NO321",
+  "shiny": "是",
+  "family": "shuangdengyu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/11752b2ce541c1ab.webp",
+  "slug": "lidengyu"
+ },
+ {
+  "title": "月牙雪熊",
+  "no": "NO322",
+  "shiny": "是",
+  "family": "yueyaxuexiong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/0e6afdc8f7e0eace.webp",
+  "slug": "yueyaxuexiong"
+ },
+ {
+  "title": "嗜光嗡嗡",
+  "no": "NO323",
+  "shiny": "是",
+  "family": "shiguangwengweng",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/a58f245f4e59e107.webp",
+  "slug": "shiguangwengweng"
+ },
+ {
+  "title": "窃光蚊",
+  "no": "NO324",
+  "shiny": "是",
+  "family": "shiguangwengweng",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/6b325efd55d25470.webp",
+  "slug": "qieguangwen"
+ },
+ {
+  "title": "柴渣虫",
+  "no": "NO325",
+  "shiny": "是",
+  "family": "chaizhachong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/ddf9e0878d496ae3.webp",
+  "slug": "chaizhachong"
+ },
+ {
+  "title": "燃薪虫",
+  "no": "NO326",
+  "shiny": "是",
+  "family": "chaizhachong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/de32aa97157caaa2.webp",
+  "slug": "ranxinchong"
+ },
+ {
+  "title": "空空颅",
+  "no": "NO327",
+  "shiny": "是",
+  "family": "kongkonglu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/b9987de766f29b63.webp",
+  "slug": "kongkonglu"
+ },
+ {
+  "title": "夜宿颅",
+  "no": "NO328",
+  "shiny": "是",
+  "family": "kongkonglu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/9f168a407a05a3aa.webp",
+  "slug": "yesulu"
+ },
+ {
+  "title": "夜枭",
+  "no": "NO329",
+  "shiny": "是",
+  "family": "kongkonglu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/b4625e1470ebb5ac.webp",
+  "slug": "yexiao"
+ },
+ {
+  "title": "暗夜颅主",
+  "no": "NO329",
+  "shiny": "是",
+  "family": "kongkonglu",
+  "stage": "",
+  "ftype": "首领形态",
+  "img": "/img/33dc7ce8257259f3.webp",
+  "slug": "anyeluzhu"
+ },
+ {
+  "title": "粉粉星",
+  "no": "NO330",
+  "shiny": "是",
+  "family": "fenfenxing",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/4c2102eda66efcfe.webp",
+  "slug": "fenfenxing"
+ },
+ {
+  "title": "小皮球",
+  "no": "NO331",
+  "shiny": "是",
+  "family": "fenfenxing",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/64e16787b485ee3f.webp",
+  "slug": "xiaopiqiu"
+ },
+ {
+  "title": "贝瑟",
+  "no": "NO332",
+  "shiny": "是",
+  "family": "beise",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9f11ad593961d05f.webp",
+  "slug": "beise"
+ },
+ {
+  "title": "贝加尔",
+  "no": "NO333",
+  "shiny": "是",
+  "family": "beise",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/f42f168c5769363a.webp",
+  "slug": "beijiaer"
+ },
+ {
+  "title": "贝古斯",
+  "no": "NO334",
+  "shiny": "是",
+  "family": "beise",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/b7cbcb66df76829f.webp",
+  "slug": "beigusi"
+ },
+ {
+  "title": "粉星仔",
+  "no": "NO335",
+  "shiny": "是",
+  "family": "fenxingzai",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/a35a635e179cf2d1.webp",
+  "slug": "fenxingzai"
+ },
+ {
+  "title": "粉耳星兔",
+  "no": "NO336",
+  "shiny": "是",
+  "family": "fenxingzai",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/f6249ebe59d052f3.webp",
+  "slug": "fenerxingtu"
+ },
+ {
+  "title": "落陨星兔",
+  "no": "NO337",
+  "shiny": "是",
+  "family": "fenxingzai",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/7ad5422376c16eda.webp",
+  "slug": "luoyunxingtu"
+ },
+ {
+  "title": "布瓜蝌",
+  "no": "NO338",
+  "shiny": "否",
+  "family": "buguake",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/6dec268c9ae2bb78.webp",
+  "slug": "buguake"
+ },
+ {
+  "title": "上岸蛙",
+  "no": "NO339",
+  "shiny": "否",
+  "family": "buguake",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/d5ec58b5a0bc4d5c.webp",
+  "slug": "shanganwa"
+ },
+ {
+  "title": "火红尾",
+  "no": "NO340",
+  "shiny": "是",
+  "family": "huohongwei",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/b496cc717223be7d.webp",
+  "slug": "huohongwei"
+ },
+ {
+  "title": "雅丹鬃",
+  "no": "NO341",
+  "shiny": "是",
+  "family": "huohongwei",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/9ec161c2df02ce18.webp",
+  "slug": "yadanzong"
+ },
+ {
+  "title": "春团",
+  "no": "NO342",
+  "shiny": "否",
+  "family": "chuntuan",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/55e6d300529665b8.webp",
+  "slug": "chuntuan"
+ },
+ {
+  "title": "春兔",
+  "no": "NO343",
+  "shiny": "否",
+  "family": "chuntuan",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/d1dd93c3023c5924.webp",
+  "slug": "chuntu"
+ },
+ {
+  "title": "春花兔",
+  "no": "NO344",
+  "shiny": "否",
+  "family": "chuntuan",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/e126a1673eab57b2.webp",
+  "slug": "chunhuatu"
+ },
+ {
+  "title": "幽星光",
+  "no": "NO345",
+  "shiny": "否",
+  "family": "youxingguang",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/de3b0f7abaf83813.webp",
+  "slug": "youxingguang"
+ },
+ {
+  "title": "曜星光",
+  "no": "NO346",
+  "shiny": "否",
+  "family": "youxingguang",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/6ef557622e6d9a21.webp",
+  "slug": "yaoxingguang"
+ },
+ {
+  "title": "暮星辰",
+  "no": "NO347",
+  "shiny": "否",
+  "family": "youxingguang",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/801a47639f4da45c.webp",
+  "slug": "muxingchen"
+ },
+ {
+  "title": "钨丝贝贝",
+  "no": "NO348",
+  "shiny": "否",
+  "family": "wusibeibei",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/eda61a3ab9a1ccc7.webp",
+  "slug": "wusibeibei"
+ },
+ {
+  "title": "辉光幕机",
+  "no": "NO349",
+  "shiny": "否",
+  "family": "wusibeibei",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/0fce605dfe5d58f5.webp",
+  "slug": "huiguangmuji"
+ },
+ {
+  "title": "机幕方舟",
+  "no": "NO350",
+  "shiny": "否",
+  "family": "wusibeibei",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/2802cc7a93d5a6e9.webp",
+  "slug": "jimufangzhou"
+ },
+ {
+  "title": "凡雀",
+  "no": "NO351",
+  "shiny": "否",
+  "family": "fanying",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/eb2045f21bc632e3.webp",
+  "slug": "fanque"
+ },
+ {
+  "title": "紫翎鹰",
+  "no": "NO352",
+  "shiny": "否",
+  "family": "fanying",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/9ab0efdadf74cf4c.webp",
+  "slug": "zilingying"
+ },
+ {
+  "title": "凡鹰",
+  "no": "NO353",
+  "shiny": "否",
+  "family": "fanying",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/82de5108186b1fef.webp",
+  "slug": "fanying"
+ },
+ {
+  "title": "小雪人",
+  "no": "NO354",
+  "shiny": "是",
+  "family": "xiaoxueren",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/fca4bdae477f5812.webp",
+  "slug": "xiaoxueren"
+ },
+ {
+  "title": "雪怪",
+  "no": "NO355",
+  "shiny": "是",
+  "family": "xiaoxueren",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/46d61698031e2a48.webp",
+  "slug": "xueguai"
+ },
+ {
+  "title": "爆焰仔",
+  "no": "NO356",
+  "shiny": "是",
+  "family": "baoyanzai",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/e7e768bfaa4c9f63.webp",
+  "slug": "baoyanzai"
+ },
+ {
+  "title": "爆焰喷喷",
+  "no": "NO357",
+  "shiny": "是",
+  "family": "baoyanzai",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/43be70294a39dff0.webp",
+  "slug": "baoyanpenpen"
+ },
+ {
+  "title": "猴麦仔",
+  "no": "NO358",
+  "shiny": "是",
+  "family": "houmaizai",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/a7ac650617ab6dc5.webp",
+  "slug": "houmaizai"
+ },
+ {
+  "title": "音碟吼",
+  "no": "NO359",
+  "shiny": "是",
+  "family": "houmaizai",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/bb7b4782e4516ae1.webp",
+  "slug": "yindiehou"
+ },
+ {
+  "title": "加油海葵",
+  "no": "NO360",
+  "shiny": "是",
+  "family": "jiayouxie-liangzhihaikuideyangzi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/6a2969f277570a0a.webp",
+  "slug": "jiayouhaikui"
+ },
+ {
+  "title": "加油蟹",
+  "no": "NO361",
+  "shiny": "是",
+  "family": "jiayouxie-liangzhihaikuideyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/d3fdc88445ff8565.webp",
+  "slug": "jiayouxie"
+ },
+ {
+  "title": "加油蟹（单只海葵的样子）",
+  "no": "NO361",
+  "shiny": "是",
+  "family": "jiayouxie-liangzhihaikuideyangzi",
+  "stage": "Ⅱ阶",
+  "ftype": "地区形态",
+  "img": "/img/383371d7b369dfc1.webp",
+  "slug": "jiayouxie-danzhihaikuideyangzi"
+ },
+ {
+  "title": "加油蟹（两只海葵的样子）",
+  "no": "NO361",
+  "shiny": "",
+  "family": "jiayouxie-liangzhihaikuideyangzi",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/0cb19576b2896b22.png",
+  "slug": "jiayouxie-liangzhihaikuideyangzi"
+ },
+ {
+  "title": "小丑豆豆",
+  "no": "NO362",
+  "shiny": "是",
+  "family": "xiaochoudoudou",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/5b91f37b45334cad.webp",
+  "slug": "xiaochoudoudou"
+ },
+ {
+  "title": "小丑兔",
+  "no": "NO363",
+  "shiny": "是",
+  "family": "xiaochoudoudou",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/85bb6c69817fe415.webp",
+  "slug": "xiaochoutu"
+ },
+ {
+  "title": "小丑公爵",
+  "no": "NO364",
+  "shiny": "是",
+  "family": "xiaochoudoudou",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/8d40e2c99d14cf73.webp",
+  "slug": "xiaochougongjue"
+ },
+ {
+  "title": "烟花团",
+  "no": "NO365",
+  "shiny": "是",
+  "family": "yanhuatuan",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/efad48f22cd69a7b.webp",
+  "slug": "yanhuatuan"
+ },
+ {
+  "title": "烟花伯爵",
+  "no": "NO366",
+  "shiny": "是",
+  "family": "yanhuatuan",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/d120e1ffcdddcea5.webp",
+  "slug": "yanhuabojue"
+ },
+ {
+  "title": "咕咕帽",
+  "no": "NO367",
+  "shiny": "是",
+  "family": "gugumao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/06cbb82e7793fec5.webp",
+  "slug": "gugumao"
+ },
+ {
+  "title": "咕德帽帽",
+  "no": "NO368",
+  "shiny": "是",
+  "family": "gugumao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/ca6f40fc8b2136ee.webp",
+  "slug": "gudemaomao"
+ },
+ {
+  "title": "炫光迪迪",
+  "no": "NO369",
+  "shiny": "是",
+  "family": "xuanguangdidi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/47a8ce19ef8852aa.webp",
+  "slug": "xuanguangdidi"
+ },
+ {
+  "title": "霹雳迪迪",
+  "no": "NO370",
+  "shiny": "是",
+  "family": "xuanguangdidi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/bf6a0eedb0245232.webp",
+  "slug": "pilididi"
+ },
+ {
+  "title": "小鼓象",
+  "no": "NO371",
+  "shiny": "是",
+  "family": "xiaoguxiang",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9786942a293e9d61.webp",
+  "slug": "xiaoguxiang"
+ },
+ {
+  "title": "巨鼓象",
+  "no": "NO372",
+  "shiny": "是",
+  "family": "xiaoguxiang",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/555b23b53c119bd7.webp",
+  "slug": "juguxiang"
+ },
+ {
+  "title": "牵线木偶",
+  "no": "NO373",
+  "shiny": "是",
+  "family": "qianxianmuou",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/dc899184cef69996.webp",
+  "slug": "qianxianmuou"
+ },
+ {
+  "title": "帅帅魔偶",
+  "no": "NO374",
+  "shiny": "是",
+  "family": "qianxianmuou",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/0e56fe5152ce5fbe.webp",
+  "slug": "shuaishuaimoou"
+ },
+ {
+  "title": "学院呱呱",
+  "no": "NO375",
+  "shiny": "否",
+  "family": "xueyuanguagua",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/2f0a6a00bb2fb1bf.webp",
+  "slug": "xueyuanguagua"
+ },
+ {
+  "title": "烈钻鸟",
+  "no": "NO376",
+  "shiny": "否",
+  "family": "liezuanniao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/5f2535454953e0e8.webp",
+  "slug": "liezuanniao"
+ },
+ {
+  "title": "长尾火鸟",
+  "no": "NO377",
+  "shiny": "否",
+  "family": "liezuanniao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/8f638f003370491e.webp",
+  "slug": "changweihuoniao"
+ },
+ {
+  "title": "火羽",
+  "no": "NO378",
+  "shiny": "否",
+  "family": "liezuanniao",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/1e04937b81460064.webp",
+  "slug": "huoyu"
+ },
+ {
+  "title": "叮叮卯",
+  "no": "NO379",
+  "shiny": "否",
+  "family": "dingdingmao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/c203d2befd606a1b.webp",
+  "slug": "dingdingmao"
+ },
+ {
+  "title": "飞飞钥",
+  "no": "NO380",
+  "shiny": "否",
+  "family": "dingdingmao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/cacf93bfa2daf1d2.webp",
+  "slug": "feifeiyao"
+ },
+ {
+  "title": "碎晶蝎",
+  "no": "NO381",
+  "shiny": "否",
+  "family": "suijingxie",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/21567cdc19d946ca.webp",
+  "slug": "suijingxie"
+ },
+ {
+  "title": "晶尾蝎",
+  "no": "NO382",
+  "shiny": "否",
+  "family": "suijingxie",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/1164e6e62d429be4.webp",
+  "slug": "jingweixie"
+ },
+ {
+  "title": "蝎子王",
+  "no": "NO383",
+  "shiny": "否",
+  "family": "suijingxie",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/2c2815652d70901c.webp",
+  "slug": "xieziwang"
+ },
+ {
+  "title": "森豆丁",
+  "no": "NO384",
+  "shiny": "否",
+  "family": "sendouding",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/6f7a0c4e978363be.webp",
+  "slug": "sendouding"
+ },
+ {
+  "title": "森蛮人",
+  "no": "NO385",
+  "shiny": "否",
+  "family": "sendouding",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/127e3cb48a420e5b.webp",
+  "slug": "senmanren"
+ },
+ {
+  "title": "森巨人",
+  "no": "NO386",
+  "shiny": "否",
+  "family": "sendouding",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/1dab197af92ad13d.webp",
+  "slug": "senjuren"
+ },
+ {
+  "title": "霹雳宝宝",
+  "no": "NO387",
+  "shiny": "否",
+  "family": "pilibaobao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9507e7618b9efc47.webp",
+  "slug": "pilibaobao"
+ },
+ {
+  "title": "雷鸣小子",
+  "no": "NO388",
+  "shiny": "否",
+  "family": "pilibaobao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/bd74efcae4924942.webp",
+  "slug": "leimingxiaozi"
+ },
+ {
+  "title": "雷神之子",
+  "no": "NO389",
+  "shiny": "否",
+  "family": "pilibaobao",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/bafd982def265deb.webp",
+  "slug": "leishenzhizi"
+ },
+ {
+  "title": "雪灵兽",
+  "no": "NO390",
+  "shiny": "否",
+  "family": "xuelingshou",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9a9e89e5d3e25d7c.webp",
+  "slug": "xuelingshou"
+ },
+ {
+  "title": "幻雪兽",
+  "no": "NO391",
+  "shiny": "否",
+  "family": "xuelingshou",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/8cceadbdc1ac9588.webp",
+  "slug": "huanxueshou"
+ },
+ {
+  "title": "饮雪狂兽",
+  "no": "NO392",
+  "shiny": "否",
+  "family": "xuelingshou",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/7115233cdce6d2d9.webp",
+  "slug": "yinxuekuangshou"
+ },
+ {
+  "title": "火豆丁",
+  "no": "NO393",
+  "shiny": "否",
+  "family": "huodouding",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/fad2b45d7c30a8a9.webp",
+  "slug": "huodouding"
+ },
+ {
+  "title": "火蛮人",
+  "no": "NO394",
+  "shiny": "否",
+  "family": "huodouding",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/00a66305cdc8b2b7.webp",
+  "slug": "huomanren"
+ },
+ {
+  "title": "火巨人",
+  "no": "NO395",
+  "shiny": "否",
+  "family": "huodouding",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/c3d8f21b7d99111c.webp",
+  "slug": "huojuren"
+ },
+ {
+  "title": "友爱天天",
+  "no": "NO396",
+  "shiny": "否",
+  "family": "youaitiantian",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/8592238af9ac32e7.webp",
+  "slug": "youaitiantian"
+ },
+ {
+  "title": "友爱星飞",
+  "no": "NO397",
+  "shiny": "否",
+  "family": "youaitiantian",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/3f641d22fe77e019.webp",
+  "slug": "youaixingfei"
+ },
+ {
+  "title": "莫比乌乌",
+  "no": "NO398",
+  "shiny": "否",
+  "family": "mobiwuwu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/b5564b556d14fd77.webp",
+  "slug": "mobiwuwu"
+ },
+ {
+  "title": "克莱因龙",
+  "no": "NO399",
+  "shiny": "否",
+  "family": "mobiwuwu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/70603c3f5de5091d.webp",
+  "slug": "kelaiyinlong"
+ },
+ {
+  "title": "瑰眼仔",
+  "no": "NO400",
+  "shiny": "否",
+  "family": "guiyanzai",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/eac7f6e12b8f53dd.webp",
+  "slug": "guiyanzai"
+ },
+ {
+  "title": "耳翎瑰魅",
+  "no": "NO401",
+  "shiny": "否",
+  "family": "guiyanzai",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/9bf96bab4ff521ff.webp",
+  "slug": "erlingguimei"
+ },
+ {
+  "title": "邪眼巨魔",
+  "no": "NO402",
+  "shiny": "否",
+  "family": "guiyanzai",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/898c88dc83ad85ee.webp",
+  "slug": "xieyanjumo"
+ },
+ {
+  "title": "觅觅蝠",
+  "no": "NO403",
+  "shiny": "否",
+  "family": "mimifu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/3dc7165ec11e3fd0.webp",
+  "slug": "mimifu"
+ },
+ {
+  "title": "翻翻蝠",
+  "no": "NO404",
+  "shiny": "否",
+  "family": "mimifu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/2e1427ab86d4ba5e.webp",
+  "slug": "fanfanfu"
+ },
+ {
+  "title": "夜游魔",
+  "no": "NO405",
+  "shiny": "否",
+  "family": "mimifu",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/94114949274e791b.webp",
+  "slug": "yeyoumo"
+ },
+ {
+  "title": "芽眼魔",
+  "no": "NO406",
+  "shiny": "否",
+  "family": "yayanmo",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/822e9e45d0853e06.webp",
+  "slug": "yayanmo"
+ },
+ {
+  "title": "叶眼魔",
+  "no": "NO407",
+  "shiny": "否",
+  "family": "yayanmo",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/10ac0740c4c2adf7.webp",
+  "slug": "yeyanmo"
+ },
+ {
+  "title": "障眼魔",
+  "no": "NO408",
+  "shiny": "否",
+  "family": "yayanmo",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/47e79abf58a1b83d.webp",
+  "slug": "zhangyanmo"
+ },
+ {
+  "title": "星云旅者",
+  "no": "NO409",
+  "shiny": "否",
+  "family": "xingyunl-zhe",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/5f4ad333774ffc25.webp",
+  "slug": "xingyunl-zhe"
+ },
+ {
+  "title": "点点",
+  "no": "NO410",
+  "shiny": "否",
+  "family": "diandian",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/d978c180d278671b.webp",
+  "slug": "diandian"
+ },
+ {
+  "title": "珀尔鼬",
+  "no": "NO411",
+  "shiny": "否",
+  "family": "diandian",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/f017b6e9b3808883.webp",
+  "slug": "poeryou"
+ },
+ {
+  "title": "不咕钟",
+  "no": "NO412",
+  "shiny": "否",
+  "family": "buguzhong",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/a4346b83b0cbbfa1.webp",
+  "slug": "buguzhong"
+ },
+ {
+  "title": "溯源钟",
+  "no": "NO413",
+  "shiny": "否",
+  "family": "buguzhong",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/8abb4de7069146f9.webp",
+  "slug": "suyuanzhong"
+ },
+ {
+  "title": "加灵",
+  "no": "NO414",
+  "shiny": "否",
+  "family": "jialing",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/240a10bd010ebd71.webp",
+  "slug": "jialing"
+ },
+ {
+  "title": "加益",
+  "no": "NO415",
+  "shiny": "否",
+  "family": "jialing",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/90c24cfc213b31ae.webp",
+  "slug": "jiayi"
+ },
+ {
+  "title": "加尔",
+  "no": "NO416",
+  "shiny": "否",
+  "family": "jialing",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/4c5ab4076b5a87df.webp",
+  "slug": "jiaer"
+ },
+ {
+  "title": "黑化加尔",
+  "no": "NO417",
+  "shiny": "否",
+  "family": "jialing",
+  "stage": "最终形态",
+  "ftype": "地区形态",
+  "img": "/img/72f322458963a5fa.webp",
+  "slug": "heihuajiaer"
+ },
+ {
+  "title": "咬咬小子",
+  "no": "NO418",
+  "shiny": "是",
+  "family": "yaoyaoxiaozi",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/34e24e357a48d7b9.webp",
+  "slug": "yaoyaoxiaozi"
+ },
+ {
+  "title": "胡桃王子",
+  "no": "NO419",
+  "shiny": "是",
+  "family": "yaoyaoxiaozi",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/77dd8090d7ecbf9c.webp",
+  "slug": "hutaowangzi"
+ },
+ {
+  "title": "足尖元件",
+  "no": "NO420",
+  "shiny": "是",
+  "family": "zujianyuanjian",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/5551853a5037bce6.webp",
+  "slug": "zujianyuanjian"
+ },
+ {
+  "title": "离心舞者",
+  "no": "NO421",
+  "shiny": "是",
+  "family": "zujianyuanjian",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/be14baf9931d6f16.webp",
+  "slug": "lixinwuzhe"
+ },
+ {
+  "title": "蝴蝶陶陶",
+  "no": "NO422",
+  "shiny": "是",
+  "family": "hudietaotao",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/d1168bce7d2408a2.webp",
+  "slug": "hudietaotao"
+ },
+ {
+  "title": "铆钉毛毛",
+  "no": "NO423",
+  "shiny": "是",
+  "family": "hudietaotao",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/013e2b9d3085b223.webp",
+  "slug": "maodingmaomao"
+ },
+ {
+  "title": "徘徊爪爪",
+  "no": "NO424",
+  "shiny": "是",
+  "family": "hudietaotao",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/2686ab2a0a2eb357.webp",
+  "slug": "paihuaizhuazhua"
+ },
+ {
+  "title": "苞米仔",
+  "no": "NO425",
+  "shiny": "是",
+  "family": "baomizai",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/b9b5e126f44763aa.webp",
+  "slug": "baomizai"
+ },
+ {
+  "title": "炮米花",
+  "no": "NO426",
+  "shiny": "是",
+  "family": "baomizai",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/7f4a33e1b825add1.webp",
+  "slug": "paomihua"
+ },
+ {
+  "title": "十字蝌蚪",
+  "no": "NO427",
+  "shiny": "是",
+  "family": "shizikedou",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/3f1aa0bc85299c64.webp",
+  "slug": "shizikedou"
+ },
+ {
+  "title": "十字蛙",
+  "no": "NO428",
+  "shiny": "是",
+  "family": "shizikedou",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/2ebf99df051bf6c3.webp",
+  "slug": "shiziwa"
+ },
+ {
+  "title": "深渊蛙",
+  "no": "NO429",
+  "shiny": "是",
+  "family": "shizikedou",
+  "stage": "最终形态",
+  "ftype": "原始形态",
+  "img": "/img/9211e583f8658e8d.webp",
+  "slug": "shenyuanwa"
+ },
+ {
+  "title": "卡波",
+  "no": "NO430",
+  "shiny": "是",
+  "family": "kabo",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/1e4dba1fd6ca6075.webp",
+  "slug": "kabo"
+ },
+ {
+  "title": "卡拉波斯",
+  "no": "NO431",
+  "shiny": "是",
+  "family": "kabo",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/e430e2c858338b52.webp",
+  "slug": "kalabosi"
+ },
+ {
+  "title": "守夜烛",
+  "no": "NO432",
+  "shiny": "是",
+  "family": "shouyezhu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/b982a35d5f683b90.webp",
+  "slug": "shouyezhu"
+ },
+ {
+  "title": "流明坎德拉",
+  "no": "NO433",
+  "shiny": "是",
+  "family": "shouyezhu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/ab4dcebead0d791b.webp",
+  "slug": "liumingkandela"
+ },
+ {
+  "title": "蜜果骸",
+  "no": "NO434",
+  "shiny": "是",
+  "family": "miguohai",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/f75d557ed6ccdf08.webp",
+  "slug": "miguohai"
+ },
+ {
+  "title": "半朽蜜果灵",
+  "no": "NO435",
+  "shiny": "是",
+  "family": "miguohai",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/8fac87d61abdcde3.webp",
+  "slug": "banxiumiguoling"
+ },
+ {
+  "title": "稻草人",
+  "no": "NO436",
+  "shiny": "是",
+  "family": "daocaoren",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9c32a4101ec98631.webp",
+  "slug": "daocaoren"
+ },
+ {
+  "title": "稻草守护者",
+  "no": "NO437",
+  "shiny": "是",
+  "family": "daocaoren",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/efe98d55df1115ac.webp",
+  "slug": "daocaoshouhuzhe"
+ },
+ {
+  "title": "栗鼠",
+  "no": "NO438",
+  "shiny": "是",
+  "family": "lishu",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/0edce2b671c0be7b.webp",
+  "slug": "lishu"
+ },
+ {
+  "title": "壳栗丝鼠",
+  "no": "NO439",
+  "shiny": "是",
+  "family": "lishu",
+  "stage": "Ⅱ阶",
+  "ftype": "原始形态",
+  "img": "/img/590d82b4c71215b9.webp",
+  "slug": "kelisishu"
+ },
+ {
+  "title": "睡铃雪影娃娃",
+  "no": "NO440",
+  "shiny": "否",
+  "family": "shuilingxueyingwawa",
+  "stage": "Ⅰ阶",
+  "ftype": "原始形态",
+  "img": "/img/9f031a8130da97dc.webp",
+  "slug": "shuilingxueyingwawa"
+ },
+ {
+  "title": "宝藏小狐",
+  "no": "NO441",
+  "shiny": "",
+  "family": "baozangxiaohu",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/421b813ce9eaab78.png",
+  "slug": "baozangxiaohu"
+ },
+ {
+  "title": "宝藏沙狐",
+  "no": "NO442",
+  "shiny": "",
+  "family": "baozangxiaohu",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/c3bb7ebcc5d36b41.png",
+  "slug": "baozangshahu"
+ },
+ {
+  "title": "诅咒狼灵",
+  "no": "NO443",
+  "shiny": "",
+  "family": "zuzhoulangling",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/9cb459eb7a5fe921.png",
+  "slug": "zuzhoulangling"
+ },
+ {
+  "title": "新月狼灵",
+  "no": "NO444",
+  "shiny": "",
+  "family": "zuzhoulangling",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/a790fd382dbd1f39.png",
+  "slug": "xinyuelangling"
+ },
+ {
+  "title": "银月狼王",
+  "no": "NO445",
+  "shiny": "",
+  "family": "zuzhoulangling",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/9faad517e7b378d4.png",
+  "slug": "yinyuelangwang"
+ },
+ {
+  "title": "新月鹭",
+  "no": "NO446",
+  "shiny": "",
+  "family": "xinyuelu",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/e3be5b61bd28a2c5.png",
+  "slug": "xinyuelu"
+ },
+ {
+  "title": "月辉鹭",
+  "no": "NO447",
+  "shiny": "",
+  "family": "xinyuelu",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/0af728a26f68d9e3.png",
+  "slug": "yuehuilu"
+ },
+ {
+  "title": "月使鹭纳",
+  "no": "NO448",
+  "shiny": "",
+  "family": "xinyuelu",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/03738ad86932669c.png",
+  "slug": "yueshiluna"
+ },
+ {
+  "title": "热团团",
+  "no": "NO449",
+  "shiny": "",
+  "family": "retuantuan",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/90f61e84548b4a5a.png",
+  "slug": "retuantuan"
+ },
+ {
+  "title": "焰米龙",
+  "no": "NO450",
+  "shiny": "",
+  "family": "retuantuan",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/c3a5f978da60502d.png",
+  "slug": "yanmilong"
+ },
+ {
+  "title": "圣凯布米龙",
+  "no": "NO451",
+  "shiny": "",
+  "family": "retuantuan",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/fb86c9cfcab65796.png",
+  "slug": "shengkaibumilong"
+ },
+ {
+  "title": "章脑丸",
+  "no": "NO452",
+  "shiny": "",
+  "family": "zhangnaowan",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/abb9a2b718a69af9.png",
+  "slug": "zhangnaowan"
+ },
+ {
+  "title": "智辉章脑",
+  "no": "NO453",
+  "shiny": "",
+  "family": "zhangnaowan",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/02899242a5f53651.png",
+  "slug": "zhihuizhangnao"
+ },
+ {
+  "title": "未完虫",
+  "no": "NO454",
+  "shiny": "",
+  "family": "weiwanchong",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/4e0ae11281f5ebcb.png",
+  "slug": "weiwanchong"
+ },
+ {
+  "title": "玳龟",
+  "no": "NO455",
+  "shiny": "",
+  "family": "daigui",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/27a9433152c82e60.png",
+  "slug": "daigui"
+ },
+ {
+  "title": "玳塔",
+  "no": "NO456",
+  "shiny": "",
+  "family": "daigui",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/0e746a318bac3cd7.png",
+  "slug": "daita"
+ },
+ {
+  "title": "量风碗",
+  "no": "NO457",
+  "shiny": "",
+  "family": "liangfengwan",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/c57f4c8f35fd1ecc.png",
+  "slug": "liangfengwan"
+ },
+ {
+  "title": "测风蝉",
+  "no": "NO458",
+  "shiny": "",
+  "family": "liangfengwan",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/88caa83ecfcc3cf6.png",
+  "slug": "cefengchan"
+ },
+ {
+  "title": "小浣蛋",
+  "no": "NO459",
+  "shiny": "",
+  "family": "xiaohuandan",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/debf52fb45feae64.png",
+  "slug": "xiaohuandan"
+ },
+ {
+  "title": "黑手浣熊",
+  "no": "NO460",
+  "shiny": "",
+  "family": "xiaohuandan",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/4afebb390119d5bc.png",
+  "slug": "heishouhuanxiong"
+ },
+ {
+  "title": "幽铃",
+  "no": "NO461",
+  "shiny": "",
+  "family": "youling",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/8beba50f468fc6af.png",
+  "slug": "youling"
+ },
+ {
+  "title": "摇铃魔偶",
+  "no": "NO462",
+  "shiny": "",
+  "family": "youling",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/0c97fda8cb515c08.png",
+  "slug": "yaolingmoou"
+ },
+ {
+  "title": "星星眼",
+  "no": "NO463",
+  "shiny": "",
+  "family": "xingxingyan",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/59cabc07e5b2d510.png",
+  "slug": "xingxingyan"
+ },
+ {
+  "title": "布灵",
+  "no": "NO464",
+  "shiny": "",
+  "family": "buling",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/0dfde99aae1dcf82.png",
+  "slug": "buling"
+ },
+ {
+  "title": "布灵布灵",
+  "no": "NO465",
+  "shiny": "",
+  "family": "buling",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/20f01b84a133ea78.png",
+  "slug": "bulingbuling"
+ },
+ {
+  "title": "果实立方人",
+  "no": "NO466",
+  "shiny": "",
+  "family": "guoshilifangren",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/320d9f4d0f226298.png",
+  "slug": "guoshilifangren"
+ },
+ {
+  "title": "呼拉猫",
+  "no": "NO852",
+  "shiny": "",
+  "family": "hulamao",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/a270a8553fc71351.webp",
+  "slug": "hulamao"
+ },
+ {
+  "title": "增肌猫",
+  "no": "NO853",
+  "shiny": "",
+  "family": "hulamao",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/308d471f9272f3fb.webp",
+  "slug": "zengjimao"
+ },
+ {
+  "title": "健猫教练",
+  "no": "NO854",
+  "shiny": "",
+  "family": "hulamao",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/954a74fd30407559.webp",
+  "slug": "jianmaojiaolian"
+ },
+ {
+  "title": "Chilunxiaozi",
+  "no": "NO888",
+  "shiny": "",
+  "family": "chilunxiaozi",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/08f5383fbd31eda2.webp",
+  "slug": "chilunxiaozi"
+ },
+ {
+  "title": "机甲小子",
+  "no": "NO889",
+  "shiny": "",
+  "family": "chilunxiaozi",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/8fbdc689ca504f7b.webp",
+  "slug": "jijiaxiaozi"
+ },
+ {
+  "title": "多灵",
+  "no": "NO928",
+  "shiny": "",
+  "family": "duoling",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/9f05ba799865e490.webp",
+  "slug": "duoling"
+ },
+ {
+  "title": "多灵主",
+  "no": "NO929",
+  "shiny": "",
+  "family": "duoling",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/99bb408567c3d485.webp",
+  "slug": "duolingzhu"
+ },
+ {
+  "title": "阿布",
+  "no": "NO961",
+  "shiny": "",
+  "family": "abu",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/e1cde39984734b1a.webp",
+  "slug": "abu"
+ },
+ {
+  "title": "超能阿布",
+  "no": "NO962",
+  "shiny": "",
+  "family": "abu",
+  "stage": "",
+  "ftype": "",
+  "img": "/img/af969ce112a198f8.webp",
+  "slug": "chaonengabu"
+ },
+ {
+  "title": "鸭吉吉国王",
+  "no": "NO1008",
+  "shiny": "否",
+  "family": "yajijiguowang-qilaiya",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/fff77e2dce7b0b9a.webp",
+  "slug": "yajijiguowang"
+ },
+ {
+  "title": "钻石蜗",
+  "no": "NO1012",
+  "shiny": "否",
+  "family": "zuanshiwo-shaolanhuangjindeyangzi",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/1c2a64f96045c538.webp",
+  "slug": "zuanshiwo"
+ },
+ {
+  "title": "蹦蹦果",
+  "no": "NO1015",
+  "shiny": "否",
+  "family": "bengbengguo-xiangyaqiuxingtai",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/88d4080b9eac43ca.webp",
+  "slug": "bengbengguo"
+ },
+ {
+  "title": "棋契陛下",
+  "no": "NO1024",
+  "shiny": "否",
+  "family": "qiqibixia-heiqiqiqidufenzhi",
+  "stage": "最终形态",
+  "ftype": "首领形态",
+  "img": "/img/cd98ebff9b55bfb7.webp",
+  "slug": "qiqibixia"
+ }
+]

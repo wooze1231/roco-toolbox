@@ -1,0 +1,55 @@
+<resources>
+    <!-- 深色模式兜底（桌面组件仍用） -->
+    <color name="bg_dark">#13164A</color>
+    <color name="bg_panel">#241A52</color>
+    <color name="purple">#7B2F8F</color>
+    <color name="ic_bg">#7B2F8F</color>
+
+    <!-- 浅色主界面（参考截图） -->
+    <color name="page_bg">#F5F3EE</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_primary">#2C2C2C</color>
+    <color name="text_secondary">#8A8A8A</color>
+    <color name="text_accent">#F5A623</color>
+    <color name="pill_yellow">#F5C542</color>
+    <color name="pill_yellow_text">#6B4C00</color>
+    <color name="divider">#E8E4DD</color>
+    <color name="green">#66BB6A</color>
+    <color name="red">#EF5350</color>
+    <color name="gold">#D4AF37</color>
+
+    <!-- 弹窗 / 设置页 / 输入框等（此前散落在 Kotlin 里硬编码，现收敛成资源以便深色覆盖） -->
+    <color name="panel_bg">#FDFCF9</color>
+    <color name="row_bg">#FFFFFF</color>
+    <color name="row_danger_bg">#FBE9E7</color>
+    <color name="row_soft_bg">#EFEBE4</color>
+    <color name="row_sel_bg">#FFF4E0</color>
+    <color name="text_soft">#8A8378</color>
+    <color name="text_sub">#A39C90</color>
+    <color name="text_danger">#C0392B</color>
+    <color name="stroke_soft">#EAE5DB</color>
+    <color name="line_soft">#F0ECE4</color>
+    <color name="arrow_soft">#C9C2B6</color>
+    <color name="chip_bg">#EDE9E2</color>
+    <color name="input_bg">#F7F5F0</color>
+    <color name="ripple">#14000000</color>
+
+    <!-- 金色系（异色图鉴的「已有 / 星标」配色） -->
+    <color name="gold_soft">#FBF3DC</color>
+    <color name="gold_line">#EAD9A6</color>
+    <color name="gold_text_deep">#9A6B00</color>
+
+    <!-- 商品卡片渐变起始色 -->
+    <color name="item_1_start">#FFF8E6</color>
+    <color name="item_1_end">#FFE9B8</color>
+    <color name="item_2_start">#F3E5FF</color>
+    <color name="item_2_end">#E1C4FF</color>
+    <color name="item_3_start">#E3F2FF</color>
+    <color name="item_3_end">#B8DFFF</color>
+    <color name="item_4_start">#E8F5E9</color>
+    <color name="item_4_end">#C8E6C9</color>
+    <color name="item_5_start">#FFEBEE</color>
+    <color name="item_5_end">#FFCDD2</color>
+    <color name="item_6_start">#E0F7FA</color>
+    <color name="item_6_end">#B2EBF2</color>
+</resources>

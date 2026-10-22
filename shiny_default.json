@@ -1,0 +1,693 @@
+{
+  "version": 1,
+  "seasons": [
+    {
+      "name": "S4",
+      "groups": [
+        {
+          "name": "赤月奇遇精灵",
+          "items": [
+            {
+              "n": "章脑丸",
+              "no": 452,
+              "s": "zhangnaowan",
+              "i": "/img/abb9a2b718a69af9.png",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "量风碗",
+              "no": 553,
+              "s": "liangfengwan",
+              "i": "/img/c57f4c8f35fd1ecc.png",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "幽铃",
+              "no": 226,
+              "s": "youling",
+              "i": "/img/8beba50f468fc6af.png",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "未完虫",
+              "no": 284,
+              "s": "weiwanchong",
+              "i": "/img/4e0ae11281f5ebcb.png",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "觅觅蝠",
+              "no": 507,
+              "s": "mimifu",
+              "i": "/img/3dc7165ec11e3fd0.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "逗逗",
+              "no": 541,
+              "s": "doudou",
+              "i": "/img/da99d7ed4c1bf1d0.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "刺轮砣（上弦的样子）",
+              "no": 44,
+              "s": "ciluntuo-shangxiandeyangzi",
+              "i": "/img/565b66cd1ca24914.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "刺轮砣（下弦的样子）",
+              "no": 45,
+              "s": "ciluntuo",
+              "i": "/img/0426afaf766a4db3.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        },
+        {
+          "name": "金月奇遇精灵",
+          "items": [
+            {
+              "n": "小浣蛋",
+              "no": 180,
+              "s": "xiaohuandan",
+              "i": "/img/debf52fb45feae64.png",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "星星眼",
+              "no": 258,
+              "s": "xingxingyan",
+              "i": "/img/59cabc07e5b2d510.png",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "布灵",
+              "no": 210,
+              "s": "buling",
+              "i": "/img/0dfde99aae1dcf82.png",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "玳龟",
+              "no": 410,
+              "s": "daigui",
+              "i": "/img/27a9433152c82e60.png",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "小黑猫",
+              "no": 195,
+              "s": "xiaoheimao",
+              "i": "/img/ae57c9a5ca709d2e.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "瑰眼仔",
+              "no": 413,
+              "s": "guiyanzai",
+              "i": "/img/eac7f6e12b8f53dd.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "芽眼魔",
+              "no": 484,
+              "s": "yayanmo",
+              "i": "/img/822e9e45d0853e06.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "小灵菇",
+              "no": 181,
+              "s": "xiaolinggu",
+              "i": "/img/0fbf6333ab1f9da7.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "叮叮卯",
+              "no": 87,
+              "s": "dingdingmao",
+              "i": "/img/c203d2befd606a1b.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        },
+        {
+          "name": "S4赛季「月涌」通行证",
+          "items": [
+            {
+              "n": "月使鹭纳",
+              "no": 280,
+              "s": "yueshiluna",
+              "i": "/img/03738ad86932669c.png",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "热团团",
+              "no": 0,
+              "s": "retuantuan",
+              "i": "/img/90f61e84548b4a5a.png",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "S3",
+      "groups": [
+        {
+          "name": "",
+          "items": [
+            {
+              "n": "伊贝儿",
+              "no": 157,
+              "s": "yibeier",
+              "i": "/img/380983ceec8d7ac4.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "可立鸡",
+              "no": 421,
+              "s": "keliji",
+              "i": "/img/66bff42cf8dc9329.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "豆丁鱼",
+              "no": 391,
+              "s": "doudingyu",
+              "i": "/img/7220cfd5a68a0ef5.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "海盔虫",
+              "no": 163,
+              "s": "haikuichong-2",
+              "i": "/img/5844eb2593c13edb.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "海盔虫（磨损的样子）",
+              "no": 162,
+              "s": "haikuichong",
+              "i": "/img/52d99a0c35ae6357.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "地鼠（枯水期的样子）",
+              "no": 432,
+              "s": "dishu-kushuiqideyangzi",
+              "i": "/img/8d7e6cbb993b5e7e.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "地鼠（储水时的样子）",
+              "no": 433,
+              "s": "dishu-chushuishideyangzi",
+              "i": "/img/d74a616a38489e0c.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "小草虫",
+              "no": 193,
+              "s": "xiaocaochong",
+              "i": "/img/1ae51d7468c6cc60.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "小鹬",
+              "no": 366,
+              "s": "xiaoyu",
+              "i": "/img/bf6ab3d34cb5bc0a.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "斑斑",
+              "no": 289,
+              "s": "banban",
+              "i": "/img/367d724fb402bc6b.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        },
+        {
+          "name": "赛季奇遇",
+          "items": [
+            {
+              "n": "卡波",
+              "no": 593,
+              "s": "kabo",
+              "i": "/img/1e4dba1fd6ca6075.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "栗鼠",
+              "no": 601,
+              "s": "lishu",
+              "i": "/img/0edce2b671c0be7b.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "稻草人",
+              "no": 599,
+              "s": "daocaoren",
+              "i": "/img/9c32a4101ec98631.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "守夜烛",
+              "no": 595,
+              "s": "shouyezhu",
+              "i": "/img/b982a35d5f683b90.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "苞米仔",
+              "no": 588,
+              "s": "baomizai",
+              "i": "/img/b9b5e126f44763aa.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "蜜果骸",
+              "no": 597,
+              "s": "miguohai",
+              "i": "/img/f75d557ed6ccdf08.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "蝴蝶陶陶",
+              "no": 585,
+              "s": "hudietaotao",
+              "i": "/img/d1168bce7d2408a2.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "十字蝌蚪",
+              "no": 590,
+              "s": "shizikedou",
+              "i": "/img/3f1aa0bc85299c64.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        },
+        {
+          "name": "S3赛季「铅字」通行证",
+          "items": [
+            {
+              "n": "胡桃王子",
+              "no": 582,
+              "s": "hutaowangzi",
+              "i": "/img/77dd8090d7ecbf9c.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "离心舞者",
+              "no": 584,
+              "s": "lixinwuzhe",
+              "i": "/img/be14baf9931d6f16.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "S2",
+      "groups": [
+        {
+          "name": "",
+          "items": [
+            {
+              "n": "公平鸽",
+              "no": 0,
+              "s": "gongpingge",
+              "i": "/img/36e00248aad11b95.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "灵狐",
+              "no": 0,
+              "s": "linghu",
+              "i": "/img/3f23f9a72125776e.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "小独角兽",
+              "no": 0,
+              "s": "xiaodujiaoshou",
+              "i": "/img/2f4500bd2481febd.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "嘟嘟煲",
+              "no": 0,
+              "s": "dudubao",
+              "i": "/img/dbf2ab7f33dfe55b.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "菊花梨",
+              "no": 0,
+              "s": "juhuali",
+              "i": "/img/9772a50f4138675d.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "幽影树",
+              "no": 0,
+              "s": "youyingshu",
+              "i": "/img/72721fbb05abefce.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "小夜",
+              "no": 0,
+              "s": "xiaoye",
+              "i": "/img/2ead985bf614895b.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "恶魔叮",
+              "no": 0,
+              "s": "emoding",
+              "i": "/img/c7b4ab5e184c0f97.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        },
+        {
+          "name": "赛季奇遇",
+          "items": [
+            {
+              "n": "烟花团",
+              "no": 0,
+              "s": "yanhuatuan",
+              "i": "/img/efad48f22cd69a7b.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "牵线木偶",
+              "no": 0,
+              "s": "qianxianmuou",
+              "i": "/img/dc899184cef69996.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "咕咕帽",
+              "no": 0,
+              "s": "gugumao",
+              "i": "/img/06cbb82e7793fec5.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "猴麦仔",
+              "no": 0,
+              "s": "houmaizai",
+              "i": "/img/a7ac650617ab6dc5.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "小鼓象",
+              "no": 0,
+              "s": "xiaoguxiang",
+              "i": "/img/9786942a293e9d61.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "炫光迪迪",
+              "no": 0,
+              "s": "xuanguangdidi",
+              "i": "/img/47a8ce19ef8852aa.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "加油海葵",
+              "no": 0,
+              "s": "jiayouhaikui",
+              "i": "/img/6a2969f277570a0a.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "小丑豆豆",
+              "no": 0,
+              "s": "xiaochoudoudou",
+              "i": "/img/5b91f37b45334cad.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        },
+        {
+          "name": "S2赛季「狂欢」通行证",
+          "items": [
+            {
+              "n": "小雪人",
+              "no": 515,
+              "s": "xiaoxueren",
+              "i": "/img/fca4bdae477f5812.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "爆焰仔",
+              "no": 517,
+              "s": "baoyanzai",
+              "i": "/img/e7e768bfaa4c9f63.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "S1",
+      "groups": [
+        {
+          "name": "",
+          "items": [
+            {
+              "n": "格兰种子",
+              "no": 0,
+              "s": "gelanzhongzi",
+              "i": "/img/6519dc1f2787142f.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "恶魔狼",
+              "no": 0,
+              "s": "emolang",
+              "i": "/img/emolang-official.png",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "拉特",
+              "no": 0,
+              "s": "late",
+              "i": "/img/5456cd05a5e64304.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "治愈兔",
+              "no": 0,
+              "s": "zhiyutu",
+              "i": "/img/6c012b7c3bd4405f.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "大耳帽兜",
+              "no": 0,
+              "s": "daermaodou",
+              "i": "/img/a06cc9e663b86374.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "呼呼猪",
+              "no": 0,
+              "s": "huhuzhu",
+              "i": "/img/c41525c4da64c4b3.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "机械方方",
+              "no": 0,
+              "s": "jixiefangfang",
+              "i": "/img/29a73e7c354f5b20.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "奇丽花",
+              "no": 0,
+              "s": "qilihua",
+              "i": "/img/86fbd445881f3c47.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        },
+        {
+          "name": "赛季奇遇",
+          "items": [
+            {
+              "n": "月牙雪熊",
+              "no": 0,
+              "s": "yueyaxuexiong",
+              "i": "/img/0e6afdc8f7e0eace.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "粉粉星",
+              "no": 0,
+              "s": "fenfenxing",
+              "i": "/img/4c2102eda66efcfe.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "粉星仔",
+              "no": 0,
+              "s": "fenxingzai",
+              "i": "/img/a35a635e179cf2d1.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "空空颅",
+              "no": 0,
+              "s": "kongkonglu",
+              "i": "/img/b9987de766f29b63.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "双灯鱼",
+              "no": 0,
+              "s": "shuangdengyu",
+              "i": "/img/be13d7e1228d67be.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "嗜光嗡嗡",
+              "no": 0,
+              "s": "shiguangwengweng",
+              "i": "/img/a58f245f4e59e107.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "贝瑟",
+              "no": 0,
+              "s": "beise",
+              "i": "/img/9f11ad593961d05f.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "燃薪虫",
+              "no": 0,
+              "s": "ranxinchong",
+              "i": "/img/de32aa97157caaa2.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        },
+        {
+          "name": "S1赛季「暗夜」通行证＆限定",
+          "items": [
+            {
+              "n": "绒绒",
+              "no": 0,
+              "s": "rongrong",
+              "i": "/img/ec410e956c16304c.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "疾光千兽",
+              "no": 0,
+              "s": "jiguangqianshou",
+              "i": "/img/82c307870fa77a97.webp",
+              "c": 0,
+              "e": 0
+            },
+            {
+              "n": "火红尾",
+              "no": 0,
+              "s": "huohongwei",
+              "i": "/img/b496cc717223be7d.webp",
+              "c": 0,
+              "e": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>批量添加 · 交互预览</title>
+<style>
+  :root{
+    --panel-bg:#FDFCF9; --row-bg:#FFFFFF; --row-sel-bg:#FFF4E0; --row-soft-bg:#EFEBE4;
+    --input-bg:#F7F4EE; --text-primary:#2E2A24; --text-sub:#A39C90; --text-soft:#8A8378;
+    --stroke-soft:#EAE5DB; --divider:#F0ECE4;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;padding:26px 16px 40px;
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:#F2EFE9;color:var(--text-primary);
+    display:flex;flex-direction:column;align-items:center;gap:16px}
+  .cap{font-size:12.5px;color:#8A8378;letter-spacing:.3px}
+  .phone{width:340px;background:var(--panel-bg);border-radius:22px;
+    padding:18px 18px 8px;box-shadow:0 10px 34px rgba(0,0,0,.13)}
+  .title{font-size:19px;font-weight:700;text-align:center}
+  .sub{font-size:12.5px;color:var(--text-sub);text-align:center;padding-top:5px;
+    white-space:pre-line;line-height:1.5}
+  .div{height:1px;background:var(--divider);margin:14px 0 10px}
+  textarea{width:100%;height:150px;resize:none;border-radius:14px;
+    background:var(--input-bg);border:1px solid var(--stroke-soft);
+    padding:14px 18px;font-size:15px;line-height:1.75;color:var(--text-primary);
+    font-family:inherit;outline:none}
+  textarea::placeholder{color:var(--text-sub)}
+  .row{display:flex;align-items:center;gap:10px;padding:12px 14px;margin-bottom:6px;
+    border-radius:13px;background:var(--row-bg);border:1px solid var(--stroke-soft);
+    cursor:pointer;transition:background .16s,border-color .16s}
+  .row.sel{background:var(--row-sel-bg);border:2px solid var(--text-primary)}
+  .box{width:30px;height:30px;flex:0 0 30px;display:flex;align-items:center;
+    justify-content:center;font-size:19px;color:var(--text-sub)}
+  .row.sel .box{color:var(--text-primary)}
+  .texts{display:flex;flex-direction:column;min-width:0}
+  .t{font-size:14.5px;font-weight:700}
+  .s{font-size:11.5px;color:var(--text-sub);padding-top:2px;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .row.soft{background:var(--row-soft-bg);border-color:var(--stroke-soft)}
+  .row.soft .t{color:var(--text-soft)}
+  .row.main{justify-content:center}
+  .row.main.empty .t{color:var(--text-soft)}
+  .miss{font-size:11.5px;color:#C0392B;background:#FBE9E7;border-radius:10px;
+    padding:9px 12px;margin-bottom:8px;line-height:1.6}
+  .bar{font-size:12px;color:#8A8378;text-align:center;padding-bottom:6px}
+  .hint{max-width:600px;font-size:12.5px;color:#7C756A;line-height:1.8;
+    background:#fff;border-radius:12px;padding:14px 16px;
+    box-shadow:0 3px 14px rgba(0,0,0,.06)}
+  .hint b{color:#2E2A24}
+  .hint code{background:#F2EFE9;border-radius:5px;padding:1.5px 6px;font-size:12px}
+  .arrow{font-size:20px;color:#C9C2B6}
+</style>
+</head>
+<body>
+
+<div class="cap">① 输入 → ② 勾选 → ③ 一次加入</div>
+
+<div class="phone">
+  <div class="title">批量添加</div>
+  <div class="sub">每行一个精灵名字（也可用逗号、顿号、空格分隔）。
+会自动逐行去图鉴对应，确认后一次性全部加入「未分类」。</div>
+  <div class="div"></div>
+  <textarea readonly>小独角兽
+公平鸽
+小夜
+音碟吼
+小丑公爵
+独角兽</textarea>
+  <div class="row main" style="background:var(--row-bg)">
+    <div class="t">下一步：对应图鉴</div>
+  </div>
+  <div class="row soft main"><div class="t">取消</div></div>
+</div>
+
+<div class="arrow">↓</div>
+
+<div class="cap">对应结果 · 勾选加入（点一下试试）</div>
+
+<div class="phone">
+  <div class="title">批量添加 · 勾选加入</div>
+  <div class="sub">输入 6 个名字，对应上 6 个。
+已预选最像的，改好勾选后一次加入：</div>
+  <div class="div"></div>
+
+  <div class="row sel" data-i="0"><div class="box">☑</div><div class="texts">
+    <div class="t">① 小独角兽</div><div class="s">你输入「小独角兽」 · xiaodujiaoshou</div></div></div>
+  <div class="row sel" data-i="1"><div class="box">☑</div><div class="texts">
+    <div class="t">① 公平鸽</div><div class="s">你输入「公平鸽」 · gongpingge</div></div></div>
+  <div class="row sel" data-i="2"><div class="box">☑</div><div class="texts">
+    <div class="t">① 小夜</div><div class="s">你输入「小夜」 · xiaoye</div></div></div>
+  <div class="row sel" data-i="3"><div class="box">☑</div><div class="texts">
+    <div class="t">① 音碟吼</div><div class="s">你输入「音碟吼」 · yindiehou</div></div></div>
+  <div class="row sel" data-i="4"><div class="box">☑</div><div class="texts">
+    <div class="t">① 小丑公爵</div><div class="s">你输入「小丑公爵」 · xiaochougongjue</div></div></div>
+
+  <div class="miss">「独角兽」对上 3 只，下面这 3 个只勾你要的：</div>
+  <div class="row" data-i="5"><div class="box">☐</div><div class="texts">
+    <div class="t">　小独角兽</div><div class="s">你输入「独角兽」 · 已有同名项</div></div></div>
+  <div class="row sel" data-i="6"><div class="box">☑</div><div class="texts">
+    <div class="t">① 彩虹独角兽</div><div class="s">你输入「独角兽」 · caihongdujiaoshou</div></div></div>
+  <div class="row" data-i="7"><div class="box">☐</div><div class="texts">
+    <div class="t">　白金独角兽</div><div class="s">你输入「独角兽」 · baijindujiaoshou</div></div></div>
+
+  <div class="row main" id="btn"><div class="t" id="btnText">加入选中的 6 只</div></div>
+  <div class="row soft"><div class="t">重新输入</div></div>
+  <div class="bar">当前勾选：<b id="cnt">6</b> 只</div>
+</div>
+
+<div class="hint">
+<b>新增了什么</b><br>
+· 入口：异色页「<b>告知异色</b>」弹窗里多了一项「<b>批量添加多只</b>」（你单个输入框里已经打了字也会带过去）<br>
+· 输入框是<b>高版多行</b>（8 行起，能滚），每行一个名字；同时也认 <code>,</code> <code>、</code> <code>；</code> 空格分隔，自动去重<br>
+· 对应顺序是<b>精确优先</b>：编号 → 精确名 → 别名 → 拼音 → 子串 → 模糊兜底。<br>
+　手打的字是准的，所以精确阶段一命中就返回，不会把「小夜」跟「小夜莺」并列添乱<br>
+· 别名自动转换：打「<b>拿脑丸</b>」→ 自动对应「章脑丸」，打「<b>叮叮卵</b>」→「叮叮卯」<br>
+· 一个词对上多只（如「独角兽」→ 3 只）就全列出来，你勾要的那几只<br>
+· 没对上的名字单独提示，可一键「<b>记为自定义精灵</b>」（图鉴没收录的新精灵）<br>
+· 复用识图那套多选面板，<b>一次加入、只存一次盘</b>，统一进未分类
+</div>
+
+<script>
+const rows=[...document.querySelectorAll('.row[data-i]')];
+const cnt=document.getElementById('cnt'),btn=document.getElementById('btn'),
+      btnText=document.getElementById('btnText');
+function refresh(){
+  const n=rows.filter(r=>r.classList.contains('sel')).length;
+  cnt.textContent=n;
+  btnText.textContent=n?`加入选中的 ${n} 只`:'勾选要加入的精灵';
+  btn.classList.toggle('empty',n===0);
+}
+rows.forEach(r=>r.addEventListener('click',()=>{
+  const on=r.classList.toggle('sel');
+  r.querySelector('.box').textContent=on?'☑':'☐';
+  refresh();
+}));
+refresh();
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+# ---- 构建产物 / 大文件 ----
+android-sdk/
+versions/
+snapshots/
+build/
+dist/
+tmp/
+gradle-tmp/
+*.apk
+*.aab
+*.aar
+
+# ---- Gradle / IDE ----
+.gradle/
+local.properties
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ---- 签名与密钥（绝不提交）----
+*.jks
+*.keystore
+keystore.properties
+
+# ---- 游戏素材（版权原因，不进仓库）----
+android-app/app/src/main/assets/particles/
+android-app/app/src/main/assets/cards/
+# 微软雅黑子集，同样不可再分发
+android-app/app/src/main/assets/fonts/ocr_subset.ttf
+
+# ---- 系统垃圾 ----
+.DS_Store
+Thumbs.db
+
+# ---- 本地构建残留（容易误提交）----
+android-app/gradle-8.9-bin.zip
+android-app/gradle-tmp/
+android-app/%SystemDrive%/
+**/%SystemDrive%/
+ocrexp/mock/probe_*.png
+
+# ---- 本地工作日志 ----
+.workbuddy/
+
+# ---- Python 缓存 ----
+__pycache__/
+*.pyc
+
+# ---- Python 缓存 ----
+__pycache__/
+*.pyc

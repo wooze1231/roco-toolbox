@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洛克助手 · 1.2.0 效果预览</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#1b1a17;color:#e9e4d8;
+       font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+       padding:26px 20px 70px}
+  h1{font-size:21px;margin:0 0 6px}
+  .lead{color:#9a9284;font-size:13px;margin:0 0 8px;line-height:1.7}
+  .lead b{color:#D4AF37}
+  h2{font-size:15.5px;margin:36px 0 6px;padding-left:10px;border-left:3px solid #D4AF37;color:#f2ecdf}
+  .note{color:#8f8779;font-size:12.5px;margin:0 0 16px;padding-left:13px;line-height:1.7}
+  .board{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+  .col{flex:0 0 auto}
+  .phone{width:300px;border-radius:28px;overflow:hidden;position:relative;
+         box-shadow:0 14px 34px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.06)}
+  .cap{font-size:12px;color:#9a9284;margin:9px 0 0 4px}
+  .screen{position:relative;min-height:520px;background:var(--bg);overflow:hidden}
+  .grain{position:absolute;inset:0;pointer-events:none;opacity:.09;mix-blend-mode:multiply;z-index:5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")}
+
+  /* ---- 彩绘色板 ---- */
+  .pl{--bg:#FBF7EC;--card:#FFFDF6;--ink:#4A453C;--txt:#2E2A25;--sub:#6F6A5E;--accent:#C25A35;--crayon:#E4573D}
+  .pd{--bg:#26241F;--card:#322F28;--ink:#6A6358;--txt:#F0EADB;--sub:#A89E8C;--accent:#F0775E;--crayon:#F0775E}
+
+  /* ---- 顶栏 ---- */
+  .hdr{height:52px;display:flex;align-items:center;padding:0 16px;position:relative;z-index:6}
+  .hdr .back{font-size:18px;margin-right:9px;opacity:.85}
+  .hdr .ttl{font-weight:800;font-size:17px;letter-spacing:.02em;transform:rotate(-.7deg)}
+  .hdr .inkline{position:absolute;left:8px;right:8px;bottom:2px;height:0;
+                border-top:2.6px solid var(--ink);filter:url(#wobble);opacity:.85}
+
+  /* ---- 彩绘卡片 ---- */
+  .card{position:relative;margin:12px 12px 0}
+  .card .bd{position:absolute;inset:0;background:var(--card);
+            border:2.6px solid var(--ink);border-radius:16px;filter:url(#wobble)}
+  .card .ct{position:relative;padding:5px 15px 8px}
+  .sect{font-size:12.5px;font-weight:800;letter-spacing:.05em;color:var(--accent);
+        padding:11px 2px 4px;transform:rotate(-.6deg);display:inline-block}
+  .row{display:flex;align-items:center;justify-content:space-between;padding:12px 2px}
+  .row .t{font-size:14px;font-weight:700;color:var(--txt)}
+  .row .s{font-size:11.5px;color:var(--sub);margin-top:3px}
+  .arrow{color:var(--sub);font-size:16px;opacity:.7}
+  .dv{height:0;border-top:2px solid var(--ink);filter:url(#wobble);opacity:.55;margin:0 8px}
+
+  /* ---- 分段控件（错位演示） ---- */
+  .seg{display:flex;gap:8px;padding:12px 4px 4px}
+  .seg .sg{flex:1;text-align:center;position:relative;padding:9px 0;font-size:12px;font-weight:800;
+           color:var(--sub);border:2px solid var(--ink);border-radius:11px;filter:url(#wobbleSoft)}
+  .seg .sg.on{color:#FFFDF6}
+  .seg .sg.on::before{content:'';position:absolute;inset:1px -1px -2px 2px;background:var(--crayon);
+           border-radius:9px;filter:url(#wobble);z-index:-1;opacity:.94}
+
+  /* ---- 按钮（错位/旋转） ---- */
+  .btn{display:block;width:calc(100% - 24px);margin:10px 12px 0;padding:12px 0;text-align:center;
+       border:2.4px solid var(--ink);border-radius:14px;font-weight:800;font-size:14.5px;
+       background:var(--card);color:var(--txt);filter:url(#wobbleSoft)}
+  .btn.pri{background:var(--crayon);color:#FFFDF6;transform:rotate(-.7deg)}
+  .btn.alt{transform:rotate(.5deg)}
+
+  /* ---- 顶栏候选 ---- */
+  .cand{width:300px;border-radius:14px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.45);margin-bottom:22px}
+  .cand .lab{font-size:12px;color:#9a9284;padding:8px 2px 6px}
+  .hb{height:54px;display:flex;align-items:center;padding:0 16px;position:relative;overflow:hidden}
+  .hb .back{font-size:18px;margin-right:9px}
+  .hb .ttl{font-weight:800;font-size:17px;transform:rotate(-.8deg);position:relative;z-index:2}
+  .hb-paper{background:#FFFDF6}
+  .hb-paper .ttl{color:#2E2A25}
+  .hb-paper .wave{position:absolute;left:52px;bottom:9px;z-index:2}
+  .hb-paper .wave path{stroke:#C25A35}
+  .hb-solid{background:#E4573D}
+  .hb-solid .ttl{color:#FFFDF6}
+  .hb-duo{background:linear-gradient(90deg,#E4573D,#E0A93B)}
+  .hb-duo .ttl{color:#FFFDF6}
+  .hb .wob{position:absolute;inset:6px;border-radius:14px;filter:url(#wobble)}
+
+  /* ---- 赛季弹窗 ---- */
+  .pop{width:300px;background:var(--card);border-radius:20px;padding:16px 16px 18px;position:relative;
+       box-shadow:0 16px 40px rgba(0,0,0,.55)}
+  .pop .bd{position:absolute;inset:0;border:2.6px solid var(--ink);border-radius:20px;filter:url(#wobble)}
+  .pop .inner{position:relative}
+  .pop h3{margin:0;text-align:center;font-size:16px;font-weight:800;color:var(--txt);transform:rotate(-.5deg)}
+  .pop .sub{text-align:center;font-size:11.5px;color:var(--sub);margin-top:4px}
+  .pop hr{border:0;height:0;border-top:2px solid var(--ink);filter:url(#wobble);opacity:.4;margin:12px 0}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .cell{text-align:center;padding:11px 0;font-weight:800;font-size:13px;border:2px solid var(--ink);
+        border-radius:11px;filter:url(#wobbleSoft);color:var(--txt);background:transparent}
+  .cell.on{color:#FFFDF6;position:relative}
+  .cell.on::before{content:'';position:absolute;inset:1px -1px -2px 2px;background:var(--crayon);
+        border-radius:9px;filter:url(#wobble);z-index:-1}
+  .badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:800;
+         padding:2px 10px;border-radius:9px;white-space:nowrap}
+  .badge.bad{background:#8a2f22;color:#FFD9CF}
+  .badge.good{background:#3f7a46;color:#E6F7E9}
+  .popwrap{position:relative;padding-top:14px}
+
+  /* ---- 米金（默认）色板与控件 ---- */
+  .gl{--bg:#F5F3EE;--card:#FFFFFF;--line:#EAE5DB;--line2:#F0ECE4;--txt:#2C2C2C;--sub:#8A8A8A;
+      --gold:#D4AF37;--sel:#FFF4E0;--chip:#EDE9E2;--danger:#C0392B;--green:#66BB6A}
+  .gbar{height:52px;display:flex;align-items:center;padding:0 16px;background:var(--card);
+        border-bottom:1px solid var(--line)}
+  .gbar .back{font-size:18px;margin-right:9px;color:var(--txt)}
+  .gbar .ttl{font-weight:800;font-size:17px;color:var(--txt)}
+  .gwrap{padding:12px}
+  .gsum{display:flex;align-items:center;justify-content:space-between;padding:2px 4px 12px}
+  .gsum .l{font-size:12.5px;color:var(--sub)}
+  .gsum .l b{color:var(--gold);font-weight:800}
+  .gsum .r{font-size:12px;color:var(--gold);font-weight:700}
+  .gcard{background:var(--card);border:1px solid var(--line);border-radius:15px;
+         box-shadow:0 2px 8px rgba(120,110,90,.07);margin-bottom:12px;overflow:hidden}
+  .ghead{display:flex;align-items:center;gap:8px;padding:13px 14px}
+  .ghead .dot{width:8px;height:8px;border-radius:2px;background:var(--gold);flex:0 0 auto}
+  .ghead .t{font-size:14px;font-weight:800;color:var(--txt)}
+  .ghead .c{font-size:11.5px;color:var(--sub);margin-left:2px}
+  .ghead .chev{margin-left:auto;color:#C9C2B6;font-size:14px}
+  .grow{display:flex;align-items:center;gap:11px;padding:11px 14px;border-top:1px solid var(--line2)}
+  .cb{width:21px;height:21px;border-radius:7px;border:1.8px solid #CFC8BB;flex:0 0 auto;
+      display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff}
+  .cb.on{background:var(--gold);border-color:var(--gold)}
+  .grow .nm{font-size:14px;color:var(--txt)}
+  .tag{font-size:10.5px;font-weight:700;color:#6B4C00;background:#FBF3DC;border:1px solid #EAD9A6;
+       border-radius:7px;padding:1px 6px;margin-left:7px}
+  .grow .acts{margin-left:auto;display:flex;gap:8px}
+  .mini{font-size:12px;font-weight:700;padding:4px 9px;border-radius:9px}
+  .mini.edit{color:#9A6B00;background:#FBF3DC}
+  .mini.del{color:var(--danger);background:#FBE9E7}
+  .mini.rest{color:#2E7D32;background:#E8F5E9}
+  .gadd{margin-top:2px;padding:12px 14px 14px;background:var(--card);border:1px solid var(--line);border-radius:15px}
+  .gadd .fl{display:flex;gap:8px;margin-bottom:9px}
+  .inp{flex:1;height:38px;border-radius:11px;border:1px solid var(--line);background:#F7F5F0;
+       display:flex;align-items:center;padding:0 12px;font-size:13px;color:var(--sub)}
+  .spin{height:38px;border-radius:11px;border:1px solid var(--line);background:#F7F5F0;
+        display:flex;align-items:center;gap:6px;padding:0 12px;font-size:13px;color:var(--txt);white-space:nowrap}
+  .gbtn{height:44px;border-radius:13px;background:var(--gold);color:#fff;font-weight:800;font-size:14.5px;
+        display:flex;align-items:center;justify-content:center}
+  .glink{text-align:center;font-size:12.5px;color:var(--sub);margin-top:11px;text-decoration:underline}
+  .switch{width:38px;height:22px;border-radius:12px;position:relative}
+  .switch.on{background:var(--gold)}
+  .switch .kn{position:absolute;top:2px;width:18px;height:18px;border-radius:50%;background:#fff}
+  .switch.on .kn{right:2px}
+  .len .mark{color:var(--green);font-weight:800}
+</style>
+</head>
+<body>
+
+<h1>洛克助手 · 1.2.0 效果预览</h1>
+<p class="lead">这张图只是<b>效果稿</b>（HTML 预览），用来定方向，不代表已改代码。看完告诉我每块「行 / 不行 / 换成什么」，我再落地到 App。</p>
+
+<!-- 全局 SVG 抖动滤镜：彩绘手绘感的来源 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="wobble">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4.2" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="wobbleSoft">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="3" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</defs></svg>
+
+<!-- ① 彩绘 -->
+<h2>① 彩绘：手绘抖动描边 + 组件错位/旋转</h2>
+<p class="note">描边、分隔线全部走 <code>wobble</code> 抖动（歪歪扭扭）；标题/按钮轻微旋转、选中块向右下错位几像素。左浅右深。</p>
+<div class="board">
+  <div class="col">
+    <div class="phone pl">
+      <div class="screen">
+        <div class="hdr"><span class="back">‹</span><span class="ttl">设置</span><div class="inkline"></div></div>
+        <div class="card"><div class="bd"></div><div class="ct">
+          <span class="sect">图鉴</span>
+          <div class="row"><div><div class="t">刷新精灵列表</div><div class="s">644 只 · 还没联网刷新过</div></div><span class="arrow">›</span></div>
+          <div class="dv"></div>
+          <div class="row"><div><div class="t">自定义精灵</div><div class="s">还没有（图鉴未收录的新精灵可记在这里）</div></div><span class="arrow">›</span></div>
+        </div></div>
+        <div class="card"><div class="bd"></div><div class="ct">
+          <span class="sect">图标</span>
+          <div class="row"><div><div class="t">图标缓存</div><div class="s">152 个文件 · 约 61842KB 异色图 76/76</div></div><span class="arrow">›</span></div>
+        </div></div>
+        <div class="card"><div class="bd"></div><div class="ct">
+          <span class="sect">数据</span>
+          <div class="row"><div><div class="t">导出记录</div><div class="s">当前 0/76 种</div></div><span class="arrow">›</span></div>
+          <div class="dv"></div>
+          <div class="row"><div><div class="t">导入记录</div><div class="s">从 JSON 覆盖</div></div><span class="arrow">›</span></div>
+          <div class="dv"></div>
+          <div class="row"><div><div class="t">还原备份</div><div class="s">还没有备份</div></div><span class="arrow">›</span></div>
+        </div></div>
+        <div class="seg"><div class="sg on">浅色</div><div class="sg">深色</div><div class="sg">跟随</div></div>
+        <div class="btn pri">导出</div>
+        <div class="btn alt">取消</div>
+        <div style="height:18px"></div>
+      </div>
+      <div class="grain"></div>
+    </div>
+    <div class="cap">彩绘 · 浅色（纸底 + 墨线 + 蜡笔红）</div>
+  </div>
+
+  <div class="col">
+    <div class="phone pd">
+      <div class="screen">
+        <div class="hdr"><span class="back">‹</span><span class="ttl">设置</span><div class="inkline"></div></div>
+        <div class="card"><div class="bd"></div><div class="ct">
+          <span class="sect">图鉴</span>
+          <div class="row"><div><div class="t">刷新精灵列表</div><div class="s">644 只 · 还没联网刷新过</div></div><span class="arrow">›</span></div>
+          <div class="dv"></div>
+          <div class="row"><div><div class="t">自定义精灵</div><div class="s">还没有（图鉴未收录的新精灵可记在这里）</div></div><span class="arrow">›</span></div>
+        </div></div>
+        <div class="card"><div class="bd"></div><div class="ct">
+          <span class="sect">图标</span>
+          <div class="row"><div><div class="t">图标缓存</div><div class="s">152 个文件 · 约 61842KB 异色图 76/76</div></div><span class="arrow">›</span></div>
+        </div></div>
+        <div class="card"><div class="bd"></div><div class="ct">
+          <span class="sect">数据</span>
+          <div class="row"><div><div class="t">导出记录</div><div class="s">当前 0/76 种</div></div><span class="arrow">›</span></div>
+          <div class="dv"></div>
+          <div class="row"><div><div class="t">导入记录</div><div class="s">从 JSON 覆盖</div></div><span class="arrow">›</span></div>
+        </div></div>
+        <div class="seg"><div class="sg on">浅色</div><div class="sg">深色</div><div class="sg">跟随</div></div>
+        <div class="btn pri">导出</div>
+        <div style="height:18px"></div>
+      </div>
+      <div class="grain"></div>
+    </div>
+    <div class="cap">彩绘 · 深色（夜纸 + 提亮蜡笔）</div>
+  </div>
+</div>
+
+<!-- ② 顶栏 -->
+<h2>② 彩绘顶栏：3 个候选（替换彩虹）</h2>
+<p class="note">左：纸底 + 墨线 + 手绘波浪下划线（最素）。中：单色蜡笔块。右：双色拼接。三个都保留「墨线抖动 + 标题轻旋」。</p>
+<div class="board">
+  <div class="cand">
+    <div class="hb hb-paper"><span class="wob"></span><span class="back">‹</span><span class="ttl">设置</span>
+      <svg class="wave" width="72" height="8" viewBox="0 0 72 8"><path d="M1,5 Q7,1 13,5 T25,5 T37,5 T49,5 T61,5 T71,5" fill="none" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <div class="inkline" style="border-top-color:#4A453C"></div>
+    </div>
+    <div class="lab">A · 纸底 + 手绘下划线</div>
+  </div>
+  <div class="cand">
+    <div class="hb hb-solid"><span class="wob" style="border:2.6px solid rgba(74,69,60,.5)"></span><span class="back" style="color:#FFFDF6">‹</span><span class="ttl">设置</span></div>
+    <div class="lab">B · 单色蜡笔块（珊瑚红）</div>
+  </div>
+  <div class="cand">
+    <div class="hb hb-duo"><span class="wob" style="border:2.6px solid rgba(74,69,60,.45)"></span><span class="back" style="color:#FFFDF6">‹</span><span class="ttl">设置</span></div>
+    <div class="lab">C · 双色拼接（红→赭黄）</div>
+  </div>
+</div>
+
+<!-- ③ 赛季弹窗 -->
+<h2>③ 自选赛季弹窗：现状 vs 建议</h2>
+<p class="note">现状：第一行 4 个、第二行 2 个被拉宽填满 → 看着不齐。建议：每列等宽、行数取整除（6 项 → 3 列 2 行），不再拉伸。</p>
+<div class="board">
+  <div class="popwrap">
+    <div class="pop pl" style="border:0">
+      <span class="badge bad">现状 · 4+2 被拉宽</span>
+      <div class="bd"></div><div class="inner">
+        <h3>自选赛季</h3><div class="sub">点选要导出的赛季（可选）</div>
+        <hr>
+        <div class="grid4">
+          <div class="cell on">S4</div><div class="cell on">S3</div><div class="cell">S2</div><div class="cell">S1</div>
+        </div>
+        <div class="grid4" style="margin-top:8px;grid-template-columns:repeat(2,1fr)">
+          <div class="cell">55</div><div class="cell">66</div>
+        </div>
+        <hr>
+        <div class="row" style="padding:2px 2px 8px"><div><div class="t">包含数量</div><div class="s">导出时一并写入只数与蛋数</div></div>
+          <div class="switch"><div class="kn" style="left:2px"></div></div></div>
+        <div class="btn" style="width:100%;margin:6px 0 0;padding:11px 0">导出</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popwrap">
+    <div class="pop pl">
+      <span class="badge good">建议 · 3 列 2 行，等宽</span>
+      <div class="bd"></div><div class="inner">
+        <h3>自选赛季</h3><div class="sub">点选要导出的赛季（可选）</div>
+        <hr>
+        <div class="grid3">
+          <div class="cell on">S4</div><div class="cell on">S3</div><div class="cell on">S2</div>
+          <div class="cell">S1</div><div class="cell">55</div><div class="cell">66</div>
+        </div>
+        <hr>
+        <div class="row" style="padding:2px 2px 8px"><div><div class="t">包含数量</div><div class="s">导出时一并写入只数与蛋数</div></div>
+          <div class="switch"><div class="kn" style="left:2px"></div></div></div>
+        <div class="btn" style="width:100%;margin:6px 0 0;padding:11px 0">导出</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>③b 不同数量怎么排（等宽 · 末行左对齐 · 绝不拉伸）</h2>
+<p class="note">规则：格子宽度<b>永远相等</b>；列数优先取能整除的；整除不了就取「每行数量差最小」的列数，同分取行数更少的。于是 <b>6→3 列（3+3）</b>、<b>7→4 列（4+3）</b>、5→3 列（3+2）、8→4 列（4+4）、10→4 列（4+4+2）。末行不满就空着，不再拉宽填满。</p>
+<div class="board">
+  <div class="pop pl" style="width:226px;padding:14px 13px"><div class="bd"></div><div class="inner">
+    <div class="sub" style="text-align:left;margin:0 0 9px">4 个 → 4 列（1 行）</div>
+    <div class="grid4">
+      <div class="cell" style="padding:9px 0;font-size:12px">S1</div><div class="cell" style="padding:9px 0;font-size:12px">S2</div>
+      <div class="cell" style="padding:9px 0;font-size:12px">S3</div><div class="cell" style="padding:9px 0;font-size:12px">S4</div>
+    </div>
+  </div></div>
+
+  <div class="pop pl" style="width:226px;padding:14px 13px"><div class="bd"></div><div class="inner">
+    <div class="sub" style="text-align:left;margin:0 0 9px">5 个 → 3 列（3+2）</div>
+    <div class="grid3">
+      <div class="cell" style="padding:9px 0;font-size:12px">S1</div><div class="cell" style="padding:9px 0;font-size:12px">S2</div>
+      <div class="cell" style="padding:9px 0;font-size:12px">S3</div><div class="cell" style="padding:9px 0;font-size:12px">55</div>
+      <div class="cell" style="padding:9px 0;font-size:12px">66</div>
+    </div>
+  </div></div>
+
+  <div class="pop pl" style="width:226px;padding:14px 13px"><div class="bd"></div><div class="inner">
+    <div class="sub" style="text-align:left;margin:0 0 9px">6 个 → 3 列（3+3）</div>
+    <div class="grid3">
+      <div class="cell on" style="padding:9px 0;font-size:12px">S1</div><div class="cell on" style="padding:9px 0;font-size:12px">S2</div>
+      <div class="cell on" style="padding:9px 0;font-size:12px">S3</div><div class="cell" style="padding:9px 0;font-size:12px">S4</div>
+      <div class="cell" style="padding:9px 0;font-size:12px">55</div><div class="cell" style="padding:9px 0;font-size:12px">66</div>
+    </div>
+  </div></div>
+
+  <div class="pop pl" style="width:226px;padding:14px 13px"><div class="bd"></div><div class="inner">
+    <div class="sub" style="text-align:left;margin:0 0 9px">7 个 → 4 列（4+3）</div>
+    <div class="grid4">
+      <div class="cell on" style="padding:9px 0;font-size:12px">S1</div><div class="cell on" style="padding:9px 0;font-size:12px">S2</div>
+      <div class="cell on" style="padding:9px 0;font-size:12px">S3</div><div class="cell on" style="padding:9px 0;font-size:12px">S4</div>
+      <div class="cell" style="padding:9px 0;font-size:12px">55</div><div class="cell" style="padding:9px 0;font-size:12px">66</div>
+      <div class="cell" style="padding:9px 0;font-size:12px">77</div>
+    </div>
+  </div></div>
+
+  <div class="pop pl" style="width:226px;padding:14px 13px"><div class="bd"></div><div class="inner">
+    <div class="sub" style="text-align:left;margin:0 0 9px">8 个 → 4 列（4+4）</div>
+    <div class="grid4">
+      <div class="cell" style="padding:9px 0;font-size:12px">S1</div><div class="cell" style="padding:9px 0;font-size:12px">S2</div>
+      <div class="cell" style="padding:9px 0;font-size:12px">S3</div><div class="cell" style="padding:9px 0;font-size:12px">S4</div>
+      <div class="cell" style="padding:9px 0;font-size:12px">55</div><div class="cell" style="padding:9px 0;font-size:12px">66</div>
+      <div class="cell" style="padding:9px 0;font-size:12px">77</div><div class="cell" style="padding:9px 0;font-size:12px">88</div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ④ 编辑商品池 -->
+<h2>④ 编辑商品池（默认 · 米金）</h2>
+<p class="note">现在是「纯文字 + 系统下拉框」。改法：分组卡片 + 自绘勾选框/胶囊标签，行内动作收敛成小药丸（改名/删除），不换主题。</p>
+<div class="board">
+  <div class="col">
+    <div class="phone gl">
+      <div class="screen">
+        <div class="gbar"><span class="back">‹</span><span class="ttl">编辑商品池</span></div>
+        <div class="gwrap">
+          <div class="gsum"><div class="l">当前 <b>86</b> 项 · 自定义 2 · 已删除 1</div><div class="r">全部展开</div></div>
+
+          <div class="gcard">
+            <div class="ghead"><span class="dot"></span><span class="t">精灵球类</span><span class="c">14 项</span><span class="chev">▾</span></div>
+            <div class="grow"><span class="cb on">✓</span><span class="nm">普通精灵球</span><div class="acts"><span class="mini edit">改名</span><span class="mini del">删除</span></div></div>
+            <div class="grow"><span class="cb on">✓</span><span class="nm">高级精灵球</span><div class="acts"><span class="mini edit">改名</span><span class="mini del">删除</span></div></div>
+            <div class="grow"><span class="cb on">✓</span><span class="nm">炫彩蛋<span class="tag">自定义</span></span><div class="acts"><span class="mini edit">改名</span><span class="mini del">删除</span></div></div>
+          </div>
+
+          <div class="gcard">
+            <div class="ghead"><span class="dot"></span><span class="t">血脉秘药</span><span class="c">21 项</span><span class="chev">▸</span></div>
+          </div>
+          <div class="gcard">
+            <div class="ghead"><span class="dot" style="background:#C9C2B6"></span><span class="t" style="color:#8A8A8A">已删除</span><span class="c">1 项（可恢复）</span><span class="chev">▸</span></div>
+          </div>
+
+          <div class="gadd">
+            <div class="fl"><div class="inp">输入商品名</div><div class="spin">精灵球类 ▾</div></div>
+            <div class="gbtn">添加</div>
+            <div class="glink">恢复默认商品池</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cap">分组卡片 · 自定义标签 · 行内小药丸</div>
+  </div>
+</div>
+
+<!-- ⑤ 订阅提醒 -->
+<h2>⑤ 订阅提醒（默认 · 米金）</h2>
+<p class="note">现在是系统 CheckBox 列表。改法：分组卡片 + 自绘勾选、分组头显示「N 项 · 已选 M」，顶部保留全选开关与清空。</p>
+<div class="board">
+  <div class="col">
+    <div class="phone gl">
+      <div class="screen">
+        <div class="gbar"><span class="back">‹</span><span class="ttl">订阅提醒</span></div>
+        <div class="gwrap">
+          <div class="gsum"><div class="l">已选 <b>12</b> 项 / 3 个分类</div><div class="r">清空</div></div>
+          <div class="gcard" style="margin-bottom:12px">
+            <div class="grow" style="border-top:0"><div style="flex:1"><div class="nm" style="font-weight:800">全选</div>
+              <div class="c" style="color:#8A8A8A;font-size:11.5px;margin-top:2px">任一商品在售即提醒</div></div>
+              <div class="switch on"><div class="kn"></div></div></div>
+          </div>
+
+          <div class="gcard">
+            <div class="ghead"><span class="dot"></span><span class="t">精灵球类</span><span class="c">14 项 · 已选 3</span><span class="chev">▾</span></div>
+            <div class="grow"><span class="cb on">✓</span><span class="nm">订阅整个分类</span></div>
+            <div class="grow" style="padding-left:40px"><span class="cb on">✓</span><span class="nm">普通精灵球</span></div>
+            <div class="grow" style="padding-left:40px"><span class="cb on">✓</span><span class="nm">高级精灵球</span></div>
+            <div class="grow" style="padding-left:40px"><span class="cb"></span><span class="nm">超级精灵球</span></div>
+          </div>
+          <div class="gcard">
+            <div class="ghead"><span class="dot"></span><span class="t">血脉秘药</span><span class="c">21 项</span><span class="chev">▸</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cap">分组卡片 · 自绘勾选 · 折叠头带统计</div>
+  </div>
+</div>
+
+</body>
+</html>

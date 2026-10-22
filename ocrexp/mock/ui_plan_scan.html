@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洛克助手 · 炫彩色卡（效果稿 v7）</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#171614;color:#e9e4d8;
+       font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+       padding:24px 18px 60px}
+  h1{font-size:20px;margin:0 0 6px}
+  .lead{color:#9a9284;font-size:13px;line-height:1.75;margin:0 0 6px}
+  .lead b{color:#E4573D}
+  code{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#C9C0AC}
+  h2{font-size:15px;margin:32px 0 14px;padding-left:10px;border-left:3px solid #E4573D;color:#f2ecdf}
+  .board{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+  .colw{flex:0 0 auto}
+  .phone{position:relative;width:300px;height:620px;border-radius:26px;overflow:hidden;
+         box-shadow:0 14px 34px rgba(0,0,0,.6);background:#000}
+  .cap{font-size:12px;color:#9a9284;margin:9px 0 0 4px;line-height:1.65;max-width:300px}
+
+  /* ===== 扫描页 ===== */
+  .feed{position:absolute;inset:0;background:
+        radial-gradient(120% 80% at 30% 20%, #F7F1E1 0%, #EFE7D3 55%, #E3D9C2 100%);
+        transform:scale(1.06)}
+  .feed .page{position:absolute;left:4%;top:9%;right:-8%;bottom:4%;background:#FBF7EC;
+        border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+  .feed .nameplate{position:absolute;right:9%;top:13%;width:36%;height:30px;background:#FFFDF6;
+        border:2px solid #4A453C;border-radius:6px;display:flex;align-items:center;justify-content:center;
+        font-size:12.5px;font-weight:800;color:#2E2A25;transform:rotate(-.6deg)}
+  .feed .ghost{position:absolute;right:15%;top:24%;width:22%;height:20%;border-radius:50%;
+        background:radial-gradient(circle at 40% 35%, #DDD6C4, #C9C0AC)}
+  .feed .panel{position:absolute;right:4%;top:46%;width:60%;height:28%;background:#292D2E;
+        border-radius:18px;display:flex;gap:4%;padding:8% 6%;align-items:center}
+  .feed .slot{flex:1;height:100%;border-radius:11px;background:#232728;
+        box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);overflow:hidden}
+  .feed .slot svg{width:100%;height:100%;display:block}
+  .feed .grid{position:absolute;left:8%;top:14%;width:46%;display:flex;flex-wrap:wrap;gap:6%}
+  .feed .grid i{width:20%;aspect-ratio:1;border-radius:50%;background:#CFC7B4;opacity:.75}
+  .feed .popup{position:absolute;left:10%;right:6%;top:34%;height:32%;background:#FFFDF6;
+        border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.25);border:2px solid #E5DECB;
+        padding:5% 5%;display:flex;flex-direction:column;gap:3%}
+  .feed .popup .pt{font-size:11.5px;font-weight:800;color:#2E2A25}
+  .feed .popup .rowc{display:flex;align-items:center;gap:6%}
+  .feed .popup .rowc span{font-size:9.5px;color:#6F6A5E;width:34%}
+  .feed .popup .dot{width:16px;height:12px;border-radius:6px}
+  .feed .popup .swatch{position:absolute;right:5%;top:16%;width:40%;height:58%;border-radius:12px;overflow:hidden}
+  .feed .popup .swatch svg{width:100%;height:100%;display:block}
+
+  .hole{position:absolute;left:5%;right:5%;top:18%;height:48%;border-radius:18px;
+        border:2px solid rgba(228,87,61,.95);
+        box-shadow:0 0 0 9999px rgba(0,0,0,.66), inset 0 0 20px rgba(228,87,61,.16)}
+  .hole .c{position:absolute;width:16px;height:16px;border:3px solid #E4573D;border-radius:3px}
+  .hole .c1{left:-3px;top:-3px;border-right:0;border-bottom:0}
+  .hole .c2{right:-3px;top:-3px;border-left:0;border-bottom:0}
+  .hole .c3{left:-3px;bottom:-3px;border-right:0;border-top:0}
+  .hole .c4{right:-3px;bottom:-3px;border-left:0;border-top:0}
+  .hole .tag{position:absolute;left:50%;top:-11px;transform:translateX(-50%);
+        font-size:10px;font-weight:800;color:#FFFDF6;background:#E4573D;
+        padding:2px 9px;border-radius:9px;white-space:nowrap}
+
+  .sheet{position:absolute;left:0;right:0;bottom:0;background:rgba(24,23,21,.95);
+         border-radius:22px 22px 0 0;padding:12px 14px 14px}
+  .hint{font-size:12px;color:#A89E8C;display:flex;justify-content:space-between;align-items:center}
+  .hint b{color:#E4573D;font-weight:800}
+  .bar{height:3px;border-radius:2px;background:linear-gradient(90deg,#E4573D,#E0A93B,#57A15A,#3E7CC1);
+       opacity:.5;margin:8px 0 10px}
+  .reslist{max-height:186px;overflow:hidden}
+  .res{display:flex;align-items:center;gap:10px;background:#2B2823;border:1px solid #3A352D;
+       border-radius:12px;padding:7px 9px;margin-bottom:7px}
+  .thumb{width:56px;height:33px;border-radius:8px;overflow:hidden;flex:0 0 auto}
+  .thumb svg{width:100%;height:100%;display:block}
+  .meta{flex:1;min-width:0}
+  .meta .n{font-size:12px;font-weight:800;color:#F0EADB;line-height:1.25}
+  .meta .n i{font-style:normal;font-weight:600;color:#A89E8C;font-size:10.5px;margin-left:5px}
+  .meta .s{font-size:10.5px;color:#A89E8C;margin-top:3px;display:flex;align-items:center;gap:5px}
+  .cdot{width:9px;height:9px;border-radius:3px;display:inline-block}
+  .pchip{display:inline-flex;align-items:center;height:17px;padding:0 5px;border-radius:5px;
+         background:#3A2A22;color:#F0D4AE;font-size:10px;line-height:1}
+  .pchip.p2{background:#2C3A22;color:#C8E6C9}
+  .pchip.p3{background:#22303A;color:#BFE6F7}
+  .pchip.p4{background:#3A2A3A;color:#DBBCEB}
+  .x{width:22px;height:22px;border-radius:7px;background:#3A2A22;color:#E08770;flex:0 0 auto;
+     display:flex;align-items:center;justify-content:center;font-size:12px}
+  .btns{display:flex;gap:9px;margin-top:10px}
+  .b{flex:1;height:42px;border-radius:13px;display:flex;align-items:center;justify-content:center;
+     font-size:13.5px;font-weight:800}
+  .b.primary{background:#E4573D;color:#FFFDF6}
+  .b.ghost{background:transparent;border:1.5px solid #4A443B;color:#A89E8C}
+
+  /* ===== 展示页（米金·浅色） ===== */
+  .gm{--bg:#F5F3EE;--card:#FFFFFF;--line:#EAE5DB;--txt:#2C2C2C;--sub:#8A8A8A;--gold:#D4AF37;
+      --goldsoft:#FBF3DC;--sel:#FFF4E0}
+  .gm .screen{position:absolute;inset:0;background:var(--bg)}
+  .gbar{height:52px;display:flex;align-items:center;padding:0 14px;background:var(--card);
+        border-bottom:1px solid var(--line)}
+  .gbar .back{font-size:18px;color:var(--txt);margin-right:8px}
+  .gbar .ttl{font-size:17px;font-weight:800;color:var(--txt);flex:1}
+  .gbar .cnt{height:30px;padding:0 10px;border-radius:10px;background:var(--goldsoft);
+             border:1px solid #EAD9A6;color:#8A6410;font-size:12px;font-weight:800;
+             display:flex;align-items:center;gap:4px}
+  .gbar .cnt i{font-style:normal;font-weight:600;font-size:10.5px;opacity:.85}
+  .gbody{padding:11px 12px}
+  .fcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:9px}
+  .frow{display:flex;gap:7px}
+  .frow+.frow{margin-top:7px}
+  .fsel{flex:1;height:34px;border-radius:10px;background:#F7F5F0;border:1px solid var(--line);
+        display:flex;align-items:center;gap:5px;padding:0 9px;font-size:11.5px;color:var(--txt)}
+  .fsel .dot{width:9px;height:9px;border-radius:3px;flex:0 0 auto}
+  .fsel .cv{margin-left:auto;font-size:10px;color:#C9C2B6}
+  .fsel.on{border-color:#E8CF8F;background:var(--sel);color:#8A6410;font-weight:800}
+  .sortrow{display:flex;gap:6px;margin-top:9px}
+  .sp{flex:1;height:29px;border-radius:9px;display:flex;align-items:center;justify-content:center;
+      font-size:11px;font-weight:700;color:var(--sub);background:#F7F5F0;border:1px solid var(--line)}
+  .sp.on{background:var(--sel);border-color:#E8CF8F;color:#8A6410}
+  .search{height:36px;border-radius:12px;background:var(--card);border:1px solid var(--line);
+          display:flex;align-items:center;padding:0 12px;font-size:12px;color:var(--sub);margin-bottom:10px}
+  .gcards{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .gc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:7px;
+      box-shadow:0 1px 4px rgba(120,110,90,.05)}
+  .gc .sw{height:56px;border-radius:10px;overflow:hidden}
+  .gc .sw svg{width:100%;height:100%;display:block}
+  .gc .nm{font-size:10.5px;color:var(--txt);font-weight:800;margin-top:6px;
+          white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .gc .sb{font-size:9.5px;color:var(--sub);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .gc .ft{display:flex;align-items:center;gap:4px;margin-top:4px}
+  .gc .ft .cdot{width:8px;height:8px;border-radius:2px}
+  .gc .ft .pt{display:inline-flex;align-items:center;height:14px;padding:0 4px;border-radius:4px;
+          background:var(--goldsoft);color:#8A6410;font-size:9px;margin-left:auto}
+  .gc .ft .pt.ss{background:#EEF0F2;color:#5A6470}
+  .dropdown{position:absolute;left:12px;right:12px;top:152px;background:var(--card);border-radius:14px;
+            border:1px solid var(--line);box-shadow:0 10px 26px rgba(80,70,50,.18);overflow:hidden}
+  .dropdown .dh{font-size:11px;color:var(--sub);padding:10px 12px 6px}
+  .dropdown .di{display:flex;align-items:center;gap:9px;padding:9px 12px;font-size:12.5px;color:var(--txt)}
+  .dropdown .di .dot{width:14px;height:14px;border-radius:5px;flex:0 0 auto}
+  .dropdown .di .n{flex:1}
+  .dropdown .di .c{font-size:10.5px;color:var(--sub)}
+  .dropdown .di.on{background:var(--sel)}
+  .scrim2{position:absolute;inset:0;background:rgba(60,52,40,.28)}
+  .detail{position:absolute;left:18px;right:18px;top:150px;background:var(--card);
+          border-radius:18px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(80,70,50,.22);padding:14px}
+  .detail .big{height:92px;border-radius:14px;overflow:hidden}
+  .detail .big svg{width:100%;height:100%;display:block}
+  .detail .r{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--txt);padding:5px 0}
+  .detail .r span{width:42px;color:var(--sub);font-size:11.5px}
+  .detail .r .dot{width:16px;height:12px;border-radius:5px}
+  .detail .acts{display:flex;gap:8px;margin-top:10px}
+  .detail .a{flex:1;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;
+             font-size:12.5px;font-weight:800}
+  .detail .a.del{background:#FBE9E7;color:#C0392B}
+  .detail .a.ok{background:var(--gold);color:#fff}
+</style>
+</head>
+<body>
+
+<h1>洛克助手 · 炫彩色卡（效果稿 v7）</h1>
+<p class="lead">修正三点：<b>粒子点位全站统一</b>（同一套 3 个位置，只换形状）；<b>精灵名用名称牌 OCR</b>（觅觅蝠 / 雪绒鸟）；<b>搜索按精灵名 + 炫彩名</b>。</p>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <path id="sp4" d="M0,-13.5 C2.1,-3.9 3.9,-2.1 13.5,0 C3.9,2.1 2.1,3.9 0,13.5 C-2.1,3.9 -3.9,2.1 -13.5,0 C-3.9,-2.1 -2.1,-3.9 0,-13.5 Z"/>
+  <path id="heart" d="M0,9 C-9.5,2 -12,-2.5 -7.2,-7 C-3.9,-10 0,-6.6 0,-3.6 C0,-6.6 3.9,-10 7.2,-7 C12,-2.5 9.5,2 0,9 Z"/>
+  <path id="diam" d="M0,-10 L10,0 L0,10 L-10,0 Z"/>
+  <path id="star5" d="M0,-10 L2.7,-3.7 L9.5,-3.1 L4.4,1.4 L5.9,8.1 L0,4.6 L-5.9,8.1 L-4.4,1.4 L-9.5,-3.1 L-2.7,-3.7 Z"
+        fill="none" stroke="#F5EFE1" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round"/>
+</defs></svg>
+
+<div class="board">
+
+  <!-- ① 图鉴三槽识别 -->
+  <div class="colw">
+    <div class="phone">
+      <div class="feed">
+        <div class="page"></div>
+        <div class="nameplate">雪绒鸟</div>
+        <div class="ghost"></div>
+        <div class="panel">
+          <div class="slot"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+            <defs><clipPath id="s1"><rect width="100" height="60" rx="10"/></clipPath></defs>
+            <g clip-path="url(#s1)"><rect width="100" height="60" fill="#E5576F"/>
+              <path d="M0,28 C14,12 26,40 42,34 C60,27 74,10 100,20 L100,0 L0,0 Z" fill="#3DD6D6"/>
+              <use href="#sp4" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+              <use href="#sp4" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+              <use href="#sp4" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+          <div class="slot"></div><div class="slot"></div>
+        </div>
+      </div>
+      <div class="hole"><span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span>
+        <span class="tag">框住 名称牌 + 色卡</span></div>
+      <div class="sheet">
+        <div class="hint"><span>对准方框 · 自动识别</span><span>已记 <b>3</b> 张</span></div>
+        <div class="bar"></div>
+        <div class="reslist">
+          <div class="res"><div class="thumb"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+            <defs><clipPath id="t1"><rect width="100" height="60" rx="12"/></clipPath></defs>
+            <g clip-path="url(#t1)"><rect width="100" height="60" fill="#E5576F"/>
+              <path d="M0,28 C14,12 26,40 42,34 C60,27 74,10 100,20 L100,0 L0,0 Z" fill="#3DD6D6"/>
+              <use href="#sp4" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+              <use href="#sp4" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+              <use href="#sp4" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+            <div class="meta"><div class="n">雪绒鸟<i>炫彩突袭</i></div>
+              <div class="s"><i class="cdot" style="background:#E5576F"></i><i class="cdot" style="background:#3DD6D6"></i><i class="pchip">✦ 星芒</i></div></div>
+            <span class="x">✕</span></div>
+          <div class="res"><div class="thumb"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+            <defs><clipPath id="t2"><rect width="100" height="60" rx="12"/></clipPath></defs>
+            <g clip-path="url(#t2)"><rect width="100" height="60" fill="#F7C722"/>
+              <path d="M0,34 C16,18 30,44 48,36 C66,28 80,12 100,22 L100,0 L0,0 Z" fill="#3DD6D6"/>
+              <use href="#heart" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+              <use href="#heart" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+              <use href="#heart" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+            <div class="meta"><div class="n">鸭吉吉<i>炫彩突袭</i></div>
+              <div class="s"><i class="cdot" style="background:#F7C722"></i><i class="cdot" style="background:#3DD6D6"></i><i class="pchip p2">♥ 爱心</i></div></div>
+            <span class="x">✕</span></div>
+        </div>
+        <div class="btns"><div class="b primary">完成并导入</div><div class="b ghost">取消并放弃</div></div>
+      </div>
+    </div>
+    <div class="cap">① 图鉴三槽：框住「名称牌 + 色卡」，名称牌 OCR 出精灵名与炫彩名。</div>
+  </div>
+
+  <!-- ② 背包弹窗识别 -->
+  <div class="colw">
+    <div class="phone">
+      <div class="feed">
+        <div class="grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="nameplate" style="right:6%;top:8%;width:30%">觅觅蝠</div>
+        <div class="popup">
+          <div class="pt">异色炫彩</div>
+          <div class="rowc"><span>颜色一</span><div class="dot" style="background:#DBBCEB"></div></div>
+          <div class="rowc"><span>颜色二</span><div class="dot" style="background:#3ED7D7"></div></div>
+          <div class="rowc"><span>粒子</span><svg width="14" height="14" viewBox="-16 -16 32 32"><use href="#star5"/></svg></div>
+          <div class="swatch"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+            <defs><clipPath id="p1"><rect width="100" height="60" rx="12"/></clipPath></defs>
+            <g clip-path="url(#p1)"><rect width="100" height="60" fill="#3ED7D7"/>
+              <path d="M0,32 C16,18 30,44 48,36 C66,28 80,12 100,22 L100,0 L0,0 Z" fill="#DBBCEB"/>
+              <use href="#star5" transform="translate(28,16) scale(.75)"/>
+              <use href="#star5" transform="translate(58,32) scale(1.15)"/>
+              <use href="#star5" transform="translate(84,14) scale(.7)"/></g></svg></div>
+        </div>
+      </div>
+      <div class="hole"><span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span>
+        <span class="tag">框住 名称牌 + 色卡弹窗</span></div>
+      <div class="sheet">
+        <div class="hint"><span>同一套算法 · 换画面也能认</span><span>已记 <b>2</b> 张</span></div>
+        <div class="bar"></div>
+        <div class="reslist">
+          <div class="res"><div class="thumb"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+            <defs><clipPath id="t4"><rect width="100" height="60" rx="12"/></clipPath></defs>
+            <g clip-path="url(#t4)"><rect width="100" height="60" fill="#3ED7D7"/>
+              <path d="M0,32 C16,18 30,44 48,36 C66,28 80,12 100,22 L100,0 L0,0 Z" fill="#DBBCEB"/>
+              <use href="#star5" transform="translate(28,16) scale(.75)"/>
+              <use href="#star5" transform="translate(58,32) scale(1.15)"/>
+              <use href="#star5" transform="translate(84,14) scale(.7)"/></g></svg></div>
+            <div class="meta"><div class="n">觅觅蝠<i>异色炫彩</i></div>
+              <div class="s"><i class="cdot" style="background:#3ED7D7"></i><i class="cdot" style="background:#DBBCEB"></i><i class="pchip p4">★ 五角星</i></div></div>
+            <span class="x">✕</span></div>
+          <div class="res"><div class="thumb"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+            <defs><clipPath id="t5"><rect width="100" height="60" rx="12"/></clipPath></defs>
+            <g clip-path="url(#t5)"><rect width="100" height="60" fill="#BFBFB9"/>
+              <path d="M0,32 C16,18 30,44 48,36 C66 28 80,12 100,22 L100,0 L0,0 Z" fill="#2A2826"/>
+              <use href="#sp4" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+              <use href="#sp4" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+              <use href="#sp4" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+            <div class="meta"><div class="n">黑白<i>常驻隐藏</i></div>
+              <div class="s"><i class="cdot" style="background:#BFBFB9"></i><i class="cdot" style="background:#2A2826"></i><i class="pchip">✦ 星芒</i></div></div>
+            <span class="x">✕</span></div>
+        </div>
+        <div class="btns"><div class="b primary">完成并导入</div><div class="b ghost">取消并放弃</div></div>
+      </div>
+    </div>
+    <div class="cap">② 背包弹窗：右上角名称牌 OCR 出「觅觅蝠」，色卡按色块 + 符号识别。</div>
+  </div>
+
+  <!-- ③ 展示页 -->
+  <div class="colw">
+    <div class="phone">
+      <div class="screen gm">
+        <div class="gbar"><span class="back">‹</span><span class="ttl">炫彩色卡</span>
+          <span class="cnt">28 <i>张</i></span></div>
+        <div class="gbody">
+          <div class="fcard">
+            <div class="frow">
+              <div class="fsel on"><span class="dot" style="background:#E5576F"></span>底色<span class="cv">红 ▾</span></div>
+              <div class="fsel"><span class="dot" style="background:#3DD6D6"></span>顶色<span class="cv">全部 ▾</span></div>
+            </div>
+            <div class="frow">
+              <div class="fsel">粒子<span class="cv">全部 ▾</span></div>
+              <div class="fsel">特殊<span class="cv">不含 ▾</span></div>
+            </div>
+            <div class="sortrow">
+              <div class="sp on">最近</div><div class="sp">底色</div><div class="sp">顶色</div><div class="sp">粒子</div>
+            </div>
+          </div>
+          <div class="search">搜索精灵名 / 炫彩名</div>
+
+          <div class="gcards">
+            <div class="gc"><div class="sw"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+              <defs><clipPath id="g1"><rect width="100" height="60" rx="10"/></clipPath></defs>
+              <g clip-path="url(#g1)"><rect width="100" height="60" fill="#E5576F"/>
+                <path d="M0,28 C14,12 26,40 42,34 C60,27 74,10 100,20 L100,0 L0,0 Z" fill="#3DD6D6"/>
+                <use href="#sp4" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+                <use href="#sp4" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+                <use href="#sp4" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+              <div class="nm">雪绒鸟</div><div class="sb">炫彩突袭</div>
+              <div class="ft"><i class="cdot" style="background:#E5576F"></i><i class="cdot" style="background:#3DD6D6"></i><span class="pt">✦ 星芒</span></div></div>
+
+            <div class="gc"><div class="sw"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+              <defs><clipPath id="g2"><rect width="100" height="60" rx="10"/></clipPath></defs>
+              <g clip-path="url(#g2)"><rect width="100" height="60" fill="#F7C722"/>
+                <path d="M0,34 C16,18 30,44 48,36 C66,28 80,12 100,22 L100,0 L0,0 Z" fill="#3DD6D6"/>
+                <use href="#heart" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+                <use href="#heart" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+                <use href="#heart" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+              <div class="nm">鸭吉吉</div><div class="sb">炫彩突袭</div>
+              <div class="ft"><i class="cdot" style="background:#F7C722"></i><i class="cdot" style="background:#3DD6D6"></i><span class="pt">♥ 爱心</span></div></div>
+
+            <div class="gc"><div class="sw"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+              <defs><clipPath id="g3"><rect width="100" height="60" rx="10"/></clipPath></defs>
+              <g clip-path="url(#g3)"><rect width="100" height="60" fill="#A7E4E4"/>
+                <path d="M0,30 C14,14 28,42 46,34 C64,26 80,10 100,18 L100,0 L0,0 Z" fill="#E4566E"/>
+                <use href="#diam" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+                <use href="#diam" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+                <use href="#diam" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+              <div class="nm">水灵</div><div class="sb">炫彩突袭</div>
+              <div class="ft"><i class="cdot" style="background:#A7E4E4"></i><i class="cdot" style="background:#E4566E"></i><span class="pt">◆ 菱形</span></div></div>
+
+            <div class="gc"><div class="sw"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+              <defs><clipPath id="g4"><rect width="100" height="60" rx="10"/></clipPath></defs>
+              <g clip-path="url(#g4)"><rect width="100" height="60" fill="#3ED7D7"/>
+                <path d="M0,32 C16,18 30,44 48,36 C66,28 80,12 100,22 L100,0 L0,0 Z" fill="#DBBCEB"/>
+                <use href="#star5" transform="translate(28,16) scale(.75)"/>
+                <use href="#star5" transform="translate(58,32) scale(1.15)"/>
+                <use href="#star5" transform="translate(84,14) scale(.7)"/></g></svg></div>
+              <div class="nm">觅觅蝠</div><div class="sb">异色炫彩</div>
+              <div class="ft"><i class="cdot" style="background:#3ED7D7"></i><i class="cdot" style="background:#DBBCEB"></i><span class="pt">★ 五角星</span></div></div>
+
+            <div class="gc"><div class="sw"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+              <defs><clipPath id="g5"><rect width="100" height="60" rx="10"/></clipPath></defs>
+              <g clip-path="url(#g5)"><rect width="100" height="60" fill="#BFBFB9"/>
+                <path d="M0,32 C16,18 30,44 48,36 C66,28 80,12 100,22 L100,0 L0,0 Z" fill="#2A2826"/>
+                <use href="#sp4" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+                <use href="#sp4" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+                <use href="#sp4" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+              <div class="nm">黑白</div><div class="sb">常驻隐藏</div>
+              <div class="ft"><i class="cdot" style="background:#BFBFB9"></i><i class="cdot" style="background:#2A2826"></i><span class="pt ss">✦ 特殊</span></div></div>
+
+            <div class="gc"><div class="sw"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+              <defs><clipPath id="g6"><rect width="100" height="60" rx="10"/></clipPath></defs>
+              <g clip-path="url(#g6)"><rect width="100" height="60" fill="#83D256"/>
+                <path d="M0,28 C14,12 26,40 42,34 C60,27 74,10 100,20 L100,0 L0,0 Z" fill="#E5576F"/>
+                <use href="#sp4" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+                <use href="#sp4" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+                <use href="#sp4" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+              <div class="nm">板板壳</div><div class="sb">炫彩突袭</div>
+              <div class="ft"><i class="cdot" style="background:#83D256"></i><i class="cdot" style="background:#E5576F"></i><span class="pt">✦ 星芒</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cap">③ 展示页：四个筛选 + 排序 + <b>按精灵名/炫彩名搜索</b>；卡片显示 精灵名 + 炫彩名 + 两色 + 粒子。</div>
+  </div>
+
+  <!-- ④ 色卡详情 -->
+  <div class="colw">
+    <div class="phone">
+      <div class="screen gm">
+        <div class="gbar"><span class="back">‹</span><span class="ttl">炫彩色卡</span>
+          <span class="cnt">28 <i>张</i></span></div>
+        <div class="gbody">
+          <div class="fcard">
+            <div class="frow">
+              <div class="fsel"><span class="dot" style="background:#E5576F"></span>底色<span class="cv">全部 ▾</span></div>
+              <div class="fsel"><span class="dot" style="background:#3DD6D6"></span>顶色<span class="cv">全部 ▾</span></div>
+            </div>
+            <div class="frow"><div class="fsel">粒子<span class="cv">全部 ▾</span></div><div class="fsel">特殊<span class="cv">不含 ▾</span></div></div>
+            <div class="sortrow"><div class="sp on">最近</div><div class="sp">底色</div><div class="sp">顶色</div><div class="sp">粒子</div></div>
+          </div>
+          <div class="search">搜索精灵名 / 炫彩名</div>
+          <div class="gcards">
+            <div class="gc"><div class="sw"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+              <defs><clipPath id="h1"><rect width="100" height="60" rx="10"/></clipPath></defs>
+              <g clip-path="url(#h1)"><rect width="100" height="60" fill="#83D256"/>
+                <path d="M0,28 C14,12 26,40 42,34 C60,27 74,10 100,20 L100,0 L0,0 Z" fill="#E5576F"/>
+                <use href="#sp4" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+                <use href="#sp4" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+                <use href="#sp4" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+              <div class="nm">板板壳</div><div class="sb">炫彩突袭</div>
+              <div class="ft"><i class="cdot" style="background:#83D256"></i><i class="cdot" style="background:#E5576F"></i><span class="pt">✦ 星芒</span></div></div>
+          </div>
+        </div>
+        <div class="scrim2"></div>
+        <div class="detail">
+          <div class="big"><svg viewBox="0 0 100 60" preserveAspectRatio="none">
+            <defs><clipPath id="dt"><rect width="100" height="60" rx="14"/></clipPath></defs>
+            <g clip-path="url(#dt)"><rect width="100" height="60" fill="#83D256"/>
+              <path d="M0,28 C14,12 26,40 42,34 C60,27 74,10 100,20 L100,0 L0,0 Z" fill="#E5576F"/>
+              <use href="#sp4" transform="translate(28,16) scale(.75)" fill="#F5EFE1"/>
+              <use href="#sp4" transform="translate(58,32) scale(1.15)" fill="#F5EFE1"/>
+              <use href="#sp4" transform="translate(84,14) scale(.7)" fill="#F5EFE1"/></g></svg></div>
+          <div class="r"><span>精灵</span><span style="width:auto;color:#2C2C2C;font-weight:800">板板壳</span></div>
+          <div class="r"><span>炫彩</span><span style="width:auto;color:#2C2C2C">炫彩突袭</span></div>
+          <div class="r"><span>底色</span><i class="dot" style="background:#83D256"></i><code>#83D256</code></div>
+          <div class="r"><span>顶色</span><i class="dot" style="background:#E5576F"></i><code>#E5576F</code></div>
+          <div class="r"><span>粒子</span><i class="pchip">✦ 星芒</i></div>
+          <div class="acts"><div class="a del">删除这张</div><div class="a ok">关闭</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cap">④ 详情：精灵名 / 炫彩名 / 底色 / 顶色 / 粒子，可删除。</div>
+  </div>
+
+</div>
+
+<h2>这版改了什么</h2>
+<p class="lead" style="padding-left:13px">
+· <b>粒子点位全站统一</b>：所有色卡都用同一套 3 个点位（左上小 / 中间大 / 右上小），只有形状变——之前小卡片是我画漏了；<br>
+· <b>精灵识别</b>：框住右上角名称牌 OCR（觅觅蝠 / 雪绒鸟），名称牌下面那行当「炫彩名」（炫彩突袭 / 异色炫彩 / 常驻隐藏）；<br>
+· <b>搜索</b>：改成按<b>精灵名 + 炫彩名</b>，不再按色号；<br>
+· 展示页卡片显示：精灵名（粗）+ 炫彩名（小）+ 两色色点 + 粒子。
+</p>
+
+<h2>还需要你确认</h2>
+<p class="lead" style="padding-left:13px">
+· 我暂定「炫彩名」= 名称牌下面那行（如「炫彩突袭」「异色炫彩」「常驻隐藏」）。如果它其实是别的东西，告诉我；<br>
+· 如果精灵名 OCR 认错，卡片上可以直接改（点开详情改名字）。
+</p>
+
+</body>
+</html>

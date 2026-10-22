@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>异色图鉴 · 关联蛋数量 范例预览 v4</title>
+<style>
+  :root{
+    --panel:#FDFCF9;
+    --ink:#2B2722;
+    --sub:#9A938A;
+    --gold:#C9A24B;
+    --divider:#ECE7DE;
+    --row:#F4F0E9;
+    --row-soft:#F7F4EF;
+    --stroke:#E4DED3;
+    --danger:#C0392B;
+    --egg:#E8923B;
+    --page:#EFEBE3;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--page); color:var(--ink);
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    padding:28px 16px 60px;
+    display:flex; flex-direction:column; align-items:center; gap:30px;
+  }
+  h1{font-size:19px; margin:0 0 2px;}
+  .hint{font-size:12.5px; color:var(--sub); margin:-4px 0 0; text-align:center; line-height:1.6;}
+  .stage{display:flex; gap:34px; flex-wrap:wrap; justify-content:center; align-items:flex-start;}
+
+  /* ===== 图鉴页 ===== */
+  .book{background:#FBF8F2; border-radius:20px; padding:16px 16px 18px; width:300px;
+        box-shadow:0 6px 22px rgba(0,0,0,.08);}
+  .book h2{font-size:15px; margin:2px 4px 12px; display:flex; justify-content:space-between; align-items:center;}
+  .book .prog{font-size:11px; color:var(--gold); font-weight:700;}
+  .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+  .cell{background:#fff; border-radius:13px; padding:7px 6px 8px; display:flex; flex-direction:column;
+        align-items:center; position:relative; border:1px solid var(--stroke);}
+  .cell.owned{border:1.5px solid var(--gold); box-shadow:0 0 0 1px rgba(201,162,75,.25) inset;}
+  .cell.dim .face{opacity:.35;}
+  .face{width:54px; height:54px; border-radius:11px; background:linear-gradient(135deg,#F3EED9,#E7DCC0);
+        display:flex; align-items:center; justify-content:center; font-size:24px; position:relative;}
+  .name{font-size:10.5px; margin-top:5px; color:var(--ink); max-width:60px; text-align:center;
+        white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .note{font-size:8.5px; color:var(--sub); margin-top:1px;}
+  .cnt{position:absolute; right:3px; bottom:20px; background:var(--danger); color:#fff;
+       font-size:10px; font-weight:700; padding:1px 5px; border-radius:9px; line-height:1.5;}
+  /* 左上角蛋角标 */
+  .egg{position:absolute; left:3px; top:3px; background:var(--egg); color:#fff;
+       font-size:10px; font-weight:700; padding:1px 5px 1px 3px; border-radius:9px; line-height:1.5;
+       display:flex; align-items:center; gap:2px; box-shadow:0 1px 3px rgba(0,0,0,.18);}
+  .egg img{height:13px; width:auto; display:block;}
+
+  /* ===== 长按弹窗 ===== */
+  .dlg{background:var(--panel); border-radius:22px; width:300px; padding:16px 18px 10px;
+       box-shadow:0 10px 34px rgba(0,0,0,.18);}
+  /* 弹窗头部：蛋图标 + 小开关 与 精灵名字 同一行平齐 */
+  .dlghead{display:flex; align-items:center; gap:8px; margin-bottom:4px;}
+  .eggtoggle{display:flex; align-items:center; gap:5px; flex:0 0 auto;}
+  .eggtoggle img{height:22px; width:auto; display:block;}
+  .sw{width:34px; height:20px; border-radius:12px; background:#D8D2C6; position:relative; transition:.2s; flex:0 0 auto;}
+  .sw.on{background:#5BB97E;}
+  .sw .kn{position:absolute; top:2px; left:2px; width:16px; height:16px; border-radius:50%; background:#fff;
+          box-shadow:0 1px 3px rgba(0,0,0,.25); transition:.2s;}
+  .sw.on .kn{left:16px;}
+  .dlg .hname{font-size:20px; font-weight:800; line-height:1; margin:0;}
+  .dlg .hmeta{font-size:13px; text-align:center; color:var(--gold); margin-top:6px;}
+  .dlg .hr{height:1px; background:var(--divider); margin:14px 0 10px;}
+  .cap{font-size:11.5px; color:var(--sub); padding:2px 2px 5px;}
+  .btn{background:var(--row); border-radius:13px; padding:12px 10px; text-align:center;
+       font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:7px; border:1px solid var(--stroke);}
+  .btnrow{display:grid; grid-template-columns:1fr 1fr; gap:7px;}
+  .btnrow .btn{margin-bottom:11px;}
+  .btn.danger{background:#FBE9E7; color:var(--danger); border-color:#F2C9C3;}
+  .btn.soft{background:var(--row-soft); color:var(--sub);}
+  .menurow{background:var(--row); border-radius:13px; padding:12px 13px; display:flex;
+           justify-content:space-between; align-items:center; font-size:13.5px; font-weight:600; margin-bottom:9px;}
+  .foot{font-size:11.5px; color:#7a7268; max-width:660px; text-align:left; line-height:1.8;
+        background:#fff; border:1px dashed var(--stroke); border-radius:12px; padding:12px 16px;}
+  .foot b{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<h1>异色图鉴 · 「关联蛋数」开关 + 蛋角标 · 范例预览 v4</h1>
+<p class="hint">左：图鉴页（本轮回临时开了关联的精灵，卡片左上角出现蛋角标）。右：长按弹窗——<b>蛋开关默认关闭、不记忆</b>，<br>打开后标题显示「数量（精灵蛋）」，关闭弹窗后再开恢复关闭态。仅预览，未改代码。</p>
+
+<div class="stage">
+
+  <!-- 图鉴页 -->
+  <div class="book">
+    <h2>异色图鉴 <span class="prog">已获得 3 / 12</span></h2>
+    <div class="grid">
+      <div class="cell owned">
+        <div class="face">🦄
+          <span class="egg"><img src="egg_icon_preview.png" alt="">2</span>
+          <span class="cnt">×1</span>
+        </div>
+        <div class="name">小独角兽</div>
+      </div>
+      <div class="cell dim">
+        <div class="face">🌿</div>
+        <div class="name">芽眼魔</div>
+      </div>
+      <div class="cell owned">
+        <div class="face">🧠
+          <span class="egg"><img src="egg_icon_preview.png" alt="">1</span>
+          <span class="cnt">×2</span>
+        </div>
+        <div class="name">拿脑丸</div>
+      </div>
+      <div class="cell dim">
+        <div class="face">⚙️</div>
+        <div class="name">齿轮小子</div>
+      </div>
+      <div class="cell owned">
+        <div class="face">👊
+          <span class="egg"><img src="egg_icon_preview.png" alt="">3</span>
+          <span class="cnt">×1</span>
+        </div>
+        <div class="name">格斗小五</div>
+      </div>
+      <div class="cell dim">
+        <div class="face">✨</div>
+        <div class="name">权杖</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 长按弹窗（默认关闭态：开关灭，不显示任何额外文字） -->
+  <div class="dlg">
+    <div class="dlghead">
+      <div class="eggtoggle">
+        <img src="egg_icon_preview.png" alt="">
+        <div class="sw"><div class="kn"></div></div>
+      </div>
+      <span class="hname">小独角兽</span>
+    </div>
+    <div class="hmeta">#128 · 异色 1 只</div>
+    <div class="hr"></div>
+
+    <div class="cap">数量</div>
+    <div class="btnrow">
+      <div class="btn">－ 减 1</div>
+      <div class="btn">＋ 加 1</div>
+    </div>
+    <div class="btn">手动输入只数</div>
+
+    <div class="cap">其它操作</div>
+    <div class="btnrow">
+      <div class="btn">补下异色图</div>
+      <div class="btn">清零</div>
+    </div>
+
+    <div class="menurow"><span>备注</span><span style="color:var(--sub);font-weight:500;">记点什么…</span></div>
+
+    <div class="hr"></div>
+    <div class="btnrow">
+      <div class="btn danger">删除</div>
+      <div class="btn soft">关闭</div>
+    </div>
+  </div>
+
+  <!-- 长按弹窗（开启态：开关打开，数量标题后显示「精灵蛋」） -->
+  <div class="dlg">
+    <div class="dlghead">
+      <div class="eggtoggle">
+        <img src="egg_icon_preview.png" alt="">
+        <div class="sw on"><div class="kn"></div></div>
+      </div>
+      <span class="hname">小独角兽</span>
+    </div>
+    <div class="hmeta">#128 · 异色 1 只</div>
+    <div class="hr"></div>
+
+    <div class="cap">数量（精灵蛋）</div>
+    <div class="btnrow">
+      <div class="btn">－ 减 1</div>
+      <div class="btn">＋ 加 1</div>
+    </div>
+    <div class="btn">手动输入只数</div>
+
+    <div class="cap">其它操作</div>
+    <div class="btnrow">
+      <div class="btn">补下异色图</div>
+      <div class="btn">清零</div>
+    </div>
+
+    <div class="menurow"><span>备注</span><span style="color:var(--sub);font-weight:500;">记点什么…</span></div>
+
+    <div class="hr"></div>
+    <div class="btnrow">
+      <div class="btn danger">删除</div>
+      <div class="btn soft">关闭</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="foot">
+  <b>按最新要求定稿（你看完再拍板）：</b><br>
+  1. <b>蛋图标</b>：使用你上传的图，已去背景并缩放到 32px，卡片左上角 / 弹窗开关前都显示这枚蛋。<br>
+  2. <b>开关更小</b>：34×20 px，旋钮 16px，与精灵名字同一行平齐。<br>
+  3. <b>数量标题随开关变化</b>：开关关闭 → 标题只写「数量」，无额外说明；开关打开 → 标题变成「数量（精灵蛋）」。<br>
+  4. <b>开关无记忆</b>：每次弹窗打开默认关闭，关闭弹窗再开后恢复关闭态。蛋数本身本地留存（仅开关状态不记忆）。<br>
+  5. <b>蛋数与精灵只数独立</b>：右下角「×只数」始终代表精灵只数；左上角蛋角标代表蛋数，开关关闭时不显示。
+</div>
+
+</body>
+</html>

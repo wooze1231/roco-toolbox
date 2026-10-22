@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洛克助手 · 全功能界面总览</title>
+<style>
+  :root{
+    --page:#F5F3EE; --card:#FFFFFF; --tp:#2C2C2C; --ts:#8A8A8A;
+    --accent:#F5A623; --pill:#F5C542; --pilltx:#6B4C00; --div:#E8E4DD;
+    --green:#66BB6A; --red:#EF5350; --gold:#D4AF37;
+    --panel:#FDFCF9; --row:#FFFFFF; --soft:#EFEBE4; --tsub:#A39C90;
+    --stroke:#EAE5DB; --line:#F0ECE4; --input:#F7F5F0; --chip:#EDE9E2;
+    --golds:#FBF3DC; --goldl:#EAD9A6; --goldt:#9A6B00;
+    --shell:#EDEAE4; --bgtop:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:#E4E0D8;
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;
+    color:var(--tp); padding:26px 18px 70px;
+  }
+  .wrap{max-width:1560px;margin:0 auto}
+  h1{font-size:24px;margin:0 0 6px;letter-spacing:.5px}
+  .sub{color:#6E6A62;font-size:13px;margin-bottom:4px;line-height:1.7}
+  .meta{color:#8A857C;font-size:12px;margin-bottom:22px}
+  .legend{
+    background:#FFF;border-radius:14px;padding:14px 18px;margin-bottom:26px;
+    display:flex;flex-wrap:wrap;gap:14px 26px;font-size:12.5px;color:#55514A;
+    border:1px solid #DAD5CB;
+  }
+  .legend b{color:#2C2C2C}
+  .legend span.k{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:middle}
+
+  /* 一条页面 = 标题 + 手机 */
+  .block{margin-bottom:38px}
+  .bhead{display:flex;align-items:baseline;gap:10px;margin-bottom:3px;flex-wrap:wrap}
+  .btitle{font-size:17px;font-weight:700}
+  .bpath{font-family:ui-monospace,Consolas,monospace;font-size:11.5px;color:#8A857C;background:#FFF;padding:2px 7px;border-radius:5px}
+  .bnote{font-size:12.5px;color:#6E6A62;margin:4px 0 14px;line-height:1.8}
+  .bnote code{background:#FFF;padding:1px 5px;border-radius:4px;font-size:11.5px;color:#9A6B00}
+
+  .phone{
+    width:340px;background:var(--shell);border-radius:26px;padding:9px;
+    box-shadow:0 8px 24px rgba(60,55,45,.18), 0 1px 0 rgba(255,255,255,.7) inset;
+    flex-shrink:0;
+  }
+  .screen{
+    background:var(--page);border-radius:19px;overflow:hidden;
+    display:flex;flex-direction:column;min-height:480px;
+  }
+  .statusbar{
+    height:22px;background:var(--bgtop);display:flex;align-items:center;
+    justify-content:space-between;padding:0 11px;font-size:9.5px;color:#9A958C;
+    border-bottom:1px solid var(--line);
+  }
+  .body{padding:13px;flex:1;display:flex;flex-direction:column;gap:9px}
+
+  /* 顶部返回栏 */
+  .navbar{background:var(--bgtop);border-bottom:1px solid var(--line);padding:9px 12px;display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600}
+  .navbar .bk{font-size:13px;color:var(--accent);font-weight:500}
+  .navbar .ttl{font-size:14.5px;font-weight:700}
+
+  .card{background:var(--card);border-radius:17px;padding:13px;border:1px solid var(--line)}
+  .row{background:var(--row);border-radius:12px;padding:10px 12px;border:1px solid var(--stroke);display:flex;align-items:center;gap:9px}
+  .rowsoft{background:var(--soft);border-radius:11px;padding:8px 11px;font-size:12px;color:#5C574F}
+
+  .t1{font-size:19px;font-weight:800;letter-spacing:.3px}
+  .t2{font-size:12.5px;color:var(--accent);margin-top:3px;font-variant-numeric:tabular-nums}
+  .t3{font-size:11.5px;color:var(--ts)}
+
+  .pill{
+    display:inline-block;background:var(--pill);color:var(--pilltx);font-weight:800;
+    border-radius:20px;padding:5px 15px;font-size:15px;letter-spacing:1.2px;
+    font-variant-numeric:tabular-nums;box-shadow:0 1px 3px rgba(0,0,0,.07);
+  }
+  .pill.s{font-size:12px;padding:3px 11px;letter-spacing:.8px}
+  .pill.xs{font-size:10.5px;padding:2px 9px;letter-spacing:.5px}
+
+  .divider{height:1px;background:var(--div);margin:9px 0}
+
+  .statline{display:flex;justify-content:space-between;align-items:center;font-size:13px}
+  .on{color:var(--green);font-weight:700}
+  .off{color:var(--red);font-weight:700}
+  .chip{background:var(--chip);border-radius:7px;padding:2px 8px;font-size:10.5px;color:#6E6A62}
+
+  .sec{font-size:12.5px;font-weight:700;color:#4A453E;margin-top:3px;display:flex;justify-content:space-between;align-items:center}
+
+  /* 商品网格 */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+  .ic{
+    border-radius:11px;padding:8px 4px;text-align:center;border:1px solid rgba(0,0,0,.05);
+    display:flex;flex-direction:column;align-items:center;gap:4px;min-height:62px;justify-content:center;
+  }
+  .ic .em{font-size:19px;line-height:1}
+  .ic .nm{font-size:9.5px;color:#4E4A43;line-height:1.25;font-weight:600;text-align:center}
+  .g1{background:linear-gradient(160deg,#FFF8E6,#FFE9B8)}
+  .g2{background:linear-gradient(160deg,#F3E5FF,#E1C4FF)}
+  .g3{background:linear-gradient(160deg,#E3F2FF,#B8DFFF)}
+  .g4{background:linear-gradient(160deg,#E8F5E9,#C8E6C9)}
+  .g5{background:linear-gradient(160deg,#FFEBEE,#FFCDD2)}
+  .g6{background:linear-gradient(160deg,#E0F7FA,#B2EBF2)}
+
+  /* 功能入口行 */
+  .entry{background:var(--card);border-radius:15px;padding:12px;display:flex;align-items:center;gap:11px;border:1px solid var(--line)}
+  .entry .eic{width:34px;height:34px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+  .entry .etx{flex:1;min-width:0}
+  .entry .em2{font-size:13.5px;font-weight:700}
+  .entry .es2{font-size:11px;color:var(--ts);margin-top:2px}
+  .entry .eco{font-size:11px;color:var(--accent);font-weight:700;white-space:nowrap}
+  .entry .ar{color:#C9C2B6;font-size:16px}
+
+  /* 底部固定按钮 */
+  .bottom{display:flex;gap:7px;padding:9px 13px 12px;background:var(--page);border-top:1px solid var(--line);margin-top:auto}
+  .bbtn{flex:1;background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:9px 4px;text-align:center;font-size:11px;font-weight:700;color:#4A453E;display:flex;flex-direction:column;align-items:center;gap:3px}
+  .bbtn .em{font-size:15px}
+
+  /* checkbox 行 */
+  .ck{display:flex;align-items:center;gap:9px;font-size:12.5px;padding:4px 0}
+  .ck .bx{width:15px;height:15px;border:1.6px solid #B9B3A8;border-radius:4px;flex-shrink:0;background:#FFF}
+  .ck .bx.on{background:var(--accent);border-color:var(--accent);position:relative}
+  .ck .bx.on::after{content:"✓";position:absolute;left:2px;top:-2px;color:#FFF;font-size:11px;font-weight:800}
+  .ck .bx.part{background:var(--accent);border-color:var(--accent);position:relative}
+  .ck .bx.part::after{content:"−";position:absolute;left:3.5px;top:-2px;color:#FFF;font-size:12px;font-weight:800}
+  .ck.ind{padding-left:20px}
+
+  .arrow-hd{font-size:13px;font-weight:700;color:#4A453E;padding:7px 0 3px;cursor:default}
+
+  /* 组件预览 */
+  .widgetgrid{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start}
+  .wtile{background:linear-gradient(150deg,#7B9BE0,#5B6BB8);border-radius:18px;padding:13px;box-shadow:0 6px 18px rgba(60,55,45,.18)}
+  .wtile .wlbl{color:#FFF;font-size:10.5px;opacity:.9;margin-bottom:7px;font-weight:600}
+  .wbox{background:#FFF;border-radius:14px;padding:11px;width:200px;border:1px solid rgba(0,0,0,.06)}
+  .wbox.dk{background:#1E1E21;border-color:#2E2E32}
+  .wbox.dk .t1,.wbox.dk .wnm{color:#EDEAE4}
+  .wbox.dk .t3{color:#8E8A84}
+  .wbox.wide{width:300px}
+  .wbox.mini{width:210px}
+
+  /* 弹窗 */
+  .mask{background:rgba(30,28,25,.30);border-radius:14px;padding:20px 14px;display:flex;justify-content:center}
+  .dlg{background:var(--panel);border-radius:20px;padding:15px;width:100%;max-width:280px;box-shadow:0 12px 34px rgba(0,0,0,.22)}
+  .dlg .dt{font-size:14.5px;font-weight:800;margin-bottom:9px}
+  .dlg .dm{font-size:12px;color:#5C574F;line-height:1.75;margin-bottom:11px}
+  .drow{background:var(--row);border-radius:11px;padding:10px 12px;font-size:12.5px;border:1px solid var(--stroke);display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
+  .drow.danger{background:#FBE9E7;border-color:#F5C9C3;color:#C0392B;font-weight:700}
+  .drow .dl{flex:0 1 auto}
+  .drow .ds{display:block;font-size:10.5px;color:var(--tsub);font-weight:400;margin-top:2px;text-align:right;line-height:1.4}
+  .inp{background:var(--input);border:1px solid var(--stroke);border-radius:12px;padding:10px 12px;font-size:12.5px;color:#A39C90;margin-bottom:9px}
+
+  .twocol{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+  .stack{display:flex;flex-direction:column;gap:16px;flex:1;min-width:300px;max-width:420px}
+  .caption{font-size:11.5px;color:#7A756C;margin-top:7px;line-height:1.65}
+  .caption b{color:#4A453E}
+
+  .badge{display:inline-block;font-size:10px;padding:1.5px 7px;border-radius:5px;font-weight:700;vertical-align:middle}
+  .b-new{background:#E8F5E9;color:#2E7D32}
+  .b-fix{background:#FFF8E6;color:#9A6B00}
+  .b-ok{background:#E3F2FF;color:#1565C0}
+
+  h2.sect{font-size:15px;margin:34px 0 14px;padding-left:11px;border-left:4px solid var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>洛克助手 · 全功能界面总览</h1>
+  <div class="sub">这是当前 App 里<strong>真实存在的每一个界面</strong>，按页面逐屏还原。不是概念稿——布局、文案、按钮名都对着代码抄的。</div>
+  <div class="meta">基于 <code>android-app/app/src/main/</code> 实际代码 · 共 8 个页面 + 2 个桌面组件 + 1 套弹窗系统 · 版本 v1.0.0（公测版）</div>
+
+  <div class="legend">
+    <span><span class="k" style="background:#F5C542"></span><b>黄胶囊</b> = 倒计时</span>
+    <span><span class="k" style="background:#66BB6A"></span><b>绿</b> = 营业中</span>
+    <span><span class="k" style="background:#EF5350"></span><b>红</b> = 休息中 / 危险操作</span>
+    <span><span class="k" style="background:#F5A623"></span><b>琥珀</b> = 强调色 / 可点</span>
+    <span><span class="k" style="background:#D4AF37"></span><b>金</b> = 异色已拥有</span>
+    <span><span class="k" style="background:#EDE9E2"></span><b>灰块</b> = 图标占位（真实图标是游戏道具图）</span>
+  </div>
+
+  <!-- ============ 1. 首页 ============ -->
+  <h2 class="sect">一、主流程</h2>
+  <div class="block">
+    <div class="bhead">
+      <span class="btitle">1. 首页</span>
+      <span class="bpath">MainActivity.kt · activity_main.xml</span>
+    </div>
+    <div class="bnote">App 唯一的启动页。上半是<strong>状态卡 + 倒计时</strong>，中间是<strong>本轮在售商品</strong>（每行 3 个），下面是<strong>三个功能入口</strong>，最底下一排<strong>固定不滚</strong>的三个按钮。点商品卡会直接跳到内置图鉴搜这个名字。</div>
+
+    <div class="twocol">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>20:11</span><span>5G ▮▮▮ 82%</span></div>
+          <div class="body">
+
+            <div class="card">
+              <div class="t1">洛克助手</div>
+              <div class="t2">16:00:00 ~ 20:00:00</div>
+              <div style="margin:9px 0"><span class="pill">00 : 52 : 07</span></div>
+              <div class="divider"></div>
+              <div class="statline"><span class="on">营业中</span><span class="t3">第 3 轮 · 下一轮 20:00</span></div>
+              <div style="margin-top:8px"><span class="chip">数据 19:08</span></div>
+            </div>
+
+            <div class="sec"><span>本轮在售</span><span style="font-size:11.5px;color:#A39C90;font-weight:400">6 件　<span style="color:var(--accent);font-weight:700">⟳ 刷新</span></span></div>
+            <div class="grid3">
+              <div class="ic g1"><span class="em">🟡</span><span class="nm">普通咕噜球</span></div>
+              <div class="ic g2"><span class="em">🟣</span><span class="nm">蓝晶碧玺</span></div>
+              <div class="ic g3"><span class="em">🔵</span><span class="nm">水系粉尘</span></div>
+              <div class="ic g4"><span class="em">🟢</span><span class="nm">魔力果</span></div>
+              <div class="ic g5"><span class="em">🔴</span><span class="nm">火系灵碎</span></div>
+              <div class="ic g6"><span class="em">🩵</span><span class="nm">国王球</span></div>
+            </div>
+
+            <div class="sec" style="margin-top:2px">功能入口</div>
+            <div class="entry">
+              <div class="eic">📜</div>
+              <div class="etx"><div class="em2">今日轮次记录</div><div class="es2">按轮自动记，可手动改</div></div>
+              <div class="eco">已记录 3/4 轮</div><div class="ar">›</div>
+            </div>
+            <div class="entry">
+              <div class="eic">📖</div>
+              <div class="etx"><div class="em2">图鉴 WIKI</div><div class="es2">BWIKI · 罗可图鉴</div></div>
+              <div class="ar">›</div>
+            </div>
+            <div class="entry">
+              <div class="eic">✨</div>
+              <div class="etx"><div class="em2">异色图鉴记录</div><div class="es2">本地保存 · 可导入导出</div></div>
+              <div class="eco">拥有异色 7 只 · 7/19</div><div class="ar">›</div>
+            </div>
+
+          </div>
+          <div class="bottom">
+            <div class="bbtn"><span class="em">📅</span>编辑商品池</div>
+            <div class="bbtn"><span class="em">🔔</span>订阅提醒</div>
+            <div class="bbtn"><span class="em">⚙️</span>设置</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">这一屏都做了什么</div>
+          <div class="rowsoft" style="margin-bottom:7px;font-size:11.5px;line-height:1.8">
+            <b>倒计时每天 08/12/16/20 各刷一轮</b>，一轮 4 小时。休息时段（00:00–08:00）不显示商品，会显示「休息中 · HH:MM 开张」。<br>
+            倒计时由桌面进程驱动，<b>每秒实时跳动</b>，不耗电、不需要精确闹钟权限。
+          </div>
+          <div class="row" style="margin-bottom:6px">
+            <div style="flex:1">
+              <div style="font-size:12.5px;font-weight:700">⟳ 刷新</div>
+              <div style="font-size:10.5px;color:var(--ts);margin-top:2px">手动重拉</div>
+            </div>
+            <span class="t3" style="font-size:10.5px">弹「正在刷新商品…」</span>
+          </div>
+          <div class="row" style="margin-bottom:6px">
+            <div style="flex:1">
+              <div style="font-size:12.5px;font-weight:700">点商品卡</div>
+              <div style="font-size:10.5px;color:var(--ts);margin-top:2px">跳图鉴搜这个名字</div>
+            </div>
+            <span class="t3" style="font-size:10.5px">带上搜索词直达</span>
+          </div>
+          <div class="row">
+            <div style="flex:1">
+              <div style="font-size:12.5px;font-weight:700">底部三键</div>
+              <div style="font-size:10.5px;color:var(--ts);margin-top:2px">编辑商品池 / 订阅提醒 / 设置</div>
+            </div>
+            <span class="t3" style="font-size:10.5px">固定不滚</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">两种状态</div>
+          <div class="row" style="margin-bottom:7px">
+            <span class="on" style="width:52px;font-size:13px">营业中</span>
+            <span class="t3" style="flex:1">第 N 轮 · 下一轮 HH:MM</span>
+          </div>
+          <div class="row">
+            <span class="off" style="width:52px;font-size:13px">休息中</span>
+            <span class="t3" style="flex:1">下一轮 HH:MM · 第 N 轮</span>
+          </div>
+          <div class="caption">首次运行若没给精确闹钟权限，底部会弹一条提示：<b>「组件倒计时已实时跳动（无需设置）。开启「闹钟与提醒」可让 8/12/16/20 的后台更新更准点。」</b> 右侧带「去开启」按钮。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 2. 订阅提醒 ============ -->
+  <div class="block">
+    <div class="bhead">
+      <span class="btitle">2. 订阅提醒</span>
+      <span class="bpath">SubscribeActivity.kt · activity_subscribe.xml</span>
+      <span class="badge b-new">本轮新增折叠</span>
+    </div>
+    <div class="bnote">勾选想要的商品，命中时发通知 + 桌面组件多一行「🔔 订阅命中」。<strong>分类默认全部收起</strong>，点分类名展开。标题上的「· 已选 N」是实时汇总。</div>
+
+    <div class="twocol">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>20:11</span><span>5G ▮▮▮ 82%</span></div>
+          <div class="navbar"><span class="ttl">订阅提醒</span></div>
+          <div class="body">
+            <div class="rowsoft" style="font-size:11px;line-height:1.7">点分类名可折叠/展开。勾选总分类=该类任意商品在售即提醒；也可细分到具体商品。</div>
+
+            <div class="ck"><div class="bx on"></div><b style="font-size:13px">全选（所有商品）</b><span style="flex:1"></span><span class="t3">已选 27 项 / 5 个分类</span></div>
+            <div style="display:flex;gap:16px;font-size:11.5px;color:var(--accent);font-weight:600">
+              <span>清空全部订阅</span><span>编辑商品池（改分类/删除/新增）</span>
+            </div>
+
+            <div class="arrow-hd">▾ 【精灵球类】14 项 · 已选 3</div>
+            <div style="padding-left:4px">
+              <div class="ck ind"><div class="bx part"></div>订阅整个分类</div>
+              <div class="ck ind" style="padding-left:38px"><div class="bx on"></div>普通咕噜球</div>
+              <div class="ck ind" style="padding-left:38px"><div class="bx on"></div>高级咕噜球</div>
+              <div class="ck ind" style="padding-left:38px"><div class="bx on"></div>国王球</div>
+              <div class="ck ind" style="padding-left:38px"><div class="bx"></div>光合球</div>
+              <div class="ck ind" style="padding-left:38px"><div class="bx"></div>调温球</div>
+              <div class="ck ind" style="padding-left:38px"><div class="bx"></div>棱镜球</div>
+              <div class="ck ind" style="padding-left:38px"><div class="bx"></div>好战球</div>
+            </div>
+
+            <div class="arrow-hd">▸ 【矿石宝石类】4 项</div>
+            <div class="arrow-hd">▸ 【血脉秘药类】21 项 · 已选 2</div>
+            <div class="arrow-hd">▸ 【粉尘类】19 项</div>
+            <div class="arrow-hd">▸ 【灵碎类】19 项</div>
+            <div class="arrow-hd">▸ 【蛋与精灵类】3 项</div>
+            <div class="arrow-hd">▸ 【经验果类】3 项</div>
+            <div class="arrow-hd">▸ 【道具材料类】4 项</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">三态联动规则</div>
+          <div class="rowsoft" style="font-size:11.5px;line-height:1.9">
+            • 勾<b>「订阅整个分类」</b> → 该类全部子项一起勾上，并记住分类级订阅（游戏以后新增的同系商品也自动命中）<br>
+            • 取消整个分类 → 该类全部取消<br>
+            • 手动取消<b>某一个</b>子项 → 父级「订阅整个分类」自动取消<br>
+            • 手动把某类<b>全部勾上</b> → 父级自动升级为勾上
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">列表数据来源</div>
+          <div class="rowsoft" style="font-size:11.5px;line-height:1.8">
+            内置商品池（87 项）+ 历史出现过的商品 + 已订阅项 + 当前在售，<b>去掉你删掉的</b>。<br>
+            底部提示会写明「共 N 项」。
+          </div>
+          <div class="caption">没数据时整页变「<b>暂无数据，先打开首页刷新一次商品即可。</b>」，「全选」和「清空」都置灰。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 3. 编辑商品池 ============ -->
+  <div class="block">
+    <div class="bhead">
+      <span class="btitle">3. 编辑商品池</span>
+      <span class="bpath">ItemEditActivity.kt · activity_item_edit.xml</span>
+      <span class="badge b-new">本轮新增改名 + 折叠</span>
+    </div>
+    <div class="bnote">你自己维护商品名单。每行现在有四个操作：<strong>改分类下拉</strong>、<strong>改名</strong>、<strong>删除</strong>。缺的在顶部加。点摘要行（「当前 N 项 · …」）能<strong>一键全展/全收</strong>。</div>
+
+    <div class="twocol">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>20:11</span><span>5G ▮▮▮ 82%</span></div>
+          <div class="navbar"><span class="ttl">编辑商品池</span></div>
+          <div class="body">
+            <div class="rowsoft" style="font-size:11px;line-height:1.7">点分类名可折叠/展开；觉得哪个商品分类不对，直接在这里改；不需要的点「删除」；缺的在下面自己加。</div>
+
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="inp" style="flex:1;margin:0;font-size:11.5px;padding:8px 10px">商品名，如 黄石榴石</div>
+              <div style="background:var(--soft);border-radius:9px;padding:8px 9px;font-size:11px;white-space:nowrap">精灵球类 ▾</div>
+              <div style="background:var(--golds);border:1px solid var(--goldl);color:var(--goldt);border-radius:9px;padding:8px 11px;font-size:11.5px;font-weight:800">添加</div>
+            </div>
+
+            <div style="font-size:11.5px;color:var(--ts)">当前 87 项 · 自定义 2 项 · 已删除 7 项　<span style="color:#8A857C;font-size:10.5px">（点这行可全展/全收）</span></div>
+            <div style="font-size:11.5px;color:var(--accent);font-weight:600">恢复默认商品池</div>
+
+            <div class="arrow-hd">▾ 【精灵球类】14 项</div>
+            <div>
+              <div class="row" style="margin-bottom:5px;padding:8px 10px">
+                <span style="flex:1;font-size:12px">普通咕噜球</span>
+                <span style="background:var(--soft);border-radius:7px;padding:4px 7px;font-size:10px">精灵球类▾</span>
+                <span style="color:var(--accent);font-size:11px;font-weight:700">改名</span>
+                <span style="color:var(--red);font-size:11px;font-weight:700">删除</span>
+              </div>
+              <div class="row" style="margin-bottom:5px;padding:8px 10px">
+                <span style="flex:1;font-size:12px">国王球</span>
+                <span style="background:var(--soft);border-radius:7px;padding:4px 7px;font-size:10px">精灵球类▾</span>
+                <span style="color:var(--accent);font-size:11px;font-weight:700">改名</span>
+                <span style="color:var(--red);font-size:11px;font-weight:700">删除</span>
+              </div>
+              <div class="row" style="margin-bottom:5px;padding:8px 10px">
+                <span style="flex:1;font-size:12px">祝福项坠 <span style="font-size:10.5px;color:var(--ts)">（自定义）</span></span>
+                <span style="background:var(--soft);border-radius:7px;padding:4px 7px;font-size:10px">道具材料类▾</span>
+                <span style="color:var(--accent);font-size:11px;font-weight:700">改名</span>
+                <span style="color:var(--red);font-size:11px;font-weight:700">删除</span>
+              </div>
+            </div>
+
+            <div class="arrow-hd">▸ 【矿石宝石类】4 项</div>
+            <div class="arrow-hd">▸ 【血脉秘药类】21 项</div>
+            <div class="arrow-hd">▾ 【已删除】7 项（点右侧可恢复）</div>
+            <div>
+              <div class="row" style="padding:8px 10px;background:var(--soft)">
+                <span style="flex:1;font-size:12px;color:var(--ts)">天使草</span>
+                <span style="background:#E4E0D8;border-radius:7px;padding:4px 7px;font-size:10px;color:var(--tsub)">道具材料类▾</span>
+                <span style="color:var(--green);font-size:11px;font-weight:700">恢复</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">新建的「改名」弹窗 <span class="badge b-new">新增</span></div>
+          <div class="mask" style="padding:14px 8px">
+            <div class="dlg">
+              <div class="dt">改名字</div>
+              <div class="dm">「祝福项坠」现在归在【道具材料类】。改名后分类跟着走，订阅勾选也会一起迁移。</div>
+              <div class="inp">祝福吊坠</div>
+              <div class="drow" style="justify-content:center;color:var(--accent);font-weight:800;margin-bottom:5px">确定</div>
+              <div class="drow" style="justify-content:center;color:#8A857C;margin:0">取消</div>
+            </div>
+          </div>
+          <div class="caption">
+            改名会一起迁走：<b>分类归属</b>、<b>订阅勾选状态</b>、<b>历史见过记录</b>。新名字为空或已存在会拒绝并提示「<b>改名失败：新名字为空或已存在</b>」。<br>
+            内置商品改名 = 隐藏原名 + 记一条自定义新名，所以池子里写错的名字可以就地纠错，不影响别的内置项。
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">其它操作反馈</div>
+          <div class="row" style="margin-bottom:6px"><span style="flex:1;font-size:12px">添加时名字留空</span><span class="t3" style="font-size:10.5px">弹「先填商品名」</span></div>
+          <div class="row" style="margin-bottom:6px"><span style="flex:1;font-size:12px">添加成功</span><span class="t3" style="font-size:10.5px">「已添加：X → 精灵球类」</span></div>
+          <div class="row" style="margin-bottom:6px"><span style="flex:1;font-size:12px">切换分类</span><span class="t3" style="font-size:10.5px">「X → 新分类」</span></div>
+          <div class="row"><span style="flex:1;font-size:12px">恢复默认商品池</span><span class="t3" style="font-size:10.5px">「已恢复默认商品池」</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 4. 轮次记录 ============ -->
+  <div class="block">
+    <div class="bhead">
+      <span class="btitle">4. 今日轮次记录</span>
+      <span class="bpath">HistoryActivity.kt · activity_history.xml</span>
+    </div>
+    <div class="bnote">每轮商品自动记一笔，最多 4 轮。<strong>长按某轮卡片</strong>可以手动更正或清空那一轮。</div>
+
+    <div class="twocol">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>20:11</span><span>5G ▮▮▮ 82%</span></div>
+          <div class="body">
+            <div style="font-size:19px;font-weight:800">今日轮次记录</div>
+            <div class="t3">2026-09-23 · 已记录 3/4 轮 · 占用约 12 KB</div>
+
+            <div style="font-size:12px;font-weight:700;color:#4A453E;margin-top:4px">今天</div>
+
+            <div class="card" style="padding:11px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:9px">
+                <b style="font-size:13px">第 3 轮</b>
+                <span class="t3">16:00 – 20:00</span>
+                <span style="background:#E8F5E9;color:#2E7D32;font-size:10px;padding:2px 8px;border-radius:6px;font-weight:700">进行中</span>
+              </div>
+              <div class="grid3">
+                <div class="ic g1"><span class="em">🟡</span><span class="nm">普通咕噜球</span></div>
+                <div class="ic g2"><span class="em">🟣</span><span class="nm">蓝晶碧玺</span></div>
+                <div class="ic g3"><span class="em">🔵</span><span class="nm">水系粉尘</span></div>
+              </div>
+            </div>
+
+            <div class="card" style="padding:11px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:9px">
+                <b style="font-size:13px">第 2 轮</b>
+                <span class="t3">12:00 – 16:00</span>
+                <span style="background:#EFEBE4;color:#8A857C;font-size:10px;padding:2px 8px;border-radius:6px;font-weight:700">已结束</span>
+              </div>
+              <div class="t3" style="font-size:11.5px">暂无记录（该轮开市后会自动记录）</div>
+            </div>
+
+            <div class="card" style="padding:11px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <b style="font-size:13px">第 4 轮</b>
+                <span class="t3">20:00 – 24:00</span>
+                <span style="background:#FFF8E6;color:#9A6B00;font-size:10px;padding:2px 8px;border-radius:6px;font-weight:700">未开始</span>
+              </div>
+            </div>
+
+            <div style="text-align:center"><span style="color:var(--accent);font-size:12px;font-weight:600">清空今日记录</span></div>
+            <div class="rowsoft" style="font-size:10.5px;line-height:1.7">记录只保存在本机，每天 08:00 新一天开市时自动清除上一日缓存，不会长期占用空间（图标缓存除外，抓到即复用，不重复耗流量）。</div>
+            <div style="font-size:10.5px;color:var(--ts);line-height:1.7">说明：每轮商品由 App 自动记录，同一轮只补不覆盖；长按某轮卡片可以手动更正或清空那一轮。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">长按轮次卡片 <span class="badge b-ok">有记录时</span></div>
+          <div class="mask" style="padding:14px 8px">
+            <div class="dlg">
+              <div class="dt">第 3 轮</div>
+              <div class="dm" style="margin-bottom:9px">16:00 – 20:00</div>
+              <div class="drow">更正这一轮的商品</div>
+              <div class="drow danger">清空这一轮</div>
+              <div class="drow" style="justify-content:center;color:#8A857C;margin:0">关闭</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">手动更正 / 补录</div>
+          <div class="mask" style="padding:14px 8px">
+            <div class="dlg">
+              <div class="dt">第 3 轮的商品</div>
+              <div class="dm" style="font-size:11px">多个商品用「、」或「,」分隔；留空 = 清空这一轮</div>
+              <div class="inp">普通咕噜球、蓝晶碧玺、水系粉尘</div>
+              <div class="drow" style="justify-content:center;color:var(--accent);font-weight:800;margin-bottom:5px">保存</div>
+              <div class="drow" style="justify-content:center;color:#8A857C;margin:0">取消</div>
+            </div>
+          </div>
+          <div class="caption">无记录的轮次长按，菜单只有一项「<b>手动补录这一轮</b>」。凌晨回看时上方多一个分区「<b>昨天（凌晨回看，08:00 后自动清除）</b>」。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 5. WIKI ============ -->
+  <h2 class="sect">二、图鉴模块</h2>
+  <div class="block">
+    <div class="bhead">
+      <span class="btitle">5. 图鉴 WIKI（内置浏览器）</span>
+      <span class="bpath">WikiActivity.kt · activity_wiki.xml</span>
+    </div>
+    <div class="bnote">App 内置的浏览器，两个站点可切：<strong>BWIKI</strong> 和 <strong>罗可图鉴</strong>。支持后退/前进/刷新/首页，也能一键甩到系统浏览器。</div>
+
+    <div class="twocol">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>20:11</span><span>5G ▮▮▮ 82%</span></div>
+          <div class="body" style="gap:8px">
+            <div style="display:flex;align-items:center;gap:7px">
+              <b style="font-size:13.5px;flex:1">BWIKI · 普通咕噜球</b>
+            </div>
+            <div style="display:flex;gap:5px">
+              <div class="inp" style="flex:1;margin:0;font-size:11.5px;padding:8px 10px">搜索精灵 / 道具…</div>
+              <div style="background:var(--golds);border:1px solid var(--goldl);color:var(--goldt);border-radius:9px;padding:8px 12px;font-size:11.5px;font-weight:800">搜索</div>
+            </div>
+            <div style="display:flex;gap:6px">
+              <span style="background:var(--card);border:1px solid var(--goldl);color:var(--goldt);font-size:11px;padding:4px 12px;border-radius:14px;font-weight:700">BWIKI</span>
+              <span style="background:var(--card);border:1px solid var(--stroke);color:#6E6A62;font-size:11px;padding:4px 12px;border-radius:14px">罗可图鉴</span>
+            </div>
+            <div style="height:2px;background:var(--accent);border-radius:1px;width:60%"></div>
+            <div class="card" style="flex:1;padding:12px">
+              <div style="font-size:13px;font-weight:800;margin-bottom:8px">普通咕噜球</div>
+              <div class="rowsoft" style="font-size:11px;line-height:1.8;margin-bottom:7px">
+                捕捉精灵使用的道具。<br>稀有度：<b style="color:#2E7D32">绿</b> ｜ 分类：<b>咕噜球</b> ｜ 序号 100001
+              </div>
+              <div style="font-size:10.5px;color:var(--ts);line-height:1.7">Wiki 正文在这里渲染，图片是 CDN 直链……</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:9px;font-size:10.5px;font-weight:700;color:#4A453E">
+              <span>← 后退</span><span>前进 →</span><span>刷新</span><span>首页</span><span>浏览器</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">两个站点</div>
+          <div class="row" style="margin-bottom:6px">
+            <div style="flex:1"><div style="font-size:12.5px;font-weight:700">BWIKI</div><div style="font-size:10.5px;color:var(--ts);margin-top:2px">wiki.biligame.com/rocom</div></div>
+            <span class="t3" style="font-size:10.5px">道具最全（1672 条）</span>
+          </div>
+          <div class="row">
+            <div style="flex:1"><div style="font-size:12.5px;font-weight:700">罗可图鉴</div><div style="font-size:10.5px;color:var(--ts);margin-top:2px">rocokingdomworld.org/zh</div></div>
+            <span class="t3" style="font-size:10.5px">搜精灵落到 pokedex</span>
+          </div>
+          <div class="caption">从首页点商品卡进来时，搜索框会自动带上商品名并直接搜。站外链接和 http 之外的 scheme 都甩给系统处理。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 6. 异色图鉴 ============ -->
+  <div class="block">
+    <div class="bhead">
+      <span class="btitle">6. 异色图鉴</span>
+      <span class="bpath">ShinyActivity.kt · activity_shiny.xml</span>
+    </div>
+    <div class="bnote">记录自己有哪些异色精灵、各几只。赛季用<strong>按钮 + 弹窗选择器</strong>切换（不是横滑 Tab）。<strong>点格子 +1 只</strong>，<strong>长按格子</strong>出完整操作菜单。</div>
+
+    <div class="twocol">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>20:11</span><span>5G ▮▮▮ 82%</span></div>
+          <div class="body" style="gap:8px">
+            <div style="display:flex;align-items:center;gap:7px">
+              <span style="background:var(--card);border:1px solid var(--stroke);border-radius:11px;padding:7px 11px;font-size:12.5px;font-weight:700">赛季：S4 ▾</span>
+              <span class="t3" style="flex:1">共 4 个</span>
+              <span style="background:var(--soft);border-radius:10px;width:34px;height:30px;display:flex;align-items:center;justify-content:center;font-size:15px">✨</span>
+            </div>
+            <div class="rowsoft" style="font-size:11px;line-height:1.7">
+              我共有异色 <b>7</b> 只（已收集种类 5 / 19）<br>
+              <b>S4</b>：3 / 12 种（25%）· 共 5 只<br>
+              <span style="font-size:10px;color:var(--tsub)">点一下 +1 只并点亮 · 长按调只数 / 写备注</span>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:#4A453E">
+              <span>赤月奇遇</span><span style="color:var(--goldt);font-weight:700">3/6 种　共 5 只</span>
+            </div>
+            <div class="grid4">
+              <div class="ic" style="background:var(--golds);border:1px solid var(--goldl);position:relative">
+                <span class="em">🌟</span><span class="nm" style="color:#4E4A43">拿脑丸</span>
+                <span style="position:absolute;top:3px;right:4px;background:var(--gold);color:#FFF;font-size:9px;font-weight:800;border-radius:6px;padding:0 5px">×3</span>
+              </div>
+              <div class="ic" style="background:var(--golds);border:1px solid var(--goldl);position:relative">
+                <span class="em">🌟</span><span class="nm" style="color:#4E4A43">幽铃</span>
+                <span style="position:absolute;top:3px;right:4px;background:var(--gold);color:#FFF;font-size:9px;font-weight:800;border-radius:6px;padding:0 5px">×1</span>
+              </div>
+              <div class="ic" style="background:var(--soft);border:1px dashed #CFC9BE">
+                <span class="em" style="opacity:.35">❔</span><span class="nm" style="color:var(--tsub)">未拥有</span>
+              </div>
+              <div class="ic" style="background:var(--soft);border:1px dashed #CFC9BE">
+                <span class="em" style="opacity:.35">❔</span><span class="nm" style="color:var(--tsub)">未拥有</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:6px;margin-top:auto">
+              <div style="flex:1;background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:9px;text-align:center;font-size:11px;font-weight:700;color:#4A453E">＋ 告知异色</div>
+              <div style="flex:1;background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:9px;text-align:center;font-size:11px;font-weight:700;color:#4A453E">截图认字</div>
+              <div style="flex:1;background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:9px;text-align:center;font-size:11px;font-weight:700;color:#4A453E">设置</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">长按格子 · 完整菜单</div>
+          <div class="mask" style="padding:12px 8px">
+            <div class="dlg">
+              <div class="drow"><span class="dl">＋ 加 1 只</span><span class="ds">再入手一只异色拿脑丸</span></div>
+              <div class="drow"><span class="dl">－ 减 1 只</span><span class="ds">现有 3 只</span></div>
+              <div class="drow"><span class="dl">手动输入只数</span><span class="ds">直接写个数字，比如 3</span></div>
+              <div class="drow">修改备注</div>
+              <div class="drow"><span class="dl">补下异色图</span><span class="ds">这只精灵在所有赛季 / 分类里一起更新</span></div>
+              <div class="drow"><span class="dl">清零</span><span class="ds">标成未拥有（只数归 0）</span></div>
+              <div class="drow danger"><span class="dl">删除这条记录</span><span class="ds" style="color:#B4665C">从 S4 里移除</span></div>
+              <div class="drow" style="justify-content:center;color:#8A857C;margin:0">关闭</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">「＋ 告知异色」/「截图认字」</div>
+          <div class="row" style="margin-bottom:6px">
+            <div style="flex:1"><div style="font-size:12.5px;font-weight:700">告知异色 · S4</div><div style="font-size:10.5px;color:var(--ts);margin-top:2px">名字或编号都行，会自动去图鉴对应</div></div>
+          </div>
+          <div class="rowsoft" style="font-size:11px;margin-bottom:6px">输入框提示：<b>精灵名字或编号，例如：拿脑丸 / 幽铃 / 226</b> ｜ <b>分类（可留空，例如：赤月奇遇精灵）</b></div>
+          <div class="rowsoft" style="font-size:11px">找不到时给三条路：<b>记为自定义精灵</b> / <b>联网刷新图鉴</b> / 取消。有歧义弹「有歧义，请确认」，每条列 <b>#编号 名字</b>。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 7. 异色设置 ============ -->
+  <div class="block">
+    <div class="bhead">
+      <span class="btitle">7. 异色图鉴 · 设置</span>
+      <span class="bpath">ShinySettingsActivity.kt · activity_shiny_settings.xml</span>
+    </div>
+    <div class="bnote">三张卡五行：图鉴刷新 / 自定义精灵 / 图标缓存 / 导出 / 导入。</div>
+
+    <div class="twocol">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>20:11</span><span>5G ▮▮▮ 82%</span></div>
+          <div class="navbar"><span class="bk">‹ 返回</span><span class="ttl">设置</span></div>
+          <div class="body">
+            <div style="font-size:11.5px;font-weight:800;color:#8A857C;margin-top:2px">图鉴</div>
+            <div class="card" style="padding:5px 11px">
+              <div class="row" style="border:0;border-radius:0;padding:9px 0;border-bottom:1px solid var(--line)">
+                <span style="flex:1;font-size:12.5px;font-weight:700">刷新精灵列表</span>
+                <span class="t3" style="font-size:10.5px">641 只 · 今天刷新过　›</span>
+              </div>
+              <div class="row" style="border:0;border-radius:0;padding:9px 0">
+                <span style="flex:1;font-size:12.5px;font-weight:700">自定义精灵</span>
+                <span class="t3" style="font-size:10.5px">2 只 ›</span>
+              </div>
+            </div>
+            <div style="font-size:11.5px;font-weight:800;color:#8A857C">图标</div>
+            <div class="card" style="padding:5px 11px">
+              <div class="row" style="border:0;border-radius:0;padding:9px 0">
+                <span style="flex:1;font-size:12.5px;font-weight:700">图标缓存</span>
+                <span class="t3" style="font-size:10.5px">520 个 · 约 3.2 MB ›</span>
+              </div>
+            </div>
+            <div style="font-size:11.5px;font-weight:800;color:#8A857C">数据</div>
+            <div class="card" style="padding:5px 11px">
+              <div class="row" style="border:0;border-radius:0;padding:9px 0;border-bottom:1px solid var(--line)">
+                <span style="flex:1;font-size:12.5px;font-weight:700">导出记录</span>
+                <span class="t3" style="font-size:10.5px">5/19 种 · 共 7 只 ›</span>
+              </div>
+              <div class="row" style="border:0;border-radius:0;padding:9px 0">
+                <span style="flex:1;font-size:12.5px;font-weight:700">导入记录</span>
+                <span class="t3" style="font-size:10.5px">从 JSON 覆盖导入 ›</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">各行的实际行为</div>
+          <div class="row" style="margin-bottom:6px"><span style="flex:1;font-size:12px">刷新精灵列表</span><span class="t3" style="font-size:10.5px">先「正在联网刷新…」</span></div>
+          <div class="row" style="margin-bottom:6px"><span style="flex:1;font-size:12px">图标缓存</span><span class="t3" style="font-size:10.5px">补图 / 清空</span></div>
+          <div class="row" style="margin-bottom:6px"><span style="flex:1;font-size:12px">导出记录</span><span class="t3" style="font-size:10.5px">shiny_record.json</span></div>
+          <div class="row"><span style="flex:1;font-size:12px">导入记录</span><span class="t3" style="font-size:10.5px">确认后「覆盖导入」</span></div>
+          <div class="caption">刷新结果弹「<b>图鉴已刷新</b>」或「<b>刷新失败</b>」。导入是<b>覆盖式</b>，会替换现有记录，所以确认按钮是危险样式。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 8. 设置 ============ -->
+  <h2 class="sect">三、设置</h2>
+  <div class="block">
+    <div class="bhead">
+      <span class="btitle">8. 设置</span>
+      <span class="bpath">SettingsActivity.kt · activity_settings.xml</span>
+      <span class="badge b-fix">深色模式在此</span>
+    </div>
+    <div class="bnote">四张卡共 7 项：外观（深色模式分段器）、提醒、关于。</div>
+
+    <div class="twocol">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>20:11</span><span>5G ▮▮▮ 82%</span></div>
+          <div class="navbar"><span class="bk">‹ 返回</span><span class="ttl">设置</span></div>
+          <div class="body">
+            <div class="card" style="padding:11px">
+              <div style="display:flex;align-items:center;margin-bottom:9px">
+                <span style="flex:1;font-size:12.5px;font-weight:700">深色模式</span>
+              </div>
+              <div style="display:flex;background:var(--chip);border-radius:9px;padding:3px;font-size:11px">
+                <span style="flex:1;text-align:center;padding:5px 0;border-radius:7px;background:var(--card);font-weight:800">跟随系统</span>
+                <span style="flex:1;text-align:center;padding:5px 0;color:#8A857C">浅色</span>
+                <span style="flex:1;text-align:center;padding:5px 0;color:#8A857C">深色</span>
+              </div>
+            </div>
+
+            <div style="font-size:11.5px;font-weight:800;color:#8A857C">提醒</div>
+            <div class="card" style="padding:5px 11px">
+              <div class="row" style="border:0;border-radius:0;padding:9px 0;border-bottom:1px solid var(--line)">
+                <div style="flex:1"><div style="font-size:12.5px;font-weight:700">订阅与提醒</div><div style="font-size:10.5px;color:var(--ts)">管理想要关注的商品</div></div><span class="t3">›</span>
+              </div>
+              <div class="row" style="border:0;border-radius:0;padding:9px 0">
+                <div style="flex:1"><div style="font-size:12.5px;font-weight:700">闹钟与提醒权限</div><div style="font-size:10.5px;color:var(--ts)">开启后 8/12/16/20 点更新更准点</div></div><span class="t3">›</span>
+              </div>
+            </div>
+
+            <div style="font-size:11.5px;font-weight:800;color:#8A857C">关于</div>
+            <div class="card" style="padding:5px 11px">
+              <div class="row" style="border:0;border-radius:0;padding:9px 0;border-bottom:1px solid var(--line)">
+                <div style="flex:1"><div style="font-size:12.5px;font-weight:700">使用说明</div><div style="font-size:10.5px;color:var(--ts)">怎么看轮次 · 怎么记异色 · 组件怎么加</div></div><span class="t3">›</span>
+              </div>
+              <div class="row" style="border:0;border-radius:0;padding:9px 0;border-bottom:1px solid var(--line)">
+                <div style="flex:1"><div style="font-size:12.5px;font-weight:700">创作者声明</div><div style="font-size:10.5px;color:var(--ts)">作者 · 数据来源 · 免责</div></div><span class="t3">›</span>
+              </div>
+              <div class="row" style="border:0;border-radius:0;padding:9px 0;border-bottom:1px solid var(--line)">
+                <div style="flex:1"><div style="font-size:12.5px;font-weight:700">关于本应用</div><div style="font-size:10.5px;color:var(--ts)">版本 1.0.0</div></div><span class="t3">›</span>
+              </div>
+              <div class="row" style="border:0;border-radius:0;padding:9px 0">
+                <div style="flex:1"><div style="font-size:12.5px;font-weight:700;color:var(--accent)">清空本地数据</div><div style="font-size:10.5px;color:var(--ts)">仅清空本机记录，不影响云端</div></div><span class="t3">›</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">「使用说明」弹窗 · 6 节</div>
+          <div class="rowsoft" style="font-size:11px;line-height:1.9">
+            <b>轮次怎么看</b>：每天 08/12/16/20 各刷一轮，一轮 4 小时…<br>
+            <b>商品怎么来的</b>：数据取自「罗科工具箱」公开数据源…<br>
+            <b>订阅提醒</b>：命中会发通知，组件多一行「🔔 订阅命中」<br>
+            <b>今日轮次记录</b>：每轮自动记一笔，最多 4 轮<br>
+            <b>异色图鉴</b>：记录异色只数，支持导入导出 + 截图认字<br>
+            <b>桌面组件</b>：长按桌面 → 小组件 → 洛克助手，可选 2×2 或 2×3
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">「清空本地数据」确认框</div>
+          <div class="mask" style="padding:12px 8px">
+            <div class="dlg">
+              <div class="dt">清空本地数据</div>
+              <div class="dm">将清除商品缓存、今日轮次记录、订阅列表等本机数据。<br>异色图鉴记录不会动。<br><br>确定继续？</div>
+              <div class="drow danger" style="justify-content:center">清空</div>
+              <div class="drow" style="justify-content:center;color:#8A857C;margin:0">取消</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 桌面组件 ============ -->
+  <h2 class="sect">四、桌面小组件（3 档自适应）</h2>
+  <div class="block">
+    <div class="bnote">长按桌面 → 小组件 → 洛克助手，注册了 <b>2×2</b> 和 <b>2×3</b> 两种。组件会<strong>按实际尺寸自动降级</strong>：够高够宽走完整版，压扁了走紧凑横向，再小就走纯文字。
+
+    <div class="widgetgrid" style="margin-top:16px">
+      <!-- L1 完整 -->
+      <div class="wtile">
+        <div class="wlbl">L1 完整 · 默认（高 ≥ 150dp）</div>
+        <div class="wbox">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <b style="font-size:13px">洛克助手</b>
+            <span style="font-size:13px;color:var(--accent)">⟳</span>
+          </div>
+          <div class="t3" style="font-size:10.5px;margin-top:4px">营业中 · 第 3 轮</div>
+          <div style="margin:7px 0"><span class="pill s">00:52:07</span></div>
+          <div class="t3" style="font-size:9.5px">已刷新 19:08</div>
+          <div style="background:#FFF8E6;border-radius:7px;padding:4px 7px;font-size:9.5px;color:#9A6B00;margin:6px 0;font-weight:700">🔔 订阅命中：精灵球类</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:7px">
+            <div class="ic" style="min-height:44px;padding:4px"><span class="em" style="font-size:14px">🟡</span><span class="nm" style="font-size:8px">普通咕噜球</span></div>
+            <div class="ic" style="min-height:44px;padding:4px"><span class="em" style="font-size:14px">🟣</span><span class="nm" style="font-size:8px">蓝晶碧玺</span></div>
+            <div class="ic" style="min-height:44px;padding:4px"><span class="em" style="font-size:14px">🔵</span><span class="nm" style="font-size:8px">水系粉尘</span></div>
+            <div class="ic" style="min-height:44px;padding:4px"><span class="em" style="font-size:14px">🟢</span><span class="nm" style="font-size:8px">魔力果</span></div>
+            <div class="ic" style="min-height:44px;padding:4px"><span class="em" style="font-size:14px">🔴</span><span class="nm" style="font-size:8px">火系灵碎</span></div>
+            <div class="ic" style="min-height:44px;padding:4px;position:relative;background:#E0F7FA">
+              <span class="em" style="font-size:14px;opacity:.3">🩵</span>
+              <span style="position:absolute;top:1px;right:2px;background:rgba(0,0,0,.55);color:#FFF;font-size:8px;font-weight:800;border-radius:5px;padding:0 4px">+6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- L2 紧凑 -->
+      <div class="wtile">
+        <div class="wlbl">L2 紧凑横向（高 &lt; 150dp）</div>
+        <div class="wbox" style="width:260px">
+          <div style="display:flex;align-items:center;gap:7px">
+            <span class="pill s">00:52:07</span>
+            <div style="display:flex;gap:4px;flex:1">
+              <div class="ic" style="width:22px;height:22px;min-height:22px;padding:0;border-radius:6px"><span style="font-size:11px">🟡</span></div>
+              <div class="ic" style="width:22px;height:22px;min-height:22px;padding:0;border-radius:6px"><span style="font-size:11px">🟣</span></div>
+              <div class="ic" style="width:22px;height:22px;min-height:22px;padding:0;border-radius:6px"><span style="font-size:11px">🔵</span></div>
+              <div class="ic" style="width:22px;height:22px;min-height:22px;padding:0;border-radius:6px"><span style="font-size:11px">🟢</span></div>
+              <div class="ic" style="width:22px;height:22px;min-height:22px;padding:0;border-radius:6px;position:relative;background:#FFEBEE">
+                <span style="font-size:11px;opacity:.3">🔴</span>
+                <span style="position:absolute;top:-2px;right:-2px;background:rgba(0,0,0,.55);color:#FFF;font-size:7px;font-weight:800;border-radius:4px;padding:0 3px">+7</span>
+              </div>
+            </div>
+            <span style="font-size:12px;color:var(--accent)">⟳</span>
+          </div>
+        </div>
+        <div class="caption" style="width:260px">只有图标没名字。图标数按宽度算（<b>2–8 个</b>），装不下最后一格变「<b>+N</b>」角标。</div>
+      </div>
+
+      <!-- L3 极简 -->
+      <div class="wtile">
+        <div class="wlbl">L3 极简纯文字（高 &lt; 80dp）</div>
+        <div class="wbox mini">
+          <div style="display:flex;align-items:center;gap:7px">
+            <span class="pill xs">00:52:07</span>
+            <span style="font-size:10px;color:#4E4A43;flex:1;line-height:1.4">普通咕噜球 · 蓝晶碧玺 · 水系粉尘 · 魔力果 · 火系灵碎</span>
+            <span style="font-size:12px;color:var(--accent)">⟳</span>
+          </div>
+        </div>
+        <div class="caption" style="width:210px">完全不放图片，商品名用「<b> · </b>」连接，最多 6 件，超了追加「<b>等 N 件</b>」。最省地方。</div>
+      </div>
+
+      <!-- 深色 -->
+      <div class="wtile">
+        <div class="wlbl">深色模式（组件不跟随页面主题，自己判断）</div>
+        <div class="wbox dk" style="width:230px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <b style="font-size:13px;color:#EDEAE4">洛克助手</b>
+            <span style="font-size:13px;color:#F7B23B">⟳</span>
+          </div>
+          <div style="font-size:10.5px;color:#8E8A84;margin-top:4px">休息中 · 下一轮 08:00</div>
+          <div style="margin:7px 0"><span class="pill s" style="background:#E8B646;color:#3A2A05">00:52:07</span></div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px">
+            <div class="ic" style="min-height:38px;padding:3px;background:linear-gradient(160deg,#3D2E4E,#291E36);border-color:transparent"><span class="em" style="font-size:13px">🟡</span><span class="nm" style="font-size:7.5px;color:#C9C3B9">普通咕噜球</span></div>
+            <div class="ic" style="min-height:38px;padding:3px;background:linear-gradient(160deg,#22384A,#162634);border-color:transparent"><span class="em" style="font-size:13px">🟣</span><span class="nm" style="font-size:7.5px;color:#C9C3B9">蓝晶碧玺</span></div>
+            <div class="ic" style="min-height:38px;padding:3px;background:linear-gradient(160deg,#22402A,#172C1D);border-color:transparent"><span class="em" style="font-size:13px">🔵</span><span class="nm" style="font-size:7.5px;color:#C9C3B9">水系粉尘</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px;max-width:900px">
+      <div style="font-size:13px;font-weight:800;margin-bottom:9px">共同行为</div>
+      <div style="font-size:12px;color:#5C574F;line-height:1.9">
+        • 点组件任意位置 → 打开 App 首页<br>
+        • 点 ⟳ 图标 → 立刻后台刷新（不走主线程）<br>
+        • 倒计时由桌面进程驱动，<b>每秒实时跳动</b>，不需要精确闹钟权限（有个 TickReceiver 每分钟兜底，解决旧版"冻结"问题）<br>
+        • 深色与否：优先看你强制的深色设置，没强制就看系统<br>
+        • 空商品时显示占位：「<b>休息中 · HH:MM 开张</b>」/「<b>打开APP加载商品</b>」/「<b>第 N 轮刷新中…</b>」
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 通知 ============ -->
+  <h2 class="sect">五、通知</h2>
+  <div class="block">
+    <div class="twocol">
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">订阅命中通知</div>
+          <div style="background:#FFF;border-radius:14px;padding:11px;border:1px solid var(--stroke)">
+            <div style="display:flex;gap:9px">
+              <div style="width:26px;height:26px;border-radius:8px;background:var(--golds);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0">🔔</div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:12px;font-weight:800">洛克助手 · 订阅提醒</div>
+                <div style="font-size:11px;color:#5C574F;line-height:1.6;margin-top:3px">本轮在售你订阅的【精灵球类】：普通咕噜球、高级咕噜球、国王球</div>
+              </div>
+            </div>
+          </div>
+          <div class="caption">渠道名「<b>洛克助手提醒</b>」，描述「订阅商品在售提醒」，重要度 DEFAULT。同一个刷新点只发一次（按「日期-小时」去重），通知 ID 固定 1001。纯本地生成，不联网。</div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">触发时机</div>
+          <div class="row" style="margin-bottom:6px"><span style="flex:1;font-size:12px">首页拉取商品时</span><span class="t3" style="font-size:10.5px">比对订阅 → 命中即发</span></div>
+          <div class="row" style="margin-bottom:6px"><span style="flex:1;font-size:12px">后台定时刷新时</span><span class="t3" style="font-size:10.5px">8/12/16/20 各一次</span></div>
+          <div class="row"><span style="flex:1;font-size:12px">桌面组件刷新按钮</span><span class="t3" style="font-size:10.5px">手动刷新也会判</span></div>
+        </div>
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">后台机制一览</div>
+          <div style="font-size:11.5px;color:#5C574F;line-height:1.9">
+            <b>RefreshReceiver</b> —— 8/12/16/20 点定时拉商品，写回首页与组件<br>
+            <b>TickReceiver</b> —— 每 60 秒兜底刷组件<br>
+            <b>BootReceiver</b> —— 开机后清过期日志、重排闹钟<br>
+            权限：INTERNET / 精确闹钟 / 开机自启 / 通知 / 唤醒锁
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 弹窗系统 ============ -->
+  <h2 class="sect">六、全局弹窗系统（UiDialogs）</h2>
+  <div class="block">
+    <div class="bnote">全 App <strong>没有一个系统默认样式弹窗</strong>，全部走自建卡片式：圆角 20dp、暖白底 <code>#FDFCF9</code>、透明窗口。危险操作红字红底。</div>
+    <div class="twocol">
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">列表菜单型 menu / menuWithSubs</div>
+          <div class="mask" style="padding:12px 8px">
+            <div class="dlg">
+              <div class="dt">赛季 / 分类</div>
+              <div class="dm" style="font-size:11px">当前 S4 · 共 4 个赛季</div>
+              <div class="drow"><span class="dl">新建赛季</span><span class="ds">赛季名，例如 S5</span></div>
+              <div class="drow"><span class="dl">在当前赛季新建分类</span><span class="ds">已有：赤月奇遇</span></div>
+              <div class="drow"><span class="dl">重命名当前赛季</span><span class="ds">现在是「S4」（3/12 种）</span></div>
+              <div class="drow danger"><span class="dl">删除当前赛季</span><span class="ds" style="color:#B4665C">该赛季下所有记录都会被删除</span></div>
+              <div class="drow" style="justify-content:center;color:#8A857C;margin:0">关闭</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">输入型 input</div>
+          <div class="mask" style="padding:12px 8px">
+            <div class="dlg">
+              <div class="dt">告知异色 · S4</div>
+              <div class="dm" style="font-size:11px">名字或编号都行，会自动去图鉴里对应</div>
+              <div class="inp">精灵名字或编号，例如：拿脑丸 / 幽铃 / 226</div>
+              <div class="inp">分类（可留空，例如：赤月奇遇精灵）</div>
+              <div class="drow" style="justify-content:center;color:var(--accent);font-weight:800;margin-bottom:5px">识别并添加</div>
+              <div class="drow" style="justify-content:center;color:#8A857C;margin:0">取消</div>
+            </div>
+          </div>
+          <div class="caption">留空会<b>就地抖动变红</b>提示，不关窗（避免输入白费）。</div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">信息型 info / loading</div>
+          <div class="mask" style="padding:12px 8px">
+            <div class="dlg">
+              <div class="dt">关于本应用</div>
+              <div class="dm" style="text-align:center">
+                <b style="font-size:13px">洛克助手 · 远行商人提醒</b><br>
+                <span style="color:#9A6B00;font-weight:800">版本 1.0.0</span><br><br>
+                <span style="font-size:11px">一个只在需要的时候出现的提醒工具：<br>告诉你这一轮卖什么、还有多久换、什么时候刷新。</span>
+              </div>
+              <div class="drow" style="justify-content:center;color:#8A857C;margin:0">知道了</div>
+            </div>
+          </div>
+          <div class="caption">加载中弹窗<b>不可取消</b>，统一「识别中…」「正在联网刷新…」这类文案，避免各页长得不一样。</div>
+        </div>
+        <div class="card">
+          <div style="font-size:13px;font-weight:800;margin-bottom:9px">确认型 confirm</div>
+          <div class="mask" style="padding:12px 8px">
+            <div class="dlg">
+              <div class="dt">导入异色记录</div>
+              <div class="dm" style="font-size:11px">从 JSON 覆盖导入，会替换现有全部记录。</div>
+              <div class="drow danger" style="justify-content:center">覆盖导入</div>
+              <div class="drow" style="justify-content:center;color:#8A857C;margin:0">取消</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:44px;padding:18px;background:#FFF;border-radius:14px;border:1px solid #DAD5CB;font-size:12.5px;color:#5C574F;line-height:2">
+    <b style="font-size:13.5px">清点：一共多少个界面？</b><br>
+    <b>8 个页面</b> —— 首页 · 订阅提醒 · 编辑商品池 · 今日轮次记录 · 图鉴 WIKI · 异色图鉴 · 异色设置 · 设置<br>
+    <b>2 种桌面组件</b> —— 2×2 / 2×3，各自还有 <b>3 档自适应布局</b>（完整 / 紧凑 / 极简）+ 深色<br>
+    <b>1 套弹窗系统</b> —— menu · menuWithSubs · confirm · info · loading · input（全 App 统一走它）<br>
+    <b>1 种通知</b> —— 订阅命中提醒<br>
+    <br>
+    <span style="color:#8A857C;font-size:11.5px">这份是当前 v1.0.0 的实际状态。本轮改的两处已标 <span class="badge b-new">新增</span>：订阅页 + 商品池页的折叠、商品池页的改名。</span>
+  </div>
+
+</div>
+</body>
+</html>

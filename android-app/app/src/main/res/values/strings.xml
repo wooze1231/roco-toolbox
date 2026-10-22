@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">洛克助手</string>
+    <string name="widget_desc_2x2">洛克助手 · 2×2（两列）</string>
+    <string name="widget_desc_2x3">洛克助手 · 2×3（三列）</string>
+</resources>

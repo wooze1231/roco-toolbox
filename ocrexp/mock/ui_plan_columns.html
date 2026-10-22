@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自选赛季弹窗 · 分辨率自适应</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #EFEFF2; color: #2C2C2C; padding: 22px 14px 56px; }
+  h1 { font-size: 20px; text-align: center; margin-bottom: 4px; }
+  .sub { text-align: center; color: #888; font-size: 12.5px; margin-bottom: 8px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .block { margin: 26px 0; }
+  .bh { font-size: 15.5px; font-weight: 700; margin-bottom: 6px; }
+  .bd { font-size: 12.5px; color: #555; line-height: 1.75; margin-bottom: 14px; background: #fff; border-radius: 10px; padding: 10px 12px; border-left: 4px solid #2E86C1; }
+  code { background:#f1f1f4; border-radius:5px; padding:1px 5px; font-size:12px; color:#185FA5; }
+  .rule { font-size:12.5px; background:#fff; border-radius:10px; padding:10px 12px; border-left:4px solid #27AE60; line-height:1.8; }
+  .rule b { color:#1E8449; }
+  .phones { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; align-items: flex-start; }
+  .col { display:flex; flex-direction:column; align-items:center; }
+  .phone { background:#1c1c1e; border-radius:26px; padding:7px; box-shadow:0 8px 22px rgba(0,0,0,.18); }
+  .scr2 { background:#F7F7FA; border-radius:19px; overflow:hidden; display:flex; flex-direction:column; }
+  .status { height:14px; display:flex; align-items:center; justify-content:center; color:#bbb; font-size:9px; }
+  .sheet { background:#fff; border-top-left-radius:18px; border-top-right-radius:18px; padding:12px 12px 14px; }
+  .sheetTitle { font-size:11px; font-weight:700; color:#185FA5; text-align:center; margin-bottom:9px; }
+  .grid { display:grid; gap:6px; }
+  .ch { aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; border-radius:9px; background:#fff; border:1.5px solid #d8d8de; color:#555; }
+  .ch.on { background:#E3F1FB; border-color:#2E86C1; color:#185FA5; }
+  .cap { text-align:center; font-size:11px; color:#666; margin-top:6px; line-height:1.4; }
+  .cap b { color:#185FA5; }
+  .colsN { display:inline-block; background:#e9f1fb; color:#185FA5; border-radius:7px; padding:1px 7px; font-size:11px; font-weight:700; }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:10px; overflow:hidden; font-size:12px; }
+  th, td { border:1px solid #ececf0; padding:8px 6px; text-align:center; }
+  th { background:#f5f7fa; color:#444; font-weight:700; }
+  td.dp { font-weight:700; color:#185FA5; background:#fafcff; }
+  .ok { color:#1E8449; font-weight:700; }
+  .bad { color:#C0392B; font-weight:700; }
+  .note { font-size:12px; color:#666; background:#fff; border-radius:10px; padding:10px 12px; border-left:4px solid #E67E22; line-height:1.8; }
+  .legend { font-size:11.5px; color:#777; text-align:center; margin-top:6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>自选赛季弹窗 · 分辨率自适应</h1>
+  <div class="sub">列数由「弹窗可用宽度 ÷ 最小可点尺寸」推出，而非写死 4 列 —— 同一套弹窗在不同屏宽手机上自动变列</div>
+
+  <div class="block">
+    <div class="bh">自适应规则</div>
+    <div class="rule">
+      <b>列数 = max(2, floor( 可用宽度 ÷ 单格最小宽 ))</b><br>
+      · 单格最小宽取 <b>76dp</b>（含 8dp 间距，保证芯片≈68dp、手指可点不挤）<br>
+      · 弹窗改为<b>全宽底部面板（BottomSheet）</b>：可用宽度 = 屏宽 − 32dp（左右边距）<br>
+      · 屏越宽 → 列数越多 → 行数越少、更省眼；屏越窄 → 列数自动收敛，芯片不会被压成小点<br>
+      · 原来的「写死 4 列」在所有手机上都长一样，从没「自适应」过 —— 5 个赛季 4 列才会落单
+    </div>
+  </div>
+
+  <!-- 5 设备 × n=20 -->
+  <div class="block">
+    <div class="bh">同一套弹窗（20 个赛季）在 5 种屏宽下的排布</div>
+    <div class="bd">下方每台手机按真实屏宽等比渲染，弹窗内列数随宽度变化。n=20 最考验排布。</div>
+    <div class="phones">
+
+      <!-- 320 -->
+      <div class="col">
+        <div class="phone" style="width:150px"><div class="scr2" style="width:136px">
+          <div class="status">320dp</div>
+          <div class="sheet"><div class="sheetTitle">自选赛季 · 20 项</div>
+            <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+              <div class="ch on">S1</div><div class="ch">S2</div><div class="ch">S3</div><div class="ch">S4</div><div class="ch">S5</div><div class="ch">S6</div><div class="ch">S7</div><div class="ch">S8</div><div class="ch">S9</div><div class="ch">S10</div><div class="ch">S11</div><div class="ch">S12</div><div class="ch">S13</div><div class="ch">S14</div><div class="ch">S15</div><div class="ch">S16</div><div class="ch">S17</div><div class="ch">S18</div><div class="ch">S19</div><div class="ch">S20</div>
+            </div></div></div></div>
+        <div class="cap">320dp 小屏<br><span class="colsN">3 列</span> · 7 行（可滑动）</div>
+      </div>
+
+      <!-- 360 -->
+      <div class="col">
+        <div class="phone" style="width:165px"><div class="scr2" style="width:151px">
+          <div class="status">360dp</div>
+          <div class="sheet"><div class="sheetTitle">自选赛季 · 20 项</div>
+            <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+              <div class="ch on">S1</div><div class="ch">S2</div><div class="ch">S3</div><div class="ch">S4</div><div class="ch">S5</div><div class="ch">S6</div><div class="ch">S7</div><div class="ch">S8</div><div class="ch">S9</div><div class="ch">S10</div><div class="ch">S11</div><div class="ch">S12</div><div class="ch">S13</div><div class="ch">S14</div><div class="ch">S15</div><div class="ch">S16</div><div class="ch">S17</div><div class="ch">S18</div><div class="ch">S19</div><div class="ch">S20</div>
+            </div></div></div></div>
+        <div class="cap">360dp 标准<br><span class="colsN">4 列</span> · 5 行（可滑动）</div>
+      </div>
+
+      <!-- 390 -->
+      <div class="col">
+        <div class="phone" style="width:178px"><div class="scr2" style="width:164px">
+          <div class="status">390dp</div>
+          <div class="sheet"><div class="sheetTitle">自选赛季 · 20 项</div>
+            <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+              <div class="ch on">S1</div><div class="ch">S2</div><div class="ch">S3</div><div class="ch">S4</div><div class="ch">S5</div><div class="ch">S6</div><div class="ch">S7</div><div class="ch">S8</div><div class="ch">S9</div><div class="ch">S10</div><div class="ch">S11</div><div class="ch">S12</div><div class="ch">S13</div><div class="ch">S14</div><div class="ch">S15</div><div class="ch">S16</div><div class="ch">S17</div><div class="ch">S18</div><div class="ch">S19</div><div class="ch">S20</div>
+            </div></div></div></div>
+        <div class="cap">390dp 主流<br><span class="colsN">4 列</span> · 5 行（可滑动）</div>
+      </div>
+
+      <!-- 414 -->
+      <div class="col">
+        <div class="phone" style="width:188px"><div class="scr2" style="width:174px">
+          <div class="status">414dp</div>
+          <div class="sheet"><div class="sheetTitle">自选赛季 · 20 项</div>
+            <div class="grid" style="grid-template-columns:repeat(5,1fr)">
+              <div class="ch on">S1</div><div class="ch">S2</div><div class="ch">S3</div><div class="ch">S4</div><div class="ch">S5</div><div class="ch">S6</div><div class="ch">S7</div><div class="ch">S8</div><div class="ch">S9</div><div class="ch">S10</div><div class="ch">S11</div><div class="ch">S12</div><div class="ch">S13</div><div class="ch">S14</div><div class="ch">S15</div><div class="ch">S16</div><div class="ch">S17</div><div class="ch">S18</div><div class="ch">S19</div><div class="ch">S20</div>
+            </div></div></div></div>
+        <div class="cap">414dp 大屏<br><span class="colsN">5 列</span> · 4 行</div>
+      </div>
+
+      <!-- 600 -->
+      <div class="col">
+        <div class="phone" style="width:260px"><div class="scr2" style="width:246px">
+          <div class="status">600dp 平板</div>
+          <div class="sheet"><div class="sheetTitle">自选赛季 · 20 项</div>
+            <div class="grid" style="grid-template-columns:repeat(7,1fr)">
+              <div class="ch on">S1</div><div class="ch">S2</div><div class="ch">S3</div><div class="ch">S4</div><div class="ch">S5</div><div class="ch">S6</div><div class="ch">S7</div><div class="ch">S8</div><div class="ch">S9</div><div class="ch">S10</div><div class="ch">S11</div><div class="ch">S12</div><div class="ch">S13</div><div class="ch">S14</div><div class="ch">S15</div><div class="ch">S16</div><div class="ch">S17</div><div class="ch">S18</div><div class="ch">S19</div><div class="ch">S20</div>
+            </div></div></div></div>
+        <div class="cap">600dp 平板/横屏<br><span class="colsN">7 列</span> · 3 行</div>
+      </div>
+
+    </div>
+    <div class="legend">手机框按屏宽等比缩放：可见 320 小屏芯片最大、414 大屏一行更多、平板最松 —— 列数随宽自动变</div>
+  </div>
+
+  <!-- 矩阵 -->
+  <div class="block">
+    <div class="bh">列数矩阵：屏宽 × 赛季数</div>
+    <div class="bd">列数 = floor((屏宽−32) ÷ 76)，最小 2 列。下表示各组合最终列数 / 行数（蓝=整齐，红=原 4 列写死的落单问题已不存在）。</div>
+    <table>
+      <tr><th>屏宽 ▸<br>赛季数 ▾</th><th>320dp</th><th>360dp</th><th>390dp</th><th>414dp</th><th>600dp</th></tr>
+      <tr><td class="dp">n=5</td><td>3 列 / 2 行</td><td>4 列 / 2 行</td><td>4 列 / 2 行</td><td class="ok">5 列 / 1 行</td><td>5 列 / 1 行</td></tr>
+      <tr><td class="dp">n=7</td><td>3 列 / 3 行</td><td>4 列 / 2 行</td><td>4 列 / 2 行</td><td>5 列 / 2 行</td><td class="ok">7 列 / 1 行</td></tr>
+      <tr><td class="dp">n=12</td><td>3 列 / 4 行</td><td>4 列 / 3 行</td><td>4 列 / 3 行</td><td>5 列 / 3 行</td><td>7 列 / 2 行</td></tr>
+      <tr><td class="dp">n=20</td><td>3 列 / 7 行</td><td>4 列 / 5 行</td><td>4 列 / 5 行</td><td>5 列 / 4 行</td><td>7 列 / 3 行</td></tr>
+    </table>
+    <div class="note" style="margin-top:12px">
+      <b>对比原 bug：</b>写死 4 列时，n=5 在任何手机都是「4+1」→ S5 落单第二行最左；n=7 是「4+3」。自适应后列数跟着宽度走，<b>不再有固定落单</b>，且大屏/平板自动用更宽列、更省滚动。<br>
+      <b>落地提示：</b>把 <code>showExportCustomGrid()</code> 的 <code>GridLayout</code> 改为 BottomSheet + 运行时按 <code>measuredWidth</code> 算 <code>columnCount</code>；或简单用 <code>FlexboxLayout</code>/<code>ConstraintLayout Flow</code> 自动换行（每行最小 76dp）。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

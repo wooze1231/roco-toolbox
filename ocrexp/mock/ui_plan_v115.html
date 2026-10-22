@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>洛克助手 v1.1.5 界面方案</title>
+<style>
+  :root{
+    --page:#F4F1EA; --card:#FFFFFF; --dialog:#FDFCF9; --ink:#2B2B2B;
+    --sub:#8A857C; --gold:#C9A24B; --line:#E7E2D8; --pill:#FCE3A0;
+    --pill-ink:#7A5B12; --danger:#C0392B; --danger-bg:#FBE9E7;
+    --wiki:#FFFFFF; --nav:#FDFCF9;
+  }
+  *{box-sizing:border-box; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  body{margin:0; background:#EDEAE2; padding:28px; color:var(--ink);}
+  h1{font-size:20px; margin:0 0 4px;}
+  .lead{color:var(--sub); font-size:13px; margin:0 0 22px; line-height:1.6;}
+  .row{display:flex; gap:22px; flex-wrap:wrap; align-items:flex-start;}
+  .phone{width:300px; background:var(--page); border-radius:26px; padding:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,.18); position:relative;}
+  .screen{background:var(--page); border-radius:18px; overflow:hidden; height:620px; position:relative; display:flex; flex-direction:column;}
+  .statusbar{height:26px; display:flex; justify-content:space-between; align-items:center;
+    padding:0 14px; font-size:11px; color:var(--ink); background:var(--page);}
+  .caption{font-size:12px; color:var(--sub); text-align:center; margin-top:10px; line-height:1.5;}
+  .caption b{color:var(--ink);}
+  /* wiki top */
+  .wtop{display:flex; align-items:center; gap:8px; padding:8px 12px 6px;}
+  .wtitle{font-size:12px; color:var(--sub); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:90px;}
+  .wsearch{flex:1; background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:7px 10px; font-size:12px; color:var(--ink);}
+  .wgo{background:var(--pill); color:var(--pill-ink); font-weight:700; font-size:12px;
+    padding:7px 12px; border-radius:14px;}
+  .chips{display:flex; gap:8px; padding:0 12px 8px;}
+  .chip{font-size:12px; padding:6px 14px; border-radius:14px; background:var(--card); border:1px solid var(--line); color:var(--ink);}
+  .chip.on{background:var(--gold); color:#fff; border-color:var(--gold);}
+  .prog{height:3px; background:linear-gradient(90deg,var(--gold),var(--pill)); margin:0 12px;}
+  .web{flex:1; background:var(--wiki); padding:14px; overflow:hidden; font-size:12px; color:#333; line-height:1.7;}
+  .web h3{margin:0 0 6px; font-size:15px;}
+  .infobox{background:#F7F4EC; border:1px solid var(--line); border-radius:10px; padding:8px; margin:8px 0; font-size:11px; color:#555;}
+  .web p{margin:6px 0;}
+  /* floating button */
+  .fab{position:absolute; right:16px; bottom:74px; background:var(--gold); color:#fff;
+    border-radius:22px; padding:10px 16px; font-size:13px; font-weight:700;
+    box-shadow:0 6px 16px rgba(201,162,75,.5); display:flex; align-items:center; gap:6px; z-index:5;}
+  .fab .dot{width:14px; height:14px; border:2px solid #fff; border-radius:3px;}
+  /* bottom nav */
+  .nav{display:flex; background:var(--nav); border-top:1px solid var(--line); padding:7px 0;}
+  .nav div{flex:1; text-align:center; font-size:13px; color:var(--ink); padding:6px 0;}
+  .nav .ac{color:var(--gold);}
+  /* shiny grid + bar */
+  .grid{flex:1; padding:12px; display:grid; grid-template-columns:repeat(4,1fr); gap:8px; align-content:start; overflow:hidden;}
+  .cell{background:var(--card); border:1px solid var(--line); border-radius:12px; height:62px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:10px; color:var(--sub);}
+  .cell .pic{width:30px; height:30px; border-radius:50%; background:linear-gradient(135deg,#cfd8e6,#aab6cc); margin-bottom:4px;}
+  .bar{display:flex; background:var(--nav); border-top:1px solid var(--line);}
+  .bar div{flex:1; text-align:center; padding:13px 0; font-size:13.5px; color:var(--ink); font-weight:600;}
+  /* dialog (UNIFIED system for all popups) */
+  .overlay{position:absolute; inset:0; background:rgba(0,0,0,.32); display:flex; align-items:center; justify-content:center; z-index:10;}
+  .dialog{width:252px; background:var(--dialog); border-radius:22px; padding:18px 16px 14px;
+    box-shadow:0 12px 36px rgba(0,0,0,.25);}
+  .dt{font-size:15px; font-weight:700; text-align:center; margin-bottom:6px; color:var(--ink);}
+  .ds{font-size:12px; color:var(--sub); text-align:center; line-height:1.6; margin-bottom:14px;}
+  .opt{border-radius:14px; padding:13px 14px; margin-bottom:10px; border:1px solid var(--line); background:#fff;}
+  .opt.t{font-size:17px; font-weight:700; color:var(--ink);}      /* 选项标题：明显大一号 */
+  .opt.s{font-size:11px; color:var(--sub); margin-top:6px; line-height:1.55; font-weight:400;}  /* 说明：明显小一号、灰、与全局 .ds 一致 */
+  .opt.t.danger{color:var(--danger);}              /* 覆盖=红字提示危险，卡片仍白，风格统一 */
+  .opt.t.fill{color:var(--gold);}
+  .cancel{text-align:center; font-size:13px; color:var(--sub); padding:8px 0 2px;}
+  .badge{display:inline-block; background:var(--pill); color:var(--pill-ink); border-radius:8px; padding:1px 7px; font-size:11px; font-weight:700; margin:0 2px;}
+  /* detailed confirm 3-btn */
+  .dlg-acts{display:flex; gap:8px; margin-top:8px;}
+  .dlg-acts div{flex:1; text-align:center; padding:10px 0; border-radius:12px; font-size:13px; font-weight:600;}
+  .dlg-acts .back{background:#F0ECE2; color:var(--sub);}
+  .dlg-acts .no{background:#F0ECE2; color:var(--sub);}
+  .dlg-acts .ok{background:var(--gold); color:#fff;}
+  .dlg-acts .ok.danger{background:var(--danger); color:#fff;}
+  /* inline toggle row inside dialog */
+  .tgrow{display:flex; justify-content:space-between; align-items:center; padding:12px 14px; margin-bottom:10px; border:1px solid var(--line); border-radius:14px; background:#fff;}
+  .tgrow .lab{font-size:14px; font-weight:700; color:var(--ink);}
+  .switch{width:44px; height:25px; border-radius:14px; background:var(--line); position:relative; flex:none;}
+  .switch.on{background:var(--gold);}
+  .switch .knob{position:absolute; top:2px; left:2px; width:21px; height:21px; border-radius:50%; background:#fff; transition:.2s;}
+  .switch.on .knob{left:21px;}
+  /* settings card */
+  .scard{background:var(--card); border-radius:16px; margin:10px 12px; overflow:hidden; border:1px solid var(--line);}
+  .shead{padding:10px 14px; font-size:13px; font-weight:700; color:var(--ink); border-bottom:1px solid var(--line); background:#FBF8F1;}
+  .srow{display:flex; justify-content:space-between; align-items:center; padding:13px 14px; font-size:13.5px; border-bottom:1px solid #F0ECE2;}
+  .srow:last-child{border-bottom:none;}
+  .srow .arrow{color:var(--sub); font-size:13px;}
+  .srow.hot{background:#FFF8E8;}
+  .srow.hot .arrow{color:var(--gold); font-weight:700;}
+  /* system save sheet */
+  .sheet{position:absolute; left:0; right:0; bottom:0; background:#fff; border-radius:18px 18px 0 0; padding:18px 16px; z-index:12; box-shadow:0 -8px 30px rgba(0,0,0,.2);}
+  .sheet .st{font-size:14px; font-weight:700; margin-bottom:12px;}
+  .sheet input{width:100%; border:1px solid var(--line); border-radius:10px; padding:11px; font-size:13px; margin-bottom:14px; background:#FAF8F2;}
+  .sheet .acts{display:flex; gap:10px;}
+  .sheet .acts div{flex:1; text-align:center; padding:11px 0; border-radius:12px; font-size:13.5px; font-weight:600;}
+  .sheet .acts .ok{background:var(--gold); color:#fff;}
+  .sheet .acts .no{background:#F0ECE2; color:var(--sub);}
+  /* toast */
+  .toast{position:absolute; left:50%; transform:translateX(-50%); bottom:84px; background:rgba(40,40,40,.92); color:#fff; font-size:12px; padding:9px 16px; border-radius:20px; z-index:8; white-space:nowrap;}
+  .section-title{font-size:16px; font-weight:700; margin:30px 0 6px; color:var(--ink);}
+  /* ===== 自选 >4 大窗口：每季一个小按钮（网格） ===== */
+  .bigwin{width:276px; max-height:560px; background:var(--dialog); border-radius:22px; padding:18px 16px 14px;
+    box-shadow:0 12px 36px rgba(0,0,0,.25); display:flex; flex-direction:column;}
+  .sbtn-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:9px; overflow-y:auto; margin-bottom:12px; padding-right:2px;}
+  .sbtn{border:1px solid var(--line); border-radius:12px; background:#fff; padding:13px 4px; text-align:center;
+    font-size:13px; font-weight:600; color:var(--ink); line-height:1.3;}
+  .sbtn.on{background:var(--gold); color:#fff; border-color:var(--gold);}
+  .legend{margin-top:26px; background:#fff; border-radius:14px; padding:18px 20px; max-width:1000px; font-size:13px; line-height:1.8; color:#444;}
+  .legend h2{font-size:15px; margin:0 0 10px; color:var(--ink);}
+  .legend code{background:#F4F1EA; padding:1px 6px; border-radius:6px; color:var(--danger);}
+  .legend b{color:var(--ink);}
+  /* JSON 预览块（导出含/不含数量差异） */
+  .json{background:#2B2B2B; color:#E8E2D4; border-radius:10px; padding:10px 12px; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:10px; line-height:1.7; text-align:left; margin:8px 0; white-space:pre-wrap; max-height:200px; overflow:auto;}
+  .json .k{color:#C9A24B;}
+  .json .n{color:#8FB7E8;}
+  .json .cm{color:#7E8A6E;}
+  .scrollhint{font-size:10px; color:var(--sub); text-align:center; margin-top:4px;}
+  .warn{color:var(--danger);}
+  /* 矩阵小卡 */
+  .matrix{display:flex; flex-direction:column; gap:8px;}
+  .matrix .row2{display:flex; align-items:center; gap:8px;}
+  .matrix .lab{font-size:11px; color:var(--sub); width:54px; flex:none;}
+</style>
+</head>
+<body>
+  <h1>洛克助手 v1.1.5 · 界面方案（草稿，未构建）</h1>
+  <p class="lead">本次所有弹窗统一同一套视觉（标题 15px / 选项 <b>17px 标题 + 11px 灰色说明</b> / 圆角卡片）。改动点：① 导入 = 两步走（第一窗口精简 → 第二窗口详细二次确认，带 返回 / 取消 / 确定）② 导出 = 全部 / 自选（全部=数量开关+导出/取消；自选=4 赛季一行+展开键，≤4 禁用、&gt;4 弹大窗口、每季一个小按钮）③ Wiki 悬浮回主页 ④ 图鉴底栏去「+」⑤ 弹窗改名。下方第三节补全<b>边界与异常全场景</b>：赛季数量从 1 到 20 的展示、导入解析失败 / 0 新增、备份还原、导出含/不含数量的 JSON 差异、导入后自动刷新。导入/导出自同 schema 互通。</p>
+
+  <!-- ===== 基础改动（③④⑤） ===== -->
+  <div class="row">
+    <!-- Wiki floating -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="wtop">
+          <span class="wtitle">wiki.biligame.com</span>
+          <span class="wsearch">搜索精灵 / 道具…</span>
+          <span class="wgo">搜索</span>
+        </div>
+        <div class="chips"><span class="chip on">BWIKI</span><span class="chip">罗可图鉴</span></div>
+        <div class="prog"></div>
+        <div class="web">
+          <h3>齿轮小子</h3>
+          <div class="infobox">属性：机械　编号：NO.012<br>进化：齿轮小子 → 齿轮骑士</div>
+          <p>洛克王国世界中的机械系精灵，常出没于工坊区域……</p>
+          <p>异色形态配色以青蓝为主，出现概率与铁矿相近。</p>
+        </div>
+        <div class="nav">
+          <div>← 后退</div><div>前进 →</div><div>刷新</div><div class="ac">首页</div><div style="color:var(--gold)">浏览器</div>
+        </div>
+        <div class="fab"><span class="dot"></span>回主页</div>
+      </div>
+      <div class="caption"><b>③ Wiki 悬浮「回主页」</b><br>常驻右下，按住拖动可换位<br>点一下回洛克助手主页</div>
+    </div>
+
+    <!-- Shiny bottom bar -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="grid">
+          <div class="cell"><div class="pic"></div>齿轮小子</div>
+          <div class="cell"><div class="pic"></div>芽眼魔</div>
+          <div class="cell"><div class="pic"></div>叮叮卯</div>
+          <div class="cell"><div class="pic"></div>稻草人</div>
+          <div class="cell"><div class="pic"></div>卡波</div>
+          <div class="cell"><div class="pic"></div>斑斑</div>
+          <div class="cell"><div class="pic"></div>豆丁鱼</div>
+          <div class="cell"><div class="pic"></div>章脑丸</div>
+          <div class="cell"><div class="pic"></div>小夜莺</div>
+          <div class="cell"><div class="pic"></div>权杖</div>
+          <div class="cell"><div class="pic"></div>格斗小五</div>
+          <div class="cell"><div class="pic"></div>格斗小八</div>
+        </div>
+        <div class="bar">
+          <div>添加图鉴</div><div>识图添加</div><div>更多</div>
+        </div>
+      </div>
+      <div class="caption"><b>④⑤ 图鉴底栏 + 弹窗改名</b><br>「＋ 告知异色」→「添加图鉴」（去+号）<br>「截图认字」→「识图添加」、「设置」→「更多」<br>弹窗标题「告知异色 ·」也改「添加图鉴 ·」</div>
+    </div>
+  </div>
+
+  <!-- ===== 导入两步走 ===== -->
+  <div class="section-title">一、导入 · 两步走（风格已统一）</div>
+  <div class="row">
+    <!-- I1 第一窗口 精简（统一风格） -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.4">（背后是数据设置页）</div>
+        <div class="overlay">
+          <div class="dialog">
+            <div class="dt">导入异色记录</div>
+            <div class="ds">文件 shiny_record.json · 共 76 只</div>
+            <div class="opt">
+              <div class="opt.t danger">覆盖导入</div>
+              <div class="opt.s">用文件替换全部当前记录</div>
+            </div>
+            <div class="opt">
+              <div class="opt.t fill">补充导入</div>
+              <div class="opt.s">只添加图鉴里没有的精灵</div>
+            </div>
+            <div class="cancel">取消</div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>① 第一窗口（精简）</b><br>标题 17px / 说明 11px 灰（层级明显）<br>覆盖=红字提示危险，卡片仍白</div>
+    </div>
+
+    <!-- I2 二次确认·覆盖 详细 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.4">（第一窗口点了「覆盖导入」）</div>
+        <div class="overlay">
+          <div class="dialog">
+            <div class="dt">确认覆盖导入？</div>
+            <div class="ds">将替换全部当前记录；<br>数量、备注、蛋数会清空且<b>不可恢复</b>；<br>开始前会自动备份，<br>可从「还原备份」找回。</div>
+            <div class="dlg-acts">
+              <div class="back">返回</div>
+              <div class="no">取消</div>
+              <div class="ok danger">确定</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>① 二次确认·覆盖（详细）</b><br>说明后果 + 自动备份<br>返回 / 取消 / 确定（红）</div>
+    </div>
+
+    <!-- I3 二次确认·补充 详细 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.4">（第一窗口点了「补充导入」）</div>
+        <div class="overlay">
+          <div class="dialog">
+            <div class="dt">确认补充导入？</div>
+            <div class="ds">扫描文件 76 只：<br>预测 <span class="badge">新增 12</span> <span class="badge">跳过 64</span><br>原有精灵的数量 / 备注不受影响；<br>仅加入图鉴里没有的（含新赛季）。</div>
+            <div class="dlg-acts">
+              <div class="back">返回</div>
+              <div class="no">取消</div>
+              <div class="ok">确定</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>① 二次确认·补充（详细）</b><br>显示预测 N/M + 不改原有<br>返回 / 取消 / 确定（金）</div>
+    </div>
+  </div>
+
+  <!-- ===== 导出 全部/自选 ===== -->
+  <div class="section-title">二、导出 · 全部 / 自选 两个入口</div>
+  <div class="row">
+    <!-- E1 第一窗口 全部/自选（统一风格） -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.4">（数据卡片点了「导出异色记录」）</div>
+        <div class="overlay">
+          <div class="dialog">
+            <div class="dt">导出异色记录</div>
+            <div class="ds">选择要导出的范围</div>
+            <div class="opt">
+              <div class="opt.t">全部赛季</div>
+              <div class="opt.s">导出所有赛季的精灵</div>
+            </div>
+            <div class="opt">
+              <div class="opt.t">自选赛季</div>
+              <div class="opt.s">挑选部分赛季导出</div>
+            </div>
+            <div class="cancel">取消</div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>② 第一窗口</b><br>全部赛季 / 自选赛季 二选一<br>与导入第一窗口同款卡片</div>
+    </div>
+
+    <!-- E2 全部 = 数量开关 + 导出/取消（无赛季枚举） -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.4">（点了「全部赛季」）</div>
+        <div class="overlay">
+          <div class="dialog">
+            <div class="dt">导出全部赛季</div>
+            <div class="ds">将导出所有赛季的精灵</div>
+            <div class="tgrow">
+              <div class="lab">包含数量</div>
+              <div class="switch"></div>
+            </div>
+            <div class="dlg-acts">
+              <div class="no">取消</div>
+              <div class="ok">导出</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>② 全部 → 数量开关</b><br>只问「是否包含数量」<br>不列 S1–S4，导出/取消</div>
+    </div>
+
+    <!-- E3 自选 ≤4 行 + 展开禁用 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.4">（点了「自选赛季」，当前共 4 个）</div>
+        <div class="overlay">
+          <div class="dialog">
+            <div class="dt">自选赛季</div>
+            <div class="ds">点选要导出的赛季</div>
+            <div class="opt" style="display:flex; gap:6px; flex-wrap:wrap; justify-content:center; border:none; background:none; padding:4px 0;">
+              <span class="chip on">S1</span><span class="chip on">S2</span><span class="chip on">S3</span><span class="chip on">S4</span>
+              <span style="align-self:center; color:var(--sub); font-size:12px;">▾ 禁用</span>
+            </div>
+            <div class="tgrow">
+              <div class="lab">包含数量</div>
+              <div class="switch"></div>
+            </div>
+            <div class="dlg-acts">
+              <div class="no">取消</div>
+              <div class="ok">导出</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>② 自选（≤4）</b><br>一行 4 赛季 chip 点选<br>展开键禁用，点了无反应</div>
+    </div>
+
+    <!-- E4 自选 >4 弹「大窗口」：每季一个小按钮 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.4">（赛季 &gt;4，点了展开 ▾）</div>
+        <div class="overlay">
+          <div class="bigwin">
+            <div class="dt">自选赛季</div>
+            <div class="ds">点选要导出的赛季（可多选）</div>
+            <div class="sbtn-grid">
+              <div class="sbtn on">S1</div>
+              <div class="sbtn on">S2</div>
+              <div class="sbtn on">S3</div>
+              <div class="sbtn on">S4</div>
+              <div class="sbtn">S5</div>
+              <div class="sbtn">S6</div>
+              <div class="sbtn">S7</div>
+              <div class="sbtn">S8</div>
+            </div>
+            <div class="tgrow">
+              <div class="lab">包含数量</div>
+              <div class="switch"></div>
+            </div>
+            <div class="dlg-acts">
+              <div class="no">取消</div>
+              <div class="ok">导出</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>② 自选（&gt;4）</b><br>弹大窗口，每季一个小按钮<br>可上下滑动、多选，非列表</div>
+    </div>
+  </div>
+
+  <!-- ===== 导出 保存 + 完成 ===== -->
+  <div class="row" style="margin-top:22px;">
+    <!-- E5 系统选择器 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.5">（确认导出后）</div>
+        <div class="sheet">
+          <div class="st">保存到 下载</div>
+          <input value="shiny_export_2026-10-14.json">
+          <div class="acts">
+            <div class="no">取消</div>
+            <div class="ok">保存</div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>② 保存</b><br>系统选择器命名保存<br>文件名带日期</div>
+    </div>
+
+    <!-- E6 完成 toast + 互通 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="scard">
+          <div class="shead">数据</div>
+          <div class="srow">导入异色记录 <span class="arrow">›</span></div>
+          <div class="srow">导出异色记录 <span class="arrow">›</span></div>
+          <div class="srow">还原备份 <span class="arrow">›</span></div>
+        </div>
+        <div class="toast">已导出 76 只精灵 → 下载/shiny_export_2026-10-14.json</div>
+      </div>
+      <div class="caption"><b>② 完成</b><br>Toast 提示路径<br>导出文件可直接再导入</div>
+    </div>
+  </div>
+
+  <!-- ===== 第三节：赛季数量矩阵 + 20 季大窗口 ===== -->
+  <div class="section-title">三、赛季数量从 1 到 20 · 自选怎么展示</div>
+  <div class="row">
+    <!-- 数量矩阵 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.4">（不同赛季数量下的自选界面）</div>
+        <div class="overlay">
+          <div class="dialog" style="width:266px;">
+            <div class="dt">自选赛季 · 数量矩阵</div>
+            <div class="ds">赛季越少越紧凑，越多越靠大窗口</div>
+            <div class="matrix">
+              <div class="row2"><span class="lab">1 季</span><span class="chip on">S1</span></div>
+              <div class="row2"><span class="lab">2 季</span><span class="chip on">S1</span><span class="chip on">S2</span></div>
+              <div class="row2"><span class="lab">3 季</span><span class="chip on">S1</span><span class="chip on">S2</span><span class="chip on">S3</span></div>
+              <div class="row2"><span class="lab">4 季</span><span class="chip on">S1</span><span class="chip on">S2</span><span class="chip on">S3</span><span class="chip on">S4</span><span style="color:var(--sub);font-size:12px;">▾禁用</span></div>
+              <div class="row2"><span class="lab">5+ 季</span><span class="chip on">S1</span><span class="chip on">S2</span><span class="chip on">S3</span><span class="chip on">S4</span><span style="color:var(--gold);font-weight:700;font-size:12px;">▾展开</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>③ 赛季数量矩阵</b><br>1–4 季：一行 chip 点选，▾禁用<br>≥5 季：▾ 启用 → 弹大窗口</div>
+    </div>
+
+    <!-- 20 季大窗口 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.4">（赛季共 20 个，点 ▾ 展开）</div>
+        <div class="overlay">
+          <div class="bigwin" style="max-height:548px;">
+            <div class="dt">自选赛季</div>
+            <div class="ds">已选 4 / 共 20，向下滑动看全部</div>
+            <div class="sbtn-grid" style="max-height:370px;">
+              <div class="sbtn on">S1</div><div class="sbtn on">S2</div><div class="sbtn on">S3</div><div class="sbtn on">S4</div>
+              <div class="sbtn">S5</div><div class="sbtn">S6</div><div class="sbtn">S7</div><div class="sbtn">S8</div>
+              <div class="sbtn">S9</div><div class="sbtn">S10</div><div class="sbtn">S11</div><div class="sbtn">S12</div>
+              <div class="sbtn">S13</div><div class="sbtn">S14</div><div class="sbtn">S15</div><div class="sbtn">S16</div>
+              <div class="sbtn">S17</div><div class="sbtn">S18</div><div class="sbtn">S19</div><div class="sbtn">S20</div>
+            </div>
+            <div class="scrollhint">↓ 大窗口可上下滑动，非列表</div>
+            <div class="tgrow">
+              <div class="lab">包含数量</div>
+              <div class="switch"></div>
+            </div>
+            <div class="dlg-acts">
+              <div class="no">取消</div>
+              <div class="ok">导出</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>③ 20 个赛季</b><br>大窗口 4 列网格、可滑动<br>选中金色，底部数量开关+导出</div>
+    </div>
+  </div>
+
+  <!-- ===== 第四节：导入异常 ===== -->
+  <div class="section-title">四、导入 · 异常与边界</div>
+  <div class="row">
+    <!-- 解析失败 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="scard">
+          <div class="shead">数据</div>
+          <div class="srow">导入异色记录 <span class="arrow">›</span></div>
+          <div class="srow">导出异色记录 <span class="arrow">›</span></div>
+          <div class="srow">还原备份 <span class="arrow">›</span></div>
+        </div>
+        <div class="toast" style="background:rgba(192,57,43,.94)">文件格式不对 · 未改动</div>
+      </div>
+      <div class="caption"><b>④ 导入·解析失败</b><br>非 JSON / 缺 seasons 字段<br>红 Toast，不写盘、不备份</div>
+    </div>
+
+    <!-- 补充 0 新增 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="web" style="opacity:.4">（补充导入已是最全的图鉴）</div>
+        <div class="toast">没有可补充的新精灵</div>
+      </div>
+      <div class="caption"><b>④ 导入·补充 0 新增</b><br>文件精灵图鉴里全有<br>提示无需补充，不写盘</div>
+    </div>
+  </div>
+
+  <!-- ===== 第五节：备份还原 + 导出 JSON 差异 ===== -->
+  <div class="section-title">五、备份还原 · 导出含/不含数量的差异</div>
+  <div class="row">
+    <!-- 还原备份 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="scard">
+          <div class="shead">数据</div>
+          <div class="srow">导入异色记录 <span class="arrow">›</span></div>
+          <div class="srow">导出异色记录 <span class="arrow">›</span></div>
+          <div class="srow hot">还原备份 <span class="arrow">›</span></div>
+        </div>
+        <div class="overlay">
+          <div class="dialog" style="width:244px;">
+            <div class="dt">还原备份？</div>
+            <div class="ds">将用上次自动备份<br>shiny_data.bak.json<br>覆盖当前记录</div>
+            <div class="dlg-acts">
+              <div class="back">返回</div>
+              <div class="no">取消</div>
+              <div class="ok">确定</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>⑤ 备份还原</b><br>每次导入前自动备份<br>误覆盖可在此找回</div>
+    </div>
+
+    <!-- 导出 JSON 差异 -->
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div style="padding:12px; overflow:auto; flex:1;">
+          <div style="font-size:11px;color:var(--sub);margin-bottom:4px;">含数量 · 关（纯图鉴）</div>
+          <div class="json">{
+  <span class="k">"seasons"</span>: [{
+    <span class="k">"name"</span>: <span class="n">"S4"</span>,
+    <span class="k">"groups"</span>: [{
+      <span class="k">"name"</span>: <span class="n">"未分类"</span>,
+      <span class="k">"items"</span>: [
+        {<span class="k">"n"</span>:<span class="n">"齿轮小子"</span>,<span class="k">"no"</span>:<span class="n">12</span>,<span class="k">"s"</span>:<span class="n">"chilunxiaozi"</span>}
+        <span class="cm">// 无 c / e / note</span>
+      ]
+    }]
+  }]
+}</div>
+          <div style="font-size:11px;color:var(--sub);margin:10px 0 4px;">含数量 · 开</div>
+          <div class="json">{
+  <span class="k">"seasons"</span>: [{
+    <span class="k">"name"</span>: <span class="n">"S4"</span>,
+    <span class="k">"groups"</span>: [{
+      <span class="k">"name"</span>: <span class="n">"未分类"</span>,
+      <span class="k">"items"</span>: [
+        {<span class="k">"n"</span>:<span class="n">"齿轮小子"</span>,<span class="k">"no"</span>:<span class="n">12</span>,<span class="k">"s"</span>:<span class="n">"chilunxiaozi"</span>,
+         <span class="k">"c"</span>:<span class="n">3</span>,<span class="k">"e"</span>:<span class="n">1</span>,<span class="k">"note"</span>:<span class="n">"稀有"</span>}
+      ]
+    }]
+  }]
+}</div>
+        </div>
+      </div>
+      <div class="caption"><b>⑤ 导出含/不含数量</b><br>关：仅 n/no/s/i<br>开：额外 c/e/note<br>两种文件导入都识别（互通）</div>
+    </div>
+  </div>
+
+  <!-- ===== 第六节：导入后自动刷新 ===== -->
+  <div class="section-title">六、导入/补充后 · 图鉴自动刷新</div>
+  <div class="row">
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"><span>20:00</span><span>🔋 Wi-Fi</span></div>
+        <div class="grid">
+          <div class="cell" style="box-shadow:0 0 0 2px var(--gold) inset;"><div class="pic"></div>齿轮小子</div>
+          <div class="cell"><div class="pic"></div>芽眼魔</div>
+          <div class="cell" style="box-shadow:0 0 0 2px var(--gold) inset;"><div class="pic"></div>叮叮卯</div>
+          <div class="cell"><div class="pic"></div>稻草人</div>
+          <div class="cell"><div class="pic"></div>卡波</div>
+          <div class="cell"><div class="pic"></div>斑斑</div>
+          <div class="cell"><div class="pic"></div>豆丁鱼</div>
+          <div class="cell"><div class="pic"></div>章脑丸</div>
+          <div class="cell"><div class="pic"></div>小夜莺</div>
+          <div class="cell"><div class="pic"></div>权杖</div>
+          <div class="cell"><div class="pic"></div>格斗小五</div>
+          <div class="cell"><div class="pic"></div>格斗小八</div>
+        </div>
+        <div class="bar">
+          <div>添加图鉴</div><div>识图添加</div><div>更多</div>
+        </div>
+        <div class="toast">已补充 12 只 · 图鉴已更新</div>
+      </div>
+      <div class="caption"><b>⑥ 导入后自动刷新</b><br>覆盖/补充完自动 re-render<br>数量、蛋角标照常显示<br>（金色框=本次新增）</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <h2>操作说明（含本次反馈修正）</h2>
+    <p><b>① 导入（两步走）</b>：选文件解析成功 → <b>第一窗口（精简）</b>给「覆盖导入 / 补充导入」两个选项（与导出第一窗口同款白卡片、同字号；覆盖用红字标危险，不整块染红，风格统一）。点任一项 → <b>第二窗口（详细二次确认）</b>：覆盖写清"替换全部、数量备注蛋数清空、不可恢复、但自动备份可还原"；补充写清"预测新增 N / 跳过 M、不改原有、只加没有的"。第二窗口底部三按钮 <code>返回</code>（回第一窗口重选）/ <code>取消</code>（整次放弃）/ <code>确定</code>（执行，覆盖红、补充金）。写盘前都备份 <code>shiny_data.bak.json</code>。</p>
+    <p><b>② 导出（全部 / 自选）</b>：点导出 → <b>第一窗口</b>选「全部赛季 / 自选赛季」。<br>
+    · <b>全部</b> → 标题「导出全部赛季」，只一句话"将导出所有赛季的精灵"，<b>不列 S1–S4 等具体赛季名</b>（赛季数是按当前数据动态读取的，日后有 S5 会自动包含，UI 无需改）；下方一个「包含数量」开关 + <code>取消 / 导出</code>。<br>
+    · <b>自选</b> → 一行展示 4 个赛季 chip 点选，右侧展开键：<b>赛季 ≤4 时禁用、点了无反应</b>；<b>赛季 &gt;4 时点展开弹出一个大窗口</b>，里面<b>每个赛季是一个小按钮</b>（4 列网格、可多选、可上下滑动、按钮只写「S1/S2…」、不带只数、不写「奇遇」等额外说明），不是列表；大窗口底部同样有「包含数量」开关 + <code>取消 / 导出</code>。<br>
+    确认后系统选择器命名保存 <code>shiny_export_&lt;日期&gt;.json</code>，Toast 回路径。导出与导入同 schema，导出文件拿去导入会被自动识别（补充模式显示"新增 0 / 跳过 N"），完全互通。</p>
+    <p><b>③ Wiki 悬浮回主页</b>：右下常驻金色按钮，按住拖动换位、点一下 <code>FLAG_ACTIVITY_CLEAR_TOP</code> 回洛克助手主页（清掉 wiki / 图鉴栈）。<b>④⑤ 图鉴底栏</b>：「＋ 告知异色」→「添加图鉴」（去+号）、「截图认字」→「识图添加」、「设置」→「更多」，弹窗标题「告知异色 ·」同步改「添加图鉴 ·」。</p>
+    <p><b>③ 赛季数量（使用过程会遇到的事）</b>：赛季是<b>按当前数据动态读</b>的，UI 不写死。<br>
+    · <b>1–4 季</b>：自选窗口一行 chip 点选，右侧 ▾ <b>禁用、点了无反应</b>（没必要弹大窗口）。<br>
+    · <b>≥5 季</b>：▾ <b>启用</b>，点它弹大窗口——4 列小按钮网格（只写 S1/S2…，无奇遇字眼、不带只数），可<b>上下滑动、多选</b>；赛季涨到 20 个也一样，只是窗口更长、滑动更多，不会挤变形。<br>
+    · <b>全部赛季</b>：始终按"导出所有赛季"处理，日后有 S5/S20 自动包含，界面不列具体名。</p>
+    <p><b>④ 导入异常（使用过程会遇到的事）</b>：<br>
+    · 选了非 JSON / 缺 <code>seasons</code> 字段的文件 → <b>红 Toast「文件格式不对·未改动」</b>，不写盘、不备份。<br>
+    · 补充导入时文件精灵图鉴里<b>全都有</b> → 扫完预测「新增 0 / 跳过 N」→ <b>Toast「没有可补充的新精灵」</b>，不写盘。</p>
+    <p><b>⑤ 备份还原 + 导出差异</b>：每次覆盖/补充导入<b>写盘前都自动备份</b> <code>shiny_data.bak.json</code>，误覆盖可在设置「还原备份」找回（二次确认）。导出时「包含数量」<b>关</b>→ 文件只有 n/no/s/i；<b>开</b>→ 额外带 c/e/note。两种文件拿去导入都识别（补充模式按"同名/同进化链"判重），完全互通。</p>
+    <p><b>⑥ 导入后刷新</b>：覆盖或补充完成后图鉴页<b>自动 re-render</b>，数量、蛋角标照常；本次新增的精灵在预览里以金色框标出（仅示意）。</p>
+    <p><b>待确认点</b>：① Wiki 悬浮按钮位置是否记住下次启动（SharedPreferences）；② 数量开关默认<b>关</b>（纯图鉴）是否符合预期；③ 展开键图标用 <code>▾</code> 还是别的。</p>
+  </div>
+</body>
+</html>

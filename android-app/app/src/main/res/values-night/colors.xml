@@ -1,0 +1,61 @@
+<resources>
+    <!--
+      深色模式（iQOO 夜览 / 系统深色）覆盖。
+      只覆盖布局与 drawable 真正引用的名字，浅色默认色仍留在 values/colors.xml。
+      配色：底 #121214 / 卡片 #1E1E21 / 描边 #2E2E32 / 主文字 #EDEAE4 / 次文字 #8E8A84
+    -->
+
+    <!-- 主界面 -->
+    <color name="page_bg">#121214</color>
+    <color name="card_bg">#1E1E21</color>
+    <color name="text_primary">#EDEAE4</color>
+    <color name="text_secondary">#8E8A84</color>
+    <color name="divider">#2E2E32</color>
+
+    <!-- 强调色：琥珀金在深色下略提亮，保证对比度 -->
+    <color name="text_accent">#F7B23B</color>
+    <color name="gold">#E0AE4B</color>
+
+    <!-- 胶囊：深色下不给纯白+亮黄，降低亮度避免刺眼 -->
+    <color name="pill_yellow">#E8B646</color>
+    <color name="pill_yellow_text">#3A2A05</color>
+
+    <!-- 状态色：深底上稍微提亮 -->
+    <color name="green">#6BC96F</color>
+    <color name="red">#FF6B68</color>
+
+    <!-- 弹窗 / 设置页 / 输入框等 -->
+    <color name="panel_bg">#1C1C1F</color>
+    <color name="row_bg">#232327</color>
+    <color name="row_danger_bg">#3A2320</color>
+    <color name="row_soft_bg">#26262A</color>
+    <color name="row_sel_bg">#3A3220</color>
+    <color name="text_soft">#A8A29A</color>
+    <color name="text_sub">#8E8A84</color>
+    <color name="text_danger">#FF7A70</color>
+    <color name="stroke_soft">#33333A</color>
+    <color name="line_soft">#2A2A2E</color>
+    <color name="arrow_soft">#5A5650</color>
+    <color name="chip_bg">#26262A</color>
+    <color name="input_bg">#26262A</color>
+    <color name="ripple">#1AFFFFFF</color>
+
+    <!-- 金色系：深色下压暗底色、提亮描边与文字，保持可读 -->
+    <color name="gold_soft">#3A3018</color>
+    <color name="gold_line">#5A4A22</color>
+    <color name="gold_text_deep">#F0C765</color>
+
+    <!-- 商品卡渐变：整体压暗降饱和，深底上不刺眼 -->
+    <color name="item_1_start">#4A3F22</color>
+    <color name="item_1_end">#332A14</color>
+    <color name="item_2_start">#3D2E4E</color>
+    <color name="item_2_end">#291E36</color>
+    <color name="item_3_start">#22384A</color>
+    <color name="item_3_end">#162634</color>
+    <color name="item_4_start">#22402A</color>
+    <color name="item_4_end">#172C1D</color>
+    <color name="item_5_start">#4A2628</color>
+    <color name="item_5_end">#331819</color>
+    <color name="item_6_start">#1D3D42</color>
+    <color name="item_6_end">#132A2E</color>
+</resources>

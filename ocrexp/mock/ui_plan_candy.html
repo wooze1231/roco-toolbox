@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>洛克助手 · 主题色彩 图文方案（米金/糖果/彩绘/海洋）</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #EFEFF2; color: #2C2C2C; padding: 24px 16px 64px;
+  }
+  h1 { font-size: 22px; text-align: center; margin-bottom: 4px; }
+  h2 { font-size: 17px; margin: 34px 0 12px; color: #1f1f1f;
+       border-left: 4px solid #C8743E; padding-left: 10px; }
+  h2.candy { border-left-color: #FF7EB3; }
+  h2.paint { border-left-color: #E4573D; }
+  h2.ocean { border-left-color: #2E86C1; }
+  .sub { text-align: center; color: #888; font-size: 13px; margin-bottom: 20px; }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+
+  table { width: 100%; border-collapse: collapse; background: #fff;
+          border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+  th, td { text-align: left; padding: 10px 12px; font-size: 13px;
+           border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+  th { background: #fafafa; font-weight: 600; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; color: #fff; }
+  .t-a { background: #FF6B6B; } .t-b { background: #5BD6B0; } .t-c { background: #FFB088; }
+  .t-d { background: #7EC8FF; } .t-new { background: #B39DDB; }
+  .state { font-size: 11px; color: #999; }
+
+  .swatches { display: flex; flex-wrap: wrap; gap: 12px; }
+  .sw { width: 122px; border-radius: 14px; overflow: hidden; background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,.07); }
+  .sw .c { height: 60px; }
+  .sw .meta { padding: 7px 9px; }
+  .sw .nm { font-size: 12.5px; font-weight: 600; }
+  .sw .hx { font-size: 11px; color: #999; font-family: monospace; }
+  .pal-title { font-size: 13px; font-weight: 700; margin: 16px 0 8px; color: #555; }
+
+  .phones { display: flex; gap: 22px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+  .phone { width: 300px; background: #fff; border-radius: 34px; padding: 12px;
+           box-shadow: 0 8px 28px rgba(0,0,0,.14); border: 1px solid #e7e7ea; }
+  .screen { border-radius: 24px; overflow: hidden; min-height: 560px; position: relative; }
+  .scr-gold { background: #F5F3EE; }
+  .scr-candy { background: #FFF0F5; }
+  .scr-paint { background: #FBF7EC; }
+  .bar { height: 44px; display: flex; align-items: center; justify-content: center;
+         font-size: 15px; font-weight: 600; color: #fff; }
+  .bar-gold { background: #C9A24B; }
+  .bar-candy { background: linear-gradient(90deg,#FF9EC7,#B39DDB); }
+  .sec-title { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; padding: 10px 12px 6px; }
+  .sec-title-gold { color: #9A7B2E; }
+  .sec-title-candy { color: #E85A92; }
+  .pad { padding: 10px 12px; }
+  .card { background: #fff; border-radius: 18px; padding: 4px 8px; margin-bottom: 12px;
+          box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+  .card-gold { border: 1px solid #ECE6D8; }
+  .card-candy { border: 1px solid #FFD6E6; box-shadow: 0 3px 12px rgba(255,126,179,.12); }
+  .row { padding: 12px 6px; border-bottom: 1px solid #f3f3f3; }
+  .row:last-child { border-bottom: none; }
+  .row .t { font-size: 14.5px; font-weight: 700; }
+  .row .t-gold { color: #2C2C2C; } .row .t-candy { color: #4A3B47; } .row .t-paint { color: #2E2A25; }
+  .seg { display: flex; margin-top: 9px; background: #f1f1f4; border-radius: 11px; padding: 3px; }
+  .seg-candybg { background: #FFEAF3; }
+  .seg .o { flex: 1; text-align: center; font-size: 11.5px; font-weight: 700;
+            padding: 7px 0; border-radius: 9px; color: #999; }
+  .seg .on-gold { background: #fff; color: #2C2C2C; }
+  .seg .on-candy { background: #fff; color: #E85A92; }
+  .cmp-cap { text-align:center; font-size:12px; color:#888; margin-top:6px; }
+  .pill { display:inline-block; background:#f0f0f3; border-radius:8px; padding:3px 8px; font-size:11px; color:#666; margin:2px;}
+
+  /* ===== 彩绘（粗糙手绘）专属 ===== */
+  .grain { position:absolute; inset:0; pointer-events:none; opacity:.08; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"); }
+  .bar-paint { position:relative; height:46px; display:flex; align-items:center; justify-content:center; }
+  .bar-fill { position:absolute; inset:7px 9px; border-radius:16px; filter:url(#wobble);
+    background:linear-gradient(90deg,#E4573D 0%,#E0A93B 38%,#57A15A 64%,#3E7CC1 100%); }
+  .bar-txt { position:relative; color:#FFFDF6; font-size:16px; font-weight:800; letter-spacing:.1em; transform:rotate(-0.7deg); }
+  .paint-card { position:relative; margin-bottom:12px; }
+  .card-border { position:absolute; inset:0; background:#FFFDF6; border:2.6px solid #4A453C; border-radius:16px; filter:url(#wobble); }
+  .card-content { position:relative; padding:4px 10px; }
+  .row-paint { padding:12px 8px; }
+  .divider { height:0; border-top:2px solid #4A453C; filter:url(#wobble); margin:1px 8px; opacity:.65; }
+  .seg-paintbg { background:#F1EAD8; }
+  .segbox { position:relative; flex:1; text-align:center; font-size:11.5px; font-weight:700;
+            padding:8px 0; border:2px solid #4A453C; border-radius:11px; color:#6F6A5E; margin:3px; filter:url(#wobbleSoft); }
+  .segbox.on-paint { color:#FFFDF6; }
+  .segbox.on-paint::before { content:''; position:absolute; inset:1px -1px -2px 2px; background:#E4573D;
+            opacity:.9; border-radius:9px; filter:url(#wobble); z-index:-1; }
+  .sec-title-paint { color:#C25A35; }
+  .ud { display:inline-block; width:48px; height:6px; margin-left:5px; vertical-align:middle;
+        background:#E4573D; border-radius:3px; filter:url(#wobble); opacity:.85; }
+  .chip-rough { filter:url(#wobbleSoft); }
+
+  .ba { display:flex; gap:18px; flex-wrap:wrap; justify-content:center; }
+  .ba .col { width:300px; }
+  .ba .lbl { text-align:center; font-size:12px; font-weight:700; margin-bottom:6px; }
+  .ba .lbl.ok { color:#2E7D32; } .ba .lbl.no { color:#C0392B; }
+
+  .tech { background:#fff; border-radius:14px; padding:14px 16px; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+  .tech li { font-size:12.5px; color:#444; line-height:1.9; margin-left:18px; }
+  .tech b { color:#C25A35; }
+
+  /* ===== 海洋（蓝色系 · 水波通透）专属 ===== */
+  .scr-ocean { background: linear-gradient(180deg,#EAF6FB 0%,#DBEFF8 100%); }
+  .bar-ocean { background: linear-gradient(90deg,#46B0EC 0%,#2E86C1 100%); }
+  .card-ocean { background:#fff; border:1px solid #C2E2F1; box-shadow:0 3px 14px rgba(46,134,193,.12); }
+  .sec-title-ocean { color:#1E78B4; }
+  .seg-oceanbg { background:#E2F2FA; }
+  .seg .on-ocean { background:#fff; color:#1E78B4; }
+  .row .t-ocean { color:#163A4B; }
+  .wave { display:block; width:100%; height:14px; }
+</style>
+</head>
+<body>
+
+<!-- 全局 SVG 抖动滤镜：彩绘粗糙感的来源 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="wobble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wobbleSoft">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+  <h1>洛克助手 · 主题色彩（图文方案）</h1>
+  <div class="sub">规划阶段 · 未构建 · 版本号待定（建议 v1.1.5）· 四档：米金 / 糖果 / 彩绘 / 海洋</div>
+
+  <h2>一、本次更新清单</h2>
+  <table>
+    <tr><th style="width:42px">#</th><th>类别</th><th>内容</th><th>状态</th></tr>
+    <tr><td><span class="tag t-a">A</span></td><td>颜色/主题</td>
+        <td>深色模式设置页发灰 —— 关 Force Dark 或建 values-night</td>
+        <td><span class="state">待修（与主题解耦）</span></td></tr>
+    <tr><td><span class="tag t-b">B</span></td><td>逻辑</td>
+        <td>图标缓存分母 → 改为图鉴条目总数 all.size</td>
+        <td><span class="state">方案已定</span></td></tr>
+    <tr><td><span class="tag t-c">C</span></td><td>布局/自适应</td>
+        <td>自选赛季弹窗列数写死（4列落单）</td>
+        <td><span class="state">⏸ 明日细聊</span></td></tr>
+    <tr><td><span class="tag t-d">D</span></td><td>逻辑</td>
+        <td>Wiki 回主页 FAB 位置不记忆</td>
+        <td><span class="state">待修</span></td></tr>
+    <tr><td><span class="tag t-new">新</span></td><td>主题色彩</td>
+        <td>主页设置→外观卡「主题色彩」：<b>米金 / 糖果 / 彩绘 / 海洋</b> 四档可切，各带深色版</td>
+        <td><span class="state">图文阶段 ★</span></td></tr>
+  </table>
+
+  <h2 class="candy">二、色板</h2>
+
+  <div class="pal-title">🍬 糖果（明亮粉彩 · 软萌圆润）</div>
+  <div class="swatches">
+    <div class="sw"><div class="c" style="background:#FFF0F5"></div><div class="meta"><div class="nm">背景</div><div class="hx">#FFF0F5</div></div></div>
+    <div class="sw"><div class="c" style="background:#FF7EB3"></div><div class="meta"><div class="nm">糖果粉</div><div class="hx">#FF7EB3</div></div></div>
+    <div class="sw"><div class="c" style="background:#5BD6B0"></div><div class="meta"><div class="nm">薄荷绿</div><div class="hx">#5BD6B0</div></div></div>
+    <div class="sw"><div class="c" style="background:#B39DDB"></div><div class="meta"><div class="nm">薰衣草</div><div class="hx">#B39DDB</div></div></div>
+    <div class="sw"><div class="c" style="background:#FFB088"></div><div class="meta"><div class="nm">蜜桃</div><div class="hx">#FFB088</div></div></div>
+    <div class="sw"><div class="c" style="background:#7EC8FF"></div><div class="meta"><div class="nm">天空蓝</div><div class="hx">#7EC8FF</div></div></div>
+  </div>
+
+  <div class="pal-title">✏️ 彩绘（绘本纸 · 蜡笔原色 · 抖动墨线）</div>
+  <div class="swatches">
+    <div class="sw"><div class="c chip-rough" style="background:#FBF7EC"></div><div class="meta"><div class="nm">绘本纸底</div><div class="hx">#FBF7EC</div></div></div>
+    <div class="sw"><div class="c chip-rough" style="background:#E4573D"></div><div class="meta"><div class="nm">蜡笔红</div><div class="hx">#E4573D</div></div></div>
+    <div class="sw"><div class="c chip-rough" style="background:#3E7CC1"></div><div class="meta"><div class="nm">蜡笔蓝</div><div class="hx">#3E7CC1</div></div></div>
+    <div class="sw"><div class="c chip-rough" style="background:#57A15A"></div><div class="meta"><div class="nm">蜡笔绿</div><div class="hx">#57A15A</div></div></div>
+    <div class="sw"><div class="c chip-rough" style="background:#E0A93B"></div><div class="meta"><div class="nm">蜡笔赭</div><div class="hx">#E0A93B</div></div></div>
+    <div class="sw"><div class="c chip-rough" style="background:#4A453C"></div><div class="meta"><div class="nm">铅笔墨线</div><div class="hx">#4A453C</div></div></div>
+  </div>
+
+  <div class="pal-title">🌊 海洋（蓝色系 · 水波通透）</div>
+  <div class="swatches">
+    <div class="sw"><div class="c" style="background:#EAF6FB"></div><div class="meta"><div class="nm">浅海背景</div><div class="hx">#EAF6FB</div></div></div>
+    <div class="sw"><div class="c" style="background:#2E86C1"></div><div class="meta"><div class="nm">海洋蓝</div><div class="hx">#2E86C1</div></div></div>
+    <div class="sw"><div class="c" style="background:#1668A8"></div><div class="meta"><div class="nm">主色深</div><div class="hx">#1668A8</div></div></div>
+    <div class="sw"><div class="c" style="background:#6FD3E0"></div><div class="meta"><div class="nm">水青</div><div class="hx">#6FD3E0</div></div></div>
+    <div class="sw"><div class="c" style="background:#FF8A65"></div><div class="meta"><div class="nm">珊瑚橘(强调)</div><div class="hx">#FF8A65</div></div></div>
+    <div class="sw"><div class="c" style="background:#4DB6AC"></div><div class="meta"><div class="nm">海藻绿</div><div class="hx">#4DB6AC</div></div></div>
+    <div class="sw"><div class="c" style="background:#163A4B"></div><div class="meta"><div class="nm">文字</div><div class="hx">#163A4B</div></div></div>
+  </div>
+
+  <h2 class="paint">三、浅色四档对比（主页设置 · 外观卡）</h2>
+  <div class="phones">
+    <!-- 米金 -->
+    <div class="phone">
+      <div class="screen scr-gold">
+        <div class="bar bar-gold">设置</div>
+        <div class="pad">
+          <div class="sec-title sec-title-gold">外观</div>
+          <div class="card card-gold">
+            <div class="row"><div class="t t-gold">深色模式</div>
+              <div class="seg"><div class="o on-gold">跟随系统</div><div class="o">浅色</div><div class="o">深色</div></div></div>
+            <div class="row"><div class="t t-gold">主题色彩</div>
+              <div class="seg"><div class="o on-gold">米金</div><div class="o">糖果</div><div class="o">彩绘</div><div class="o">海洋</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cmp-cap">米金（默认）</div>
+    </div>
+
+    <!-- 糖果 -->
+    <div class="phone">
+      <div class="screen scr-candy">
+        <div class="bar bar-candy">设置</div>
+        <div class="pad">
+          <div class="sec-title sec-title-candy">外观</div>
+          <div class="card card-candy">
+            <div class="row"><div class="t t-candy">深色模式</div>
+              <div class="seg seg-candybg"><div class="o on-candy">跟随系统</div><div class="o">浅色</div><div class="o">深色</div></div></div>
+            <div class="row"><div class="t t-candy" style="color:#E85A92">主题色彩</div>
+              <div class="seg seg-candybg"><div class="o">米金</div><div class="o on-candy">糖果 ✓</div><div class="o">彩绘</div><div class="o">海洋</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cmp-cap">糖果</div>
+    </div>
+
+    <!-- 彩绘（粗糙手绘） -->
+    <div class="phone">
+      <div class="screen scr-paint">
+        <div class="grain"></div>
+        <div class="bar-paint"><div class="bar-fill"></div><div class="bar-txt">设置</div></div>
+        <div class="pad">
+          <div class="sec-title sec-title-paint">外观<span class="ud"></span></div>
+          <div class="paint-card">
+            <div class="card-border"></div>
+            <div class="card-content">
+              <div class="row-paint"><div class="t t-paint">深色模式</div>
+                <div class="seg seg-paintbg">
+                  <div class="segbox on-paint"><span>跟随系统</span></div>
+                  <div class="segbox"><span>浅色</span></div>
+                  <div class="segbox"><span>深色</span></div>
+                </div></div>
+              <div class="divider"></div>
+              <div class="row-paint"><div class="t t-paint" style="color:#E4573D">主题色彩</div>
+                <div class="seg seg-paintbg">
+                  <div class="segbox"><span>米金</span></div>
+                  <div class="segbox"><span>糖果</span></div>
+                  <div class="segbox on-paint"><span>彩绘 ✓</span></div>
+                  <div class="segbox"><span>海洋</span></div>
+                </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cmp-cap">彩绘（抖动墨线 + 蜡笔溢出 + 纸纹）</div>
+    </div>
+
+    <!-- 海洋（蓝色系 · 水波） -->
+    <div class="phone">
+      <div class="screen scr-ocean">
+        <div class="bar bar-ocean">设置</div>
+        <svg class="wave" viewBox="0 0 300 14" preserveAspectRatio="none"><path d="M0 8 Q 18.75 -1 37.5 8 T 75 8 T 112.5 8 T 150 8 T 187.5 8 T 225 8 T 262.5 8 T 300 8 V14 H0 Z" fill="#ffffff" opacity=".55"/></svg>
+        <div class="pad">
+          <div class="sec-title sec-title-ocean">外观</div>
+          <div class="card card-ocean">
+            <div class="row"><div class="t t-ocean">深色模式</div>
+              <div class="seg"><div class="o on-ocean">跟随系统</div><div class="o">浅色</div><div class="o">深色</div></div></div>
+            <div class="row"><div class="t t-ocean" style="color:#2E86C1">主题色彩</div>
+              <div class="seg seg-oceanbg"><div class="o">米金</div><div class="o">糖果</div><div class="o">彩绘</div><div class="o on-ocean">海洋 ✓</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cmp-cap">海洋（蓝色系 · 水波通透）</div>
+    </div>
+  </div>
+
+  <h2 class="paint">四、彩绘「粗糙感」怎么来的（技法拆解）</h2>
+  <div class="ba">
+    <div class="col">
+      <div class="lbl no">✗ 之前（太干净，像表单虚线）</div>
+      <div class="screen scr-paint" style="min-height:auto">
+        <div class="bar" style="background:linear-gradient(90deg,#C8743E,#8A9A5B);color:#fff">设置</div>
+        <div class="pad">
+          <div class="card" style="border:1.5px dashed #C9BBA0;background:#FBF7EE;padding:4px 8px">
+            <div class="row"><div class="t" style="color:#3A352E">深色模式</div></div>
+            <div class="row"><div class="t" style="color:#C8743E">主题色彩</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="lbl ok">✓ 现在（抖动墨线 + 蜡笔 + 纸纹）</div>
+      <div class="screen scr-paint" style="min-height:auto">
+        <div class="grain"></div>
+        <div class="bar-paint"><div class="bar-fill"></div><div class="bar-txt">设置</div></div>
+        <div class="pad">
+          <div class="paint-card">
+            <div class="card-border"></div>
+            <div class="card-content">
+              <div class="row-paint"><div class="t t-paint">深色模式</div></div>
+              <div class="divider"></div>
+              <div class="row-paint"><div class="t t-paint" style="color:#E4573D">主题色彩</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tech" style="margin-top:14px">
+    <ul>
+      <li><b>① 抖动墨线</b>：所有描边过 <code>feTurbulence + feDisplacementMap</code> 位移滤镜，直线变波浪、拐角有手绘抖动。</li>
+      <li><b>② 蜡笔溢出描边</b>：选中态填充色故意偏移 2–3px 并同样过抖动，颜色「出框」。</li>
+      <li><b>③ 纸纹颗粒</b>：整屏叠一层 <code>feTurbulence</code> 噪声（低透明度 multiply），模拟绘本纸齿。</li>
+      <li><b>④ 铅笔毛边 + 硬偏移阴影</b>：铅笔墨色描边，不用柔和模糊投影。</li>
+      <li><b>⑤ 轻微歪斜</b>：标题/顶栏旋转 ±0.7°，拒绝网格感。</li>
+      <li><b>⑥ 手写体（落地时）</b>：标题用中文手写体内置，正文系统字，数值绝不抖动。</li>
+    </ul>
+  </div>
+
+  <h2 class="ocean">五、深色模式（各主题独立配色）</h2>
+  <div class="phones">
+    <!-- 暗夜糖果 -->
+    <div class="phone">
+      <div class="screen" style="background:#2A1E2E">
+        <div class="bar" style="background:linear-gradient(90deg,#7A3B5E,#9B5BA8)">设置</div>
+        <div class="pad">
+          <div class="sec-title" style="color:#FF9EC7">外观</div>
+          <div class="card" style="background:#3A2C40;border:1px solid #4A3A50;box-shadow:0 3px 12px rgba(255,126,179,.10)">
+            <div class="row" style="border-bottom:1px solid #4A3A50"><div class="t" style="color:#F3E9F0">深色模式</div>
+              <div class="seg" style="background:#2A1E2E"><div class="o">跟随系统</div><div class="o">浅色</div><div class="o" style="background:#5A3F63;color:#FFB8D6">深色</div></div></div>
+            <div class="row"><div class="t" style="color:#FFB8D6;font-weight:700">主题色彩</div>
+              <div class="seg" style="background:#2A1E2E"><div class="o">米金</div><div class="o" style="background:#5A3F63;color:#FFB8D6">糖果 ✓</div><div class="o">彩绘</div><div class="o">海洋</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cmp-cap">暗夜糖果（深莓紫底 + 提亮粉）</div>
+    </div>
+
+    <!-- 暗夜彩绘（粗糙手绘·暗） -->
+    <div class="phone">
+      <div class="screen" style="background:#26241F">
+        <div class="grain" style="opacity:.10;mix-blend-mode:screen"></div>
+        <div class="bar-paint"><div class="bar-fill" style="background:linear-gradient(90deg,#F0775E,#E8C46A 40%,#7FB97E 66%,#6BA0D8 100%)"></div><div class="bar-txt" style="color:#FBF4E6">设置</div></div>
+        <div class="pad">
+          <div class="sec-title sec-title-paint" style="color:#E8946A">外观<span class="ud" style="background:#E8946A"></span></div>
+          <div class="paint-card">
+            <div class="card-border" style="background:#322F28;border-color:#6A6358"></div>
+            <div class="card-content">
+              <div class="row-paint"><div class="t t-paint" style="color:#F0EADB">深色模式</div>
+                <div class="seg seg-paintbg" style="background:#2C2A24">
+                  <div class="segbox on-paint" style="border-color:#6A6358;color:#FBF4E6"><span>跟随系统</span></div>
+                  <div class="segbox" style="border-color:#6A6358;color:#A89E8C"><span>浅色</span></div>
+                  <div class="segbox" style="border-color:#6A6358;color:#A89E8C"><span>深色</span></div>
+                </div></div>
+              <div class="divider" style="border-color:#6A6358"></div>
+              <div class="row-paint"><div class="t t-paint" style="color:#F0775E">主题色彩</div>
+                <div class="seg seg-paintbg" style="background:#2C2A24">
+                  <div class="segbox" style="border-color:#6A6358;color:#A89E8C"><span>米金</span></div>
+                  <div class="segbox" style="border-color:#6A6358;color:#A89E8C"><span>糖果</span></div>
+                  <div class="segbox on-paint" style="border-color:#6A6358;color:#FBF4E6"><span>彩绘 ✓</span></div>
+                  <div class="segbox" style="border-color:#6A6358;color:#A89E8C"><span>海洋</span></div>
+                </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cmp-cap">暗夜彩绘（夜纸底 + 提亮蜡笔 + 抖动）</div>
+    </div>
+
+    <!-- 暗夜海洋 -->
+    <div class="phone">
+      <div class="screen" style="background:#0E2A3A">
+        <div class="bar" style="background:linear-gradient(90deg,#1B6FA8,#0F4F7A)">设置</div>
+        <svg class="wave" viewBox="0 0 300 14" preserveAspectRatio="none"><path d="M0 8 Q 18.75 -1 37.5 8 T 75 8 T 112.5 8 T 150 8 T 187.5 8 T 225 8 T 262.5 8 T 300 8 V14 H0 Z" fill="#1B4A63" opacity=".6"/></svg>
+        <div class="pad">
+          <div class="sec-title" style="color:#5FB6E8">外观</div>
+          <div class="card" style="background:#143A4C;border:1px solid #1E546E;box-shadow:0 3px 14px rgba(79,168,224,.12)">
+            <div class="row" style="border-bottom:1px solid #1E546E"><div class="t" style="color:#DCEEF5">深色模式</div>
+              <div class="seg" style="background:#0E2A3A"><div class="o">跟随系统</div><div class="o">浅色</div><div class="o" style="background:#1B6FA8;color:#D6F0FF">深色</div></div></div>
+            <div class="row"><div class="t" style="color:#5FB6E8;font-weight:700">主题色彩</div>
+              <div class="seg" style="background:#0E2A3A"><div class="o">米金</div><div class="o">糖果</div><div class="o">彩绘</div><div class="o" style="background:#1B6FA8;color:#D6F0FF">海洋 ✓</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cmp-cap">暗夜海洋（深海蓝绿 + 荧光提亮）</div>
+    </div>
+  </div>
+
+  <h2>六、实现要点（落地时参考）</h2>
+  <p class="note">
+    <span class="pill">SettingsActivity.buildAppearanceSection() 主题色彩行（4 选项）</span>
+    <span class="pill">每主题 2 套：light + night（values / values-night）</span>
+    <span class="pill">KEY_THEME = gold/candy/paint/ocean</span>
+    <span class="pill">默认 gold 不变</span>
+    <br>⚠️ Kotlin 硬编码色（Color.WHITE、面板 #FDFCF9、项坠 gold 描边）改随主题资源，否则非米金主题露白/露金；与 Bug A 的 values-night 改造一并做。<br>
+    ⚠️ <b>彩绘落地难点</b>：原生 View 无现成「抖动滤镜」。靠「手绘不规则圆角 VectorDrawable 背景 + 噪声 PNG 纸纹(multiply) + 偏移选中态 + 手写体(标题)」组合，不靠卡通圆角。<br>
+    ⚠️ <b>海洋落地</b>：水波用 SVG 矢量波浪背景（顶栏/卡片装饰），主色族走蓝色系；珊瑚橘仅作强调点缀，避免全蓝单调。<br>
+    ⚠️ 四档主题仅换「强调色族 + 底纹/质感」，不动深色模式逻辑（KEY_NIGHT_MODE 独立）。
+  </p>
+
+</div>
+</body>
+</html>

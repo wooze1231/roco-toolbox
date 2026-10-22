@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  「还有 N 件」角标（RemoteViews 专用）。
+  左上改右上做圆角，贴在格子右上角；下左直角，和格子圆角贴合。
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/text_accent" />
+    <corners
+        android:topLeftRadius="8dp"
+        android:topRightRadius="9dp"
+        android:bottomLeftRadius="8dp"
+        android:bottomRightRadius="0dp" />
+</shape>

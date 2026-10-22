@@ -1,0 +1,562 @@
+[
+ {
+  "id": "pet_000354",
+  "name": "鸭吉吉",
+  "number": "011",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000420",
+  "name": "雪绒鸟",
+  "number": "018",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000025",
+  "name": "冬羽雀",
+  "number": "019",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000133",
+  "name": "幻影灵菇",
+  "number": "023",
+  "shiny": "PetPortrait_img_Gho_LingGu3_101_Res.png",
+  "head": "PetAvatar_3147_1.png"
+ },
+ {
+  "id": "pet_000009",
+  "name": "恶魔叮",
+  "number": "030",
+  "shiny": "PetPortrait_emoding_yise.png",
+  "head": "PetAvatar_3010_1.png"
+ },
+ {
+  "id": "pet_000124",
+  "name": "化蝶",
+  "number": "034",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000263",
+  "name": "卷胡巨獭",
+  "number": "038",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000257",
+  "name": "晶石蜗",
+  "number": "040",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000386",
+  "name": "晶石蜗",
+  "number": "040",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000039",
+  "name": "卡瓦重",
+  "number": "046",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000062",
+  "name": "音速犬",
+  "number": "048",
+  "shiny": "PetPortrait_yinsuquan_yise.png",
+  "head": ""
+ },
+ {
+  "id": "pet_000053",
+  "name": "暗影灵面",
+  "number": "055",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000018",
+  "name": "蹦蹦花",
+  "number": "065",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000130",
+  "name": "朔夜伊芙",
+  "number": "087",
+  "shiny": "PetPortrait_ziyemeiying_yise.png",
+  "head": "PetAvatar_3144_1.png"
+ },
+ {
+  "id": "pet_000280",
+  "name": "翠顶夫人",
+  "number": "090",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000446",
+  "name": "黑羽夫人",
+  "number": "091",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000127",
+  "name": "花衣蝶",
+  "number": "101",
+  "shiny": "PetPortrait_huayidie_yise.png",
+  "head": "PetAvatar_3141_1.png"
+ },
+ {
+  "id": "pet_000055",
+  "name": "白金独角兽",
+  "number": "117",
+  "shiny": "PetPortrait_baijindujiaoshou_yise.png",
+  "head": "PetAvatar_3063_1.png"
+ },
+ {
+  "id": "pet_000396",
+  "name": "风滚暮虫",
+  "number": "120",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000206",
+  "name": "怖哭菇",
+  "number": "130",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000339",
+  "name": "电企鹅",
+  "number": "133",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000219",
+  "name": "獠牙猪",
+  "number": "138",
+  "shiny": "PetPortrait_liaoyazhu_yise.png",
+  "head": "PetAvatar_3263_1.png"
+ },
+ {
+  "id": "pet_000008",
+  "name": "草头鸭",
+  "number": "179",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000417",
+  "name": "圆号鱼",
+  "number": "184",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000441",
+  "name": "棋祈督",
+  "number": "191",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000174",
+  "name": "荆棘电环",
+  "number": "209",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000192",
+  "name": "寒音蛇",
+  "number": "213",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000158",
+  "name": "恶魔红钻",
+  "number": "215",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000625",
+  "name": "烈焰狂战士",
+  "number": "218",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000290",
+  "name": "爵士鹿",
+  "number": "228",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000453",
+  "name": "月亮砣",
+  "number": "238",
+  "shiny": "PetPortrait_img_Poi_CiLunTuo2Ar_101_Res.png",
+  "head": "PetAvatar_3585_1.png"
+ },
+ {
+  "id": "pet_000455",
+  "name": "月亮砣",
+  "number": "238",
+  "shiny": "PetPortrait_img_Poi_CiLunTuo2_101_Res.png",
+  "head": "PetAvatar_3583_1.png"
+ },
+ {
+  "id": "pet_000626",
+  "name": "满月砣",
+  "number": "238",
+  "shiny": "PetPortrait_img_Poi_CiLunTuoBo_101_Res.png",
+  "head": "PetAvatar_4108_1.png"
+ },
+ {
+  "id": "pet_000109",
+  "name": "琉璃水母",
+  "number": "245",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000076",
+  "name": "火焰猿",
+  "number": "251",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000217",
+  "name": "冰钻布鲁斯",
+  "number": "254",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000179",
+  "name": "立方人",
+  "number": "265",
+  "shiny": "PetPortrait_lifangren_gai.png",
+  "head": "PetAvatar_3202_1.png"
+ },
+ {
+  "id": "pet_000497",
+  "name": "绒光优优",
+  "number": "271",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000308",
+  "name": "深蓝鲸",
+  "number": "273",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000065",
+  "name": "格兰球",
+  "number": "276",
+  "shiny": "PetPortrait_gelanqiu_yise.png",
+  "head": "PetAvatar_3074_1.png"
+ },
+ {
+  "id": "pet_000357",
+  "name": "遁地鼠",
+  "number": "279",
+  "shiny": "PetPortrait_dundishu_xushui_yise.png",
+  "head": "PetAvatar_3456_1.png"
+ },
+ {
+  "id": "pet_000451",
+  "name": "秩序鱿墨",
+  "number": "282",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000161",
+  "name": "龙息帕尔",
+  "number": "295",
+  "shiny": "PetPortrait_img_Dem_PaErSaSi3_102_Res.png",
+  "head": "PetAvatar_3182_1.png"
+ },
+ {
+  "id": "pet_000478",
+  "name": "古卷匣魔像",
+  "number": "306",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000209",
+  "name": "绒仙子",
+  "number": "309",
+  "shiny": "PetPortrait_rongxianzi_yise.png",
+  "head": "PetAvatar_3246_1.png"
+ },
+ {
+  "id": "pet_000310",
+  "name": "利灯鱼",
+  "number": "321",
+  "shiny": "PetPortrait_lidengyu_yise.png",
+  "head": "PetAvatar_3383_1.png"
+ },
+ {
+  "id": "pet_000176",
+  "name": "小皮球",
+  "number": "331",
+  "shiny": "PetPortrait_xiaopiqiu_yise.png",
+  "head": "PetAvatar_3199_1.png"
+ },
+ {
+  "id": "pet_000265",
+  "name": "粉耳星兔",
+  "number": "336",
+  "shiny": "PetPortrait_fenerxingtu_yise.png",
+  "head": "PetAvatar_3320_1.png"
+ },
+ {
+  "id": "pet_000375",
+  "name": "上岸蛙",
+  "number": "339",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000299",
+  "name": "春花兔",
+  "number": "344",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000510",
+  "name": "机幕方舟",
+  "number": "350",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000487",
+  "name": "加油蟹",
+  "number": "361",
+  "shiny": "PetPortrait_jiayouxie_yise.png",
+  "head": "PetAvatar_3660_1.png"
+ },
+ {
+  "id": "pet_000514",
+  "name": "加油蟹",
+  "number": "361",
+  "shiny": "PetPortrait_jiayouxiedanzhi_yise.png",
+  "head": "PetAvatar_3743_1.png"
+ },
+ {
+  "id": "pet_000491",
+  "name": "烟花伯爵",
+  "number": "366",
+  "shiny": "PetPortrait_yanhuabojue_yise.png",
+  "head": "PetAvatar_3678_1.png"
+ },
+ {
+  "id": "pet_000493",
+  "name": "咕德帽帽",
+  "number": "368",
+  "shiny": "PetPortrait_gudemaomao_ysie.png",
+  "head": "PetAvatar_3684_1.png"
+ },
+ {
+  "id": "pet_000501",
+  "name": "巨鼓象",
+  "number": "372",
+  "shiny": "PetPortrait_juguxiang_yise.png",
+  "head": "PetAvatar_3709_1.png"
+ },
+ {
+  "id": "pet_000485",
+  "name": "学院呱呱",
+  "number": "375",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000071",
+  "name": "火羽",
+  "number": "378",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000522",
+  "name": "森巨人",
+  "number": "386",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000164",
+  "name": "邪眼巨魔",
+  "number": "402",
+  "shiny": "PetPortrait_img_Dem_KuangChong3_101_Res.png",
+  "head": "PetAvatar_3185_1.png"
+ },
+ {
+  "id": "pet_000268",
+  "name": "夜游魔",
+  "number": "405",
+  "shiny": "PetPortrait_img_Win_NiNi3_101_Res.png",
+  "head": "PetAvatar_3323_1.png"
+ },
+ {
+  "id": "pet_000529",
+  "name": "珀尔鼬",
+  "number": "411",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000199",
+  "name": "黑化加尔",
+  "number": "417",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000503",
+  "name": "胡桃王子",
+  "number": "419",
+  "shiny": "PetPortrait_hutaowangzi_yise.png",
+  "head": "PetAvatar_3711_1.png"
+ },
+ {
+  "id": "pet_000505",
+  "name": "离心舞者",
+  "number": "421",
+  "shiny": "PetPortrait_lixinwuzhe_yise.png",
+  "head": "PetAvatar_3719_1.png"
+ },
+ {
+  "id": "pet_000293",
+  "name": "徘徊爪爪",
+  "number": "424",
+  "shiny": "PetPortrait_maolaoye_yise.png",
+  "head": "PetAvatar_3362_1.png"
+ },
+ {
+  "id": "pet_000489",
+  "name": "流明坎德拉",
+  "number": "433",
+  "shiny": "PetPortrait_liumingkandela_yise.png",
+  "head": "PetAvatar_3676_1.png"
+ },
+ {
+  "id": "pet_000499",
+  "name": "半朽蜜果灵",
+  "number": "435",
+  "shiny": "PetPortrait_banxiumiguoling_yise.png",
+  "head": "PetAvatar_3707_1.png"
+ },
+ {
+  "id": "pet_000443",
+  "name": "壳栗丝鼠",
+  "number": "439",
+  "shiny": "PetPortrait_kelisishu_yise.png",
+  "head": "PetAvatar_3566_1.png"
+ },
+ {
+  "id": "pet_000596",
+  "name": "宝藏沙狐",
+  "number": "442",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000608",
+  "name": "银月狼王",
+  "number": "445",
+  "shiny": "",
+  "head": ""
+ },
+ {
+  "id": "pet_000611",
+  "name": "月使鹭纳",
+  "number": "448",
+  "shiny": "PetPortrait_img_Win_XinYueLu3_101_Res.png",
+  "head": "PetAvatar_3766_1.png"
+ },
+ {
+  "id": "pet_000601",
+  "name": "圣凯布米龙",
+  "number": "451",
+  "shiny": "PetPortrait_img_Fir_ReTuanTuan3_101_Res.png",
+  "head": "PetAvatar_3576_1.png"
+ },
+ {
+  "id": "pet_000613",
+  "name": "智辉章脑",
+  "number": "453",
+  "shiny": "PetPortrait_img_Lig_ZhangNaoWan3_101_Res.png",
+  "head": "PetAvatar_3768_1.png"
+ },
+ {
+  "id": "pet_000598",
+  "name": "未完虫",
+  "number": "454",
+  "shiny": "PetPortrait_img_Gho_WeiWanChong1_101_Res.png",
+  "head": "PetAvatar_3542_1.png"
+ },
+ {
+  "id": "pet_000603",
+  "name": "玳塔",
+  "number": "456",
+  "shiny": "PetPortrait_img_Ill_DaiGui2_101_Res.png",
+  "head": "PetAvatar_3590_1.png"
+ },
+ {
+  "id": "pet_000615",
+  "name": "黑手浣熊",
+  "number": "460",
+  "shiny": "PetPortrait_img_Dem_XiaoHuanDan2_101_Res.png",
+  "head": "PetAvatar_3772_1.png"
+ },
+ {
+  "id": "pet_000617",
+  "name": "摇铃魔偶",
+  "number": "462",
+  "shiny": "PetPortrait_img_Gho_YouLing3_101_Res.png",
+  "head": "PetAvatar_3774_1.png"
+ },
+ {
+  "id": "pet_000597",
+  "name": "星星眼",
+  "number": "463",
+  "shiny": "PetPortrait_img_Ill_QiuQiu1_101_Res.png",
+  "head": "PetAvatar_3236_1.png"
+ },
+ {
+  "id": "pet_000619",
+  "name": "布灵布灵",
+  "number": "465",
+  "shiny": "PetPortrait_img_Ill_BuLing2_101_Res.png",
+  "head": "PetAvatar_3776_1.png"
+ }
+]

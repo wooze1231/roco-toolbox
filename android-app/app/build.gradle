@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.wooze.rocomerchant'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.wooze.rocomerchant"
+        minSdk 24
+        targetSdk 34
+        versionCode 39
+        versionName "1.2.0"
+        // 应用名由渠道决定：正式版用 @string/app_name，测试版单独命名
+        manifestPlaceholders = [appLabel: "@string/app_name"]
+    }
+
+    // 渠道包：prod = 正式版（1.2.0，保持原样）
+    //        beta = 独立测试版（1.2.99，不同 applicationId → 可与正式版并存、数据互不相通）
+    flavorDimensions "channel"
+    productFlavors {
+        prod {
+            dimension "channel"
+        }
+        beta {
+            dimension "channel"
+            applicationId "com.wooze.rocomerchant.test"
+            versionCode 199
+            versionName "1.2.99"
+            manifestPlaceholders = [appLabel: "洛克助手(测试)"]
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+}

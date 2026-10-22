@@ -1,0 +1,89 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ===== 米金 Gold（暗夜） ===== -->
+    <style name="Theme.RocoMerchant.GoldNight" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorBg">#1A1714</item>
+        <item name="colorPrimary">#E6B85C</item>
+        <item name="colorOnPrimary">#2A231A</item>
+        <item name="colorPrimaryContainer">#3A3128</item>
+        <item name="colorOnPrimaryContainer">#F0D49A</item>
+        <item name="colorSurface">#25211C</item>
+        <item name="colorOnSurface">#F0E9DD</item>
+        <item name="colorSurfaceVariant">#322C25</item>
+        <item name="colorOnSurfaceVariant">#A89A86</item>
+        <item name="colorOutline">#4A4239</item>
+        <item name="colorOutlineVariant">#38322B</item>
+        <item name="colorError">#E57373</item>
+        <item name="colorErrorContainer">#4A2A28</item>
+        <item name="android:windowBackground">?attr/colorBg</item>
+        <item name="android:statusBarColor">?attr/colorBg</item>
+        <item name="android:navigationBarColor">?attr/colorBg</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- ===== 糖果 Candy（暗夜） ===== -->
+    <style name="Theme.RocoMerchant.CandyNight" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorBg">#2A1E2E</item>
+        <item name="colorPrimary">#FFB8D6</item>
+        <item name="colorOnPrimary">#3A2436</item>
+        <item name="colorPrimaryContainer">#5A3E55</item>
+        <item name="colorOnPrimaryContainer">#FFD6E8</item>
+        <item name="colorSurface">#382A3E</item>
+        <item name="colorOnSurface">#FBE6F0</item>
+        <item name="colorSurfaceVariant">#463549</item>
+        <item name="colorOnSurfaceVariant">#C89BB4</item>
+        <item name="colorOutline">#5A4560</item>
+        <item name="colorOutlineVariant">#45354A</item>
+        <item name="colorError">#FF8FA8</item>
+        <item name="colorErrorContainer">#4E2A38</item>
+        <item name="android:windowBackground">?attr/colorBg</item>
+        <item name="android:statusBarColor">?attr/colorBg</item>
+        <item name="android:navigationBarColor">?attr/colorBg</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- ===== 彩绘 Paint（暗夜 · 夜纸底 + 提亮蜡笔） ===== -->
+    <style name="Theme.RocoMerchant.PaintNight" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorBg">#26241F</item>
+        <item name="colorPrimary">#F0775E</item>
+        <item name="colorOnPrimary">#2A2118</item>
+        <item name="colorPrimaryContainer">#3A2E26</item>
+        <item name="colorOnPrimaryContainer">#F0D4AE</item>
+        <item name="colorSurface">#322F28</item>
+        <item name="colorOnSurface">#F0EADB</item>
+        <item name="colorSurfaceVariant">#2C2A24</item>
+        <item name="colorOnSurfaceVariant">#A89E8C</item>
+        <item name="colorOutline">#6A6358</item>
+        <item name="colorOutlineVariant">#322F28</item>
+        <!-- 彩绘强调：提亮蜡笔红，暗底上比浅色深砖红更可读 -->
+        <item name="colorPaintAccent">#F0775E</item>
+        <item name="colorError">#E08770</item>
+        <item name="colorErrorContainer">#4A2E26</item>
+        <item name="android:windowBackground">?attr/colorBg</item>
+        <item name="android:statusBarColor">?attr/colorBg</item>
+        <item name="android:navigationBarColor">?attr/colorBg</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- ===== 海洋 Ocean（暗夜） ===== -->
+    <style name="Theme.RocoMerchant.OceanNight" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorBg">#0E2A3A</item>
+        <item name="colorPrimary">#5FB6E8</item>
+        <item name="colorOnPrimary">#0A2433</item>
+        <item name="colorPrimaryContainer">#1E4F66</item>
+        <item name="colorOnPrimaryContainer">#BFE6F7</item>
+        <item name="colorSurface">#173648</item>
+        <item name="colorOnSurface">#E2F1F7</item>
+        <item name="colorSurfaceVariant">#20475C</item>
+        <item name="colorOnSurfaceVariant">#8FB6C7</item>
+        <item name="colorOutline">#2C556B</item>
+        <item name="colorOutlineVariant">#1E4055</item>
+        <item name="colorError">#EF8A86</item>
+        <item name="colorErrorContainer">#3A2A2A</item>
+        <item name="android:windowBackground">?attr/colorBg</item>
+        <item name="android:statusBarColor">?attr/colorBg</item>
+        <item name="android:navigationBarColor">?attr/colorBg</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 炫彩色卡扫描（仅测试渠道使用相机） -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+    <application
+        android:name=".RocoApp"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:hasFragileUserData="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="${appLabel}"
+        android:theme="@style/Theme.RocoMerchant.Gold"
+        android:forceDarkAllowed="false">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SubscribeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="订阅提醒" />
+
+        <activity
+            android:name=".ItemEditActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="编辑商品池"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="今日轮次记录" />
+
+        <activity
+            android:name=".WikiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="图鉴 WIKI"
+            android:hardwareAccelerated="true" />
+
+        <activity
+            android:name=".ShinyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="异色图鉴"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ShinySettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="异色图鉴 · 设置"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="设置"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ShinyCardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="炫彩色卡" />
+
+        <activity
+            android:name=".CardScanActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="扫描色卡" />
+
+        <receiver
+            android:name=".MerchantWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/merchant_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".MerchantWidgetWide"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/merchant_widget_wide_info" />
+        </receiver>
+
+        <receiver
+            android:name=".RefreshReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".TickReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

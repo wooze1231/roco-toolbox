@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>识图多选弹窗预览</title>
+<style>
+  :root{
+    --panel-bg:#FDFCF9; --row-bg:#FFFFFF; --row-sel-bg:#FFF4E0; --row-soft-bg:#EFEBE4;
+    --text-primary:#2E2A24; --text-sub:#A39C90; --text-soft:#8A8378;
+    --stroke-soft:#EAE5DB; --divider:#F0ECE4;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{
+    margin:0;padding:28px 16px 40px;
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:#F2EFE9;color:var(--text-primary);
+    display:flex;flex-direction:column;align-items:center;gap:18px;
+  }
+  .cap{font-size:12.5px;color:#8A8378;letter-spacing:.3px}
+  .phone{width:340px;background:var(--panel-bg);border-radius:22px;
+    padding:18px 18px 8px;box-shadow:0 10px 34px rgba(0,0,0,.13)}
+  .title{font-size:19px;font-weight:700;text-align:center}
+  .sub{font-size:12.5px;color:var(--text-sub);text-align:center;padding-top:5px;
+    white-space:pre-line;line-height:1.5}
+  .div{height:1px;background:var(--divider);margin:14px 0 10px}
+  .row{
+    display:flex;align-items:center;gap:10px;
+    padding:12px 14px;margin-bottom:6px;border-radius:13px;
+    background:var(--row-bg);border:1px solid var(--stroke-soft);
+    cursor:pointer;transition:background .16s,border-color .16s;
+  }
+  .row.sel{background:var(--row-sel-bg);border:2px solid var(--text-primary)}
+  .box{width:30px;height:30px;flex:0 0 30px;display:flex;align-items:center;
+    justify-content:center;font-size:19px;color:var(--text-sub)}
+  .row.sel .box{color:var(--text-primary)}
+  .texts{display:flex;flex-direction:column;min-width:0}
+  .t{font-size:14.5px;font-weight:700}
+  .s{font-size:11.5px;color:var(--text-sub);padding-top:2px;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .row.soft{background:var(--row-soft-bg);border-color:var(--stroke-soft)}
+  .row.soft .t{color:var(--text-soft)}
+  .main{margin-top:2px}
+  .main.empty .t{color:var(--text-soft)}
+  .bar{font-size:12px;color:#8A8378;text-align:center;padding-bottom:6px}
+  .hint{max-width:560px;font-size:12.5px;color:#7C756A;line-height:1.75;
+    background:#fff;border-radius:12px;padding:14px 16px;
+    box-shadow:0 3px 14px rgba(0,0,0,.06)}
+  .hint b{color:#2E2A24}
+  code{background:#F2EFE9;border-radius:5px;padding:1.5px 6px;font-size:12px}
+</style>
+</head>
+<body>
+
+<div class="cap">识图结果 · 多选加入（预览：点一下试试）</div>
+
+<div class="phone">
+  <div class="title">识别结果 · 勾选加入</div>
+  <div class="sub">认出的字：「叮花架 平鸽贝小夜小独角鲁 丑公小象音碟花伯」
+识别置信度：中（48%）· 可能有 1~2 个字认错了，扫一眼再点
+
+识别到 3 处名字。已预选最像的，认错了就改勾选：</div>
+  <div class="div"></div>
+
+  <div class="row sel" data-i="0">
+    <div class="box">☑</div>
+    <div class="texts"><div class="t">① 小夜</div>
+      <div class="s">第 2 行「平鸽贝小夜小独角鲁」 · xiaoye</div></div>
+  </div>
+  <div class="row" data-i="1">
+    <div class="box">☐</div>
+    <div class="texts"><div class="t">　小独角兽</div>
+      <div class="s">第 2 行「平鸽贝小夜小独角鲁」 · xiaodujiaoshou</div></div>
+  </div>
+  <div class="row sel" data-i="2">
+    <div class="box">☑</div>
+    <div class="texts"><div class="t">① 小鼓象</div>
+      <div class="s">第 3 行「丑公小象音碟花伯」 · xiaoguxiang</div></div>
+  </div>
+  <div class="row" data-i="3">
+    <div class="box">☐</div>
+    <div class="texts"><div class="t">　音碟吼</div>
+      <div class="s">第 3 行「丑公小象音碟花伯」 · yindiehou</div></div>
+  </div>
+  <div class="row sel" data-i="4">
+    <div class="box">☑</div>
+    <div class="texts"><div class="t">① 公平鸽</div>
+      <div class="s">第 2 行「平鸽贝小夜小独角鲁」 · gongpingge</div></div>
+  </div>
+  <div class="row sel" data-i="5">
+    <div class="box">☑</div>
+    <div class="texts"><div class="t">① 小丑公爵</div>
+      <div class="s">第 3 行「丑公小象音碟花伯」 · xiaochougongjue</div></div>
+  </div>
+
+  <div class="row main" id="btn" style="justify-content:center">
+    <div class="t" id="btnText">加入选中的 4 只</div>
+  </div>
+  <div class="row soft"><div class="t">手动输入名字</div></div>
+  <div class="row soft"><div class="t">重新选一张图</div></div>
+  <div class="bar">当前勾选：<b id="cnt">4</b> 只</div>
+</div>
+
+<div class="hint">
+<b>改动说明</b><br>
+· 每个候选前面是<b>勾选框</b>，点整行切换勾选，弹窗<b>不关闭</b>，可以连续勾多只<br>
+· 每行默认<b>预勾头号候选</b>（标 ①），认错就取消勾选、改勾旁边的<br>
+· 副标题写明「<b>第 N 行 + 该行 OCR 原文</b>」，一眼能对上图里的位置<br>
+· 底部一个「<b>加入选中的 N 只</b>」按钮，数量实时刷新，一次提交<br>
+· 分类统一进<b>未分类</b>，不弹输入框（想归类事后再整理）<br>
+· 单选时代的「选一只就关窗」已去掉
+</div>
+
+<script>
+const rows=[...document.querySelectorAll('.row[data-i]')];
+const cnt=document.getElementById('cnt'), btn=document.getElementById('btn'),
+      btnText=document.getElementById('btnText');
+function refresh(){
+  const n=rows.filter(r=>r.classList.contains('sel')).length;
+  cnt.textContent=n;
+  btnText.textContent=n?`加入选中的 ${n} 只`:'勾选要加入的精灵';
+  btn.classList.toggle('empty',n===0);
+}
+rows.forEach(r=>r.addEventListener('click',()=>{
+  const on=r.classList.toggle('sel');
+  r.querySelector('.box').textContent=on?'☑':'☐';
+  refresh();
+}));
+refresh();
+</script>
+</body>
+</html>

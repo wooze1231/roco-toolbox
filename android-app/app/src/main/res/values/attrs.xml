@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 页面级背景（Material3 无统一「页面背景」attr，自定义一个，其余复用 Material3 内置语义色） -->
+    <attr name="colorBg" format="color" />
+    <!-- 彩绘主题专属强调色：浅色=深砖红(#C25A35) 作分组小标题/标题强调；深色=提亮蜡笔红(#F0775E) 保证暗底可读 -->
+    <attr name="colorPaintAccent" format="color" />
+</resources>

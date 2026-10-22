@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>补哪些 · 咕噜球 + 材料</title><style>
+:root{--page:#F6F3ED;--line:#E4DED3;--txt:#2B2723;--sub:#8A8378;--gold:#D4A017;--ok:#2E7D32}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--txt);font:13.5px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif;padding:24px 20px 90px}
+h1{font-size:20px;margin:0 0 4px}
+.lede{color:#6E6860;font-size:12.5px;margin:0 0 18px}
+h2{font-size:15.5px;margin:32px 0 8px;padding-left:9px;border-left:4px solid var(--gold)}
+h3{font-size:13.5px;margin:18px 0 6px;color:#5C564E;display:flex;align-items:center;gap:8px}
+h3 .cnt{font-size:11px;font-weight:400;color:var(--sub);background:#fff;border:1px solid var(--line);border-radius:8px;padding:1px 8px}
+.acts{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 10px}
+.acts button{font:inherit;font-size:12px;padding:5px 12px;border-radius:16px;border:1px solid var(--line);background:#fff;cursor:pointer;color:#5C564E}
+.acts button:hover{background:#FFFDF6;border-color:var(--gold);color:#9A6B00}
+table{border-collapse:collapse;width:100%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(60,50,30,.07);font-size:13px}
+td{padding:7px 11px;border-bottom:1px solid #F2EEE7}
+tr:last-child td{border-bottom:0}
+td.c{width:38px;text-align:center}
+td.no{width:92px;color:var(--sub);font-size:11.5px}
+td.r{width:56px;color:var(--sub);font-size:11.5px}
+input[type=checkbox]{width:17px;height:17px;accent-color:#D4A017;cursor:pointer}
+tr.have{background:#FBFAF7}
+tr.have td.nm{color:#9C968D}
+.badge{font-size:10.5px;padding:1px 7px;border-radius:8px;background:#F1EDE5;color:#6B655C;margin-left:6px}
+.badge.app{background:#E8F3E9;color:#2E7D32}
+.badge.lim{background:#FBE9E7;color:#C0392B}
+.note{background:#FFFDF6;border:1px solid #EAD9A6;border-radius:12px;padding:12px 15px;font-size:12.5px;margin:14px 0}
+.note b{color:#9A6B00}
+#out{position:fixed;left:0;right:0;bottom:0;background:#2B2723;color:#F0ECE4;padding:11px 20px;font-size:12.5px;display:flex;gap:14px;align-items:center;box-shadow:0 -4px 16px rgba(0,0,0,.18)}
+#out code{flex:1;background:#1E1E21;padding:6px 11px;border-radius:9px;font-size:12px;overflow-x:auto;white-space:nowrap;color:#EDEAE4}
+#out button{font:inherit;font-size:12.5px;padding:7px 16px;border-radius:18px;border:0;background:#D4A017;color:#3A2A00;font-weight:700;cursor:pointer;white-space:nowrap}
+#out .n{color:#B9B2A7;white-space:nowrap}
+</style></head><body>
+<h1>补哪些 · 咕噜球 + 材料</h1>
+<p class="lede">这次是<b>真的能勾</b>的。勾完点右下角「复制结果」发给我就行。默认已帮你勾好推荐项，不想要的取消即可。</p>
+<div class="note"><b>规则</b>：<br>· <b>★ 已内置</b>的不用管，已经在了<br>· BWIKI 有、App 没有的默认<b>已勾选</b>，取消 = 不要<br>· <span class="badge lim">赛季限定</span>的默认<b>不勾</b>（按你说的炫彩球不加）</div>
+<h2>一、咕噜球（BWIKI 共 17 条）</h2>
+<div class="acts"><button onclick="setSec('ball',1)">全勾</button><button onclick="setSec('ball',0)">全不勾</button><button onclick="setSec('ball',0,1)">只勾非限定</button></div>
+<table><tbody>
+<tr class="have"><td class="c">—</td><td class="nm">普通咕噜球<i class="badge app">★ 已内置</i></td><td class="no">#100002</td><td class="r">蓝</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">高级咕噜球<i class="badge app">★ 已内置</i></td><td class="no">#100003</td><td class="r">紫</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">国王球<i class="badge app">★ 已内置</i></td><td class="no">#100255</td><td class="r">橙</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">美妙球<i class="badge app">★ 已内置</i></td><td class="no">#100262</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="ball" data-lim="0"  checked></td><td class="nm">好战球</td><td class="no">#100263</td><td class="r">紫</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">光合球<i class="badge app">★ 已内置</i></td><td class="no">#100271</td><td class="r">紫</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">网兜球<i class="badge app">★ 已内置</i></td><td class="no">#100272</td><td class="r">紫</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">暗星球<i class="badge app">★ 已内置</i></td><td class="no">#100273</td><td class="r">紫</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">调温球<i class="badge app">★ 已内置</i></td><td class="no">#100274</td><td class="r">紫</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">绝缘球<i class="badge app">★ 已内置</i></td><td class="no">#100275</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="ball" data-lim="0"  checked></td><td class="nm">淘沙球</td><td class="no">#100283</td><td class="r">紫</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">变幻球<i class="badge app">★ 已内置</i></td><td class="no">#100284</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="ball" data-lim="0"  checked></td><td class="nm">捕光球</td><td class="no">#100285</td><td class="r">橙</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">棱镜球<i class="badge app">★ 已内置</i></td><td class="no">#100286</td><td class="r">橙</td></tr>
+<tr><td class="c"><input type="checkbox" class="ball" data-lim="0"  checked></td><td class="nm">可可果球</td><td class="no">#100287</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="ball" data-lim="1" ></td><td class="nm">织梦棱镜球<i class="badge lim">赛季限定</i></td><td class="no">#100288</td><td class="r">橙</td></tr>
+<tr><td class="c"><input type="checkbox" class="ball" data-lim="0"  checked></td><td class="nm">柔软咕噜球</td><td class="no">#280001</td><td class="r">蓝</td></tr>
+</tbody></table>
+<h2>二、材料（按小类分，BWIKI 材料共 99 条）</h2>
+<div class="acts"><button onclick="setSec('mat',1)">全勾</button><button onclick="setSec('mat',0)">全不勾</button><button onclick="onlyApp()">只保留已内置的（不补任何新材料）</button></div>
+<h3>草药植物<span class="cnt">共 26 · 已内置 5 · 待补 21</span></h3>
+<div class="acts"><button onclick="setCat('草药植物',1)">本类全勾</button><button onclick="setCat('草药植物',0)">本类全不勾</button></div>
+<table><tbody>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">可可果</td><td class="no">#100211</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">无花果</td><td class="no">#100212</td><td class="r">蓝</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">魔力果<i class="badge app">★ 已内置</i></td><td class="no">#100213</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">向阳花</td><td class="no">#100604</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">喵喵草</td><td class="no">#100605</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">天使草<i class="badge app">★ 已内置</i></td><td class="no">#100608</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">石耳<i class="badge app">★ 已内置</i></td><td class="no">#100621</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">伞伞菌</td><td class="no">#100622</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">蜜黄菌</td><td class="no">#100623</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">喷气菇<i class="badge app">★ 已内置</i></td><td class="no">#100624</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">凤眼莲</td><td class="no">#100625</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">幽幽草</td><td class="no">#100627</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">星霜花<i class="badge app">★ 已内置</i></td><td class="no">#100661</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">雪菇</td><td class="no">#100662</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">花星角</td><td class="no">#100664</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">大嘴花</td><td class="no">#100666</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">紫晶菇</td><td class="no">#100668</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">海桑花</td><td class="no">#100669</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">火焰花</td><td class="no">#100674</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">藻羽花</td><td class="no">#100839</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">彩玉花</td><td class="no">#100840</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">象牙花</td><td class="no">#100841</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">风卷草</td><td class="no">#100842</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">海神花</td><td class="no">#100844</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">紫雀花</td><td class="no">#100846</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="草药植物" checked></td><td class="nm">短木莲</td><td class="no">#100850</td><td class="r">绿</td></tr>
+</tbody></table>
+<h3>灵碎<span class="cnt">共 19 · 已内置 0 · 待补 19</span></h3>
+<div class="acts"><button onclick="setCat('灵碎',1)">本类全勾</button><button onclick="setCat('灵碎',0)">本类全不勾</button></div>
+<table><tbody>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">草系灵碎</td><td class="no">#100301</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">火系灵碎</td><td class="no">#100302</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">水系灵碎</td><td class="no">#100303</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">光系灵碎</td><td class="no">#100304</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">恶系灵碎</td><td class="no">#100305</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">幽系灵碎</td><td class="no">#100306</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">普通灵碎</td><td class="no">#100307</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">地系灵碎</td><td class="no">#100309</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">冰系灵碎</td><td class="no">#100310</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">龙系灵碎</td><td class="no">#100311</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">电系灵碎</td><td class="no">#100312</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">毒系灵碎</td><td class="no">#100313</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">虫系灵碎</td><td class="no">#100314</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">武系灵碎</td><td class="no">#100315</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">翼系灵碎</td><td class="no">#100316</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">萌系灵碎</td><td class="no">#100317</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">机械灵碎</td><td class="no">#100318</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">幻系灵碎</td><td class="no">#100319</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="灵碎" checked></td><td class="nm">愿力灵碎</td><td class="no">#100531</td><td class="r">紫</td></tr>
+</tbody></table>
+<h3>粉尘<span class="cnt">共 19 · 已内置 14 · 待补 5</span></h3>
+<div class="acts"><button onclick="setCat('粉尘',1)">本类全勾</button><button onclick="setCat('粉尘',0)">本类全不勾</button></div>
+<table><tbody>
+<tr class="have"><td class="c">—</td><td class="nm">草系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100121</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">火系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100122</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="粉尘" checked></td><td class="nm">水系粉尘</td><td class="no">#100123</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">光系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100124</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">恶系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100125</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">幽系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100126</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="粉尘" checked></td><td class="nm">普通粉尘</td><td class="no">#100127</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">地系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100129</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="粉尘" checked></td><td class="nm">冰系粉尘</td><td class="no">#100130</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">龙系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100131</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">电系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100132</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">毒系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100133</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="粉尘" checked></td><td class="nm">虫系粉尘</td><td class="no">#100134</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">武系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100135</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">翼系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100136</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">萌系粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100137</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">机械粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100138</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="粉尘" checked></td><td class="nm">幻系粉尘</td><td class="no">#100139</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">魔法粉尘<i class="badge app">★ 已内置</i></td><td class="no">#100201</td><td class="r">蓝</td></tr>
+</tbody></table>
+<h3>其它<span class="cnt">共 10 · 已内置 0 · 待补 10</span></h3>
+<div class="acts"><button onclick="setCat('其它',1)">本类全勾</button><button onclick="setCat('其它',0)">本类全不勾</button></div>
+<table><tbody>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="其它" checked></td><td class="nm">灵魂环印</td><td class="no">#100205</td><td class="r">橙</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="其它" checked></td><td class="nm">蓝掌</td><td class="no">#100606</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="其它" checked></td><td class="nm">蜂窝</td><td class="no">#100626</td><td class="r">橙</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="其它" checked></td><td class="nm">荧光兰</td><td class="no">#100665</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="其它" checked></td><td class="nm">流星兰</td><td class="no">#100667</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="其它" checked></td><td class="nm">恶魔雪茄</td><td class="no">#100670</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="其它" checked></td><td class="nm">小小炼金釜</td><td class="no">#100730</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="其它" checked></td><td class="nm">小小魔力之源</td><td class="no">#100731</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="其它" checked></td><td class="nm">海珊瑚</td><td class="no">#100843</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="其它" checked></td><td class="nm">洋红珊瑚</td><td class="no">#100848</td><td class="r">绿</td></tr>
+</tbody></table>
+<h3>瓶装/药剂<span class="cnt">共 10 · 已内置 0 · 待补 10</span></h3>
+<div class="acts"><button onclick="setCat('瓶装/药剂',1)">本类全勾</button><button onclick="setCat('瓶装/药剂',0)">本类全不勾</button></div>
+<table><tbody>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="瓶装/药剂" checked></td><td class="nm">瓶装雨天</td><td class="no">#100688</td><td class="r">蓝</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="瓶装/药剂" checked></td><td class="nm">瓶装迷雾</td><td class="no">#100689</td><td class="r">蓝</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="瓶装/药剂" checked></td><td class="nm">瓶装冰雪</td><td class="no">#100690</td><td class="r">蓝</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="瓶装/药剂" checked></td><td class="nm">瓶装沙暴</td><td class="no">#100691</td><td class="r">蓝</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="瓶装/药剂" checked></td><td class="nm">瓶装困倦</td><td class="no">#100693</td><td class="r">蓝</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="瓶装/药剂" checked></td><td class="nm">瓶装恐惧</td><td class="no">#100694</td><td class="r">蓝</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="瓶装/药剂" checked></td><td class="nm">瓶装快乐</td><td class="no">#100695</td><td class="r">蓝</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="瓶装/药剂" checked></td><td class="nm">瓶装斗志</td><td class="no">#100696</td><td class="r">蓝</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="瓶装/药剂" checked></td><td class="nm">瓶装幸运</td><td class="no">#100698</td><td class="r">橙</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="瓶装/药剂" checked></td><td class="nm">液化药剂</td><td class="no">#100723</td><td class="r">绿</td></tr>
+</tbody></table>
+<h3>杂项材料<span class="cnt">共 7 · 已内置 0 · 待补 7</span></h3>
+<div class="acts"><button onclick="setCat('杂项材料',1)">本类全勾</button><button onclick="setCat('杂项材料',0)">本类全不勾</button></div>
+<table><tbody>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="杂项材料" checked></td><td class="nm">魔法石</td><td class="no">#100203</td><td class="r">蓝</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="杂项材料" checked></td><td class="nm">贤者碎晶</td><td class="no">#100423</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="杂项材料" checked></td><td class="nm">睡铃</td><td class="no">#100607</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="杂项材料" checked></td><td class="nm">骨片</td><td class="no">#100663</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="杂项材料" checked></td><td class="nm">留影沙漏</td><td class="no">#100736</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="杂项材料" checked></td><td class="nm">幽幽鬼火</td><td class="no">#100845</td><td class="r">绿</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="杂项材料" checked></td><td class="nm">杏黄贝</td><td class="no">#100849</td><td class="r">绿</td></tr>
+</tbody></table>
+<h3>矿石宝石<span class="cnt">共 4 · 已内置 4 · 待补 0</span></h3>
+<table><tbody>
+<tr class="have"><td class="c">—</td><td class="nm">黑晶琉璃<i class="badge app">★ 已内置</i></td><td class="no">#100628</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">黄石榴石<i class="badge app">★ 已内置</i></td><td class="no">#100675</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">蓝晶碧玺<i class="badge app">★ 已内置</i></td><td class="no">#100676</td><td class="r">绿</td></tr>
+<tr class="have"><td class="c">—</td><td class="nm">紫莲刚玉<i class="badge app">★ 已内置</i></td><td class="no">#100677</td><td class="r">绿</td></tr>
+</tbody></table>
+<h3>符文本源<span class="cnt">共 2 · 已内置 0 · 待补 2</span></h3>
+<div class="acts"><button onclick="setCat('符文本源',1)">本类全勾</button><button onclick="setCat('符文本源',0)">本类全不勾</button></div>
+<table><tbody>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="符文本源" checked></td><td class="nm">契约本源</td><td class="no">#100206</td><td class="r">橙</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="符文本源" checked></td><td class="nm">创造符文</td><td class="no">#100729</td><td class="r">紫</td></tr>
+</tbody></table>
+<h3>血脉秘药<span class="cnt">共 2 · 已内置 0 · 待补 2</span></h3>
+<div class="acts"><button onclick="setCat('血脉秘药',1)">本类全勾</button><button onclick="setCat('血脉秘药',0)">本类全不勾</button></div>
+<table><tbody>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="血脉秘药" checked></td><td class="nm">首领血脉凝露</td><td class="no">#100530</td><td class="r">紫</td></tr>
+<tr><td class="c"><input type="checkbox" class="mat" data-cat="血脉秘药" checked></td><td class="nm">奇异血脉凝露</td><td class="no">#100532</td><td class="r">紫</td></tr>
+</tbody></table>
+<div id="out">
+<span class="n">已勾 <b id="cnt">0</b> 项</span>
+<code id="txt">—</code>
+<button onclick="copyOut()">复制结果</button>
+</div>
+<script>
+function all(sel,k){document.querySelectorAll(sel).forEach(function(e){e.checked=!!k});upd()}
+function setSec(sec,k,nonlim){
+  var sel = sec==='ball'?'.ball':'.mat';
+  document.querySelectorAll(sel).forEach(function(e){
+    if(nonlim && e.dataset.lim==='1'){e.checked=false;} else {e.checked=!!k;}
+  });upd();
+}
+function setCat(c,k){document.querySelectorAll('.mat[data-cat="'+c+'"]').forEach(function(e){e.checked=!!k});upd()}
+function onlyApp(){document.querySelectorAll('.mat').forEach(function(e){e.checked=false});upd()}
+function picked(){
+  var a=[];
+  document.querySelectorAll('input:checked').forEach(function(e){
+    a.push(e.closest('tr').querySelector('.nm').firstChild.textContent.trim());
+  });
+  return a;
+}
+function upd(){document.getElementById('cnt').textContent=picked().length;document.getElementById('txt').textContent=picked().join('、')||'（无）'}
+function copyOut(){
+  var t=picked().join('、');
+  navigator.clipboard.writeText(t).then(function(){
+    var b=document.querySelector('#out button');var old=b.textContent;
+    b.textContent='已复制 ✓';setTimeout(function(){b.textContent=old},1400);
+  });
+}
+document.addEventListener('change',upd);upd();
+</script></body></html>
