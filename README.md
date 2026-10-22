@@ -37,17 +37,21 @@ android-app/app/src/main/assets/fonts/       # ocr_subset.ttf（请换用可自�
 ## 目录
 
 ```
-android-app/         Android 工程（Kotlin，无第三方 UI 框架）
-  app/src/main/assets/   内置数据（图鉴 / 精灵 / 类别）
-  app/src/main/java/...  业务代码
-ocrexp/mock/         设计稿与可交互原型（HTML）
-tools/               快照 / 回滚脚本
-build_*.py           数据抓取与构建脚本
+android-app/              Android 工程（Kotlin，无第三方 UI 框架）
+  app/src/main/assets/      内置数据（图鉴 / 精灵 / 类别）
+  app/src/main/java/...     业务代码
+ocrexp/                   设计稿与可交互原型（HTML）
+tools/
+  snapshot.sh / rollback.sh   源码快照与回滚
+  probes/                     早期抓取探针（probe_*.py）
+  build/                      数据构建脚本（build_* / fetch_* / fix_*）
+data/                     抓取产物（图鉴 / 图标索引 / 形态表）
+legacy/                   旧的桌面端脚本（merchant_reminder.py）
 ```
 
 ## 许可
 
-- **代码**：MIT
+- **代码**：MIT（见 [LICENSE](LICENSE)）
 - **数据**：来自 BWIKI 等社区站点，遵循其原始许可（CC BY-NC-SA），**不可商用**
 - **游戏素材**：版权归腾讯及相关权利人，本仓库不分发
 
